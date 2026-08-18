@@ -1,0 +1,82 @@
+{
+  "baseline_ablation_complete": true,
+  "performance_scope": "FROZEN_TEST_DIAGNOSTIC",
+  "test_rescored_from_frozen_component_parent_scores": true,
+  "method_parameters_changed": false,
+  "methods": {
+    "Independent_Component": {
+      "component_accuracy": 0.7757936507936508,
+      "parent_set_f1": 0.7974118165784834,
+      "parent_set_exact": 0.2861111111111111,
+      "k_accuracy": 0.325,
+      "k_mae": 0.8555555555555555,
+      "unknown_precision": 0.654158215010142,
+      "unknown_recall": 0.8565737051792829,
+      "unknown_f1": 0.7418056354226568
+    },
+    "Hierarchical_Content_Top10_Beta0": {
+      "component_accuracy": 0.8071428571428572,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.41388888888888886,
+      "k_accuracy": 0.48055555555555557,
+      "k_mae": 0.5333333333333333,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552
+    },
+    "Final_Graph_Beta0.1": {
+      "component_accuracy": 0.805952380952381,
+      "parent_set_f1": 0.8442328042328041,
+      "parent_set_exact": 0.41944444444444445,
+      "k_accuracy": 0.4861111111111111,
+      "k_mae": 0.5277777777777778,
+      "unknown_precision": 0.6524271844660194,
+      "unknown_recall": 0.8924302788844621,
+      "unknown_f1": 0.7537857543466069
+    },
+    "Oracle_KnownParentCount_Content": {
+      "component_accuracy": 0.8257936507936507,
+      "parent_set_f1": 0.8729761904761906,
+      "parent_set_exact": 0.5583333333333333,
+      "k_accuracy": 0.6277777777777778,
+      "k_mae": 0.37222222222222223,
+      "unknown_precision": 0.6654578422484134,
+      "unknown_recall": 0.9747675962815405,
+      "unknown_f1": 0.790948275862069
+    }
+  },
+  "hierarchical_content_minus_independent": {
+    "component_accuracy": 0.03134920634920635,
+    "parent_set_f1": 0.04613315696649012,
+    "parent_set_exact": 0.12777777777777777,
+    "k_accuracy": 0.15555555555555556,
+    "k_mae": -0.3222222222222222,
+    "unknown_f1": 0.010580664408898488
+  },
+  "graph_minus_hierarchical_content": {
+    "component_accuracy": -0.0011904761904761862,
+    "parent_set_f1": 0.0006878306878306262,
+    "parent_set_exact": 0.005555555555555591,
+    "k_accuracy": 0.005555555555555536,
+    "k_mae": -0.005555555555555536,
+    "unknown_f1": 0.0013994545150516347
+  },
+  "oracle_known_parent_count_minus_content": {
+    "component_accuracy": 0.018650793650793585,
+    "parent_set_f1": 0.029431216931217086,
+    "parent_set_exact": 0.1444444444444445,
+    "k_accuracy": 0.1472222222222222,
+    "k_mae": -0.1611111111111111,
+    "unknown_f1": 0.0385619760305137
+  },
+  "baseline_definitions": {
+    "Independent_Component": "Each component independently chooses the lowest-cost eligible parent from all 60 TEST gallery projects. No query-level parent-set constraint, no candidate-pool restriction, no proliferation penalty, and no graph.",
+    "Hierarchical_Content_Top10_Beta0": "Frozen Top-10 retrieval followed by unknown-K parent-set optimization with the frozen lambda; graph beta=0.",
+    "Final_Graph_Beta0.1": "Frozen final method using Top-10 retrieval, unknown-K parent-set optimization and boundary-aware graph beta=0.1.",
+    "Oracle_KnownParentCount_Content": "Diagnostic upper bound. The method is given only the number of true registered/known parents in each query, not their identities. It searches the same frozen Top-10 candidate pool with content evidence only."
+  },
+  "oracle_is_deployable_method": false,
+  "oracle_uses_ground_truth_cardinality": true,
+  "phase7h_frozen_crosscheck_passed": true,
+  "goals_met": true
+}

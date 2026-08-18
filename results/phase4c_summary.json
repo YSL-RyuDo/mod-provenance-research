@@ -1,0 +1,13 @@
+{
+  "projects": 30,
+  "json_identifiers": 1034,
+  "json_internal_resolvable": 36,
+  "json_external_minecraft": 592,
+  "json_unresolved": 998,
+  "class_identifiers": 4161,
+  "class_internal_resolvable": 0,
+  "class_external_minecraft": 45,
+  "class_unresolved": 4161,
+  "mods_with_internal_json_refs": 3,
+  "mods_with_internal_class_refs": 0
+}

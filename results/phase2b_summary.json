@@ -1,0 +1,15 @@
+{
+  "frozen_projects": 30,
+  "download_success": 30,
+  "download_failed": 0,
+  "total_components": 6977,
+  "unique_sha256": 6773,
+  "code_components": 5732,
+  "structured_components": 888,
+  "image_components": 357,
+  "target_components": 2926,
+  "background_components": 4051,
+  "cross_mod_exact_duplicate_groups": 3,
+  "cross_mod_exact_duplicate_components": 8,
+  "cross_mod_duplicate_component_rate": 0.001147
+}

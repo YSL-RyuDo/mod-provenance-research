@@ -1,0 +1,18 @@
+{
+  "stage1_parameters_frozen": true,
+  "calibration_only": true,
+  "test_used": false,
+  "unknown_thresholds": {
+    "CODE_BINARY": 0.1302083283662796,
+    "STRUCTURED": 0.03125,
+    "IMAGE": 0.0
+  },
+  "alpha_absolute_distance": 0.75,
+  "alpha_mean_regret": 0.25,
+  "parent_proliferation_lambda": 0.5,
+  "maximum_known_parent_candidates": 3,
+  "unknown_rule": "A candidate known parent is eligible for a component only when its absolute fused distance is <= the frozen modality-specific threshold. If no selected known parent is eligible, the component is assigned UNKNOWN.",
+  "known_assignment_cost": "alpha * min(distance / threshold, 1) + (1-alpha) * clipped MEAN_REGRET",
+  "query_objective": "sum(component assignment costs) + lambda * number_of_selected_known_parents",
+  "search_space": "exhaustive known-parent subsets of size 0 through 3; exact K is never supplied"
+}

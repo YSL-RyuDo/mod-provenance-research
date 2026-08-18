@@ -1,0 +1,32 @@
+{
+  "final_method_freeze_complete": true,
+  "performance_evaluated": false,
+  "performance_scope": "NONE",
+  "test_queries_scored": 0,
+  "unknown_heldout_queries_scored": 0,
+  "final_parameters": {
+    "CODE_UNKNOWN_threshold": 0.1302083283662796,
+    "STRUCTURED_UNKNOWN_threshold": 0.03125,
+    "IMAGE_UNKNOWN_threshold": 0.0,
+    "alpha": 0.75,
+    "mean_regret_weight": 0.25,
+    "lambda": 0.5,
+    "candidate_pool_M": 10,
+    "graph_beta": 0.1,
+    "boundary_top_r": 3,
+    "Kmax": 3
+  },
+  "test_queries": 360,
+  "test_components": 2520,
+  "test_k_distribution": {
+    "1": 120,
+    "2": 120,
+    "3": 120
+  },
+  "query_size_constant": true,
+  "modality_composition_constant": true,
+  "public_identity_leakage_detected": false,
+  "final_parameter_file_sha256": "caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325",
+  "parameters_may_change_after_this_phase": false,
+  "goals_met": true
+}

@@ -1,0 +1,30 @@
+{
+  "projects": 30,
+  "historical_versions_tested": 90,
+  "historical_components_tested": 23324,
+  "failed_operations": 0,
+  "unchanged_same_path_rate": 0.3995026582061396,
+  "unchanged_moved_path_rate": 0.0032155719430629393,
+  "changed_or_removed_rate": 0.5972817698507975,
+  "exact_parent_recall": 0.40271823014920255,
+  "exact_no_match_rate": 0.5972817698507975,
+  "exact_ambiguous_rate": 0.0,
+  "exact_wrong_parent_rate": 0.0,
+  "by_modality": {
+    "CODE_BINARY": {
+      "components": 20575,
+      "exact_parent_recall": 0.3644714459295261,
+      "changed_or_removed_rate": 0.6355285540704739
+    },
+    "IMAGE": {
+      "components": 821,
+      "exact_parent_recall": 0.8915956151035322,
+      "changed_or_removed_rate": 0.10840438489646773
+    },
+    "STRUCTURED": {
+      "components": 1928,
+      "exact_parent_recall": 0.6026970954356846,
+      "changed_or_removed_rate": 0.39730290456431533
+    }
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "calibration_queries": 50,
+  "test_queries": 150,
+  "best_thresholds": {
+    "OPCODE_3GRAM": {
+      "threshold": 0.05,
+      "calibration_component_accuracy": 0.3222222222222225
+    },
+    "OPCODE_STRUCT": {
+      "threshold": 0.05,
+      "calibration_component_accuracy": 0.3072222222222224
+    },
+    "OPCODE_CONTEXT": {
+      "threshold": 0.0025,
+      "calibration_component_accuracy": 0.29000000000000065
+    }
+  },
+  "results": {
+    "OPCODE_3GRAM": {
+      "CLEAN": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4620000000000001,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.38740740740740737,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.08,
+          "mean_cut_edges": 0.31333333333333335
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.6666666666666666,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.31333333333333335,
+          "mean_cut_edges": 0.07333333333333333
+        }
+      },
+      "DROP30": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.36148148148148146,
+          "parent_f1": 0.4102804232804233,
+          "parent_set_exact": 0.013333333333333334,
+          "component_set_exact": 0.013333333333333334,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.3555555555555555,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.06,
+          "mean_cut_edges": 0.17333333333333334
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.647037037037037,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.20666666666666667,
+          "mean_cut_edges": 0.04
+        }
+      },
+      "BRIDGE": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.25777777777777783,
+          "parent_f1": 0.36,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.3159259259259259,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.06666666666666667,
+          "mean_cut_edges": 0.7466666666666667
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.5033333333333333,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.07333333333333333,
+          "mean_cut_edges": 0.6266666666666667
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2785185185185185,
+          "parent_f1": 0.3983492063492064,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.32555555555555554,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.05333333333333334,
+          "mean_cut_edges": 0.6666666666666666
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.5433333333333333,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.05333333333333334,
+          "mean_cut_edges": 0.5266666666666666
+        }
+      }
+    },
+    "OPCODE_STRUCT": {
+      "CLEAN": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4533333333333333,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.3937037037037037,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.09333333333333334,
+          "mean_cut_edges": 0.3
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.7022222222222223,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.31333333333333335,
+          "mean_cut_edges": 0.14666666666666667
+        }
+      },
+      "DROP30": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.34629629629629627,
+          "parent_f1": 0.4114761904761905,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.3481481481481481,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.07333333333333333,
+          "mean_cut_edges": 0.25333333333333335
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.6885185185185185,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.22,
+          "mean_cut_edges": 0.08666666666666667
+        }
+      },
+      "BRIDGE": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.22555555555555554,
+          "parent_f1": 0.31555555555555553,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.3085185185185186,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.84
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.5414814814814816,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.10666666666666667,
+          "mean_cut_edges": 1.04
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2662962962962963,
+          "parent_f1": 0.38276190476190475,
+          "parent_set_exact": 0.02666666666666667,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.31333333333333335,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.05333333333333334,
+          "mean_cut_edges": 0.7533333333333333
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.5888888888888889,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.1,
+          "mean_cut_edges": 0.8333333333333334
+        }
+      }
+    },
+    "OPCODE_CONTEXT": {
+      "CLEAN": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.38666666666666666,
+          "parent_f1": 0.43866666666666676,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.08,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.36666666666666664,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 2.1666666666666665
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.7255555555555556,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.26666666666666666,
+          "mean_cut_edges": 0.9733333333333334
+        }
+      },
+      "DROP30": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.3951851851851852,
+          "parent_f1": 0.4459312169312169,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.02,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.35740740740740745,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.04,
+          "mean_cut_edges": 1.5333333333333334
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.7055555555555555,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.2,
+          "mean_cut_edges": 0.5866666666666667
+        }
+      },
+      "BRIDGE": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.19,
+          "parent_f1": 0.26555555555555554,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.3551851851851852,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 4.713333333333333
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.6874074074074075,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.24,
+          "mean_cut_edges": 3.3066666666666666
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2462962962962963,
+          "parent_f1": 0.366031746031746,
+          "parent_set_exact": 0.02666666666666667,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B6_PARENTSET_GRAPH": {
+          "component_accuracy": 0.34296296296296297,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.04,
+          "mean_cut_edges": 3.5733333333333333
+        },
+        "ORACLE_PARENTSET_GRAPH": {
+          "component_accuracy": 0.6825925925925925,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0,
+          "component_set_exact": 0.18,
+          "mean_cut_edges": 2.36
+        }
+      }
+    }
+  }
+}

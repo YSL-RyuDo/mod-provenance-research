@@ -1,0 +1,39 @@
+{
+  "phase10a4b_complete": true,
+  "scope": "NICAD_FROZEN_GALLERY_SOURCE_MAPPING",
+  "frozen_gallery_parent_universe": 60,
+  "code_bearing_gallery_projects": 55,
+  "zero_code_gallery_projects": 5,
+  "input_gallery_projects": 55,
+  "input_gallery_code_components": 10448,
+  "repository_snapshot_resolution_counts": {
+    "NO_GITHUB_REPOSITORY": 12,
+    "DATE_HEURISTIC": 33,
+    "EXACT_NORMALIZED_TAG": 9,
+    "REPOSITORY_ERROR": 1
+  },
+  "java_mapping_status_counts": {
+    "NO_REPOSITORY": 1061,
+    "EXACT_PACKAGE_SUFFIX": 3273,
+    "NO_BASENAME_MATCH": 5157,
+    "REPOSITORY_ERROR": 724,
+    "UNIQUE_BASENAME": 2,
+    "AMBIGUOUS_PACKAGE_SUFFIX": 219,
+    "AMBIGUOUS_BASENAME": 12
+  },
+  "source_resolvable_gallery_components": 3275,
+  "source_resolvable_gallery_component_rate": 0.3134571209800919,
+  "high_confidence_gallery_components": 200,
+  "materialized_unique_java_files": 2482,
+  "gallery_parents_with_any_resolvable_source": 41,
+  "code_bearing_gallery_parents_without_resolvable_source": 14,
+  "frozen_parents_with_zero_code_components": 5,
+  "repository_errors": 13,
+  "manual_annotation_used": false,
+  "important_interpretation": {
+    "exact_normalized_tag": "Frozen Modrinth version number matched a Git tag after normalization.",
+    "date_heuristic": "Nearest repository commit at or before frozen Modrinth release date; not claimed as exact build source.",
+    "mapping_unit": "CLASS entry to Java source; inner classes collapse to their outer Java source.",
+    "nicad_materialization": "Each unique Java source is materialized once per frozen parent."
+  }
+}

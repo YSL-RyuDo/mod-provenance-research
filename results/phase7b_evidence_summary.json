@@ -1,0 +1,68 @@
+{
+  "identity_neutral_evidence_extraction_complete": true,
+  "performance_evaluated": false,
+  "thresholds_tuned": false,
+  "representation_policy": {
+    "CODE_BINARY": "raw JVM opcode identities and structural method statistics only; constant-pool operands, class/package/method names, descriptors and string literals are not used as evidence",
+    "STRUCTURED": "normalized structural tokens; file paths and literal MOD namespaces are not used; nonstandard resource namespaces are replaced with generic markers",
+    "IMAGE": "decoded pixel evidence only: aHash, dHash, pHash and 16-bin luminance histogram"
+  },
+  "gallery_input_components": 48376,
+  "gallery_evidence_components": 48376,
+  "query_input_components": 3780,
+  "query_evidence_components": 3780,
+  "gallery_failures": 0,
+  "query_failures": 0,
+  "failure_records": 0,
+  "gallery_modality_counts": {
+    "CODE_BINARY": 22373,
+    "IMAGE": 5329,
+    "STRUCTURED": 20674
+  },
+  "query_modality_counts": {
+    "IMAGE": 540,
+    "STRUCTURED": 540,
+    "CODE_BINARY": 2700
+  },
+  "gallery_by_split": {
+    "CALIBRATION_BACKGROUND": {
+      "components": 8980,
+      "projects": 15,
+      "by_modality": {
+        "CODE_BINARY": 8671,
+        "IMAGE": 176,
+        "STRUCTURED": 133
+      }
+    },
+    "CALIBRATION_KNOWN": {
+      "components": 13067,
+      "projects": 25,
+      "by_modality": {
+        "STRUCTURED": 8102,
+        "CODE_BINARY": 3254,
+        "IMAGE": 1711
+      }
+    },
+    "TEST_BACKGROUND": {
+      "components": 4061,
+      "projects": 15,
+      "by_modality": {
+        "CODE_BINARY": 3555,
+        "STRUCTURED": 477,
+        "IMAGE": 29
+      }
+    },
+    "TEST_KNOWN": {
+      "components": 22268,
+      "projects": 45,
+      "by_modality": {
+        "STRUCTURED": 11962,
+        "CODE_BINARY": 6893,
+        "IMAGE": 3413
+      }
+    }
+  },
+  "unknown_current_projects_extracted_into_gallery": 0,
+  "query_private_identity_columns_exposed": false,
+  "goals_met": true
+}

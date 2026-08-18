@@ -1,0 +1,119 @@
+{
+  "phase9f_complete": true,
+  "performance_scope": "REAL_PROJECT_GALLERY_SIZE_SCALABILITY",
+  "accuracy_re_evaluated": false,
+  "parameters_retuned": false,
+  "query_predictions_used_as_paper_accuracy": false,
+  "gallery_design": {
+    "scales_projects": [
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "real_projects_total": 100,
+    "test_projects": 60,
+    "calibration_projects": 40,
+    "ordering": "sorted TEST projects first, followed by sorted CAL projects",
+    "scale_60_matches_phase9d_test_gallery": true,
+    "synthetic_gallery_duplication": false
+  },
+  "benchmark_protocol": {
+    "latency_concurrency": 1,
+    "throughput_concurrency": 4,
+    "requests_per_setting": 200,
+    "warmup_per_scale": 20,
+    "total_measured_requests": 2000,
+    "random_seed": 20260813,
+    "server": "FastAPI/Uvicorn single process",
+    "input": "pre-extracted identity-neutral TEST query evidence"
+  },
+  "host_system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.6",
+    "physical_cpu_cores": 20,
+    "logical_cpu_cores": 28,
+    "total_memory_bytes": 34031173632
+  },
+  "results_by_scale": {
+    "20": {
+      "gallery_projects": 20,
+      "gallery_components": 16282,
+      "sequential_search_p50_ms": 4.3530999999999995,
+      "sequential_search_p95_ms": 7.481775,
+      "sequential_total_p50_ms": 5.0545,
+      "sequential_total_p95_ms": 8.511889999999998,
+      "sequential_reconstruction_p50_ms": 0.68035,
+      "concurrency4_throughput_req_s": 208.81646066758856,
+      "concurrency4_client_p50_ms": 16.932949999999998,
+      "concurrency4_client_p95_ms": 35.061174999999984,
+      "rss_after_scale_c4_bytes": 153165824
+    },
+    "40": {
+      "gallery_projects": 40,
+      "gallery_components": 21694,
+      "sequential_search_p50_ms": 7.89255,
+      "sequential_search_p95_ms": 9.741159999999999,
+      "sequential_total_p50_ms": 8.7847,
+      "sequential_total_p95_ms": 10.636455,
+      "sequential_reconstruction_p50_ms": 0.8466,
+      "concurrency4_throughput_req_s": 169.73754417084228,
+      "concurrency4_client_p50_ms": 21.4052,
+      "concurrency4_client_p95_ms": 41.25884999999996,
+      "rss_after_scale_c4_bytes": 158380032
+    },
+    "60": {
+      "gallery_projects": 60,
+      "gallery_components": 26329,
+      "sequential_search_p50_ms": 10.878,
+      "sequential_search_p95_ms": 12.256759999999998,
+      "sequential_total_p50_ms": 11.9405,
+      "sequential_total_p95_ms": 13.373219999999998,
+      "sequential_reconstruction_p50_ms": 1.0233500000000002,
+      "concurrency4_throughput_req_s": 134.00445444196055,
+      "concurrency4_client_p50_ms": 24.933500000000002,
+      "concurrency4_client_p95_ms": 46.912389999999995,
+      "rss_after_scale_c4_bytes": 155340800
+    },
+    "80": {
+      "gallery_projects": 80,
+      "gallery_components": 41903,
+      "sequential_search_p50_ms": 19.7437,
+      "sequential_search_p95_ms": 21.137365,
+      "sequential_total_p50_ms": 20.9606,
+      "sequential_total_p95_ms": 22.326009999999997,
+      "sequential_reconstruction_p50_ms": 1.1999499999999999,
+      "concurrency4_throughput_req_s": 81.78606368741927,
+      "concurrency4_client_p50_ms": 44.095299999999995,
+      "concurrency4_client_p95_ms": 73.184205,
+      "rss_after_scale_c4_bytes": 155197440
+    },
+    "100": {
+      "gallery_projects": 100,
+      "gallery_components": 48376,
+      "sequential_search_p50_ms": 21.456850000000003,
+      "sequential_search_p95_ms": 23.842584999999996,
+      "sequential_total_p50_ms": 22.8682,
+      "sequential_total_p95_ms": 25.324914999999994,
+      "sequential_reconstruction_p50_ms": 1.4228999999999998,
+      "concurrency4_throughput_req_s": 88.11783822268623,
+      "concurrency4_client_p50_ms": 39.897999999999996,
+      "concurrency4_client_p95_ms": 63.46235499999999,
+      "rss_after_scale_c4_bytes": 160342016
+    }
+  },
+  "aggregate": {
+    "all_settings_zero_failures": true,
+    "rss_initial_bytes": 147120128,
+    "rss_final_bytes": 160342016,
+    "rss_change_bytes": 13221888,
+    "scale20_to_scale100": {
+      "gallery_component_ratio": 2.9711337673504485,
+      "search_p50_ratio": 4.929096505938298,
+      "total_p50_ratio": 4.524324859036502
+    }
+  },
+  "interpretation_warning": "Phase 9F is a scalability-only system sensitivity analysis. Gallery size is changed using real TEST and calibration projects. Accuracy is neither evaluated nor retuned at these alternate gallery sizes. The input begins from already-extracted identity-neutral query evidence.",
+  "goals_met": true
+}

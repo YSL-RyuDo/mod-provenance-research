@@ -1,0 +1,88 @@
+{
+  "random_seed": 20260812,
+  "split_frozen": true,
+  "pilot_development_corpus": "original 30-MOD corpus",
+  "fresh_corpus_used_for_development": false,
+  "fresh_projects": 120,
+  "target_projects": 90,
+  "background_projects": 30,
+  "target_split_definition": {
+    "CALIBRATION_KNOWN": 25,
+    "TEST_KNOWN": 45,
+    "UNKNOWN_HELDOUT": 20
+  },
+  "background_split_definition": {
+    "CALIBRATION_BACKGROUND": 15,
+    "TEST_BACKGROUND": 15
+  },
+  "splits": {
+    "CALIBRATION_BACKGROUND": {
+      "projects": 15,
+      "target_mods": 0,
+      "background_libraries": 15,
+      "code_binary_components": 8671,
+      "structured_components": 136,
+      "image_components": 176,
+      "total_components": 8983,
+      "median_components": 42.0,
+      "projects_with_code": 15,
+      "projects_with_structured": 15,
+      "projects_with_image": 13
+    },
+    "CALIBRATION_KNOWN": {
+      "projects": 25,
+      "target_mods": 25,
+      "background_libraries": 0,
+      "code_binary_components": 3254,
+      "structured_components": 8104,
+      "image_components": 1711,
+      "total_components": 13069,
+      "median_components": 87.0,
+      "projects_with_code": 25,
+      "projects_with_structured": 25,
+      "projects_with_image": 24
+    },
+    "TEST_BACKGROUND": {
+      "projects": 15,
+      "target_mods": 0,
+      "background_libraries": 15,
+      "code_binary_components": 3555,
+      "structured_components": 4605,
+      "image_components": 29,
+      "total_components": 8189,
+      "median_components": 94.0,
+      "projects_with_code": 13,
+      "projects_with_structured": 15,
+      "projects_with_image": 15
+    },
+    "TEST_KNOWN": {
+      "projects": 45,
+      "target_mods": 45,
+      "background_libraries": 0,
+      "code_binary_components": 6893,
+      "structured_components": 12029,
+      "image_components": 3413,
+      "total_components": 22335,
+      "median_components": 70.0,
+      "projects_with_code": 42,
+      "projects_with_structured": 45,
+      "projects_with_image": 44
+    },
+    "UNKNOWN_HELDOUT": {
+      "projects": 20,
+      "target_mods": 20,
+      "background_libraries": 0,
+      "code_binary_components": 742,
+      "structured_components": 6193,
+      "image_components": 746,
+      "total_components": 7681,
+      "median_components": 54.0,
+      "projects_with_code": 20,
+      "projects_with_structured": 20,
+      "projects_with_image": 20
+    }
+  },
+  "input_corpus_sha256": "81f27c645811acf6d0fe6ccc27326d829738e5797835995a1341acd2555a476e",
+  "input_package_registry_sha256": "a9e0297fc0e2d2c80e244c7d707417d31f615aa9519ef6f01c163358063e2cb7",
+  "output_split_sha256": "7289be16d55a34a4da0e05348bfc084fbec5f0f5ce1d8c6888b2e12c90818210"
+}

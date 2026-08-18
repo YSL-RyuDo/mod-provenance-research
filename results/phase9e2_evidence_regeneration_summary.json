@@ -1,0 +1,117 @@
+{
+  "phase9e2_complete": true,
+  "scope": "RAW_ARCHIVE_PAYLOAD_TO_IDENTITY_NEUTRAL_EVIDENCE_REGENERATION_CORRECTNESS",
+  "extractor_reuse": {
+    "source": "scripts/phase7b_extract_identity_neutral_evidence.py",
+    "reimplemented": false,
+    "definition_loading_method": "execute original Phase 7B source through the '# Load registries' marker",
+    "same_extract_features_function": true
+  },
+  "expected": {
+    "queries": 360,
+    "components": 2520,
+    "modality_counts": {
+      "CODE_BINARY": 1800,
+      "STRUCTURED": 360,
+      "IMAGE": 360
+    }
+  },
+  "observed": {
+    "queries": 360,
+    "components": 2520,
+    "modality_counts": {
+      "CODE_BINARY": 1800,
+      "STRUCTURED": 360,
+      "IMAGE": 360
+    }
+  },
+  "payload_integrity": {
+    "sha256_matches": 2520,
+    "sha256_mismatches": 0
+  },
+  "signature_correctness": {
+    "fully_identical_components": 2520,
+    "mismatched_components": 0,
+    "field_comparisons": 40320,
+    "field_matches": 40320,
+    "field_mismatch_counts": {
+      "code_op3_simhash128": 0,
+      "code_struct_simhash128": 0,
+      "code_context_simhash128": 0,
+      "code_method_count": 0,
+      "code_instruction_count": 0,
+      "code_major_version": 0,
+      "structured_simhash128": 0,
+      "structured_token_count": 0,
+      "structured_parse_kind": 0,
+      "image_ahash64": 0,
+      "image_dhash64": 0,
+      "image_phash64": 0,
+      "image_hist16": 0,
+      "image_width": 0,
+      "image_height": 0,
+      "image_frames": 0
+    },
+    "by_modality": {
+      "CODE_BINARY": {
+        "components": 1800,
+        "fully_identical": 1800,
+        "mismatches": 0
+      },
+      "STRUCTURED": {
+        "components": 360,
+        "fully_identical": 360,
+        "mismatches": 0
+      },
+      "IMAGE": {
+        "components": 360,
+        "fully_identical": 360,
+        "mismatches": 0
+      }
+    }
+  },
+  "timing_diagnostic_not_final_benchmark": {
+    "warning": "These are sequential offline extraction diagnostics only. Publication-ready end-to-end latency is measured in Phase 9E-3.",
+    "archive_payload_read_ms": {
+      "mean": 0.04000607142857143,
+      "p50": 0.0264,
+      "p95": 0.09861499999999991,
+      "p99": 0.22076699999999996
+    },
+    "evidence_extraction_ms": {
+      "mean": 2.8557085714285715,
+      "p50": 1.2793999999999999,
+      "p95": 11.630869999999984,
+      "p99": 28.214145,
+      "by_modality": {
+        "CODE_BINARY": {
+          "components": 1800,
+          "mean_ms": 3.1371517222222227,
+          "p50_ms": 1.6776,
+          "p95_ms": 12.1623,
+          "p99_ms": 23.023163999999998,
+          "max_ms": 33.9689
+        },
+        "STRUCTURED": {
+          "components": 360,
+          "mean_ms": 0.8811872222222222,
+          "p50_ms": 0.86215,
+          "p95_ms": 1.508575,
+          "p99_ms": 2.1452460000000024,
+          "max_ms": 3.4057
+        },
+        "IMAGE": {
+          "components": 360,
+          "mean_ms": 3.423014166666667,
+          "p50_ms": 0.7468,
+          "p95_ms": 25.43909500000001,
+          "p99_ms": 50.17098200000001,
+          "max_ms": 62.8524
+        }
+      }
+    }
+  },
+  "correctness_passed": true,
+  "ready_for_phase9e3": true,
+  "goals_met": true
+}

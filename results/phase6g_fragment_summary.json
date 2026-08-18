@@ -1,0 +1,74 @@
+{
+  "fragment_catalog_frozen": true,
+  "random_seed": 20260812,
+  "targets_per_fragment": 5,
+  "variants_per_release_requested": 3,
+  "fragment_definition": "five HARD_MASKED CODE_BINARY target components connected through the original historical intra-JAR CLASS_REF graph; additional shortest-path nodes are topology-only connectors and are excluded from attribution accuracy",
+  "strict_path_failed_role": "secondary diagnostic only; not the primary fragment eligibility rule",
+  "eligible_h5_releases": 181,
+  "eligible_h5_projects": 71,
+  "generated_fragments": 497,
+  "fragment_nodes": 2513,
+  "fragment_edges": 2911,
+  "failure_records": 0,
+  "by_split": {
+    "CALIBRATION_KNOWN": {
+      "fragments": 146,
+      "projects": 20,
+      "releases": 53,
+      "target_nodes": 730,
+      "strict_target_nodes": 60,
+      "median_connectors": 0.0,
+      "p95_connectors": 0.0,
+      "max_connectors": 2,
+      "median_total_nodes": 5.0,
+      "p95_total_nodes": 5.0,
+      "max_total_nodes": 7
+    },
+    "TEST_KNOWN": {
+      "fragments": 234,
+      "projects": 35,
+      "releases": 87,
+      "target_nodes": 1170,
+      "strict_target_nodes": 168,
+      "median_connectors": 0.0,
+      "p95_connectors": 0.3499999999999943,
+      "max_connectors": 3,
+      "median_total_nodes": 5.0,
+      "p95_total_nodes": 5.349999999999994,
+      "max_total_nodes": 8
+    },
+    "UNKNOWN_HELDOUT": {
+      "fragments": 117,
+      "projects": 16,
+      "releases": 41,
+      "target_nodes": 585,
+      "strict_target_nodes": 66,
+      "median_connectors": 0.0,
+      "p95_connectors": 0.0,
+      "max_connectors": 3,
+      "median_total_nodes": 5.0,
+      "p95_total_nodes": 5.0,
+      "max_total_nodes": 8
+    }
+  },
+  "project_coverage": {
+    "CALIBRATION_KNOWN": {
+      "eligible_h5_projects": 20,
+      "projects_with_generated_fragments": 20,
+      "missing_projects": []
+    },
+    "TEST_KNOWN": {
+      "eligible_h5_projects": 35,
+      "projects_with_generated_fragments": 35,
+      "missing_projects": []
+    },
+    "UNKNOWN_HELDOUT": {
+      "eligible_h5_projects": 16,
+      "projects_with_generated_fragments": 16,
+      "missing_projects": []
+    }
+  },
+  "minimum_parent_project_goal": 15,
+  "goals_met": true
+}

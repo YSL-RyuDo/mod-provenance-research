@@ -1,0 +1,42 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large/raw research data
+data/
+*.jar
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.class
+
+# Temporary/generated logs
+*.log
+*.tmp
+*.bak
+
+# Large transient result artifacts
+results/*stdout*.txt
+results/*timing*.csv
+results/*replicates*.csv
+
+# Keep reproducibility-relevant result files
+!results/*.json
+!results/*summary*.json
+!results/*parameters*.json
+!results/*predictions*.csv
+!results/*audit*.csv
+!results/*ground_truth*.csv
+!results/*manifest*.csv
+!results/*comparison*.csv
+!results/*by_scenario*.csv
+!results/*by_unknown_multiplicity*.csv

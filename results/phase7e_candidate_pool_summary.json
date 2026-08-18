@@ -1,0 +1,139 @@
+{
+  "candidate_parent_pool_audit_complete": true,
+  "performance_scope": "CALIBRATION_ONLY",
+  "test_queries_scored": 0,
+  "unknown_heldout_queries_scored": 0,
+  "stage1_final_parent_set_not_used_as_hard_constraint": true,
+  "retrieval_score_policy": "frozen Phase 7D alpha and modality thresholds; no proliferation lambda; query-level candidate score is the mean of the three lowest component costs",
+  "candidate_m_values": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "top_m_results": {
+    "3": {
+      "mean_parent_recall": 0.9231481481481483,
+      "all_true_parents_present_rate": 0.8166666666666667,
+      "queries_missing_any_true_parent": 33,
+      "by_k": {
+        "1": {
+          "queries": 60,
+          "mean_parent_recall": 1.0
+        },
+        "2": {
+          "queries": 60,
+          "mean_parent_recall": 0.975
+        },
+        "3": {
+          "queries": 60,
+          "mean_parent_recall": 0.7944444444444444
+        }
+      }
+    },
+    "4": {
+      "mean_parent_recall": 0.9333333333333333,
+      "all_true_parents_present_rate": 0.8388888888888889,
+      "queries_missing_any_true_parent": 29,
+      "by_k": {
+        "1": {
+          "queries": 60,
+          "mean_parent_recall": 1.0
+        },
+        "2": {
+          "queries": 60,
+          "mean_parent_recall": 0.9833333333333333
+        },
+        "3": {
+          "queries": 60,
+          "mean_parent_recall": 0.8166666666666665
+        }
+      }
+    },
+    "5": {
+      "mean_parent_recall": 0.9407407407407408,
+      "all_true_parents_present_rate": 0.8555555555555555,
+      "queries_missing_any_true_parent": 26,
+      "by_k": {
+        "1": {
+          "queries": 60,
+          "mean_parent_recall": 1.0
+        },
+        "2": {
+          "queries": 60,
+          "mean_parent_recall": 0.9833333333333333
+        },
+        "3": {
+          "queries": 60,
+          "mean_parent_recall": 0.8388888888888888
+        }
+      }
+    },
+    "6": {
+      "mean_parent_recall": 0.9444444444444444,
+      "all_true_parents_present_rate": 0.8666666666666667,
+      "queries_missing_any_true_parent": 24,
+      "by_k": {
+        "1": {
+          "queries": 60,
+          "mean_parent_recall": 1.0
+        },
+        "2": {
+          "queries": 60,
+          "mean_parent_recall": 0.9833333333333333
+        },
+        "3": {
+          "queries": 60,
+          "mean_parent_recall": 0.85
+        }
+      }
+    },
+    "8": {
+      "mean_parent_recall": 0.9546296296296297,
+      "all_true_parents_present_rate": 0.8888888888888888,
+      "queries_missing_any_true_parent": 20,
+      "by_k": {
+        "1": {
+          "queries": 60,
+          "mean_parent_recall": 1.0
+        },
+        "2": {
+          "queries": 60,
+          "mean_parent_recall": 0.9916666666666667
+        },
+        "3": {
+          "queries": 60,
+          "mean_parent_recall": 0.8722222222222221
+        }
+      }
+    },
+    "10": {
+      "mean_parent_recall": 0.9694444444444444,
+      "all_true_parents_present_rate": 0.9277777777777778,
+      "queries_missing_any_true_parent": 13,
+      "by_k": {
+        "1": {
+          "queries": 60,
+          "mean_parent_recall": 1.0
+        },
+        "2": {
+          "queries": 60,
+          "mean_parent_recall": 0.9916666666666667
+        },
+        "3": {
+          "queries": 60,
+          "mean_parent_recall": 0.9166666666666666
+        }
+      }
+    }
+  },
+  "selection_target": {
+    "mean_parent_recall": 0.95,
+    "all_true_parents_present_rate": 0.9
+  },
+  "selected_candidate_pool_size": 10,
+  "selection_rule_status": "TARGET_CRITERIA_MET",
+  "goals_met": true
+}

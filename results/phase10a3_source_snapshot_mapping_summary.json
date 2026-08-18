@@ -1,0 +1,34 @@
+{
+  "phase10a3_complete": true,
+  "scope": "SOURCE_SNAPSHOT_AND_CLASS_TO_JAVA_MAPPING_AUDIT",
+  "input_code_components": 1800,
+  "input_queries": 360,
+  "repository_errors": 1,
+  "unique_project_versions": 116,
+  "snapshot_resolution_counts": {
+    "DATE_HEURISTIC": 76,
+    "EXACT_NORMALIZED_TAG": 19,
+    "NO_GITHUB_REPOSITORY": 18,
+    "REPOSITORY_ERROR": 3
+  },
+  "java_mapping_status_counts": {
+    "EXACT_PACKAGE_SUFFIX": 1155,
+    "NO_BASENAME_MATCH": 539,
+    "AMBIGUOUS_BASENAME": 92,
+    "UNIQUE_BASENAME": 14
+  },
+  "source_resolvable_components": 1169,
+  "source_resolvable_component_rate": 0.6494444444444445,
+  "high_confidence_components": 229,
+  "high_confidence_component_rate": 0.1272222222222222,
+  "queries_with_any_resolvable_code": 306,
+  "queries_with_all_code_resolvable": 148,
+  "queries_with_all_code_high_confidence": 17,
+  "manual_annotation_used": false,
+  "important_interpretation": {
+    "exact_normalized_tag": "Version number matched a Git tag after normalization.",
+    "date_heuristic": "Nearest repository commit before Modrinth release date; this is NOT claimed to be the exact build source.",
+    "high_confidence_definition": "EXACT_NORMALIZED_TAG plus an unambiguous Java source mapping."
+  },
+  "ready_for_phase10a4": true
+}

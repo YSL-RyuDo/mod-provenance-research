@@ -1,0 +1,21 @@
+{
+  "random_seed": 20260812,
+  "development_corpus_excluded": true,
+  "fresh_projects": 120,
+  "target_mods": 90,
+  "background_libraries": 30,
+  "minimum_required_fabric_versions": 4,
+  "median_valid_fabric_versions": 16.5,
+  "min_valid_fabric_versions": 4,
+  "max_valid_fabric_versions": 631,
+  "license_counts": {
+    "MIT": 102,
+    "Apache-2.0": 11,
+    "MPL-2.0": 7
+  },
+  "candidate_pool": 2966,
+  "rejected_or_failed": 74,
+  "target_goal": 90,
+  "background_goal": 30,
+  "goals_met": true
+}

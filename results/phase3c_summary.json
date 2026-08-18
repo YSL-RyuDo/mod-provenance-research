@@ -1,0 +1,38 @@
+{
+  "path_failed_queries": 2206,
+  "content_queries_evaluated": 2206,
+  "ALL": {
+    "components": 2206,
+    "unique_correct_rate": 0.2629193109700816,
+    "true_in_best_tie_rate": 0.33907524932003624,
+    "wrong_rate": 0.6609247506799637,
+    "mean_best_distance": 11.228921124206709,
+    "mean_margin": 2.815956482320943
+  },
+  "by_modality": {
+    "CODE_BINARY": {
+      "components": 1873,
+      "unique_correct_rate": 0.18793379604911906,
+      "true_in_best_tie_rate": 0.2717565403096636,
+      "wrong_rate": 0.7282434596903363,
+      "mean_best_distance": 11.92632140950347,
+      "mean_margin": 1.8697277095568607
+    },
+    "IMAGE": {
+      "components": 145,
+      "unique_correct_rate": 0.6206896551724138,
+      "true_in_best_tie_rate": 0.6758620689655173,
+      "wrong_rate": 0.32413793103448274,
+      "mean_best_distance": 4.834482758620689,
+      "mean_margin": 8.241379310344827
+    },
+    "STRUCTURED": {
+      "components": 188,
+      "unique_correct_rate": 0.7340425531914894,
+      "true_in_best_tie_rate": 0.75,
+      "wrong_rate": 0.25,
+      "mean_best_distance": 9.212765957446809,
+      "mean_margin": 8.058510638297872
+    }
+  }
+}

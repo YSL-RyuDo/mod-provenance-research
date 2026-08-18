@@ -1,0 +1,22 @@
+{
+  "full40_calibration_matrix_complete": true,
+  "performance_evaluated": false,
+  "test_queries_scored": 0,
+  "unknown_heldout_queries_scored": 0,
+  "calibration_components": 1260,
+  "pseudo_unknown_visible_candidates_per_component": 39,
+  "full_known_candidates_per_component": 40,
+  "existing_visible_score_rows": 49140,
+  "recovered_hidden_parent_rows": 1260,
+  "full40_score_rows": 50400,
+  "expected_full40_score_rows": 50400,
+  "full40_regret_recomputed": true,
+  "calibration_views": {
+    "PSEUDO_UNKNOWN_39": "Phase 7C matrix. One true known parent is absent and acts as UNKNOWN. Used for open-set threshold calibration.",
+    "KNOWN_ONLY_40": "Phase 7C2 matrix. The hidden parent is restored and MEAN_REGRET/rank are recomputed over all 40 calibration projects. Used for known-only K=1/2/3 parent-set and proliferation-penalty calibration."
+  },
+  "true_parent_candidate_rows": 1260,
+  "hidden_candidate_rows": 1260,
+  "failure_records": 0,
+  "goals_met": true
+}

@@ -1,0 +1,14 @@
+{
+  "accepted_real_mods": 30,
+  "target": 30,
+  "total_code": 5732,
+  "total_structured": 888,
+  "total_image": 357,
+  "median_code": 53.0,
+  "median_structured": 20.5,
+  "median_image": 2.5,
+  "mods_with_images": 28,
+  "mods_with_structured": 30,
+  "java_mods": 29,
+  "kotlin_mods": 6
+}

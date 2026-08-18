@@ -1,0 +1,249 @@
+{
+  "phase11c_complete": true,
+  "scope": "CONTROLLED_MULTI_UNKNOWN_ROBUSTNESS",
+  "benchmark": {
+    "queries": 180,
+    "components": 1260,
+    "scenarios": {
+      "MU_1K2U": 30,
+      "MU_1K3U": 30,
+      "MU_2K2U": 30,
+      "MU_2K3U": 30,
+      "MU_U2": 30,
+      "MU_U3": 30
+    },
+    "unknown_source_multiplicity": [
+      2,
+      3
+    ],
+    "independent_test_set": false,
+    "construction": "Post-freeze recomposition of frozen TEST donor components.",
+    "primary_frozen_test_modified": false,
+    "manual_annotation_used": false
+  },
+  "inference_protocol": {
+    "phase7b_evidence": "Exact frozen donor evidence reused; no feature recomputation.",
+    "gallery": "Original frozen 60-project TEST gallery.",
+    "candidate_retrieval": "Frozen Phase7E mean-of-best-three component costs, M=10.",
+    "solver": "Frozen Phase7H subset optimizer.",
+    "graph_refinement": "Not applied because recomposed robustness queries have no empirical dependency graph.",
+    "effective_track": "CONTENT_ONLY_HIERARCHICAL_RECONSTRUCTION",
+    "parameter_retuning": false,
+    "unknown_output_labels_per_query": 1,
+    "actual_unknown_source_identity_available_to_model": false
+  },
+  "frozen_parameters": {
+    "CODE_UNKNOWN_threshold": 0.1302083283662796,
+    "STRUCTURED_UNKNOWN_threshold": 0.03125,
+    "IMAGE_UNKNOWN_threshold": 0.0,
+    "alpha": 0.75,
+    "mean_regret_weight": 0.25,
+    "lambda": 0.5,
+    "candidate_pool_M": 10,
+    "maximum_known_parents": 3,
+    "maximum_unregistered_parent_labels": 1
+  },
+  "overall": {
+    "queries": 180,
+    "components": 1260,
+    "component_accuracy": 0.8412698412698413,
+    "known_component_accuracy": 0.7461538461538462,
+    "unknown_precision": 0.8921113689095128,
+    "unknown_recall": 0.8839080459770114,
+    "unknown_f1": 0.8879907621247114,
+    "collapsed_parent_set_f1": 0.8839682539682538,
+    "collapsed_parent_set_exact": 0.6,
+    "registered_known_parent_f1": 0.7437037037037038,
+    "registered_known_parent_exact": 0.6,
+    "k_collapsed_accuracy": 0.6333333333333333,
+    "k_collapsed_mae": 0.4111111111111111,
+    "k_actual_source_count_mae": 1.2333333333333334
+  },
+  "retrieval_ceiling": {
+    "queries_with_known_parent": 120,
+    "mean_known_parent_recall": 0.9791666666666666,
+    "all_known_true_parents_present_rate": 0.9583333333333334
+  },
+  "by_scenario": [
+    {
+      "scenario": "MU_1K2U",
+      "queries": 30,
+      "unknown_parent_count": 2,
+      "known_parent_count": 1,
+      "component_accuracy": 0.8047619047619048,
+      "known_component_accuracy": 0.7888888888888889,
+      "unknown_precision": 0.8376068376068376,
+      "unknown_recall": 0.8166666666666667,
+      "unknown_f1": 0.8270042194092827,
+      "registered_known_parent_f1": 0.85,
+      "registered_known_parent_exact": 0.5666666666666667,
+      "collapsed_parent_set_f1": 0.9088888888888889,
+      "collapsed_parent_set_exact": 0.5666666666666667,
+      "k_collapsed_accuracy": 0.5666666666666667,
+      "k_collapsed_mae": 0.4666666666666667,
+      "k_actual_source_count_mae": 0.6
+    },
+    {
+      "scenario": "MU_1K3U",
+      "queries": 30,
+      "unknown_parent_count": 3,
+      "known_parent_count": 1,
+      "component_accuracy": 0.8714285714285714,
+      "known_component_accuracy": 0.8,
+      "unknown_precision": 0.9183673469387755,
+      "unknown_recall": 0.9,
+      "unknown_f1": 0.9090909090909091,
+      "registered_known_parent_f1": 0.7611111111111111,
+      "registered_known_parent_exact": 0.6,
+      "collapsed_parent_set_f1": 0.8688888888888889,
+      "collapsed_parent_set_exact": 0.6,
+      "k_collapsed_accuracy": 0.6666666666666666,
+      "k_collapsed_mae": 0.43333333333333335,
+      "k_actual_source_count_mae": 1.6333333333333333
+    },
+    {
+      "scenario": "MU_2K2U",
+      "queries": 30,
+      "unknown_parent_count": 2,
+      "known_parent_count": 2,
+      "component_accuracy": 0.7380952380952381,
+      "known_component_accuracy": 0.65,
+      "unknown_precision": 0.6754385964912281,
+      "unknown_recall": 0.8555555555555555,
+      "unknown_f1": 0.7549019607843137,
+      "registered_known_parent_f1": 0.8533333333333334,
+      "registered_known_parent_exact": 0.7,
+      "collapsed_parent_set_f1": 0.9115873015873016,
+      "collapsed_parent_set_exact": 0.7,
+      "k_collapsed_accuracy": 0.7666666666666667,
+      "k_collapsed_mae": 0.26666666666666666,
+      "k_actual_source_count_mae": 1.1333333333333333
+    },
+    {
+      "scenario": "MU_2K3U",
+      "queries": 30,
+      "unknown_parent_count": 3,
+      "known_parent_count": 2,
+      "component_accuracy": 0.8238095238095238,
+      "known_component_accuracy": 0.7833333333333333,
+      "unknown_precision": 0.7596153846153846,
+      "unknown_recall": 0.8777777777777778,
+      "unknown_f1": 0.8144329896907216,
+      "registered_known_parent_f1": 0.8977777777777778,
+      "registered_known_parent_exact": 0.6333333333333333,
+      "collapsed_parent_set_f1": 0.9311111111111111,
+      "collapsed_parent_set_exact": 0.6333333333333333,
+      "k_collapsed_accuracy": 0.7,
+      "k_collapsed_mae": 0.3,
+      "k_actual_source_count_mae": 1.8333333333333333
+    },
+    {
+      "scenario": "MU_U2",
+      "queries": 30,
+      "unknown_parent_count": 2,
+      "known_parent_count": 0,
+      "component_accuracy": 0.8666666666666667,
+      "known_component_accuracy": 0.0,
+      "unknown_precision": 1.0,
+      "unknown_recall": 0.8666666666666667,
+      "unknown_f1": 0.9285714285714286,
+      "registered_known_parent_f1": 0.5,
+      "registered_known_parent_exact": 0.5,
+      "collapsed_parent_set_f1": 0.8166666666666667,
+      "collapsed_parent_set_exact": 0.5,
+      "k_collapsed_accuracy": 0.5,
+      "k_collapsed_mae": 0.6,
+      "k_actual_source_count_mae": 0.6
+    },
+    {
+      "scenario": "MU_U3",
+      "queries": 30,
+      "unknown_parent_count": 3,
+      "known_parent_count": 0,
+      "component_accuracy": 0.9428571428571428,
+      "known_component_accuracy": 0.0,
+      "unknown_precision": 1.0,
+      "unknown_recall": 0.9428571428571428,
+      "unknown_f1": 0.9705882352941176,
+      "registered_known_parent_f1": 0.6,
+      "registered_known_parent_exact": 0.6,
+      "collapsed_parent_set_f1": 0.8666666666666667,
+      "collapsed_parent_set_exact": 0.6,
+      "k_collapsed_accuracy": 0.6,
+      "k_collapsed_mae": 0.4,
+      "k_actual_source_count_mae": 1.6
+    }
+  ],
+  "by_unknown_multiplicity": [
+    {
+      "unknown_parent_count": 2,
+      "queries": 90,
+      "components": 630,
+      "component_accuracy": 0.8031746031746032,
+      "known_component_accuracy": 0.7095238095238096,
+      "unknown_precision": 0.864406779661017,
+      "unknown_recall": 0.85,
+      "unknown_f1": 0.8571428571428572,
+      "registered_known_parent_f1": 0.7344444444444443,
+      "registered_known_parent_exact": 0.5888888888888889,
+      "collapsed_parent_set_f1": 0.8790476190476191,
+      "collapsed_parent_set_exact": 0.5888888888888889,
+      "k_collapsed_accuracy": 0.6111111111111112,
+      "k_collapsed_mae": 0.4444444444444444,
+      "k_actual_source_count_mae": 0.7777777777777778
+    },
+    {
+      "unknown_parent_count": 3,
+      "queries": 90,
+      "components": 630,
+      "component_accuracy": 0.8793650793650793,
+      "known_component_accuracy": 0.7888888888888889,
+      "unknown_precision": 0.9175946547884187,
+      "unknown_recall": 0.9155555555555556,
+      "unknown_f1": 0.9165739710789766,
+      "registered_known_parent_f1": 0.752962962962963,
+      "registered_known_parent_exact": 0.6111111111111112,
+      "collapsed_parent_set_f1": 0.8888888888888888,
+      "collapsed_parent_set_exact": 0.6111111111111112,
+      "k_collapsed_accuracy": 0.6555555555555556,
+      "k_collapsed_mae": 0.37777777777777777,
+      "k_actual_source_count_mae": 1.6888888888888889
+    }
+  ],
+  "by_modality": {
+    "CODE_BINARY": {
+      "components": 900,
+      "component_accuracy": 0.84,
+      "unknown_precision": 0.8991869918699187,
+      "unknown_recall": 0.8777777777777778,
+      "unknown_f1": 0.8883534136546185
+    },
+    "IMAGE": {
+      "components": 180,
+      "component_accuracy": 0.9611111111111111,
+      "unknown_precision": 1.0,
+      "unknown_recall": 0.9416666666666667,
+      "unknown_f1": 0.9699570815450643
+    },
+    "STRUCTURED": {
+      "components": 180,
+      "component_accuracy": 0.7277777777777777,
+      "unknown_precision": 0.7686567164179104,
+      "unknown_recall": 0.8583333333333333,
+      "unknown_f1": 0.8110236220472441
+    }
+  },
+  "structural_limitation": {
+    "actual_multi_unknown_parent_identity_recovery": "UNSUPPORTED",
+    "reason": "The frozen model exposes only one UNKNOWN label per query.",
+    "interpretation": "UNKNOWN precision/recall/F1 measures rejection of unregistered components. It does not measure discrimination among multiple distinct held-out source projects.",
+    "k_collapsed_definition": "number of registered known labels plus one if any UNKNOWN component is present",
+    "k_actual_definition": "number of registered known parents plus the number of distinct held-out source projects",
+    "k_actual_source_count_mae": 1.2333333333333334
+  },
+  "freeze_integrity": {
+    "phase7_final_method_frozen": true,
+    "phase7_test_used_for_selection": false,
+    "phase11_parameter_retuning": false
+  }
+}

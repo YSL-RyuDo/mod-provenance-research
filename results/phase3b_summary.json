@@ -1,0 +1,37 @@
+{
+  "SHA256": {
+    "unique_correct_rate": 0.40271823014920255,
+    "true_in_candidate_rate": 0.40271823014920255,
+    "ambiguous_true_rate": 0.0,
+    "wrong_rate": 0.0,
+    "no_match_rate": 0.5972817698507975
+  },
+  "FULL_PATH": {
+    "unique_correct_rate": 0.9054193105813754,
+    "true_in_candidate_rate": 0.9112073400788887,
+    "ambiguous_true_rate": 0.005788029497513291,
+    "wrong_rate": 8.574858514834505e-05,
+    "no_match_rate": 0.08870691133596295
+  },
+  "BASENAME": {
+    "unique_correct_rate": 0.8239152803978734,
+    "true_in_candidate_rate": 0.9390756302521008,
+    "ambiguous_true_rate": 0.1151603498542274,
+    "wrong_rate": 0.008960727148002058,
+    "no_match_rate": 0.0519636425998971
+  },
+  "OUTER_CLASS_NAME": {
+    "unique_correct_rate": 0.8237437832275768,
+    "true_in_candidate_rate": 0.9483364774481221,
+    "ambiguous_true_rate": 0.12459269422054536,
+    "wrong_rate": 0.009046475733150403,
+    "no_match_rate": 0.042617046818727494
+  },
+  "SHA_OR_PATH": {
+    "unique_correct_rate": 0.9086348825244384,
+    "true_in_candidate_rate": 0.9144229120219516,
+    "ambiguous_true_rate": 0.005788029497513291,
+    "wrong_rate": 8.574858514834505e-05,
+    "no_match_rate": 0.08549133939290002
+  }
+}

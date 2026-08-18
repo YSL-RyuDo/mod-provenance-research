@@ -1,0 +1,15 @@
+{
+  "phase10a4_query_corpus_complete": true,
+  "expected_source_resolvable": 1169,
+  "materialized_source_components": 1169,
+  "failures": 0,
+  "unique_query_ids": 306,
+  "unique_snapshots": 66,
+  "snapshot_resolution_counts": {
+    "DATE_HEURISTIC": 940,
+    "EXACT_NORMALIZED_TAG": 229
+  },
+  "high_confidence_components": 229,
+  "manual_annotation_used": false,
+  "failure_examples": []
+}

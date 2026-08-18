@@ -1,0 +1,213 @@
+{
+  "identity_audit_frozen": true,
+  "path_identity_allowed_in_final_method": false,
+  "hard_masked_definition": "historical component whose exact SHA-256 does not occur in its own current release; path/name identity is not exposed to the final attribution method",
+  "strict_path_failed_definition": "HARD_MASKED component whose same full relative path also does not occur in its own current release",
+  "current_filtered_components": 56035,
+  "historical_filtered_components": 165496,
+  "historical_target_components_audited": 124470,
+  "hard_masked_components": 31279,
+  "strict_path_failed_components": 6429,
+  "calibration_gallery_projects": 40,
+  "test_gallery_projects": 60,
+  "unknown_heldout_projects": 20,
+  "unknown_projects_in_test_gallery": 0,
+  "by_split": {
+    "CALIBRATION_KNOWN": {
+      "components": 35937,
+      "own_exact_sha_rate": 0.8498761721902218,
+      "own_same_path_rate": 0.9870885160141358,
+      "hard_masked_candidates": 5395,
+      "hard_masked_rate": 0.15012382780977823,
+      "strict_path_failed_candidates": 432,
+      "strict_path_failed_rate": 0.012021036814425245,
+      "known_sha_true_parent_rate": 0.8498761721902218,
+      "known_path_true_parent_rate": 0.9870885160141358,
+      "known_basename_true_parent_rate": 0.9937112168517127,
+      "known_outer_class_true_parent_rate_code": 0.9877675840978594
+    },
+    "TEST_KNOWN": {
+      "components": 67321,
+      "own_exact_sha_rate": 0.6774706258076975,
+      "own_same_path_rate": 0.9197278709466585,
+      "hard_masked_candidates": 21713,
+      "hard_masked_rate": 0.32252937419230254,
+      "strict_path_failed_candidates": 5229,
+      "strict_path_failed_rate": 0.07767264300886796,
+      "known_sha_true_parent_rate": 0.6774706258076975,
+      "known_path_true_parent_rate": 0.9197278709466585,
+      "known_basename_true_parent_rate": 0.9320717161064155,
+      "known_outer_class_true_parent_rate_code": 0.8215935334872979
+    },
+    "UNKNOWN_HELDOUT": {
+      "components": 21212,
+      "own_exact_sha_rate": 0.8033660192343957,
+      "own_same_path_rate": 0.9585140486517065,
+      "hard_masked_candidates": 4171,
+      "hard_masked_rate": 0.19663398076560437,
+      "strict_path_failed_candidates": 768,
+      "strict_path_failed_rate": 0.03620592117669244,
+      "unknown_sha_collision_rate": 0.0011314350367716388,
+      "unknown_path_collision_rate": 0.005751461436922497,
+      "unknown_basename_collision_rate": 0.037573071846124836,
+      "unknown_outer_collision_rate_code": 0.12600896860986546
+    }
+  },
+  "by_split_modality": {
+    "CALIBRATION_KNOWN": {
+      "CODE_BINARY": {
+        "components": 9483,
+        "own_exact_sha_rate": 0.5349572919962038,
+        "own_same_path_rate": 0.977749657281451,
+        "hard_masked_candidates": 4410,
+        "hard_masked_rate": 0.46504270800379627,
+        "strict_path_failed_candidates": 211,
+        "strict_path_failed_rate": 0.022250342718548984,
+        "known_sha_true_parent_rate": 0.5349572919962038,
+        "known_path_true_parent_rate": 0.977749657281451,
+        "known_basename_true_parent_rate": 0.9868185173468311,
+        "known_outer_class_true_parent_rate_code": 0.9877675840978594
+      },
+      "IMAGE": {
+        "components": 5032,
+        "own_exact_sha_rate": 0.9876788553259142,
+        "own_same_path_rate": 0.9908585055643879,
+        "hard_masked_candidates": 62,
+        "hard_masked_rate": 0.01232114467408585,
+        "strict_path_failed_candidates": 45,
+        "strict_path_failed_rate": 0.008942766295707472,
+        "known_sha_true_parent_rate": 0.9876788553259142,
+        "known_path_true_parent_rate": 0.9908585055643879,
+        "known_basename_true_parent_rate": 0.9908585055643879,
+        "known_outer_class_true_parent_rate_code": null
+      },
+      "STRUCTURED": {
+        "components": 21422,
+        "own_exact_sha_rate": 0.9569134534590608,
+        "own_same_path_rate": 0.990337036691252,
+        "hard_masked_candidates": 923,
+        "hard_masked_rate": 0.04308654654093922,
+        "strict_path_failed_candidates": 176,
+        "strict_path_failed_rate": 0.008215852861544207,
+        "known_sha_true_parent_rate": 0.9569134534590608,
+        "known_path_true_parent_rate": 0.990337036691252,
+        "known_basename_true_parent_rate": 0.9974325459807675,
+        "known_outer_class_true_parent_rate_code": null
+      }
+    },
+    "TEST_KNOWN": {
+      "CODE_BINARY": {
+        "components": 22516,
+        "own_exact_sha_rate": 0.40846509149049565,
+        "own_same_path_rate": 0.8102682536862675,
+        "hard_masked_candidates": 13319,
+        "hard_masked_rate": 0.5915349085095043,
+        "strict_path_failed_candidates": 4272,
+        "strict_path_failed_rate": 0.18973174631373246,
+        "known_sha_true_parent_rate": 0.40846509149049565,
+        "known_path_true_parent_rate": 0.8102682536862675,
+        "known_basename_true_parent_rate": 0.8199946704565643,
+        "known_outer_class_true_parent_rate_code": 0.8215935334872979
+      },
+      "IMAGE": {
+        "components": 9905,
+        "own_exact_sha_rate": 0.9509338717819283,
+        "own_same_path_rate": 0.9729429581019687,
+        "hard_masked_candidates": 486,
+        "hard_masked_rate": 0.04906612821807168,
+        "strict_path_failed_candidates": 255,
+        "strict_path_failed_rate": 0.02574457344775366,
+        "known_sha_true_parent_rate": 0.9509338717819283,
+        "known_path_true_parent_rate": 0.9729429581019687,
+        "known_basename_true_parent_rate": 0.9795053003533569,
+        "known_outer_class_true_parent_rate_code": null
+      },
+      "STRUCTURED": {
+        "components": 34900,
+        "own_exact_sha_rate": 0.7734097421203439,
+        "own_same_path_rate": 0.975243553008596,
+        "hard_masked_candidates": 7908,
+        "hard_masked_rate": 0.22659025787965617,
+        "strict_path_failed_candidates": 702,
+        "strict_path_failed_rate": 0.02011461318051576,
+        "known_sha_true_parent_rate": 0.7734097421203439,
+        "known_path_true_parent_rate": 0.975243553008596,
+        "known_basename_true_parent_rate": 0.990916905444126,
+        "known_outer_class_true_parent_rate_code": null
+      }
+    },
+    "UNKNOWN_HELDOUT": {
+      "CODE_BINARY": {
+        "components": 2230,
+        "own_exact_sha_rate": 0.5699551569506727,
+        "own_same_path_rate": 0.9488789237668162,
+        "hard_masked_candidates": 959,
+        "hard_masked_rate": 0.43004484304932733,
+        "strict_path_failed_candidates": 114,
+        "strict_path_failed_rate": 0.051121076233183856,
+        "unknown_sha_collision_rate": 0.0,
+        "unknown_path_collision_rate": 0.0,
+        "unknown_basename_collision_rate": 0.12017937219730941,
+        "unknown_outer_collision_rate_code": 0.12600896860986546
+      },
+      "IMAGE": {
+        "components": 1990,
+        "own_exact_sha_rate": 0.9899497487437185,
+        "own_same_path_rate": 0.9869346733668342,
+        "hard_masked_candidates": 20,
+        "hard_masked_rate": 0.010050251256281407,
+        "strict_path_failed_candidates": 16,
+        "strict_path_failed_rate": 0.008040201005025126,
+        "unknown_sha_collision_rate": 0.0,
+        "unknown_path_collision_rate": 0.007537688442211055,
+        "unknown_basename_collision_rate": 0.02864321608040201,
+        "unknown_outer_collision_rate_code": null
+      },
+      "STRUCTURED": {
+        "components": 16992,
+        "own_exact_sha_rate": 0.8121468926553672,
+        "own_same_path_rate": 0.9564500941619586,
+        "hard_masked_candidates": 3192,
+        "hard_masked_rate": 0.18785310734463276,
+        "strict_path_failed_candidates": 638,
+        "strict_path_failed_rate": 0.03754708097928437,
+        "unknown_sha_collision_rate": 0.0014124293785310734,
+        "unknown_path_collision_rate": 0.006297080979284369,
+        "unknown_basename_collision_rate": 0.027777777777777776,
+        "unknown_outer_collision_rate_code": null
+      }
+    }
+  },
+  "hard_parent_availability": {
+    "CALIBRATION_KNOWN": {
+      "distinct_parent_projects": 25,
+      "hard_components": 5395,
+      "strict_path_failed_components": 432,
+      "parents_with_code_hard_components": 25,
+      "parents_with_structured_hard_components": 25,
+      "parents_with_image_hard_components": 5
+    },
+    "TEST_KNOWN": {
+      "distinct_parent_projects": 45,
+      "hard_components": 21713,
+      "strict_path_failed_components": 5229,
+      "parents_with_code_hard_components": 40,
+      "parents_with_structured_hard_components": 45,
+      "parents_with_image_hard_components": 12
+    },
+    "UNKNOWN_HELDOUT": {
+      "distinct_parent_projects": 20,
+      "hard_components": 4171,
+      "strict_path_failed_components": 768,
+      "parents_with_code_hard_components": 19,
+      "parents_with_structured_hard_components": 19,
+      "parents_with_image_hard_components": 1
+    }
+  },
+  "input_current_sha256": "cf8c01882cb2c44ae8b0bfb03d010c50134a306bc7dcf02bc187388035861cb8",
+  "input_historical_sha256": "5a537070bc0053f27831f6f69762be121ae14c23bbdcad80b355b1d956711c69",
+  "input_split_sha256": "7289be16d55a34a4da0e05348bfc084fbec5f0f5ce1d8c6888b2e12c90818210",
+  "audit_csv_sha256": "b5c8be79bef2b9313d4b99882ca826ebdd5666e4b44dc98a9eba81d9add878f9",
+  "hard_catalog_sha256": "6f1742dbd4b52867d316cbb923d363d3257d255131afe053396699b11345275d",
+  "goals_met": true
+}

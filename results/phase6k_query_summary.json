@@ -1,0 +1,145 @@
+{
+  "component_query_manifest_frozen": true,
+  "random_seed": 20260812,
+  "performance_evaluated": false,
+  "thresholds_tuned": false,
+  "fixed_query_component_count": 7,
+  "fixed_modality_composition": {
+    "CODE_BINARY": 5,
+    "STRUCTURED": 1,
+    "IMAGE": 1
+  },
+  "calibration_queries": 180,
+  "test_queries": 360,
+  "total_queries": 540,
+  "test_k_distribution": {
+    "1": 120,
+    "2": 120,
+    "3": 120
+  },
+  "scenario_summary": {
+    "CAL_KNOWN_K1": {
+      "queries": 60,
+      "k_true": [
+        1
+      ],
+      "known_parent_count": [
+        1
+      ],
+      "unknown_parent_count": [
+        0
+      ]
+    },
+    "CAL_KNOWN_K2": {
+      "queries": 60,
+      "k_true": [
+        2
+      ],
+      "known_parent_count": [
+        2
+      ],
+      "unknown_parent_count": [
+        0
+      ]
+    },
+    "CAL_KNOWN_K3": {
+      "queries": 60,
+      "k_true": [
+        3
+      ],
+      "known_parent_count": [
+        3
+      ],
+      "unknown_parent_count": [
+        0
+      ]
+    },
+    "TEST_KNOWN_K1": {
+      "queries": 60,
+      "k_true": [
+        1
+      ],
+      "known_parent_count": [
+        1
+      ],
+      "unknown_parent_count": [
+        0
+      ]
+    },
+    "TEST_KNOWN_K2": {
+      "queries": 60,
+      "k_true": [
+        2
+      ],
+      "known_parent_count": [
+        2
+      ],
+      "unknown_parent_count": [
+        0
+      ]
+    },
+    "TEST_KNOWN_K3": {
+      "queries": 60,
+      "k_true": [
+        3
+      ],
+      "known_parent_count": [
+        3
+      ],
+      "unknown_parent_count": [
+        0
+      ]
+    },
+    "TEST_MIXED_1K1U": {
+      "queries": 60,
+      "k_true": [
+        2
+      ],
+      "known_parent_count": [
+        1
+      ],
+      "unknown_parent_count": [
+        1
+      ]
+    },
+    "TEST_MIXED_2K1U": {
+      "queries": 60,
+      "k_true": [
+        3
+      ],
+      "known_parent_count": [
+        2
+      ],
+      "unknown_parent_count": [
+        1
+      ]
+    },
+    "TEST_UNKNOWN_K1": {
+      "queries": 60,
+      "k_true": [
+        1
+      ],
+      "known_parent_count": [
+        0
+      ],
+      "unknown_parent_count": [
+        1
+      ]
+    }
+  },
+  "eligible_parent_pools": {
+    "CALIBRATION_KNOWN": 19,
+    "TEST_KNOWN": 33,
+    "UNKNOWN_HELDOUT": 15
+  },
+  "unknown_design": "at most one held-out UNKNOWN source per query; multiple unseen-source clustering is outside the primary benchmark",
+  "image_transform_recipe": "LOSSLESS_REENCODE_PNG_V1",
+  "public_manifest_exposes_K": false,
+  "public_manifest_exposes_scenario": false,
+  "public_manifest_exposes_source_identity": false,
+  "public_manifest_exposes_path": false,
+  "public_manifest_exposes_source_hash": false,
+  "graph_frozen": false,
+  "payloads_materialized": false,
+  "goals_met": true
+}

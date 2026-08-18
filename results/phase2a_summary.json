@@ -1,0 +1,13 @@
+{
+  "total": 30,
+  "target_mods": 19,
+  "background_libraries": 11,
+  "commit_sha_success": 30,
+  "commit_sha_failed": 0,
+  "target_code_total": 2238,
+  "target_structured_total": 489,
+  "target_image_total": 199,
+  "target_median_code": 47.0,
+  "target_median_structured": 20.0,
+  "target_median_image": 2.0
+}

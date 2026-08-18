@@ -1,0 +1,13 @@
+{
+  "historical_releases": 87,
+  "failures": 0,
+  "releases_with_hard_nodes": 45,
+  "total_hard_nodes": 1873,
+  "eligible_connected_subgraph_5": 27,
+  "eligible_connected_subgraph_10": 20,
+  "eligible_connected_subgraph_20": 12,
+  "median_hard_nodes": 9.0,
+  "median_max_hard_in_one_component": 8.0,
+  "median_hard_coverage_by_best_component": 0.9571428571428572,
+  "median_largest_hard_induced_rate": 0.5
+}

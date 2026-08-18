@@ -1,0 +1,63 @@
+{
+  "phase6l_complete": true,
+  "component_query_manifest_remains_frozen": true,
+  "performance_evaluated": false,
+  "thresholds_tuned": false,
+  "queries": 540,
+  "materialized_payloads": 3780,
+  "payload_files_on_disk": 3780,
+  "source_hash_verified": 3780,
+  "image_payloads": 540,
+  "image_pixel_equality_verified": 540,
+  "image_output_hash_changed": 540,
+  "exact_stage_gallery_collisions": 0,
+  "exact_gallery_collisions_by_modality": {},
+  "exact_gallery_collisions_by_stage": {},
+  "graph_tracks": {
+    "NATURAL": "undirected dependency adjacency among selected CODE_BINARY query components using original historical CLASS_REF edges",
+    "CONNECTED_STRESS": "NATURAL graph plus minimum deterministic bridges required to make all five CODE query nodes connected; bridge construction does not use parent labels or K and edge origin is hidden from the public method"
+  },
+  "primary_graph_track": "CONNECTED_STRESS",
+  "natural_graph_edges": 1289,
+  "connected_stress_graph_edges": 2297,
+  "queries_with_stress_bridges": 369,
+  "mean_stress_bridges_per_query": 1.8666666666666667,
+  "max_stress_bridges_per_query": 4,
+  "natural_connected_components_by_k": {
+    "1": {
+      "1": 171,
+      "2": 3,
+      "4": 4,
+      "5": 2
+    },
+    "2": {
+      "2": 38,
+      "3": 63,
+      "4": 52,
+      "5": 27
+    },
+    "3": {
+      "3": 32,
+      "4": 99,
+      "5": 49
+    }
+  },
+  "stress_connected_components_by_k": {
+    "1": {
+      "1": 180
+    },
+    "2": {
+      "1": 180
+    },
+    "3": {
+      "1": 180
+    }
+  },
+  "stress_all_queries_connected": true,
+  "public_payload_manifest_exposes_source_identity": false,
+  "public_graph_exposes_edge_origin": false,
+  "public_graph_exposes_K": false,
+  "payloads_materialized": true,
+  "graph_frozen": true,
+  "goals_met": true
+}

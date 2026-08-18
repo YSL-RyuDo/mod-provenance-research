@@ -1,0 +1,93 @@
+{
+  "graph_refinement_calibration_complete": true,
+  "performance_scope": "CALIBRATION_ONLY",
+  "test_queries_scored": 0,
+  "unknown_heldout_queries_scored": 0,
+  "candidate_pool_size": 10,
+  "top_r_for_edge_weight": 3,
+  "beta_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "selected_beta": 0.1,
+  "beta_selected_at_zero": false,
+  "beta_selected_at_grid_maximum": false,
+  "selection_priority": [
+    "mean parent-set F1 across KNOWN_ONLY_40 and PSEUDO_UNKNOWN_39",
+    "mean component accuracy",
+    "mean K accuracy",
+    "pseudo-UNKNOWN F1",
+    "smaller beta under remaining ties"
+  ],
+  "stage1_reference_from_phase7d": {
+    "known_component_accuracy": 0.7388888888888889,
+    "known_parent_set_f1": 0.7574338624338626,
+    "known_k_accuracy": 0.34444444444444444,
+    "pseudo_component_accuracy": 0.834920634920635,
+    "pseudo_parent_set_f1": 0.8762962962962964,
+    "pseudo_k_accuracy": 0.6,
+    "pseudo_unknown_f1": 0.8783868935097668
+  },
+  "selected_known_metrics": {
+    "component_accuracy": 0.734920634920635,
+    "parent_set_f1": 0.7513492063492064,
+    "parent_set_exact": 0.17777777777777778,
+    "k_accuracy": 0.35,
+    "k_mae": 0.7222222222222222
+  },
+  "selected_pseudo_metrics": {
+    "component_accuracy": 0.8365079365079365,
+    "parent_set_f1": 0.8765343915343916,
+    "parent_set_exact": 0.5611111111111111,
+    "k_accuracy": 0.5944444444444444,
+    "k_mae": 0.4388888888888889,
+    "unknown_precision": 0.8641975308641975,
+    "unknown_recall": 0.8951406649616368,
+    "unknown_f1": 0.879396984924623
+  },
+  "selected_grid_metrics": {
+    "beta": 0.1,
+    "mean_parent_set_f1": 0.813941798941799,
+    "mean_component_accuracy": 0.7857142857142858,
+    "mean_k_accuracy": 0.4722222222222222,
+    "known_component_accuracy": 0.734920634920635,
+    "known_parent_set_f1": 0.7513492063492064,
+    "known_parent_set_exact": 0.17777777777777778,
+    "known_k_accuracy": 0.35,
+    "known_k_mae": 0.7222222222222222,
+    "pseudo_component_accuracy": 0.8365079365079365,
+    "pseudo_parent_set_f1": 0.8765343915343916,
+    "pseudo_parent_set_exact": 0.5611111111111111,
+    "pseudo_k_accuracy": 0.5944444444444444,
+    "pseudo_k_mae": 0.4388888888888889,
+    "pseudo_unknown_precision": 0.8641975308641975,
+    "pseudo_unknown_recall": 0.8951406649616368,
+    "pseudo_unknown_f1": 0.879396984924623
+  },
+  "private_edge_weight_diagnostic": {
+    "CROSS_PARENT": {
+      "edges": 508,
+      "mean_weight": 0.3137795275590552,
+      "median_weight": 0.2
+    },
+    "SAME_PARENT": {
+      "edges": 1044,
+      "mean_weight": 0.4946360153256706,
+      "median_weight": 0.5
+    }
+  },
+  "edge_origin_used_by_method": false,
+  "ground_truth_used_to_compute_edge_weight": false,
+  "graph_changes_candidate_eligibility": false,
+  "test_data_used_for_selection": false,
+  "goals_met": true
+}

@@ -1,0 +1,243 @@
+{
+  "fusion_method": "MEAN_REGRET",
+  "calibration_queries": 50,
+  "test_queries": 150,
+  "best_threshold": 0.05,
+  "calibration_component_accuracy": 0.3397222222222226,
+  "results": {
+    "CLEAN": {
+      "F1_FUSED_GLOBAL": {
+        "component_accuracy": 0.37037037037037035,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.05333333333333334,
+        "mean_cut_edges": 0.0
+      },
+      "F2_FUSED_HIERARCHICAL": {
+        "component_accuracy": 0.40518518518518515,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.1,
+        "mean_cut_edges": 1.18
+      },
+      "ORACLE_FUSED_PARENTSET": {
+        "component_accuracy": 0.7129629629629629,
+        "parent_f1": 1.0,
+        "parent_set_exact": 1.0,
+        "component_set_exact": 0.29333333333333333,
+        "mean_cut_edges": 0.4866666666666667
+      }
+    },
+    "DROP30": {
+      "F1_FUSED_GLOBAL": {
+        "component_accuracy": 0.37037037037037035,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.05333333333333334,
+        "mean_cut_edges": 0.0
+      },
+      "F2_FUSED_HIERARCHICAL": {
+        "component_accuracy": 0.39925925925925926,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.08,
+        "mean_cut_edges": 0.88
+      },
+      "ORACLE_FUSED_PARENTSET": {
+        "component_accuracy": 0.7033333333333334,
+        "parent_f1": 1.0,
+        "parent_set_exact": 1.0,
+        "component_set_exact": 0.22,
+        "mean_cut_edges": 0.36
+      }
+    },
+    "BRIDGE": {
+      "F1_FUSED_GLOBAL": {
+        "component_accuracy": 0.37037037037037035,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.05333333333333334,
+        "mean_cut_edges": 0.0
+      },
+      "F2_FUSED_HIERARCHICAL": {
+        "component_accuracy": 0.36333333333333334,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.09333333333333334,
+        "mean_cut_edges": 2.2333333333333334
+      },
+      "ORACLE_FUSED_PARENTSET": {
+        "component_accuracy": 0.6381481481481481,
+        "parent_f1": 1.0,
+        "parent_set_exact": 1.0,
+        "component_set_exact": 0.21333333333333335,
+        "mean_cut_edges": 2.033333333333333
+      }
+    },
+    "DROP30_BRIDGE": {
+      "F1_FUSED_GLOBAL": {
+        "component_accuracy": 0.37037037037037035,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.05333333333333334,
+        "mean_cut_edges": 0.0
+      },
+      "F2_FUSED_HIERARCHICAL": {
+        "component_accuracy": 0.3722222222222222,
+        "parent_f1": 0.5044444444444444,
+        "parent_set_exact": 0.14666666666666667,
+        "component_set_exact": 0.08666666666666667,
+        "mean_cut_edges": 2.14
+      },
+      "ORACLE_FUSED_PARENTSET": {
+        "component_accuracy": 0.6592592592592592,
+        "parent_f1": 1.0,
+        "parent_set_exact": 1.0,
+        "component_set_exact": 0.18,
+        "mean_cut_edges": 1.7733333333333334
+      }
+    }
+  },
+  "by_parent_count": {
+    "2": {
+      "CLEAN": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.38222222222222224,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.41333333333333333,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.7533333333333333,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      },
+      "DROP30": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.38222222222222224,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.4,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.7444444444444444,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      },
+      "BRIDGE": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.38222222222222224,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.3977777777777778,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.7044444444444444,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      },
+      "DROP30_BRIDGE": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.38222222222222224,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.3933333333333333,
+          "parent_f1": 0.48,
+          "parent_set_exact": 0.24
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.7244444444444444,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      }
+    },
+    "3": {
+      "CLEAN": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.35851851851851846,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.397037037037037,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.6725925925925925,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      },
+      "DROP30": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.35851851851851846,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.3985185185185185,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.6622222222222223,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      },
+      "BRIDGE": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.35851851851851846,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.3288888888888888,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.5718518518518519,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      },
+      "DROP30_BRIDGE": {
+        "F1_FUSED_GLOBAL": {
+          "component_accuracy": 0.35851851851851846,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "F2_FUSED_HIERARCHICAL": {
+          "component_accuracy": 0.35111111111111104,
+          "parent_f1": 0.5288888888888889,
+          "parent_set_exact": 0.05333333333333334
+        },
+        "ORACLE_FUSED_PARENTSET": {
+          "component_accuracy": 0.594074074074074,
+          "parent_f1": 1.0,
+          "parent_set_exact": 1.0
+        }
+      }
+    }
+  }
+}

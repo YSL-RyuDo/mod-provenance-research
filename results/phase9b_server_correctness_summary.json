@@ -1,0 +1,58 @@
+{
+  "server_correctness_regression_complete": true,
+  "server_phase": "9A",
+  "evaluation_phase": "9B",
+  "performance_scope": "CORRECTNESS_REGRESSION_ONLY",
+  "phase7h_predictions_modified": false,
+  "server_method_frozen": true,
+  "server_health": {
+    "status": "ok",
+    "alpha": 0.75,
+    "lambda": 0.5,
+    "candidate_pool_M": 10,
+    "graph_beta": 0.1,
+    "boundary_top_r": 3,
+    "Kmax": 3,
+    "rss_bytes_at_health_check": 87056384
+  },
+  "expected": {
+    "queries": 360,
+    "components": 2520
+  },
+  "matches": {
+    "parent_set_queries": 360,
+    "k_queries": 360,
+    "selected_subset_queries": 360,
+    "candidate_top10_queries": 360,
+    "component_assignments": 2520,
+    "fully_identical_queries": 360
+  },
+  "mismatches": {
+    "queries": 0,
+    "components": 0,
+    "parent_set_queries": 0,
+    "k_queries": 0,
+    "selected_subset_queries": 0,
+    "candidate_top10_queries": 0
+  },
+  "latency_diagnostic_not_for_publication": {
+    "warning": "Correctness-regression latency only. Do not use as final server performance result. Requests are sequential and /regression reads already-computed Phase 7H score matrices.",
+    "client_roundtrip_ms": {
+      "mean": 21.301895833443673,
+      "p50": 13.922800000727875,
+      "p95": 36.40282999895135,
+      "p99": 40.75970800029616,
+      "max": 124.08969999887631
+    },
+    "server_internal_reconstruction_ms": {
+      "count": 360,
+      "mean": 0.9555961111111111,
+      "p50": 0.9375,
+      "p95": 1.107935
+    },
+    "full_regression_wall_seconds": 7.9413612999996985
+  },
+  "correctness_passed": true,
+  "ready_for_phase9c_performance_benchmark": true,
+  "goals_met": true
+}

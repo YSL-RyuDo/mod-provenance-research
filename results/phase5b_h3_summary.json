@@ -1,0 +1,22 @@
+{
+  "random_seed": 20260812,
+  "hard_nodes_per_parent": 3,
+  "fragment_catalog_size": 28,
+  "distinct_parent_mods": 7,
+  "parent_mods": [
+    "MOD0002",
+    "MOD0007",
+    "MOD0009",
+    "MOD0012",
+    "MOD0013",
+    "MOD0028",
+    "MOD0029"
+  ],
+  "two_parent_queries": 100,
+  "three_parent_queries": 100,
+  "total_queries": 200,
+  "total_target_nodes": 1500,
+  "total_connector_nodes": 442,
+  "mean_target_nodes_per_query": 7.5,
+  "mean_connector_nodes_per_query": 2.21
+}

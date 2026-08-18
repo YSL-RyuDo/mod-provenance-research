@@ -1,0 +1,13 @@
+{
+  "requested_projects": 30,
+  "release_download_success": 30,
+  "release_download_failed": 0,
+  "total_release_components": 7677,
+  "code_binary_components": 6771,
+  "structured_components": 638,
+  "image_components": 268,
+  "unique_component_sha256": 7565,
+  "cross_mod_duplicate_groups": 0,
+  "cross_mod_duplicate_components": 0,
+  "cross_mod_duplicate_rate": 0.0
+}

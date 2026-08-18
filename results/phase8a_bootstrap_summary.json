@@ -1,0 +1,217 @@
+{
+  "bootstrap_statistics_complete": true,
+  "performance_scope": "FROZEN_TEST_STATISTICAL_ANALYSIS",
+  "method_parameters_changed": false,
+  "test_rescored": false,
+  "bootstrap_protocol": {
+    "sampling_unit": "QUERY",
+    "components_kept_with_query": true,
+    "stratification": "resample with replacement within each of the six frozen TEST scenarios",
+    "scenario_size_per_replicate": 60,
+    "total_queries_per_replicate": 360,
+    "replicates": 10000,
+    "random_seed": 20260813,
+    "interval": "percentile_95",
+    "paired_graph_comparison": true
+  },
+  "final_method_beta_0_1": {
+    "component_accuracy": {
+      "lower_95": 0.7876984126984127,
+      "upper_95": 0.8238095238095238,
+      "bootstrap_mean": 0.8058716666666668,
+      "bootstrap_std": 0.009115223549585036,
+      "point_estimate": 0.805952380952381
+    },
+    "parent_set_f1": {
+      "lower_95": 0.8291005291005313,
+      "upper_95": 0.85911441798942,
+      "bootstrap_mean": 0.8442309074074096,
+      "bootstrap_std": 0.007614649578758862,
+      "point_estimate": 0.8442328042328067
+    },
+    "parent_set_exact": {
+      "lower_95": 0.37222222222222223,
+      "upper_95": 0.4666666666666667,
+      "bootstrap_mean": 0.41930916666666673,
+      "bootstrap_std": 0.02377308052890772,
+      "point_estimate": 0.41944444444444445
+    },
+    "k_accuracy": {
+      "lower_95": 0.4361111111111111,
+      "upper_95": 0.5333333333333333,
+      "bootstrap_mean": 0.4858286111111111,
+      "bootstrap_std": 0.024953850495935133,
+      "point_estimate": 0.4861111111111111
+    },
+    "k_mae": {
+      "lower_95": 0.4777777777777778,
+      "upper_95": 0.5777777777777777,
+      "bootstrap_mean": 0.5280777777777778,
+      "bootstrap_std": 0.02615776027954772,
+      "point_estimate": 0.5277777777777778
+    },
+    "unknown_precision": {
+      "lower_95": 0.6269376118067979,
+      "upper_95": 0.6779324055666004,
+      "bootstrap_mean": 0.6524783974577747,
+      "bootstrap_std": 0.013073130701086995,
+      "point_estimate": 0.6524271844660194
+    },
+    "unknown_recall": {
+      "lower_95": 0.8657718120805369,
+      "upper_95": 0.9174434087882823,
+      "bootstrap_mean": 0.8924784172578667,
+      "bootstrap_std": 0.013197200026768935,
+      "point_estimate": 0.8924302788844621
+    },
+    "unknown_f1": {
+      "lower_95": 0.7325513142087495,
+      "upper_95": 0.7744445543621631,
+      "bootstrap_mean": 0.7537446208343656,
+      "bootstrap_std": 0.010704578451691822,
+      "point_estimate": 0.7537857543466069
+    }
+  },
+  "content_only_beta_0": {
+    "component_accuracy": {
+      "lower_95": 0.789672619047619,
+      "upper_95": 0.8242063492063492,
+      "bootstrap_mean": 0.807063492063492,
+      "bootstrap_std": 0.008900179758163991,
+      "point_estimate": 0.8071428571428572
+    },
+    "parent_set_f1": {
+      "lower_95": 0.8284123677248697,
+      "upper_95": 0.8584920634920656,
+      "bootstrap_mean": 0.843551539682542,
+      "bootstrap_std": 0.00759391240674951,
+      "point_estimate": 0.843544973544976
+    },
+    "parent_set_exact": {
+      "lower_95": 0.36666666666666664,
+      "upper_95": 0.46111111111111114,
+      "bootstrap_mean": 0.41378944444444443,
+      "bootstrap_std": 0.02382722600906813,
+      "point_estimate": 0.41388888888888886
+    },
+    "k_accuracy": {
+      "lower_95": 0.4305555555555556,
+      "upper_95": 0.5277777777777778,
+      "bootstrap_mean": 0.48030888888888884,
+      "bootstrap_std": 0.025016048084133036,
+      "point_estimate": 0.48055555555555557
+    },
+    "k_mae": {
+      "lower_95": 0.48055555555555557,
+      "upper_95": 0.5861111111111111,
+      "bootstrap_mean": 0.5335975000000001,
+      "bootstrap_std": 0.026199724350815072,
+      "point_estimate": 0.5333333333333333
+    },
+    "unknown_precision": {
+      "lower_95": 0.626425855513308,
+      "upper_95": 0.6771659557066568,
+      "bootstrap_mean": 0.6518068044882132,
+      "bootstrap_std": 0.01307987231914289,
+      "point_estimate": 0.6517509727626459
+    },
+    "unknown_recall": {
+      "lower_95": 0.8632665830103009,
+      "upper_95": 0.914780292942743,
+      "bootstrap_mean": 0.8898378776388279,
+      "bootstrap_std": 0.013164132243696608,
+      "point_estimate": 0.8897742363877822
+    },
+    "unknown_f1": {
+      "lower_95": 0.7310960332663108,
+      "upper_95": 0.7730537646908457,
+      "bootstrap_mean": 0.7523535313259939,
+      "bootstrap_std": 0.01068948730446409,
+      "point_estimate": 0.7523862998315552
+    }
+  },
+  "paired_graph_minus_content_only": {
+    "component_accuracy": {
+      "lower_95": -0.003968253968253954,
+      "upper_95": 0.0011904761904761862,
+      "bootstrap_mean": -0.0011918253968253969,
+      "bootstrap_std": 0.0013105743253800936,
+      "probability_delta_gt_zero": 0.1415,
+      "probability_delta_ge_zero": 0.2223,
+      "probability_delta_lt_zero": 0.7777,
+      "ci_excludes_zero": false,
+      "direction_if_ci_excludes_zero": "INCONCLUSIVE",
+      "point_estimate": -0.0011904761904761862
+    },
+    "parent_set_f1": {
+      "lower_95": -0.0016931216931218602,
+      "upper_95": 0.003465608465608172,
+      "bootstrap_mean": 0.0006793677248676401,
+      "bootstrap_std": 0.0013259713670518082,
+      "probability_delta_gt_zero": 0.6694,
+      "probability_delta_ge_zero": 0.7201,
+      "probability_delta_lt_zero": 0.2799,
+      "ci_excludes_zero": false,
+      "direction_if_ci_excludes_zero": "INCONCLUSIVE",
+      "point_estimate": 0.0006878306878306262
+    },
+    "parent_set_exact": {
+      "lower_95": 0.0,
+      "upper_95": 0.013888888888888895,
+      "bootstrap_mean": 0.005519722222222223,
+      "bootstrap_std": 0.003913544937185831,
+      "probability_delta_gt_zero": 0.8653,
+      "probability_delta_ge_zero": 1.0,
+      "probability_delta_lt_zero": 0.0,
+      "ci_excludes_zero": false,
+      "direction_if_ci_excludes_zero": "INCONCLUSIVE",
+      "point_estimate": 0.005555555555555591
+    },
+    "k_accuracy": {
+      "lower_95": 0.0,
+      "upper_95": 0.013888888888888895,
+      "bootstrap_mean": 0.005519722222222221,
+      "bootstrap_std": 0.00391354493718583,
+      "probability_delta_gt_zero": 0.8653,
+      "probability_delta_ge_zero": 1.0,
+      "probability_delta_lt_zero": 0.0,
+      "ci_excludes_zero": false,
+      "direction_if_ci_excludes_zero": "INCONCLUSIVE",
+      "point_estimate": 0.005555555555555536
+    },
+    "k_mae": {
+      "lower_95": -0.01388888888888895,
+      "upper_95": 0.0,
+      "bootstrap_mean": -0.005519722222222223,
+      "bootstrap_std": 0.00391354493718583,
+      "probability_delta_gt_zero": 0.0,
+      "probability_delta_ge_zero": 0.1347,
+      "probability_delta_lt_zero": 0.8653,
+      "ci_excludes_zero": false,
+      "direction_if_ci_excludes_zero": "INCONCLUSIVE",
+      "point_estimate": -0.005555555555555536
+    },
+    "unknown_f1": {
+      "lower_95": 0.0,
+      "upper_95": 0.003531508408582367,
+      "bootstrap_mean": 0.001391089508371633,
+      "bootstrap_std": 0.0009871883321185741,
+      "probability_delta_gt_zero": 0.8653,
+      "probability_delta_ge_zero": 1.0,
+      "probability_delta_lt_zero": 0.0,
+      "ci_excludes_zero": false,
+      "direction_if_ci_excludes_zero": "INCONCLUSIVE",
+      "point_estimate": 0.0013994545150516347
+    }
+  },
+  "primary_graph_metric": "parent_set_f1",
+  "primary_graph_statistical_interpretation": "CI_INCLUDES_ZERO",
+  "primary_graph_ci_excludes_zero": false,
+  "interpretation_policy": {
+    "if_ci_includes_zero": "Do not claim statistically reliable graph improvement. Report the graph effect as small and statistically inconclusive.",
+    "if_positive_ci_excludes_zero": "Graph refinement may be reported as a statistically supported positive effect on the frozen primary metric.",
+    "if_negative_ci_excludes_zero": "Graph refinement should not be claimed as beneficial on the frozen primary metric."
+  },
+  "source_project_dependence_note": "This phase uses query-level scenario-stratified bootstrap. It preserves dependence among the seven components within each query. Because source projects can recur across different queries and queries may contain multiple parents, a separate source-project clustered sensitivity analysis should be performed before final publication claims rather than treating 2520 components as independent.",
+  "goals_met": true
+}

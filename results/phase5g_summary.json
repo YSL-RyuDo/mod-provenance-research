@@ -1,0 +1,41 @@
+{
+  "queries": 200,
+  "results": {
+    "MEAN_RANK": {
+      "component_accuracy": 0.35194444444444445,
+      "parent_f1": 0.47083333333333327,
+      "parent_set_exact": 0.075,
+      "component_set_exact": 0.05
+    },
+    "MEAN_REGRET": {
+      "component_accuracy": 0.3602777777777778,
+      "parent_f1": 0.48333333333333334,
+      "parent_set_exact": 0.14,
+      "component_set_exact": 0.055
+    },
+    "MEDIAN_REGRET": {
+      "component_accuracy": 0.34638888888888886,
+      "parent_f1": 0.46,
+      "parent_set_exact": 0.12,
+      "component_set_exact": 0.055
+    },
+    "SINGLE_3GRAM": {
+      "component_accuracy": 0.29833333333333334,
+      "parent_f1": 0.41,
+      "parent_set_exact": 0.08,
+      "component_set_exact": 0.045
+    },
+    "SINGLE_CONTEXT": {
+      "component_accuracy": 0.3258333333333333,
+      "parent_f1": 0.45416666666666666,
+      "parent_set_exact": 0.075,
+      "component_set_exact": 0.03
+    },
+    "SINGLE_STRUCT": {
+      "component_accuracy": 0.2927777777777778,
+      "parent_f1": 0.43333333333333335,
+      "parent_set_exact": 0.1,
+      "component_set_exact": 0.05
+    }
+  }
+}

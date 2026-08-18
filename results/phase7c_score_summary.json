@@ -1,0 +1,57 @@
+{
+  "calibration_score_matrix_complete": true,
+  "missing_representation_policy": "A missing component representation is excluded from that query component's fusion. Available representations are averaged. A parent with no gallery component for an available representation receives normalized distance 1.0.",
+  "performance_evaluated": false,
+  "test_queries_scored": 0,
+  "unknown_heldout_queries_scored": 0,
+  "calibration_queries": 180,
+  "calibration_components": 1260,
+  "calibration_gallery_projects": 40,
+  "visible_gallery_projects_per_query": 39,
+  "score_rows": 49140,
+  "openset_feature_rows": 1260,
+  "component_modality_counts": {
+    "CODE_BINARY": 900,
+    "STRUCTURED": 180,
+    "IMAGE": 180
+  },
+  "code_gallery_representation_availability": {
+    "OP3": {
+      "available": 11604,
+      "missing": 321
+    },
+    "STRUCT": {
+      "available": 11925,
+      "missing": 0
+    },
+    "CONTEXT": {
+      "available": 11604,
+      "missing": 321
+    }
+  },
+  "code_query_missing_representations": {
+    "OP3": 0,
+    "STRUCT": 0,
+    "CONTEXT": 0
+  },
+  "code_query_representation_usage": {
+    "OP3": 900,
+    "STRUCT": 900,
+    "CONTEXT": 900
+  },
+  "code_query_representation_count_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 900
+  },
+  "distance_policy": {
+    "CODE_BINARY": "minimum gallery-component normalized Hamming distance per parent for each available OP3, STRUCT and CONTEXT representation; missing query representations are omitted from fusion",
+    "STRUCTURED": "minimum normalized structural SimHash Hamming distance per parent",
+    "IMAGE": "minimum normalized aHash/dHash/pHash Hamming and normalized 16-bin luminance histogram L1 distance per parent"
+  },
+  "missing_modality_parent_distance": 1.0,
+  "hidden_parent_rows_emitted": 0,
+  "expected_score_rows": 49140,
+  "failure_records": 0,
+  "goals_met": true
+}

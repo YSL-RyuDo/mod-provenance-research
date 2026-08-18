@@ -1,0 +1,11 @@
+{
+  "accepted_repositories": 10,
+  "target": 10,
+  "total_code_files": 4454,
+  "total_structured_files": 4730,
+  "total_image_files": 2427,
+  "repos_with_images": 10,
+  "repos_with_structured_data": 10,
+  "repos_with_java": 9,
+  "repos_with_kotlin": 5
+}

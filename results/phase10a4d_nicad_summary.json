@@ -1,0 +1,116 @@
+{
+  "phase10a4d_complete": true,
+  "baseline": "NiCadCross 7.0",
+  "granularity": "functions",
+  "language": "java",
+  "configuration": "default/blindrename",
+  "threshold": 0.3,
+  "query_source_resolvable_components": 1169,
+  "query_source_resolvable_queries": 306,
+  "gallery_source_available_parents": 41,
+  "parsed_clone_pairs": 2199,
+  "skipped_pair_shapes": 0,
+  "tracks": {
+    "RESOLVABLE": {
+      "n_components": 1169,
+      "component_accuracy": 0.7100085543199316,
+      "unknown_precision": 0.5264705882352941,
+      "unknown_recall": 0.9546666666666667,
+      "unknown_f1": 0.6786729857819905,
+      "predicted_unknown_rate": 0.58169375534645,
+      "gt_gallery_available_rate": 1.0,
+      "n_queries": 306,
+      "parent_precision": 0.8518518518518519,
+      "parent_recall": 0.7990196078431373,
+      "parent_f1": 0.8154684095860566,
+      "parent_exact": 0.7254901960784313,
+      "k_accuracy": 0.39215686274509803
+    },
+    "AVAILABLE_GALLERY": {
+      "n_components": 1169,
+      "component_accuracy": 0.7100085543199316,
+      "unknown_precision": 0.5264705882352941,
+      "unknown_recall": 0.9546666666666667,
+      "unknown_f1": 0.6786729857819905,
+      "predicted_unknown_rate": 0.58169375534645,
+      "gt_gallery_available_rate": 1.0,
+      "n_queries": 306,
+      "parent_precision": 0.8518518518518519,
+      "parent_recall": 0.7990196078431373,
+      "parent_f1": 0.8154684095860566,
+      "parent_exact": 0.7254901960784313,
+      "k_accuracy": 0.39215686274509803
+    },
+    "HIGH_CONFIDENCE": {
+      "n_components": 229,
+      "component_accuracy": 0.5982532751091703,
+      "unknown_precision": 0.3825503355704698,
+      "unknown_recall": 1.0,
+      "unknown_f1": 0.5533980582524272,
+      "predicted_unknown_rate": 0.6506550218340611,
+      "gt_gallery_available_rate": 1.0,
+      "n_queries": 37,
+      "parent_precision": 0.918918918918919,
+      "parent_recall": 0.918918918918919,
+      "parent_f1": 0.918918918918919,
+      "parent_exact": 0.918918918918919,
+      "k_accuracy": 0.43243243243243246
+    }
+  },
+  "by_scenario": {
+    "TEST_KNOWN_K1": {
+      "n_queries": 41,
+      "parent_precision": 0.975609756097561,
+      "parent_recall": 0.975609756097561,
+      "parent_f1": 0.975609756097561,
+      "parent_exact": 0.975609756097561,
+      "k_accuracy": 0.34146341463414637
+    },
+    "TEST_KNOWN_K2": {
+      "n_queries": 55,
+      "parent_precision": 0.9454545454545454,
+      "parent_recall": 0.9,
+      "parent_f1": 0.9151515151515152,
+      "parent_exact": 0.8545454545454545,
+      "k_accuracy": 0.4727272727272727
+    },
+    "TEST_KNOWN_K3": {
+      "n_queries": 56,
+      "parent_precision": 0.875,
+      "parent_recall": 0.7142857142857143,
+      "parent_f1": 0.7690476190476191,
+      "parent_exact": 0.5178571428571429,
+      "k_accuracy": 0.26785714285714285
+    },
+    "TEST_MIXED_1K1U": {
+      "n_queries": 54,
+      "parent_precision": 0.7777777777777778,
+      "parent_recall": 0.7962962962962963,
+      "parent_f1": 0.7839506172839507,
+      "parent_exact": 0.7592592592592593,
+      "k_accuracy": 0.5
+    },
+    "TEST_MIXED_2K1U": {
+      "n_queries": 57,
+      "parent_precision": 0.8011695906432749,
+      "parent_recall": 0.7017543859649122,
+      "parent_f1": 0.7333333333333333,
+      "parent_exact": 0.5789473684210527,
+      "k_accuracy": 0.10526315789473684
+    },
+    "TEST_UNKNOWN_K1": {
+      "n_queries": 43,
+      "parent_precision": 0.7441860465116279,
+      "parent_recall": 0.7441860465116279,
+      "parent_f1": 0.7441860465116279,
+      "parent_exact": 0.7441860465116279,
+      "k_accuracy": 0.7441860465116279
+    }
+  },
+  "protocol": {
+    "component_parent_support": "number of distinct query methods with >=1 cross-clone into a parent",
+    "decision": "highest support; no support -> UNKNOWN; exact tie -> UNKNOWN",
+    "test_retuning": false,
+    "manual_annotation": false
+  }
+}

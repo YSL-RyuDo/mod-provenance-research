@@ -1,0 +1,41 @@
+{
+  "phase10a5_complete": true,
+  "scope": "FROZEN_STONEDETECTOR_BYTECODE_CORPUS",
+  "stone_detector_input_kind": "CLASS_FILES",
+  "test_queries": 360,
+  "query_code_components": 1800,
+  "gallery_projects": 60,
+  "gallery_code_components": 10448,
+  "total_class_files": 12248,
+  "gallery_split_counts": {
+    "TEST_KNOWN": 45,
+    "TEST_BACKGROUND": 15
+  },
+  "gallery_code_components_min_per_project": 3,
+  "gallery_code_components_median_per_project": 42.0,
+  "gallery_code_components_max_per_project": 2697,
+  "query_sha_audit_passed": true,
+  "gallery_sha_audit_passed": true,
+  "unknown_gallery_leak_count": 0,
+  "identity_bearing_input_paths_removed": true,
+  "anonymous_query_directories": 360,
+  "anonymous_parent_directories": 60,
+  "stone_detector_config": {
+    "METRIC": "LCS",
+    "THRESHOLD": "0.3f",
+    "MINFUNCTIONSIZE": 15,
+    "USEFUNCTIONNAMES": true,
+    "BYTECODEBASEDCLONEDETECTION": true,
+    "REGISTERCODE_STACKCODE": true
+  },
+  "important_protocol_notes": {
+    "test_not_retuned": true,
+    "gallery_definition": "TEST_KNOWN + TEST_BG frozen projects",
+    "unknown_projects_excluded_from_gallery": true,
+    "query_bytes": "Exact Phase6L frozen materialized TEST CODE payloads",
+    "gallery_bytes": "Exact filtered current-release CLASS entries from frozen registry",
+    "original_class_paths_not_exposed_to_stonedetector": true
+  },
+  "corpus_path": "C:\\research\\mod-provenance-research\\data\\phase10a5_stonedetector_corpus",
+  "ready_for_phase10a6": true
+}

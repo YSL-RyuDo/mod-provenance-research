@@ -1,0 +1,15 @@
+{
+  "graph_parameters_frozen": true,
+  "calibration_only": true,
+  "test_used": false,
+  "primary_graph_track": "CONNECTED_STRESS",
+  "candidate_pool_size": 10,
+  "top_r_for_boundary_weight": 3,
+  "edge_weight": "Jaccard overlap between each edge endpoint's top-3 content candidate sets",
+  "graph_refinement": "(1-beta) * own content unary cost + beta * edge-weighted neighboring content unary cost",
+  "eligibility_policy": "Graph refinement does not change Phase 7D absolute-distance eligibility; an ineligible candidate cannot become eligible through graph propagation.",
+  "selected_beta": 0.1,
+  "alpha": 0.75,
+  "lambda": 0.5,
+  "maximum_known_parents": 3
+}

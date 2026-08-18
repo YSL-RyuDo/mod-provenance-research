@@ -1,0 +1,281 @@
+{
+  "phase11a_complete": true,
+  "scope": "MULTI_UNKNOWN_ROBUSTNESS_BENCHMARK",
+  "seed": 20260818,
+  "queries_per_scenario": 30,
+  "total_queries": 180,
+  "total_components": 1260,
+  "scenario_counts": {
+    "MU_1K2U": 30,
+    "MU_2K2U": 30,
+    "MU_1K3U": 30,
+    "MU_2K3U": 30,
+    "MU_U2": 30,
+    "MU_U3": 30
+  },
+  "modality_counts": {
+    "CODE": 900,
+    "STRUCTURED": 180,
+    "IMAGE": 180
+  },
+  "frozen_test_donor_components": 2520,
+  "known_donor_sources": 33,
+  "unknown_heldout_donor_sources": 15,
+  "known_donor_availability": {
+    "FMOD0077": {
+      "CODE": 40,
+      "STRUCTURED": 6,
+      "IMAGE": 8
+    },
+    "FMOD0001": {
+      "CODE": 32,
+      "STRUCTURED": 5,
+      "IMAGE": 6
+    },
+    "FMOD0023": {
+      "CODE": 45,
+      "STRUCTURED": 10,
+      "IMAGE": 8
+    },
+    "FMOD0004": {
+      "CODE": 24,
+      "STRUCTURED": 5,
+      "IMAGE": 3
+    },
+    "FMOD0096": {
+      "CODE": 35,
+      "STRUCTURED": 8,
+      "IMAGE": 6
+    },
+    "FMOD0086": {
+      "CODE": 49,
+      "STRUCTURED": 10,
+      "IMAGE": 11
+    },
+    "FMOD0087": {
+      "CODE": 49,
+      "STRUCTURED": 12,
+      "IMAGE": 10
+    },
+    "FMOD0050": {
+      "CODE": 24,
+      "STRUCTURED": 5,
+      "IMAGE": 4
+    },
+    "FMOD0025": {
+      "CODE": 51,
+      "STRUCTURED": 9,
+      "IMAGE": 11
+    },
+    "FMOD0083": {
+      "CODE": 38,
+      "STRUCTURED": 12,
+      "IMAGE": 7
+    },
+    "FMOD0061": {
+      "CODE": 31,
+      "STRUCTURED": 5,
+      "IMAGE": 11
+    },
+    "FMOD0069": {
+      "CODE": 49,
+      "STRUCTURED": 5,
+      "IMAGE": 9
+    },
+    "FMOD0043": {
+      "CODE": 47,
+      "STRUCTURED": 10,
+      "IMAGE": 9
+    },
+    "FMOD0067": {
+      "CODE": 39,
+      "STRUCTURED": 6,
+      "IMAGE": 8
+    },
+    "FMOD0051": {
+      "CODE": 47,
+      "STRUCTURED": 11,
+      "IMAGE": 9
+    },
+    "FMOD0066": {
+      "CODE": 48,
+      "STRUCTURED": 12,
+      "IMAGE": 10
+    },
+    "FMOD0079": {
+      "CODE": 49,
+      "STRUCTURED": 9,
+      "IMAGE": 9
+    },
+    "FMOD0016": {
+      "CODE": 46,
+      "STRUCTURED": 6,
+      "IMAGE": 12
+    },
+    "FMOD0089": {
+      "CODE": 46,
+      "STRUCTURED": 11,
+      "IMAGE": 10
+    },
+    "FMOD0053": {
+      "CODE": 41,
+      "STRUCTURED": 7,
+      "IMAGE": 8
+    },
+    "FMOD0060": {
+      "CODE": 42,
+      "STRUCTURED": 8,
+      "IMAGE": 9
+    },
+    "FMOD0044": {
+      "CODE": 42,
+      "STRUCTURED": 9,
+      "IMAGE": 9
+    },
+    "FMOD0074": {
+      "CODE": 41,
+      "STRUCTURED": 9,
+      "IMAGE": 9
+    },
+    "FMOD0003": {
+      "CODE": 23,
+      "STRUCTURED": 5,
+      "IMAGE": 6
+    },
+    "FMOD0011": {
+      "CODE": 23,
+      "STRUCTURED": 4,
+      "IMAGE": 3
+    },
+    "FMOD0036": {
+      "CODE": 30,
+      "STRUCTURED": 5,
+      "IMAGE": 11
+    },
+    "FMOD0055": {
+      "CODE": 38,
+      "STRUCTURED": 8,
+      "IMAGE": 7
+    },
+    "FMOD0022": {
+      "CODE": 32,
+      "STRUCTURED": 7,
+      "IMAGE": 5
+    },
+    "FMOD0005": {
+      "CODE": 35,
+      "STRUCTURED": 9,
+      "IMAGE": 6
+    },
+    "FMOD0040": {
+      "CODE": 30,
+      "STRUCTURED": 6,
+      "IMAGE": 4
+    },
+    "FMOD0035": {
+      "CODE": 35,
+      "STRUCTURED": 10,
+      "IMAGE": 6
+    },
+    "FMOD0099": {
+      "CODE": 40,
+      "STRUCTURED": 9,
+      "IMAGE": 10
+    },
+    "FMOD0014": {
+      "CODE": 13,
+      "STRUCTURED": 2,
+      "IMAGE": 4
+    }
+  },
+  "unknown_donor_availability": {
+    "FMOD0062": {
+      "CODE": 46,
+      "STRUCTURED": 8,
+      "IMAGE": 6
+    },
+    "FMOD0090": {
+      "CODE": 44,
+      "STRUCTURED": 9,
+      "IMAGE": 10
+    },
+    "FMOD0068": {
+      "CODE": 29,
+      "STRUCTURED": 3,
+      "IMAGE": 6
+    },
+    "FMOD0070": {
+      "CODE": 45,
+      "STRUCTURED": 8,
+      "IMAGE": 11
+    },
+    "FMOD0085": {
+      "CODE": 22,
+      "STRUCTURED": 5,
+      "IMAGE": 4
+    },
+    "FMOD0028": {
+      "CODE": 50,
+      "STRUCTURED": 9,
+      "IMAGE": 9
+    },
+    "FMOD0084": {
+      "CODE": 56,
+      "STRUCTURED": 9,
+      "IMAGE": 10
+    },
+    "FMOD0009": {
+      "CODE": 39,
+      "STRUCTURED": 7,
+      "IMAGE": 7
+    },
+    "FMOD0006": {
+      "CODE": 36,
+      "STRUCTURED": 7,
+      "IMAGE": 7
+    },
+    "FMOD0054": {
+      "CODE": 34,
+      "STRUCTURED": 7,
+      "IMAGE": 7
+    },
+    "FMOD0094": {
+      "CODE": 20,
+      "STRUCTURED": 3,
+      "IMAGE": 2
+    },
+    "FMOD0046": {
+      "CODE": 33,
+      "STRUCTURED": 8,
+      "IMAGE": 4
+    },
+    "FMOD0007": {
+      "CODE": 27,
+      "STRUCTURED": 8,
+      "IMAGE": 8
+    },
+    "FMOD0048": {
+      "CODE": 17,
+      "STRUCTURED": 3,
+      "IMAGE": 3
+    },
+    "FMOD0027": {
+      "CODE": 48,
+      "STRUCTURED": 11,
+      "IMAGE": 8
+    }
+  },
+  "bad_composition_count": 0,
+  "bad_unknown_multiplicity_count": 0,
+  "manual_annotation_used": false,
+  "test_retuning": false,
+  "primary_test_modified": false,
+  "important_protocol_notes": {
+    "donor_pool": "Only frozen Phase6K TEST components and their Phase6L materialized payloads.",
+    "multi_unknown_ground_truth": "Distinct held-out source_fresh_id values are retained privately to measure actual unknown-source multiplicity.",
+    "evaluation_label": "All held-out sources remain collapsed to the single public label UNKNOWN.",
+    "k_true_actual_sources": "Known parents plus distinct held-out source parents.",
+    "k_target_collapsed_unknown": "Known parents plus one UNKNOWN group; this is the only K notion the existing classifier can currently represent.",
+    "purpose": "Post-freeze robustness evaluation only; not used for calibration or parameter tuning."
+  }
+}

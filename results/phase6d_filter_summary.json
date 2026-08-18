@@ -1,0 +1,79 @@
+{
+  "filter_definition_frozen": true,
+  "filter_rules": [
+    "EMPTY_BYTES",
+    "WHITESPACE_ONLY",
+    "EMPTY_JSON_OBJECT",
+    "EMPTY_JSON_ARRAY"
+  ],
+  "filter_scope": "STRUCTURED_ONLY",
+  "current_before": 60257,
+  "current_after": 56035,
+  "current_removed": 4222,
+  "current_removed_rate": 0.07006654828484657,
+  "historical_before": 178162,
+  "historical_after": 165496,
+  "historical_removed": 12666,
+  "historical_removed_rate": 0.0710926011158384,
+  "removed_reason_counts": {
+    "EMPTY_JSON_OBJECT": 16888
+  },
+  "current_removed_reason_counts": {
+    "EMPTY_JSON_OBJECT": 4222
+  },
+  "historical_removed_reason_counts": {
+    "EMPTY_JSON_OBJECT": 12666
+  },
+  "current_cross_project_duplicate_groups_after_filter": 5,
+  "current_cross_project_duplicate_components_after_filter": 48,
+  "current_cross_project_duplicate_rate_after_filter": 0.0008566074774694388,
+  "duplicate_groups_by_modality_after_filter": {
+    "STRUCTURED": 4,
+    "IMAGE": 1
+  },
+  "duplicate_components_by_modality_after_filter": {
+    "STRUCTURED": 46,
+    "IMAGE": 2
+  },
+  "current_split_stats_after_filter": {
+    "CALIBRATION_BACKGROUND": {
+      "components_after_filter": 8980,
+      "code_binary": 8671,
+      "structured": 133,
+      "image": 176
+    },
+    "CALIBRATION_KNOWN": {
+      "components_after_filter": 13067,
+      "code_binary": 3254,
+      "structured": 8102,
+      "image": 1711
+    },
+    "TEST_BACKGROUND": {
+      "components_after_filter": 4061,
+      "code_binary": 3555,
+      "structured": 477,
+      "image": 29
+    },
+    "TEST_KNOWN": {
+      "components_after_filter": 22268,
+      "code_binary": 6893,
+      "structured": 11962,
+      "image": 3413
+    },
+    "UNKNOWN_HELDOUT": {
+      "components_after_filter": 7659,
+      "code_binary": 742,
+      "structured": 6171,
+      "image": 746
+    }
+  },
+  "current_removed_by_split": {
+    "TEST_BACKGROUND": 16521,
+    "TEST_KNOWN": 268,
+    "UNKNOWN_HELDOUT": 84,
+    "CALIBRATION_BACKGROUND": 10,
+    "CALIBRATION_KNOWN": 5
+  },
+  "failures": 0,
+  "goals_met": true
+}

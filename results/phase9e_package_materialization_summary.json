@@ -1,0 +1,35 @@
+{
+  "phase9e_package_materialization_complete": true,
+  "scope": "MATERIALIZED_HETEROGENEOUS_PROVENANCE_QUERY_PACKAGES",
+  "queries": 360,
+  "components": 2520,
+  "components_per_query": 7,
+  "modality_composition": {
+    "CODE_BINARY": 5,
+    "STRUCTURED": 1,
+    "IMAGE": 1
+  },
+  "payload_path_column": "payload_relpath",
+  "payload_resolution": {
+    "resolved_components": 2520,
+    "resolution_method_counts": {
+      "DIRECT_RELATIVE_PATH": 2520
+    }
+  },
+  "archive_validation": {
+    "validated_components": 2520,
+    "validation_failures": 0
+  },
+  "package_storage": {
+    "compression": "ZIP_STORED",
+    "total_package_bytes": 30490112,
+    "median_package_bytes": 42853.0,
+    "min_package_bytes": 8917,
+    "max_package_bytes": 1960343
+  },
+  "runnable_mod_claim": false,
+  "package_definition": "A deterministic archive containing the seven frozen materialized benchmark components plus component-type metadata. It is a heterogeneous provenance-query package, not a runnable game MOD.",
+  "private_ground_truth_in_package": false,
+  "source_identity_in_package_manifest": false,
+  "goals_met": true
+}

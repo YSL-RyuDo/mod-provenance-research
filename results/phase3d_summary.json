@@ -1,0 +1,52 @@
+{
+  "path_failed_code_queries": 1873,
+  "historical_queries_disassembled": 1873,
+  "current_disassembly_failures": 0,
+  "historical_disassembly_failures": 0,
+  "reference_naive_binary_token_simhash": {
+    "queries": 1873,
+    "top1_unique_correct_rate": 0.18793379604911906,
+    "top1_true_in_tie_rate": 0.2717565403096636
+  },
+  "bytecode_representations": {
+    "OPCODE_STRUCT": {
+      "queries": 1873,
+      "top1_unique_correct_rate": 0.3630539241857982,
+      "top1_true_in_tie_rate": 0.6182594767752269,
+      "top3_parent_recall": 0.7207688200747464,
+      "top5_parent_recall": 0.7746930058729311,
+      "top10_parent_recall": 0.8649225840896957,
+      "mrr_optimistic": 0.6948852654416053,
+      "mean_best_distance": 17.45274959957288,
+      "mean_true_distance": 21.560597971169248,
+      "mean_top1_margin": 14.807261078483716,
+      "best_tie_rate": 0.35130806193272823
+    },
+    "OPCODE_CONTEXT": {
+      "queries": 1873,
+      "top1_unique_correct_rate": 0.3593166043780032,
+      "top1_true_in_tie_rate": 0.6134543513080619,
+      "top3_parent_recall": 0.7170315002669514,
+      "top5_parent_recall": 0.785371062466631,
+      "top10_parent_recall": 0.8761345435130806,
+      "mrr_optimistic": 0.6933319555869348,
+      "mean_best_distance": 12.893753336892685,
+      "mean_true_distance": 16.816337426588362,
+      "mean_top1_margin": 12.515216230646022,
+      "best_tie_rate": 0.3406300053390283
+    },
+    "OPCODE_3GRAM": {
+      "queries": 1873,
+      "top1_unique_correct_rate": 0.35504538174052325,
+      "top1_true_in_tie_rate": 0.6572343833422317,
+      "top3_parent_recall": 0.7394554191137213,
+      "top5_parent_recall": 0.804057661505606,
+      "top10_parent_recall": 0.8937533368926855,
+      "mrr_optimistic": 0.7254957647809984,
+      "mean_best_distance": 17.294180459156433,
+      "mean_true_distance": 21.15162840363054,
+      "mean_top1_margin": 22.155365723438333,
+      "best_tie_rate": 0.40736785904965295
+    }
+  }
+}

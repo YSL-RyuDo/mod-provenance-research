@@ -1,0 +1,53 @@
+{
+  "final_method_frozen": true,
+  "freeze_phase": "7G",
+  "test_performance_seen_before_freeze": false,
+  "query_definition": {
+    "components_per_query": 7,
+    "modality_composition": {
+      "CODE_BINARY": 5,
+      "STRUCTURED": 1,
+      "IMAGE": 1
+    },
+    "K_exposed": false,
+    "maximum_known_parents": 3
+  },
+  "stage1": {
+    "unknown_thresholds": {
+      "CODE_BINARY": 0.1302083283662796,
+      "STRUCTURED": 0.03125,
+      "IMAGE": 0.0
+    },
+    "alpha_absolute_distance": 0.75,
+    "alpha_mean_regret": 0.25,
+    "parent_proliferation_lambda": 0.5,
+    "candidate_pool_size": 10
+  },
+  "stage2": {
+    "graph_track": "CONNECTED_STRESS",
+    "boundary_candidate_top_r": 3,
+    "edge_weight": "Jaccard overlap between Top-3 content candidate sets",
+    "graph_beta": 0.1,
+    "graph_changes_candidate_eligibility": false
+  },
+  "unknown_model": {
+    "maximum_unregistered_parent_labels_per_query": 1,
+    "unknown_output_label": "UNKNOWN"
+  },
+  "selection_history": {
+    "stage1_selected_on": "CALIBRATION_ONLY",
+    "candidate_pool_selected_on": "CALIBRATION_ONLY",
+    "graph_beta_selected_on": "CALIBRATION_ONLY",
+    "test_used_for_selection": false
+  },
+  "freeze_input_sha256": {
+    "results\\phase7d_stage1_parameters.json": "6ea575313b65da88b578460412ed110c74cd1ad8392461b3b69857fcc6407064",
+    "results\\phase7e_candidate_pool_summary.json": "1038cb60429e75b00da8ee7f17fcd0863507f2285154968e5d4a01ef98a310ad",
+    "results\\phase7f_graph_parameters.json": "39dcc5fcd2294cef2de9476b6c55b726787ea57bdc8580c7da3f2f48dbdd16f4",
+    "results\\phase7f2_graph_contribution_summary.json": "41afbb7b6f6795fa9ddc7bfa5ea402a6ad82e532b86cf92d20131608ae082ff5",
+    "results\\phase6k_query_ground_truth.csv": "558c45a535aa7f9df4ee71dfda9c9b2a6032833ecde9ec2fe3ecb448bf76069a",
+    "results\\phase6l_materialized_private_manifest.csv": "68dabd20c408e00328d3db34f34dc391b5d433e70e02dcdffcbdfe52c0c67d9d",
+    "results\\phase6l_materialized_public_manifest.csv": "76bc60da1db9eff0b154f5d06ecb2b4c163a2a6d8b8eb665a14cbc15bbd15cd7",
+    "results\\phase6l_graph_connected_stress_public.csv": "24b1ff86f65da2c178bf46cba9c38be167f2f9b810ed4d2bc88bf8bc5c181b6c"
+  }
+}

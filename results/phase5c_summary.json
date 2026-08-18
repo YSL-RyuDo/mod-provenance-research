@@ -1,0 +1,89 @@
+{
+  "OPCODE_3GRAM": {
+    "B1_INDEPENDENT": {
+      "queries": 200,
+      "component_accuracy": 0.24611111111111114,
+      "parent_precision": 0.275202380952381,
+      "parent_recall": 0.5575,
+      "parent_f1": 0.36567207792207795,
+      "parent_set_exact": 0.0,
+      "component_set_exact": 0.0
+    },
+    "B2_PACKAGE_AGGREGATION": {
+      "queries": 200,
+      "component_accuracy": 0.17972222222222223,
+      "parent_precision": 0.24833333333333332,
+      "parent_recall": 0.24833333333333332,
+      "parent_f1": 0.24833333333333332,
+      "parent_set_exact": 0.025,
+      "component_set_exact": 0.025
+    },
+    "B3_DEPENDENCY": {
+      "queries": 200,
+      "component_accuracy": 0.42,
+      "parent_precision": 0.4525,
+      "parent_recall": 0.43666666666666665,
+      "parent_f1": 0.4428333333333333,
+      "parent_set_exact": 0.105,
+      "component_set_exact": 0.105
+    }
+  },
+  "OPCODE_STRUCT": {
+    "B1_INDEPENDENT": {
+      "queries": 200,
+      "component_accuracy": 0.2580555555555556,
+      "parent_precision": 0.2689761904761905,
+      "parent_recall": 0.5608333333333333,
+      "parent_f1": 0.36134343434343436,
+      "parent_set_exact": 0.0,
+      "component_set_exact": 0.0
+    },
+    "B2_PACKAGE_AGGREGATION": {
+      "queries": 200,
+      "component_accuracy": 0.1636111111111111,
+      "parent_precision": 0.2683333333333333,
+      "parent_recall": 0.2683333333333333,
+      "parent_f1": 0.2683333333333333,
+      "parent_set_exact": 0.025,
+      "component_set_exact": 0.015
+    },
+    "B3_DEPENDENCY": {
+      "queries": 200,
+      "component_accuracy": 0.42,
+      "parent_precision": 0.4441666666666667,
+      "parent_recall": 0.43416666666666665,
+      "parent_f1": 0.43799999999999994,
+      "parent_set_exact": 0.105,
+      "component_set_exact": 0.105
+    }
+  },
+  "OPCODE_CONTEXT": {
+    "B1_INDEPENDENT": {
+      "queries": 200,
+      "component_accuracy": 0.3219444444444444,
+      "parent_precision": 0.31669642857142855,
+      "parent_recall": 0.6166666666666667,
+      "parent_f1": 0.4153304473304473,
+      "parent_set_exact": 0.005,
+      "component_set_exact": 0.0
+    },
+    "B2_PACKAGE_AGGREGATION": {
+      "queries": 200,
+      "component_accuracy": 0.21888888888888886,
+      "parent_precision": 0.3275,
+      "parent_recall": 0.3275,
+      "parent_f1": 0.3275,
+      "parent_set_exact": 0.035,
+      "component_set_exact": 0.02
+    },
+    "B3_DEPENDENCY": {
+      "queries": 200,
+      "component_accuracy": 0.37333333333333335,
+      "parent_precision": 0.435,
+      "parent_recall": 0.41666666666666663,
+      "parent_f1": 0.4236666666666666,
+      "parent_set_exact": 0.075,
+      "component_set_exact": 0.075
+    }
+  }
+}

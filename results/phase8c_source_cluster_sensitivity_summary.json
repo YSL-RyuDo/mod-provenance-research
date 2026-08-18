@@ -1,0 +1,204 @@
+{
+  "source_project_sensitivity_complete": true,
+  "performance_scope": "FROZEN_TEST_SENSITIVITY",
+  "method_parameters_changed": false,
+  "test_rescored": false,
+  "point_estimates": {
+    "component_accuracy": 0.805952380952381,
+    "parent_set_f1": 0.8442328042328067,
+    "parent_set_exact": 0.41944444444444445,
+    "k_accuracy": 0.4861111111111111,
+    "k_mae": 0.5277777777777778,
+    "unknown_precision": 0.6524271844660194,
+    "unknown_recall": 0.8924302788844621,
+    "unknown_f1": 0.7537857543466069
+  },
+  "source_anchor_cluster_bootstrap": {
+    "anchor_assignment": "Each query is assigned to one of its true contributing source projects using SHA-256(query_id) modulo the number of contributing projects. Assignment is deterministic and independent of performance.",
+    "clusters": 48,
+    "median_queries_per_cluster": 7.5,
+    "max_queries_per_cluster": 12,
+    "replicates": 10000,
+    "random_seed": 20260813,
+    "interval": "percentile_95",
+    "metrics": {
+      "component_accuracy": {
+        "bootstrap_mean": 0.8057355926549499,
+        "bootstrap_std": 0.016298100289587256,
+        "lower_95": 0.7718887026951543,
+        "upper_95": 0.8356581836419847,
+        "point_estimate": 0.805952380952381
+      },
+      "parent_set_f1": {
+        "bootstrap_mean": 0.8440043889720491,
+        "bootstrap_std": 0.011901454395301412,
+        "lower_95": 0.820531140032789,
+        "upper_95": 0.8670896181607438,
+        "point_estimate": 0.8442328042328067
+      },
+      "parent_set_exact": {
+        "bootstrap_mean": 0.4189239121098919,
+        "bootstrap_std": 0.03770598394778351,
+        "lower_95": 0.3462602088656975,
+        "upper_95": 0.49368118492996765,
+        "point_estimate": 0.41944444444444445
+      },
+      "k_accuracy": {
+        "bootstrap_mean": 0.48554920009928165,
+        "bootstrap_std": 0.03457721837596784,
+        "lower_95": 0.41847826086956524,
+        "upper_95": 0.5538067837674137,
+        "point_estimate": 0.4861111111111111
+      },
+      "k_mae": {
+        "bootstrap_mean": 0.5284966915117291,
+        "bootstrap_std": 0.03826655105769208,
+        "lower_95": 0.454067510363433,
+        "upper_95": 0.6039354257322854,
+        "point_estimate": 0.5277777777777778
+      },
+      "unknown_precision": {
+        "bootstrap_mean": 0.6486992888888877,
+        "bootstrap_std": 0.05146414748694946,
+        "lower_95": 0.5384615384615384,
+        "upper_95": 0.7397940229875546,
+        "point_estimate": 0.6524271844660194
+      },
+      "unknown_recall": {
+        "bootstrap_mean": 0.8915589444734664,
+        "bootstrap_std": 0.022376235932810292,
+        "lower_95": 0.843746637374462,
+        "upper_95": 0.9315437240332375,
+        "point_estimate": 0.8924302788844621
+      },
+      "unknown_f1": {
+        "bootstrap_mean": 0.749854023352203,
+        "bootstrap_std": 0.03745538805926084,
+        "lower_95": 0.6662019430558254,
+        "upper_95": 0.8139353259034111,
+        "point_estimate": 0.7537857543466069
+      }
+    }
+  },
+  "query_vs_source_cluster_ci_width": {
+    "component_accuracy": {
+      "query_bootstrap_width": 0.036111111111111094,
+      "source_cluster_bootstrap_width": 0.06376948094683044,
+      "cluster_over_query_width_ratio": 1.7659240877583822
+    },
+    "parent_set_f1": {
+      "query_bootstrap_width": 0.030013888888888673,
+      "source_cluster_bootstrap_width": 0.04655847812795477,
+      "cluster_over_query_width_ratio": 1.5512311083816601
+    },
+    "parent_set_exact": {
+      "query_bootstrap_width": 0.09444444444444444,
+      "source_cluster_bootstrap_width": 0.14742097606427013,
+      "cluster_over_query_width_ratio": 1.560927981856978
+    },
+    "k_accuracy": {
+      "query_bootstrap_width": 0.09722222222222221,
+      "source_cluster_bootstrap_width": 0.1353285228978484,
+      "cluster_over_query_width_ratio": 1.3919505212350125
+    },
+    "k_mae": {
+      "query_bootstrap_width": 0.09999999999999992,
+      "source_cluster_bootstrap_width": 0.1498679153688524,
+      "cluster_over_query_width_ratio": 1.4986791536885253
+    },
+    "unknown_precision": {
+      "query_bootstrap_width": 0.05099479375980254,
+      "source_cluster_bootstrap_width": 0.20133248452601615,
+      "cluster_over_query_width_ratio": 3.9480988093478615
+    },
+    "unknown_recall": {
+      "query_bootstrap_width": 0.05167159670774546,
+      "source_cluster_bootstrap_width": 0.0877970866587755,
+      "cluster_over_query_width_ratio": 1.699136319617832
+    },
+    "unknown_f1": {
+      "query_bootstrap_width": 0.04189324015341356,
+      "source_cluster_bootstrap_width": 0.14773338284758575,
+      "cluster_over_query_width_ratio": 3.5264253208055596
+    }
+  },
+  "leave_one_source_project_out": {
+    "distinct_source_projects": 48,
+    "membership_policy": "For each source project, all TEST queries containing that project are removed, including queries where the project is a secondary parent.",
+    "metric_influence": {
+      "component_accuracy": {
+        "mean_delta": 0.0004061122739030115,
+        "mean_absolute_delta": 0.0029211504884679995,
+        "max_absolute_delta": 0.011391565423823469,
+        "most_influential_source_project": "FMOD0016",
+        "most_influential_removed_queries": 19,
+        "most_influential_signed_delta": 0.011391565423823469
+      },
+      "parent_set_f1": {
+        "mean_delta": -0.00043344597806599616,
+        "mean_absolute_delta": 0.0021465491506922735,
+        "max_absolute_delta": 0.0058356586310480685,
+        "most_influential_source_project": "FMOD0062",
+        "most_influential_removed_queries": 13,
+        "most_influential_signed_delta": -0.0058356586310480685
+      },
+      "parent_set_exact": {
+        "mean_delta": 0.00037884884228533744,
+        "mean_absolute_delta": 0.00720479734191969,
+        "max_absolute_delta": 0.021749919948767238,
+        "most_influential_source_project": "FMOD0062",
+        "most_influential_removed_queries": 13,
+        "most_influential_signed_delta": -0.021749919948767238
+      },
+      "k_accuracy": {
+        "mean_delta": -0.0007748204794665904,
+        "mean_absolute_delta": 0.0062690467079373445,
+        "max_absolute_delta": 0.0192523214857509,
+        "most_influential_source_project": "FMOD0062",
+        "most_influential_removed_queries": 13,
+        "most_influential_signed_delta": -0.0192523214857509
+      },
+      "k_mae": {
+        "mean_delta": 0.0010783009227995053,
+        "mean_absolute_delta": 0.006588756757924995,
+        "max_absolute_delta": 0.019772654498879216,
+        "most_influential_source_project": "FMOD0062",
+        "most_influential_removed_queries": 13,
+        "most_influential_signed_delta": 0.019772654498879216
+      },
+      "unknown_precision": {
+        "mean_delta": 0.0029213948006465242,
+        "mean_absolute_delta": 0.009945408768402155,
+        "max_absolute_delta": 0.026404932322301677,
+        "most_influential_source_project": "FMOD0016",
+        "most_influential_removed_queries": 19,
+        "most_influential_signed_delta": 0.026404932322301677
+      },
+      "unknown_recall": {
+        "mean_delta": 6.801145035203321e-05,
+        "mean_absolute_delta": 0.0031428427215962735,
+        "max_absolute_delta": 0.016660630206446925,
+        "most_influential_source_project": "FMOD0068",
+        "most_influential_removed_queries": 9,
+        "most_influential_signed_delta": 0.016660630206446925
+      },
+      "unknown_f1": {
+        "mean_delta": 0.0019174856140622258,
+        "mean_absolute_delta": 0.006826917211924524,
+        "max_absolute_delta": 0.01662844683682496,
+        "most_influential_source_project": "FMOD0016",
+        "most_influential_removed_queries": 19,
+        "most_influential_signed_delta": 0.01662844683682496
+      }
+    }
+  },
+  "sensitivity_stability": {
+    "parent_set_f1_max_loso_delta_below_0.03": true,
+    "component_accuracy_max_loso_delta_below_0.03": true,
+    "unknown_f1_max_loso_delta_below_0.05": true,
+    "overall_descriptive_stability": true
+  },
+  "methodological_note": "Multi-parent queries belong to multiple source projects, so there is no unique ordinary one-way cluster assignment. The anchor-source bootstrap is therefore reported as a sensitivity analysis rather than as a replacement for the primary scenario-stratified query bootstrap. The leave-one-source-project-out analysis uses all parent memberships and directly tests whether any individual MOD project dominates the reported performance.",
+  "phase8a_point_estimate_crosscheck_passed": true,
+  "goals_met": true
+}

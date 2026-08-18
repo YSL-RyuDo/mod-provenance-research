@@ -1,0 +1,19 @@
+{
+  "open_set_calibration_protocol_frozen": true,
+  "performance_evaluated": false,
+  "test_data_used": false,
+  "unknown_heldout_used": false,
+  "calibration_queries": 180,
+  "calibration_components": 1260,
+  "base_calibration_known_projects": 25,
+  "base_calibration_background_projects": 15,
+  "visible_gallery_projects_per_pseudo_unknown_query": 39,
+  "hidden_parent_per_query": 1,
+  "parents_ever_used_as_pseudo_unknown": 19,
+  "minimum_hidden_uses_per_parent": 0,
+  "maximum_hidden_uses_per_parent": 16,
+  "pseudo_unknown_component_total": 782,
+  "known_component_total": 478,
+  "protocol_description": "For each of the 180 calibration queries, one true CALIBRATION_KNOWN parent is deterministically removed from the 40-project calibration gallery. Components from that hidden parent are relabeled UNKNOWN only for threshold calibration. TEST_KNOWN and UNKNOWN_HELDOUT are never used.",
+  "goals_met": true
+}

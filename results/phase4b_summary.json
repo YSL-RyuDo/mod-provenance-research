@@ -1,0 +1,18 @@
+{
+  "projects": 30,
+  "base_edges": 25864,
+  "added_edges": 123,
+  "total_edges_v2": 25987,
+  "non_class_edges_v2": 713,
+  "json_exact_path": 67,
+  "json_identifier_ref": 0,
+  "model_parent": 29,
+  "texture_ref": 0,
+  "fabric_icon": 27,
+  "class_identifier_ref": 0,
+  "mods_with_new_resource_edges": 30,
+  "median_added_edges": 3.0,
+  "median_non_class_edges_v2": 17.0,
+  "median_largest_component_rate_v2": 0.818447724644582,
+  "target_median_largest_component_rate_v2": 0.8360655737704918
+}

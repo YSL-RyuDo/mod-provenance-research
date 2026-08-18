@@ -1,0 +1,386 @@
+{
+  "calibration_queries": 50,
+  "test_queries": 150,
+  "best_thresholds": {
+    "OPCODE_3GRAM": {
+      "threshold": 0.02,
+      "calibration_score": 0.3453829365079366
+    },
+    "OPCODE_STRUCT": {
+      "threshold": 0.05,
+      "calibration_score": 0.3282678571428572
+    },
+    "OPCODE_CONTEXT": {
+      "threshold": 0.005,
+      "calibration_score": 0.368670634920635
+    }
+  },
+  "results": {
+    "OPCODE_3GRAM": {
+      "CLEAN": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4620000000000001,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.38074074074074077,
+          "parent_f1": 0.4307142857142857,
+          "parent_set_exact": 0.06,
+          "component_set_exact": 0.06,
+          "mean_cut_edges": 0.54
+        }
+      },
+      "DROP30": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.36148148148148146,
+          "parent_f1": 0.4102804232804233,
+          "parent_set_exact": 0.013333333333333334,
+          "component_set_exact": 0.013333333333333334,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.3433333333333333,
+          "parent_f1": 0.4032539682539682,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667,
+          "mean_cut_edges": 0.29333333333333333
+        }
+      },
+      "BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.25777777777777783,
+          "parent_f1": 0.36,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.3318518518518518,
+          "parent_f1": 0.412031746031746,
+          "parent_set_exact": 0.05333333333333334,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.7733333333333333
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2785185185185185,
+          "parent_f1": 0.3983492063492064,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.3159259259259259,
+          "parent_f1": 0.4165608465608465,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.006666666666666667,
+          "mean_cut_edges": 0.7533333333333333
+        }
+      }
+    },
+    "OPCODE_STRUCT": {
+      "CLEAN": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4533333333333333,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4533333333333333,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12,
+          "mean_cut_edges": 0.0
+        }
+      },
+      "DROP30": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.34629629629629627,
+          "parent_f1": 0.4114761904761905,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.34629629629629627,
+          "parent_f1": 0.4114761904761905,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        }
+      },
+      "BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.22555555555555554,
+          "parent_f1": 0.31555555555555553,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.24814814814814815,
+          "parent_f1": 0.3426666666666666,
+          "parent_set_exact": 0.04666666666666667,
+          "component_set_exact": 0.006666666666666667,
+          "mean_cut_edges": 0.10666666666666667
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2662962962962963,
+          "parent_f1": 0.38276190476190475,
+          "parent_set_exact": 0.02666666666666667,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.2785185185185185,
+          "parent_f1": 0.39960317460317457,
+          "parent_set_exact": 0.04,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.10666666666666667
+        }
+      }
+    },
+    "OPCODE_CONTEXT": {
+      "CLEAN": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.38666666666666666,
+          "parent_f1": 0.43866666666666676,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.08,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.38185185185185183,
+          "parent_f1": 0.45790476190476187,
+          "parent_set_exact": 0.04,
+          "component_set_exact": 0.04,
+          "mean_cut_edges": 1.2666666666666666
+        }
+      },
+      "DROP30": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.3951851851851852,
+          "parent_f1": 0.4459312169312169,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.02,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.3796296296296296,
+          "parent_f1": 0.4508941798941798,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 1.3266666666666667
+        }
+      },
+      "BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.19,
+          "parent_f1": 0.26555555555555554,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.32296296296296295,
+          "parent_f1": 0.37985714285714284,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667,
+          "mean_cut_edges": 2.8333333333333335
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333,
+          "mean_cut_edges": 0.0
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2462962962962963,
+          "parent_f1": 0.366031746031746,
+          "parent_set_exact": 0.02666666666666667,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 0.0
+        },
+        "B5_BOUNDARY_CUT": {
+          "component_accuracy": 0.3207407407407407,
+          "parent_f1": 0.4183333333333334,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.0,
+          "mean_cut_edges": 2.3266666666666667
+        }
+      }
+    }
+  }
+}

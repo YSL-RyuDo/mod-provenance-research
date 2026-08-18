@@ -1,0 +1,185 @@
+{
+  "modality_composition_audit": true,
+  "performance_evaluated": false,
+  "thresholds_tuned": false,
+  "query_budget": 8,
+  "minimum_parent_project_goal": 15,
+  "candidate_templates": {
+    "A_5C_2S_1I": {
+      "code": 5,
+      "structured": 2,
+      "image": 1
+    },
+    "B_5C_1S_2I": {
+      "code": 5,
+      "structured": 1,
+      "image": 2
+    },
+    "C_4C_2S_2I": {
+      "code": 4,
+      "structured": 2,
+      "image": 2
+    }
+  },
+  "template_priority": [
+    "A_5C_2S_1I",
+    "B_5C_1S_2I",
+    "C_4C_2S_2I"
+  ],
+  "template_results": {
+    "A_5C_2S_1I": {
+      "composition": {
+        "CODE_BINARY": 5,
+        "STRUCTURED": 2,
+        "IMAGE": 1,
+        "total": 8
+      },
+      "splits": {
+        "CALIBRATION_KNOWN": {
+          "fragments": 121,
+          "projects": 18,
+          "minimum_parent_goal_met": true,
+          "missing_projects": [
+            "FMOD0097"
+          ]
+        },
+        "TEST_KNOWN": {
+          "fragments": 167,
+          "projects": 28,
+          "minimum_parent_goal_met": true,
+          "missing_projects": [
+            "FMOD0036",
+            "FMOD0043",
+            "FMOD0067",
+            "FMOD0069",
+            "FMOD0086"
+          ]
+        },
+        "UNKNOWN_HELDOUT": {
+          "fragments": 100,
+          "projects": 14,
+          "minimum_parent_goal_met": false,
+          "missing_projects": [
+            "FMOD0094"
+          ]
+        }
+      },
+      "all_splits_minimum_15_met": false
+    },
+    "B_5C_1S_2I": {
+      "composition": {
+        "CODE_BINARY": 5,
+        "STRUCTURED": 1,
+        "IMAGE": 2,
+        "total": 8
+      },
+      "splits": {
+        "CALIBRATION_KNOWN": {
+          "fragments": 116,
+          "projects": 16,
+          "minimum_parent_goal_met": true,
+          "missing_projects": [
+            "FMOD0052",
+            "FMOD0058",
+            "FMOD0101"
+          ]
+        },
+        "TEST_KNOWN": {
+          "fragments": 137,
+          "projects": 21,
+          "minimum_parent_goal_met": true,
+          "missing_projects": [
+            "FMOD0001",
+            "FMOD0003",
+            "FMOD0004",
+            "FMOD0025",
+            "FMOD0044",
+            "FMOD0050",
+            "FMOD0061",
+            "FMOD0066",
+            "FMOD0074",
+            "FMOD0083",
+            "FMOD0086",
+            "FMOD0099"
+          ]
+        },
+        "UNKNOWN_HELDOUT": {
+          "fragments": 91,
+          "projects": 13,
+          "minimum_parent_goal_met": false,
+          "missing_projects": [
+            "FMOD0062",
+            "FMOD0068"
+          ]
+        }
+      },
+      "all_splits_minimum_15_met": false
+    },
+    "C_4C_2S_2I": {
+      "composition": {
+        "CODE_BINARY": 4,
+        "STRUCTURED": 2,
+        "IMAGE": 2,
+        "total": 8
+      },
+      "splits": {
+        "CALIBRATION_KNOWN": {
+          "fragments": 105,
+          "projects": 15,
+          "minimum_parent_goal_met": true,
+          "missing_projects": [
+            "FMOD0052",
+            "FMOD0058",
+            "FMOD0097",
+            "FMOD0101"
+          ]
+        },
+        "TEST_KNOWN": {
+          "fragments": 104,
+          "projects": 17,
+          "minimum_parent_goal_met": true,
+          "missing_projects": [
+            "FMOD0001",
+            "FMOD0003",
+            "FMOD0004",
+            "FMOD0025",
+            "FMOD0036",
+            "FMOD0043",
+            "FMOD0044",
+            "FMOD0050",
+            "FMOD0061",
+            "FMOD0066",
+            "FMOD0067",
+            "FMOD0069",
+            "FMOD0074",
+            "FMOD0083",
+            "FMOD0086",
+            "FMOD0099"
+          ]
+        },
+        "UNKNOWN_HELDOUT": {
+          "fragments": 82,
+          "projects": 12,
+          "minimum_parent_goal_met": false,
+          "missing_projects": [
+            "FMOD0062",
+            "FMOD0068",
+            "FMOD0094"
+          ]
+        }
+      },
+      "all_splits_minimum_15_met": false
+    }
+  },
+  "selected_template": null,
+  "selection_rule": "first template in the frozen methodological priority order that retains at least 15 distinct parent projects in CALIBRATION_KNOWN, TEST_KNOWN, and UNKNOWN_HELDOUT; no provenance performance result is used",
+  "leakage_policy": {
+    "fixed_evaluated_components_per_query": 8,
+    "query_size_varies_with_K": false,
+    "modality_composition_varies_with_K": false,
+    "K_exposed_to_method": false,
+    "path_identity_exposed_to_method": false,
+    "source_project_identity_exposed_to_method": false
+  },
+  "goals_met": false
+}

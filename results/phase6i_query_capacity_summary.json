@@ -1,0 +1,262 @@
+{
+  "query_capacity_audit": true,
+  "performance_evaluated": false,
+  "thresholds_tuned": false,
+  "input_full_heterogeneous_fragments": 451,
+  "capacity_definition": "5 HARD_MASKED CODE_BINARY components + all same-release HARD_MASKED STRUCTURED components + all same-release historical IMAGE components whose exact original survives in the source current release",
+  "candidate_query_budgets": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "minimum_parent_project_goal": 15,
+  "by_split": {
+    "CALIBRATION_KNOWN": {
+      "fragments": 135,
+      "projects": 19,
+      "min_capacity": 7,
+      "median_capacity": 23.0,
+      "p25_capacity": 14,
+      "p75_capacity": 62,
+      "max_capacity": 1026,
+      "budgets": {
+        "7": {
+          "fragments": 135,
+          "projects": 19,
+          "missing_projects": []
+        },
+        "8": {
+          "fragments": 132,
+          "projects": 19,
+          "missing_projects": []
+        },
+        "9": {
+          "fragments": 125,
+          "projects": 18,
+          "missing_projects": [
+            "FMOD0052"
+          ]
+        },
+        "10": {
+          "fragments": 122,
+          "projects": 18,
+          "missing_projects": [
+            "FMOD0052"
+          ]
+        },
+        "11": {
+          "fragments": 116,
+          "projects": 17,
+          "missing_projects": [
+            "FMOD0052",
+            "FMOD0058"
+          ]
+        },
+        "12": {
+          "fragments": 113,
+          "projects": 16,
+          "missing_projects": [
+            "FMOD0045",
+            "FMOD0052",
+            "FMOD0058"
+          ]
+        }
+      }
+    },
+    "TEST_KNOWN": {
+      "fragments": 207,
+      "projects": 33,
+      "min_capacity": 7,
+      "median_capacity": 22.0,
+      "p25_capacity": 9,
+      "p75_capacity": 56,
+      "max_capacity": 4127,
+      "budgets": {
+        "7": {
+          "fragments": 207,
+          "projects": 33,
+          "missing_projects": []
+        },
+        "8": {
+          "fragments": 200,
+          "projects": 32,
+          "missing_projects": [
+            "FMOD0086"
+          ]
+        },
+        "9": {
+          "fragments": 173,
+          "projects": 28,
+          "missing_projects": [
+            "FMOD0050",
+            "FMOD0066",
+            "FMOD0067",
+            "FMOD0086",
+            "FMOD0099"
+          ]
+        },
+        "10": {
+          "fragments": 154,
+          "projects": 25,
+          "missing_projects": [
+            "FMOD0004",
+            "FMOD0025",
+            "FMOD0050",
+            "FMOD0061",
+            "FMOD0066",
+            "FMOD0067",
+            "FMOD0086",
+            "FMOD0099"
+          ]
+        },
+        "11": {
+          "fragments": 137,
+          "projects": 22,
+          "missing_projects": [
+            "FMOD0003",
+            "FMOD0004",
+            "FMOD0025",
+            "FMOD0044",
+            "FMOD0050",
+            "FMOD0061",
+            "FMOD0066",
+            "FMOD0067",
+            "FMOD0069",
+            "FMOD0086",
+            "FMOD0099"
+          ]
+        },
+        "12": {
+          "fragments": 131,
+          "projects": 21,
+          "missing_projects": [
+            "FMOD0001",
+            "FMOD0003",
+            "FMOD0004",
+            "FMOD0025",
+            "FMOD0044",
+            "FMOD0050",
+            "FMOD0061",
+            "FMOD0066",
+            "FMOD0067",
+            "FMOD0069",
+            "FMOD0086",
+            "FMOD0099"
+          ]
+        }
+      }
+    },
+    "UNKNOWN_HELDOUT": {
+      "fragments": 109,
+      "projects": 15,
+      "min_capacity": 8,
+      "median_capacity": 30.0,
+      "p25_capacity": 10,
+      "p75_capacity": 117,
+      "max_capacity": 1970,
+      "budgets": {
+        "7": {
+          "fragments": 109,
+          "projects": 15,
+          "missing_projects": []
+        },
+        "8": {
+          "fragments": 109,
+          "projects": 15,
+          "missing_projects": []
+        },
+        "9": {
+          "fragments": 103,
+          "projects": 14,
+          "missing_projects": [
+            "FMOD0094"
+          ]
+        },
+        "10": {
+          "fragments": 91,
+          "projects": 13,
+          "missing_projects": [
+            "FMOD0068",
+            "FMOD0094"
+          ]
+        },
+        "11": {
+          "fragments": 74,
+          "projects": 11,
+          "missing_projects": [
+            "FMOD0054",
+            "FMOD0062",
+            "FMOD0068",
+            "FMOD0094"
+          ]
+        },
+        "12": {
+          "fragments": 69,
+          "projects": 10,
+          "missing_projects": [
+            "FMOD0054",
+            "FMOD0062",
+            "FMOD0068",
+            "FMOD0084",
+            "FMOD0094"
+          ]
+        }
+      }
+    }
+  },
+  "budget_viability": {
+    "7": {
+      "projects": {
+        "CALIBRATION_KNOWN": 19,
+        "TEST_KNOWN": 33,
+        "UNKNOWN_HELDOUT": 15
+      },
+      "minimum_15_parent_goal_met": true
+    },
+    "8": {
+      "projects": {
+        "CALIBRATION_KNOWN": 19,
+        "TEST_KNOWN": 32,
+        "UNKNOWN_HELDOUT": 15
+      },
+      "minimum_15_parent_goal_met": true
+    },
+    "9": {
+      "projects": {
+        "CALIBRATION_KNOWN": 18,
+        "TEST_KNOWN": 28,
+        "UNKNOWN_HELDOUT": 14
+      },
+      "minimum_15_parent_goal_met": false
+    },
+    "10": {
+      "projects": {
+        "CALIBRATION_KNOWN": 18,
+        "TEST_KNOWN": 25,
+        "UNKNOWN_HELDOUT": 13
+      },
+      "minimum_15_parent_goal_met": false
+    },
+    "11": {
+      "projects": {
+        "CALIBRATION_KNOWN": 17,
+        "TEST_KNOWN": 22,
+        "UNKNOWN_HELDOUT": 11
+      },
+      "minimum_15_parent_goal_met": false
+    },
+    "12": {
+      "projects": {
+        "CALIBRATION_KNOWN": 16,
+        "TEST_KNOWN": 21,
+        "UNKNOWN_HELDOUT": 10
+      },
+      "minimum_15_parent_goal_met": false
+    }
+  },
+  "highest_safe_common_budget": 8,
+  "goals_met": true
+}

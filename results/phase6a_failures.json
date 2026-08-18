@@ -1,0 +1,520 @@
+[
+  {
+    "project_id": "UW3Xof3H",
+    "slug": "blood-particles-bogdantokarev",
+    "title": "Blood Particles",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "vr8jnBnS",
+    "slug": "custom-copper-golems",
+    "title": "Custom Copper Golems",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "QNNaBHMG",
+    "slug": "midiplayer",
+    "title": "MidiPlayer",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "gUy7vLaG",
+    "slug": "axis-tiertagger",
+    "title": "Axis tiertagger",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "s0mn6CsF",
+    "slug": "konfy",
+    "title": "Konfy",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "FHuqjOkQ",
+    "slug": "player-ping-display",
+    "title": "Player Ping Display",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "cpSWXswg",
+    "slug": "pig-villages",
+    "title": "Pig villages",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "VwiFgnjV",
+    "slug": "arrow-owner",
+    "title": "Arrow Owner",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "a2l3d92F",
+    "slug": "attribute-randomizer",
+    "title": "Attribute Randomizer",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "OrYRDEkP",
+    "slug": "citresewnbackwardscompat",
+    "title": "CITResewnBackwardsCompat",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "x8kr0TGc",
+    "slug": "simple-voice-hud",
+    "title": "Simple Voice HUD",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "1Ii9KeXz",
+    "slug": "sscapezz",
+    "title": "SSCapezz",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "Au3ykER5",
+    "slug": "forceblend",
+    "title": "ForceBlend (PoC)",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "z4LD3VXE",
+    "slug": "surface-light",
+    "title": "Surface Light",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "XukrQo6T",
+    "slug": "tripwire-fix",
+    "title": "tripwire fix",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "xAYUZD4M",
+    "slug": "flashlights",
+    "title": "Flashlight: Shader Light Engine",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "N2kMWSqQ",
+    "slug": "more-and-more-muxuebl",
+    "title": "More and more ???",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "Yvq0Vfta",
+    "slug": "bonfire-gearbox",
+    "title": "Bonfire",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "s04niaVV",
+    "slug": "hazarmod",
+    "title": "Wister|HazarMod",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "52922utB",
+    "slug": "bedrock-style-coordinates-day-counter",
+    "title": "Bedrock Style Coordinates & Day Counter",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "XGzA5oMS",
+    "slug": "orbital-railgun-unofficial",
+    "title": "Orbital Railgun Unofficial Port",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "UbcfOBMH",
+    "slug": "simple_coin_shops",
+    "title": "Simple Coin Shops",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "vnoSqxtd",
+    "slug": "just-clean-f1",
+    "title": "Just Clean F1",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "Y8LxiJTw",
+    "slug": "trimeffects",
+    "title": "TrimEffects",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "Q716JSEg",
+    "slug": "all-hostile-mobs",
+    "title": "All Hostile Mobs",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "YRETN7a4",
+    "slug": "gaaus-badges",
+    "title": "Gaaus Badges",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "ahfP7tss",
+    "slug": "rxbetter-ui",
+    "title": "RxBetter UI",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "YVIdD1ED",
+    "slug": "no-spears",
+    "title": "No Spears",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "KedBLyoD",
+    "slug": "route-helper",
+    "title": "Route Helper",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "jgMcPMmX",
+    "slug": "modernmite",
+    "title": "ModernMITE",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "OFflKJZq",
+    "slug": "pvp-refill-machine",
+    "title": "PvP Refill Machine",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "K1kzD0Ig",
+    "slug": "mob-farm",
+    "title": "Mob Farm",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "WMoUFmXc",
+    "slug": "better-trim-tooltips",
+    "title": "Better Trim Tooltips",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "NAVvCrz5",
+    "slug": "cmdcounter",
+    "title": "CommandCounter",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "nj8FspJp",
+    "slug": "local-identity",
+    "title": "Local Identity",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "IYCVXMbc",
+    "slug": "create-netherite",
+    "title": "Create: Enhanced Netherite Productions",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "UYd23ZmY",
+    "slug": "repurposed-structures-friends-and-foes-compat",
+    "title": "Repurposed Structures - Friends and Foes Compat",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "mzy3A5kV",
+    "slug": "cursorplus",
+    "title": "Cursor+",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "IaKnQE4a",
+    "slug": "phoenix-origins",
+    "title": "Phoenix Origins",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "imWxRc7Q",
+    "slug": "micindicator",
+    "title": "Mic Indicator",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "h7QgiH72",
+    "slug": "create-crystal-clear",
+    "title": "Create: Crystal Clear",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "35Aq1Gtg",
+    "slug": "ale_256s-custom-window-title",
+    "title": "Ale_256's custom window title",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "QDRnCqG7",
+    "slug": "legendary-tooltips-x-travelers-backpack-fix",
+    "title": "Legendary Tooltips x Traveler's Backpack Fix",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "8yaZxwRF",
+    "slug": "bydennyys-mod",
+    "title": "byDennyys Mod",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "L2lIJTpv",
+    "slug": "concept-sculk",
+    "title": "Concept Sculk",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "yhGD254B",
+    "slug": "pixture",
+    "title": "Pixture",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "LbHayyqq",
+    "slug": "friend-marker",
+    "title": "Friend Marker",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "Jj0MQL6b",
+    "slug": "extra-potions",
+    "title": "Extra Potions",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "vanKNzPy",
+    "slug": "reinforced-shulker-boxes-ported",
+    "title": "Reinforced Shulker Boxes Ported",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "JmhpKhzY",
+    "slug": "supply-reminder",
+    "title": "Supply Reminder",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "oAJ7klAG",
+    "slug": "iom857s-masteries",
+    "title": "iom857's Masteries",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "7hRHmcMD",
+    "slug": "hypercompostable",
+    "title": "Hypercompostable",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "hBSK026S",
+    "slug": "keyfallhelper",
+    "title": "KeyfallHelper",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "8KuQhMGI",
+    "slug": "tribulation-difficulty-overhaul",
+    "title": "Tribulation - Difficulty Overhaul",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "rxMTwxyO",
+    "slug": "advancements-debug",
+    "title": "Advancements Debug",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "zwHpHXOr",
+    "slug": "xaero-world-map-bridge",
+    "title": "xaero-world-map-bridge",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "JMnIwGJs",
+    "slug": "gestorage",
+    "title": "Gestorage",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "GJmD5cBs",
+    "slug": "photo-newspaper-mod",
+    "title": "Photo & Newspaper Mod",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "cWV9qwcE",
+    "slug": "brew-anything-derexxd",
+    "title": "Brew Anything!",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "Ed9OoIEo",
+    "slug": "floating-world",
+    "title": "Floating World",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "wVSlXt7P",
+    "slug": "eggs-for-breakfast",
+    "title": "Eggs For Breakfast",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "tNYQSQuZ",
+    "slug": "more-more-and-even-more",
+    "title": "More More and even MORE",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  },
+  {
+    "project_id": "hbenkg6I",
+    "slug": "no-time-to-mine-speedrun-timer",
+    "title": "No Time to Mine: Speedrun Timer",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "FExn2xgh",
+    "slug": "food-plus-mc",
+    "title": "Food Plus",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "hNRrmxjU",
+    "slug": "simplest-hud",
+    "title": "Simplest Hud",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "g6ANCv3M",
+    "slug": "alert",
+    "title": "Alert",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "r3Ge6Tj5",
+    "slug": "ae2-mousetweaks-fix",
+    "title": "AE2 + Mouse Tweaks Fix",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "dOGROImc",
+    "slug": "windowlogging-fabric",
+    "title": "Windowlogging Fabric",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "Zc1fMHXk",
+    "slug": "mod-deck",
+    "title": "Mod Deck",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "MAZWI9Ys",
+    "slug": "key-holder",
+    "title": "Key Holder",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "hQ3nzKCH",
+    "slug": "tenbeescrystaloptimizer",
+    "title": "Tenbees crystal optimizer",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "X7k1OEQo",
+    "slug": "toms-loot",
+    "title": "Tom's Loot",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 2
+  },
+  {
+    "project_id": "QdNNQ43U",
+    "slug": "fusebox",
+    "title": "FuseBox",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 1
+  },
+  {
+    "project_id": "wQwbgxTb",
+    "slug": "pgparticles-api",
+    "title": "PrettyGoodParticles API",
+    "reason": "insufficient_fabric_versions",
+    "valid_versions": 3
+  }
+]

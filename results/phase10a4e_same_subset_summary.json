@@ -1,0 +1,320 @@
+{
+  "phase10a4e_complete": true,
+  "comparison": "Proposed identity-neutral binary method vs NiCadCross on the exact same source-resolvable CODE component subset",
+  "proposed_prediction_file": "results/phase7h_final_component_predictions.csv",
+  "detected_proposed_prediction_column": "predicted_label",
+  "same_subset_components": 1169,
+  "same_subset_queries": 306,
+  "strict_high_confidence_query_count": 17,
+  "tracks": {
+    "NICAD_RESOLVABLE": {
+      "n_components": 1169,
+      "proposed": {
+        "n_components": 1169,
+        "component_accuracy": 0.8408896492728828,
+        "unknown_precision": 0.6983805668016194,
+        "unknown_recall": 0.92,
+        "unknown_f1": 0.7940161104718066,
+        "predicted_unknown_rate": 0.42258340461933275,
+        "n_queries": 306,
+        "parent_precision": 0.8932461873638343,
+        "parent_recall": 0.8583877995642702,
+        "parent_f1": 0.8674291938997821,
+        "parent_exact": 0.7875816993464052,
+        "k_accuracy": 0.7712418300653595
+      },
+      "nicad": {
+        "n_components": 1169,
+        "component_accuracy": 0.7100085543199316,
+        "unknown_precision": 0.5264705882352941,
+        "unknown_recall": 0.9546666666666667,
+        "unknown_f1": 0.6786729857819905,
+        "predicted_unknown_rate": 0.58169375534645,
+        "n_queries": 306,
+        "parent_precision": 0.8518518518518519,
+        "parent_recall": 0.7990196078431373,
+        "parent_f1": 0.8154684095860566,
+        "parent_exact": 0.7254901960784313,
+        "k_accuracy": 0.5882352941176471
+      },
+      "delta_proposed_minus_nicad": {
+        "component_accuracy": 0.1308810949529512,
+        "unknown_f1": 0.11534312468981611,
+        "parent_f1": 0.05196078431372553,
+        "parent_exact": 0.06209150326797386,
+        "k_accuracy": 0.18300653594771243
+      }
+    },
+    "HIGH_CONF_COMPONENTS": {
+      "n_components": 229,
+      "proposed": {
+        "n_components": 229,
+        "component_accuracy": 0.7292576419213974,
+        "unknown_precision": 0.4897959183673469,
+        "unknown_recall": 0.8421052631578947,
+        "unknown_f1": 0.6193548387096773,
+        "predicted_unknown_rate": 0.4279475982532751,
+        "n_queries": 89,
+        "parent_precision": 0.7808988764044944,
+        "parent_recall": 0.7752808988764045,
+        "parent_f1": 0.7771535580524345,
+        "parent_exact": 0.7640449438202247,
+        "k_accuracy": 0.7752808988764045
+      },
+      "nicad": {
+        "n_components": 229,
+        "component_accuracy": 0.5982532751091703,
+        "unknown_precision": 0.3825503355704698,
+        "unknown_recall": 1.0,
+        "unknown_f1": 0.5533980582524272,
+        "predicted_unknown_rate": 0.6506550218340611,
+        "n_queries": 89,
+        "parent_precision": 0.7752808988764045,
+        "parent_recall": 0.7696629213483146,
+        "parent_f1": 0.7715355805243447,
+        "parent_exact": 0.7640449438202247,
+        "k_accuracy": 0.5955056179775281
+      },
+      "delta_proposed_minus_nicad": {
+        "component_accuracy": 0.13100436681222716,
+        "unknown_f1": 0.06595678045725017,
+        "parent_f1": 0.00561797752808979,
+        "parent_exact": 0.0,
+        "k_accuracy": 0.1797752808988764
+      }
+    },
+    "STRICT_HIGH_CONFIDENCE_QUERIES": {
+      "n_components": 85,
+      "n_queries_expected": 17,
+      "n_queries_actual": 17,
+      "proposed": {
+        "n_components": 85,
+        "component_accuracy": 0.7411764705882353,
+        "unknown_precision": 0.6875,
+        "unknown_recall": 0.825,
+        "unknown_f1": 0.75,
+        "predicted_unknown_rate": 0.5647058823529412,
+        "n_queries": 17,
+        "parent_precision": 0.7647058823529411,
+        "parent_recall": 0.7647058823529411,
+        "parent_f1": 0.7647058823529411,
+        "parent_exact": 0.7647058823529411,
+        "k_accuracy": 0.47058823529411764
+      },
+      "nicad": {
+        "n_components": 85,
+        "component_accuracy": 0.6823529411764706,
+        "unknown_precision": 0.5970149253731343,
+        "unknown_recall": 1.0,
+        "unknown_f1": 0.7476635514018691,
+        "predicted_unknown_rate": 0.788235294117647,
+        "n_queries": 17,
+        "parent_precision": 1.0,
+        "parent_recall": 1.0,
+        "parent_f1": 1.0,
+        "parent_exact": 1.0,
+        "k_accuracy": 0.47058823529411764
+      },
+      "delta_proposed_minus_nicad": {
+        "component_accuracy": 0.05882352941176472,
+        "unknown_f1": 0.002336448598130869,
+        "parent_f1": -0.23529411764705888,
+        "parent_exact": -0.23529411764705888,
+        "k_accuracy": 0.0
+      }
+    }
+  },
+  "by_scenario": {
+    "TEST_KNOWN_K1": {
+      "n_components": 195,
+      "proposed": {
+        "n_components": 195,
+        "component_accuracy": 0.8307692307692308,
+        "unknown_precision": 0.0,
+        "unknown_recall": 0.0,
+        "unknown_f1": 0.0,
+        "predicted_unknown_rate": 0.16923076923076924,
+        "n_queries": 41,
+        "parent_precision": 1.0,
+        "parent_recall": 1.0,
+        "parent_f1": 1.0,
+        "parent_exact": 1.0,
+        "k_accuracy": 0.6341463414634146
+      },
+      "nicad": {
+        "n_components": 195,
+        "component_accuracy": 0.6358974358974359,
+        "unknown_precision": 0.0,
+        "unknown_recall": 0.0,
+        "unknown_f1": 0.0,
+        "predicted_unknown_rate": 0.3641025641025641,
+        "n_queries": 41,
+        "parent_precision": 0.975609756097561,
+        "parent_recall": 0.975609756097561,
+        "parent_f1": 0.975609756097561,
+        "parent_exact": 0.975609756097561,
+        "k_accuracy": 0.34146341463414637
+      }
+    },
+    "TEST_KNOWN_K2": {
+      "n_components": 190,
+      "proposed": {
+        "n_components": 190,
+        "component_accuracy": 0.8368421052631579,
+        "unknown_precision": 0.0,
+        "unknown_recall": 0.0,
+        "unknown_f1": 0.0,
+        "predicted_unknown_rate": 0.1631578947368421,
+        "n_queries": 55,
+        "parent_precision": 0.9818181818181818,
+        "parent_recall": 0.9363636363636364,
+        "parent_f1": 0.9515151515151515,
+        "parent_exact": 0.8909090909090909,
+        "k_accuracy": 0.7818181818181819
+      },
+      "nicad": {
+        "n_components": 190,
+        "component_accuracy": 0.6473684210526316,
+        "unknown_precision": 0.0,
+        "unknown_recall": 0.0,
+        "unknown_f1": 0.0,
+        "predicted_unknown_rate": 0.3526315789473684,
+        "n_queries": 55,
+        "parent_precision": 0.9454545454545454,
+        "parent_recall": 0.9,
+        "parent_f1": 0.9151515151515152,
+        "parent_exact": 0.8545454545454545,
+        "k_accuracy": 0.36363636363636365
+      }
+    },
+    "TEST_KNOWN_K3": {
+      "n_components": 191,
+      "proposed": {
+        "n_components": 191,
+        "component_accuracy": 0.7905759162303665,
+        "unknown_precision": 0.0,
+        "unknown_recall": 0.0,
+        "unknown_f1": 0.0,
+        "predicted_unknown_rate": 0.17277486910994763,
+        "n_queries": 56,
+        "parent_precision": 0.9375,
+        "parent_recall": 0.8244047619047619,
+        "parent_f1": 0.8601190476190476,
+        "parent_exact": 0.6428571428571429,
+        "k_accuracy": 0.8571428571428571
+      },
+      "nicad": {
+        "n_components": 191,
+        "component_accuracy": 0.6230366492146597,
+        "unknown_precision": 0.0,
+        "unknown_recall": 0.0,
+        "unknown_f1": 0.0,
+        "predicted_unknown_rate": 0.3769633507853403,
+        "n_queries": 56,
+        "parent_precision": 0.875,
+        "parent_recall": 0.7142857142857143,
+        "parent_f1": 0.7690476190476191,
+        "parent_exact": 0.5178571428571429,
+        "k_accuracy": 0.7142857142857143
+      }
+    },
+    "TEST_MIXED_1K1U": {
+      "n_components": 193,
+      "proposed": {
+        "n_components": 193,
+        "component_accuracy": 0.8808290155440415,
+        "unknown_precision": 0.8230088495575221,
+        "unknown_recall": 0.96875,
+        "unknown_f1": 0.8899521531100478,
+        "predicted_unknown_rate": 0.5854922279792746,
+        "n_queries": 54,
+        "parent_precision": 0.8981481481481481,
+        "parent_recall": 0.9074074074074074,
+        "parent_f1": 0.9012345679012346,
+        "parent_exact": 0.8888888888888888,
+        "k_accuracy": 0.9074074074074074
+      },
+      "nicad": {
+        "n_components": 193,
+        "component_accuracy": 0.7150259067357513,
+        "unknown_precision": 0.6433566433566433,
+        "unknown_recall": 0.9583333333333334,
+        "unknown_f1": 0.7698744769874477,
+        "predicted_unknown_rate": 0.7409326424870466,
+        "n_queries": 54,
+        "parent_precision": 0.7777777777777778,
+        "parent_recall": 0.7962962962962963,
+        "parent_f1": 0.7839506172839507,
+        "parent_exact": 0.7592592592592593,
+        "k_accuracy": 0.7222222222222222
+      }
+    },
+    "TEST_MIXED_2K1U": {
+      "n_components": 187,
+      "proposed": {
+        "n_components": 187,
+        "component_accuracy": 0.786096256684492,
+        "unknown_precision": 0.6444444444444445,
+        "unknown_recall": 0.8787878787878788,
+        "unknown_f1": 0.7435897435897436,
+        "predicted_unknown_rate": 0.48128342245989303,
+        "n_queries": 57,
+        "parent_precision": 0.847953216374269,
+        "parent_recall": 0.8070175438596491,
+        "parent_f1": 0.8116959064327485,
+        "parent_exact": 0.6666666666666666,
+        "k_accuracy": 0.7192982456140351
+      },
+      "nicad": {
+        "n_components": 187,
+        "component_accuracy": 0.6631016042780749,
+        "unknown_precision": 0.512,
+        "unknown_recall": 0.9696969696969697,
+        "unknown_f1": 0.6701570680628273,
+        "predicted_unknown_rate": 0.6684491978609626,
+        "n_queries": 57,
+        "parent_precision": 0.8011695906432749,
+        "parent_recall": 0.7017543859649122,
+        "parent_f1": 0.7333333333333333,
+        "parent_exact": 0.5789473684210527,
+        "k_accuracy": 0.6140350877192983
+      }
+    },
+    "TEST_UNKNOWN_K1": {
+      "n_components": 213,
+      "proposed": {
+        "n_components": 213,
+        "component_accuracy": 0.9107981220657277,
+        "unknown_precision": 1.0,
+        "unknown_recall": 0.9107981220657277,
+        "unknown_f1": 0.9533169533169533,
+        "predicted_unknown_rate": 0.9107981220657277,
+        "n_queries": 43,
+        "parent_precision": 0.6744186046511628,
+        "parent_recall": 0.6744186046511628,
+        "parent_f1": 0.6744186046511628,
+        "parent_exact": 0.6744186046511628,
+        "k_accuracy": 0.6744186046511628
+      },
+      "nicad": {
+        "n_components": 213,
+        "component_accuracy": 0.9483568075117371,
+        "unknown_precision": 1.0,
+        "unknown_recall": 0.9483568075117371,
+        "unknown_f1": 0.9734939759036145,
+        "predicted_unknown_rate": 0.9483568075117371,
+        "n_queries": 43,
+        "parent_precision": 0.7441860465116279,
+        "parent_recall": 0.7441860465116279,
+        "parent_f1": 0.7441860465116279,
+        "parent_exact": 0.7441860465116279,
+        "k_accuracy": 0.7441860465116279
+      }
+    }
+  },
+  "interpretation": {
+    "nicad_advantage": "NiCad receives reconstructed Java source corresponding to binary query components; the proposed method operates on the frozen binary-side evidence directly.",
+    "no_test_retuning": true,
+    "comparison_unit": "exact same NiCad-source-resolvable CODE nodes"
+  }
+}

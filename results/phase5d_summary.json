@@ -1,0 +1,341 @@
+{
+  "calibration_queries": 50,
+  "test_queries": 150,
+  "best_params": {
+    "OPCODE_3GRAM": {
+      "lambda": 0.05,
+      "gamma": 0.0,
+      "calibration_score": 0.26119047619047625
+    },
+    "OPCODE_STRUCT": {
+      "lambda": 0.05,
+      "gamma": 0.0,
+      "calibration_score": 0.28441269841269845
+    },
+    "OPCODE_CONTEXT": {
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "calibration_score": 0.31359668109668104
+    }
+  },
+  "results": {
+    "OPCODE_3GRAM": {
+      "CLEAN": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4620000000000001,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.24296296296296296,
+          "parent_f1": 0.3402222222222222,
+          "parent_set_exact": 0.013333333333333334,
+          "component_set_exact": 0.013333333333333334
+        }
+      },
+      "DROP30": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.36148148148148146,
+          "parent_f1": 0.4102804232804233,
+          "parent_set_exact": 0.013333333333333334,
+          "component_set_exact": 0.013333333333333334
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.21888888888888886,
+          "parent_f1": 0.310973544973545,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        }
+      },
+      "BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.25777777777777783,
+          "parent_f1": 0.36,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.23888888888888885,
+          "parent_f1": 0.34036507936507937,
+          "parent_set_exact": 0.013333333333333334,
+          "component_set_exact": 0.013333333333333334
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.24740740740740738,
+          "parent_f1": 0.37049350649350643,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3062962962962963,
+          "parent_f1": 0.4266666666666667,
+          "parent_set_exact": 0.08666666666666667,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2785185185185185,
+          "parent_f1": 0.3983492063492064,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.2211111111111111,
+          "parent_f1": 0.33020105820105816,
+          "parent_set_exact": 0.013333333333333334,
+          "component_set_exact": 0.013333333333333334
+        }
+      }
+    },
+    "OPCODE_STRUCT": {
+      "CLEAN": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.44,
+          "parent_f1": 0.4533333333333333,
+          "parent_set_exact": 0.12,
+          "component_set_exact": 0.12
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.21407407407407406,
+          "parent_f1": 0.35818518518518516,
+          "parent_set_exact": 0.04,
+          "component_set_exact": 0.02666666666666667
+        }
+      },
+      "DROP30": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.34629629629629627,
+          "parent_f1": 0.4114761904761905,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.19407407407407404,
+          "parent_f1": 0.31387301587301586,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        }
+      },
+      "BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.22555555555555554,
+          "parent_f1": 0.31555555555555553,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.20444444444444443,
+          "parent_f1": 0.32650793650793647,
+          "parent_set_exact": 0.03333333333333333,
+          "component_set_exact": 0.02666666666666667
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.2614814814814814,
+          "parent_f1": 0.3697012987012987,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3018518518518519,
+          "parent_f1": 0.44777777777777783,
+          "parent_set_exact": 0.11333333333333333,
+          "component_set_exact": 0.04666666666666667
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2662962962962963,
+          "parent_f1": 0.38276190476190475,
+          "parent_set_exact": 0.02666666666666667,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.18925925925925924,
+          "parent_f1": 0.3128306878306878,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667
+        }
+      }
+    },
+    "OPCODE_CONTEXT": {
+      "CLEAN": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.38666666666666666,
+          "parent_f1": 0.43866666666666676,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.08
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.2737037037037037,
+          "parent_f1": 0.370989417989418,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667
+        }
+      },
+      "DROP30": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.3951851851851852,
+          "parent_f1": 0.4459312169312169,
+          "parent_set_exact": 0.02,
+          "component_set_exact": 0.02
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.2737037037037037,
+          "parent_f1": 0.370989417989418,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667
+        }
+      },
+      "BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.19,
+          "parent_f1": 0.26555555555555554,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.2737037037037037,
+          "parent_f1": 0.370989417989418,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667
+        }
+      },
+      "DROP30_BRIDGE": {
+        "B1_INDEPENDENT": {
+          "component_accuracy": 0.32185185185185183,
+          "parent_f1": 0.4232183742183742,
+          "parent_set_exact": 0.0,
+          "component_set_exact": 0.0
+        },
+        "B2_EXACT_GLOBAL": {
+          "component_accuracy": 0.3377777777777778,
+          "parent_f1": 0.4744444444444444,
+          "parent_set_exact": 0.08,
+          "component_set_exact": 0.03333333333333333
+        },
+        "B3_HARD_COMPONENT": {
+          "component_accuracy": 0.2462962962962963,
+          "parent_f1": 0.366031746031746,
+          "parent_set_exact": 0.02666666666666667,
+          "component_set_exact": 0.0
+        },
+        "B4_SOFT_GRAPH": {
+          "component_accuracy": 0.2737037037037037,
+          "parent_f1": 0.370989417989418,
+          "parent_set_exact": 0.006666666666666667,
+          "component_set_exact": 0.006666666666666667
+        }
+      }
+    }
+  }
+}

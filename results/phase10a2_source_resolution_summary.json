@@ -1,0 +1,24 @@
+{
+  "phase10a2_complete": true,
+  "scope": "TEST_CODE_SOURCE_REPOSITORY_RESOLUTION",
+  "test_code_components": 1800,
+  "test_queries": 360,
+  "unique_source_projects": 48,
+  "github_source_projects": 41,
+  "github_source_project_rate": 0.8541666666666666,
+  "github_source_components": 1542,
+  "github_source_component_rate": 0.8566666666666667,
+  "queries_with_at_least_one_github_code_source": 342,
+  "queries_with_all_code_sources_on_github": 267,
+  "project_resolution_status_counts": {
+    "GITHUB_SOURCE": 41,
+    "NO_SOURCE_URL": 7
+  },
+  "notes": {
+    "java_mapping_not_yet_claimed": true,
+    "current_stage_only_resolves_project_source_repository": true,
+    "class_to_java_mapping_next_phase": true,
+    "manual_annotation_used": false
+  },
+  "ready_for_phase10a3": true
+}

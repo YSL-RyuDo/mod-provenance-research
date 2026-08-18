@@ -1,0 +1,13 @@
+{
+  "projects": 30,
+  "graph_failures": 0,
+  "nodes": 7677,
+  "edges": 25864,
+  "class_ref_edges": 25274,
+  "resource_literal_edges": 8,
+  "metadata_dependency_edges": 590,
+  "mods_with_class_edges": 28,
+  "median_edges_per_mod": 110.0,
+  "median_largest_component_rate": 0.818447724644582,
+  "target_median_largest_component_rate": 0.8360655737704918
+}
