@@ -1,6 +1,6 @@
 # Reproducing the Research Workflow
 
-This repository preserves the code and metadata needed to trace Phase 1 through Phase 11. It intentionally does not redistribute third-party MOD/JAR payloads, cloned repositories, generated query packages, or external tools.
+This repository preserves the code and metadata needed to trace Phase 1 through Phase 12. It intentionally does not redistribute third-party MOD/JAR payloads, cloned repositories, generated query packages, or external tools.
 
 ## 1. Environment
 
@@ -43,6 +43,8 @@ Phase 8  post-hoc statistics and ablations
 Phase 9  server correctness and performance
 Phase 10 source/external-baseline compatibility
 Phase 11 post-freeze multi-UNKNOWN robustness
+Phase 12 post-freeze Exact-vs-LSH retrieval/scalability
+Phase 12 post-freeze Exact-vs-LSH retrieval/scalability evaluation
 ```
 
 The exact scripts, inputs, outputs, results, and freeze status for each phase are listed in `reproducibility/EXPERIMENT_INDEX.md`.
@@ -75,7 +77,27 @@ Open-NiCad/NiCadCross is not vendored. Install it separately and reconstruct the
 
 Run `scripts/phase11b_run_multi_unknown_robustness.py`. It reuses exact Phase 7B donor evidence and generates a temporary adapter in `scripts/_phase11b_phase7h_adapter_generated.py`. That active generated file is ignored because the tracked driver recreates it deterministically. The historical adapter used for the preserved run is under `archive/generated/` for audit.
 
-## 8. Expected preserved endpoints
+## 8. Phase 12 approximate retrieval and scalability
+
+Run in order:
+
+- `scripts/phase12a_ann_candidate_benchmark.py`
+- `scripts/phase12b_ann_downstream_evaluation.py`
+- `scripts/phase12c_online_retrieval_runtime.py`
+- `scripts/phase12d_online_pool_downstream_evaluation.py`
+- `scripts/phase12e_scalability_crossover.py`
+- `scripts/phase12f_reporting_audit.py`
+
+Use Phase 12C/12D for full 360-query fidelity results. Phase 12E is a deterministic 120-query runtime/scalability sample.
+
+`200eq`, `500eq`, and `1000eq` are synthetic component-volume stress conditions over 100 real registered parents, not unique-project counts.
+
+Verify the frozen Phase 12 state with:
+
+- `reproducibility/phase12_freeze_manifest.sha256`
+- `results/phase12f_reporting_audit_summary.json`
+
+## 9. Expected preserved endpoints
 
 - Primary frozen TEST: `results/phase7h_final_test_summary.json`
 - Statistical analysis: `results/phase8a_bootstrap_summary.json`, `phase8b_baseline_ablation_summary.json`, `phase8c_source_cluster_sensitivity_summary.json`
