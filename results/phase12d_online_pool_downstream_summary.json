@@ -1,0 +1,103 @@
+{
+  "phase12d_complete": true,
+  "scope": "ONLINE_ANN_POOL_DOWNSTREAM_FROZEN_RECONSTRUCTION",
+  "frozen_method_modified": false,
+  "phase7_parameters_retuned": false,
+  "test_used_for_ann_parameter_selection": false,
+  "graph_refinement_applied": false,
+  "reason_graph_excluded": "Phase12B isolates retrieval-backend effects. The frozen dependency-graph term is an optional weak refinement whose Phase7 TEST contribution was small and statistically inconclusive.",
+  "frozen_beta0_reproduction": {
+    "component_predictions_exact_match": true,
+    "query_parent_sets_exact_match": true
+  },
+  "backends": {
+    "EXACT": {
+      "backend": "EXACT",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8071428571428572,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552,
+      "parent_set_precision": 0.7844907407407408,
+      "parent_set_recall": 0.9560185185185184,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.41388888888888886,
+      "k_accuracy": 0.48055555555555557,
+      "k_mae": 0.5333333333333333
+    },
+    "FAST": {
+      "backend": "FAST",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8067460317460318,
+      "unknown_precision": 0.6511175898931001,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7519640852974186,
+      "parent_set_precision": 0.7840277777777778,
+      "parent_set_recall": 0.9550925925925925,
+      "parent_set_f1": 0.8428042328042328,
+      "parent_set_exact": 0.41388888888888886,
+      "k_accuracy": 0.4777777777777778,
+      "k_mae": 0.5361111111111111
+    },
+    "BALANCED": {
+      "backend": "BALANCED",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8071428571428572,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552,
+      "parent_set_precision": 0.7844907407407408,
+      "parent_set_recall": 0.9560185185185184,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.41388888888888886,
+      "k_accuracy": 0.48055555555555557,
+      "k_mae": 0.5333333333333333
+    },
+    "HIGH_RECALL": {
+      "backend": "HIGH_RECALL",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8071428571428572,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552,
+      "parent_set_precision": 0.7844907407407408,
+      "parent_set_recall": 0.9560185185185184,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.41388888888888886,
+      "k_accuracy": 0.48055555555555557,
+      "k_mae": 0.5333333333333333
+    }
+  },
+  "delta_from_exact": {
+    "FAST": {
+      "component_accuracy": -0.0003968253968253954,
+      "unknown_f1": -0.00042221453413660015,
+      "parent_set_f1": -0.0007407407407407085,
+      "parent_set_exact": 0.0,
+      "k_accuracy": -0.002777777777777768
+    },
+    "BALANCED": {
+      "component_accuracy": 0.0,
+      "unknown_f1": 0.0,
+      "parent_set_f1": 0.0,
+      "parent_set_exact": 0.0,
+      "k_accuracy": 0.0
+    },
+    "HIGH_RECALL": {
+      "component_accuracy": 0.0,
+      "unknown_f1": 0.0,
+      "parent_set_f1": 0.0,
+      "parent_set_exact": 0.0,
+      "k_accuracy": 0.0
+    }
+  },
+  "interpretation_rule": {
+    "operating_points_all_reported": true,
+    "no_test_selection": true,
+    "balanced_not_promoted_based_on_test": "FAST, BALANCED, and HIGH_RECALL remain fixed operating points. Phase12D evaluates online Phase12C candidate pools without TEST-based selection."
+  }
+}

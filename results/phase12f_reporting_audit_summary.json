@@ -1,0 +1,175 @@
+{
+  "phase12f_complete": true,
+  "scope": "REPORTING_ONLY_PHASE12_FREEZE_AUDIT",
+  "predictions_recomputed": false,
+  "parameters_retuned": false,
+  "primary_test_modified": false,
+  "phase12_interpretation": {
+    "main_system_result": "Aggressive FAST LSH pruning provides a modest latency reduction with a very small downstream prediction change; conservative fidelity-preserving LSH configurations do not outperform vectorized exhaustive search at the evaluated scales.",
+    "fast_real_crossover": "FAST first shows lower p50 latency than Exact at the 40-real-project scale.",
+    "balanced_crossover": "No observed p50 crossover through 100 real projects and 1000-equivalent synthetic component-volume stress.",
+    "high_recall_crossover": "No observed p50 crossover through 100 real projects and 1000-equivalent synthetic component-volume stress.",
+    "accuracy_reporting_source": "Use full 360-query Phase12C/12D results for fidelity and downstream accuracy claims.",
+    "scaling_reporting_source": "Use the deterministic stratified 120-query Phase12E sample only for runtime/scalability claims.",
+    "synthetic_scope": "200eq/500eq/1000eq duplicate component arrays from 100 real registered parents and are computational component-volume stress tests, not 200/500/1000 unique real MOD projects."
+  },
+  "full_test_downstream": {
+    "EXACT": {
+      "backend": "EXACT",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8071428571428572,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552,
+      "parent_set_precision": 0.7844907407407408,
+      "parent_set_recall": 0.9560185185185184,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.4138888888888888,
+      "k_accuracy": 0.4805555555555555,
+      "k_mae": 0.5333333333333333
+    },
+    "FAST": {
+      "backend": "FAST",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8067460317460318,
+      "unknown_precision": 0.6511175898931001,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7519640852974186,
+      "parent_set_precision": 0.7840277777777778,
+      "parent_set_recall": 0.9550925925925924,
+      "parent_set_f1": 0.8428042328042328,
+      "parent_set_exact": 0.4138888888888888,
+      "k_accuracy": 0.4777777777777778,
+      "k_mae": 0.5361111111111111
+    },
+    "BALANCED": {
+      "backend": "BALANCED",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8071428571428572,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552,
+      "parent_set_precision": 0.7844907407407408,
+      "parent_set_recall": 0.9560185185185184,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.4138888888888888,
+      "k_accuracy": 0.4805555555555555,
+      "k_mae": 0.5333333333333333
+    },
+    "HIGH_RECALL": {
+      "backend": "HIGH_RECALL",
+      "queries": 360,
+      "components": 2520,
+      "component_accuracy": 0.8071428571428572,
+      "unknown_precision": 0.6517509727626459,
+      "unknown_recall": 0.8897742363877822,
+      "unknown_f1": 0.7523862998315552,
+      "parent_set_precision": 0.7844907407407408,
+      "parent_set_recall": 0.9560185185185184,
+      "parent_set_f1": 0.8435449735449735,
+      "parent_set_exact": 0.4138888888888888,
+      "k_accuracy": 0.4805555555555555,
+      "k_mae": 0.5333333333333333
+    }
+  },
+  "fast_delta_from_exact": {
+    "component_accuracy": -0.0003968253968253954,
+    "unknown_f1": -0.00042221453413660015,
+    "parent_set_f1": -0.0007407407407407085,
+    "parent_set_exact": 0.0,
+    "k_accuracy": -0.0027777777777777124
+  },
+  "scale60_runtime_sample": {
+    "EXACT": {
+      "p50_ms": 10.3153865,
+      "p95_ms": 10.94733535,
+      "speedup_p50_vs_exact": 1.0
+    },
+    "FAST": {
+      "p50_ms": 8.84792,
+      "p95_ms": 10.874974,
+      "speedup_p50_vs_exact": 1.165854404198953
+    },
+    "BALANCED": {
+      "p50_ms": 11.2451765,
+      "p95_ms": 11.9096819,
+      "speedup_p50_vs_exact": 0.917316549011036
+    },
+    "HIGH_RECALL": {
+      "p50_ms": 11.465834,
+      "p95_ms": 12.2971142,
+      "speedup_p50_vs_exact": 0.8996629900624759
+    }
+  },
+  "scale100_runtime_sample": {
+    "EXACT": {
+      "p50_ms": 20.5693375,
+      "speedup_p50_vs_exact": 1.0
+    },
+    "FAST": {
+      "p50_ms": 17.933557,
+      "speedup_p50_vs_exact": 1.1469747747198171
+    },
+    "BALANCED": {
+      "p50_ms": 22.2529945,
+      "speedup_p50_vs_exact": 0.9243402050901508
+    },
+    "HIGH_RECALL": {
+      "p50_ms": 22.928345,
+      "speedup_p50_vs_exact": 0.8971139216546157
+    }
+  },
+  "scale1000eq_runtime_sample": {
+    "EXACT": {
+      "p50_ms": 195.4418805,
+      "speedup_p50_vs_exact": 1.0
+    },
+    "FAST": {
+      "p50_ms": 166.121497,
+      "speedup_p50_vs_exact": 1.176499634481382
+    },
+    "BALANCED": {
+      "p50_ms": 207.4677645,
+      "speedup_p50_vs_exact": 0.9420349275513594
+    },
+    "HIGH_RECALL": {
+      "p50_ms": 209.1281765,
+      "speedup_p50_vs_exact": 0.9345554662740532
+    }
+  },
+  "p50_crossover": {
+    "FAST": {
+      "first_observed_p50_faster_scale": "40",
+      "scale_type": "REAL",
+      "speedup_p50": 1.1345525426113328
+    },
+    "BALANCED": {
+      "first_observed_p50_faster_scale": null,
+      "scale_type": null,
+      "speedup_p50": null
+    },
+    "HIGH_RECALL": {
+      "first_observed_p50_faster_scale": null,
+      "scale_type": null,
+      "speedup_p50": null
+    }
+  },
+  "paper_safe_claims": [
+    "The online exhaustive implementation exactly reproduced the frozen Phase7H Top-10 candidate pools.",
+    "On the full frozen TEST set, BALANCED and HIGH_RECALL produced the same final content-only provenance predictions as Exact.",
+    "FAST changed 1 of 360 query-level predictions and 1 of 2520 component predictions relative to Exact.",
+    "FAST first achieved lower observed p50 search latency than Exact at the 40-project real-gallery scale.",
+    "At 60 frozen TEST projects, FAST reduced p50 search latency while incurring only a very small downstream metric decrease.",
+    "Fidelity-preserving BALANCED and HIGH_RECALL did not show a p50 speed advantage over Exact within the evaluated real and synthetic component-volume scales."
+  ],
+  "claims_to_avoid": [
+    "Do not claim ANN is universally faster than exhaustive search.",
+    "Do not claim FAST is lossless.",
+    "Do not report Phase12E sampled fidelity as the primary accuracy result.",
+    "Do not call 200eq/500eq/1000eq evaluations on 200/500/1000 unique MOD projects.",
+    "Do not claim a statistically significant ANN accuracy difference without a dedicated paired uncertainty analysis."
+  ]
+}

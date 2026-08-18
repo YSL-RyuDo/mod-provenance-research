@@ -43,3 +43,28 @@ This index records the preserved research flow as of 2026-08-18. Paths are relat
 - Phase 9 latency scopes differ: precomputed-score, evidence-to-result, and local-package-to-result numbers must not be mixed.
 - Phase 10 compares only source-resolvable code components and gives NiCadCross reconstructed Java source while the proposed method uses frozen binary-side evidence.
 - Phase 11 measures rejection of components from multiple unregistered sources after collapsing them to one public `UNKNOWN` label; it does not identify distinct unknown parents.
+
+
+## Phase 12 — Approximate Retrieval Scalability
+
+Phase 12 evaluates whether the frozen Phase 7 provenance reconstruction pipeline can replace exhaustive registered-parent retrieval with binary multi-table LSH candidate generation without retuning the frozen method.
+
+- Phase 12A: candidate-generation fidelity audit using fixed FAST, BALANCED, and HIGH_RECALL LSH operating points.
+- Phase 12B: downstream content-only reconstruction using LSH candidate pools with frozen Phase 7 scores.
+- Phase 12C: deployable online Exact-vs-LSH retrieval with actual Hamming/histogram distance recomputation.
+- Phase 12D: downstream reconstruction from the online Phase 12C candidate pools.
+- Phase 12E: retrieval scalability benchmark at 20/40/60/80/100 real projects and 200eq/500eq/1000eq synthetic component-volume stress.
+- Phase 12F: reporting-only integrity and freeze audit.
+
+Key findings:
+
+- Online Exact reproduces the frozen Phase 7H Top-10 candidate pools.
+- Full TEST content-only Exact performance remains component accuracy 0.807143, UNKNOWN F1 0.752386, parent-set F1 0.843545, parent-set exact 0.413889, and K accuracy 0.480556.
+- BALANCED and HIGH_RECALL preserve the final Exact predictions on all 360 frozen TEST queries.
+- FAST changes 1/360 query prediction and 1/2520 component prediction; its component-accuracy delta is -0.000397 and parent-F1 delta is -0.000741.
+- FAST first shows lower observed p50 search latency than Exact at 40 real gallery projects.
+- At the 60-project frozen TEST scale, the Phase 12E runtime sample reports Exact p50 10.315 ms and FAST p50 8.848 ms (1.166x).
+- Fidelity-preserving BALANCED and HIGH_RECALL do not show an observed p50 crossover through 100 real projects or the 1000eq synthetic component-volume stress.
+- 200eq/500eq/1000eq are computational component-volume stress conditions over 100 real registered parents, not additional unique real MOD projects.
+
+Primary fidelity/downstream claims must use the full 360-query Phase 12C/12D results. Phase 12E uses a deterministic stratified 120-query sample and is used for runtime/scalability reporting.
