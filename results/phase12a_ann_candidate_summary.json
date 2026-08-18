@@ -1,0 +1,97 @@
+{
+  "phase12a_complete": true,
+  "scope": "ANN_CANDIDATE_GENERATION_FIDELITY_AUDIT",
+  "frozen_method_modified": false,
+  "phase7_parameters_retuned": false,
+  "test_used_for_ann_parameter_selection": false,
+  "benchmark": {
+    "gallery_projects": 60,
+    "gallery_components": 26329,
+    "test_queries": 360,
+    "test_components": 2520,
+    "candidate_pool_M": 10
+  },
+  "method": {
+    "ann_family": "MULTI_TABLE_BINARY_LSH",
+    "candidate_generation_only": true,
+    "exact_frozen_distance_reranking": true,
+    "histogram_used_for_lsh": false,
+    "histogram_still_used_in_frozen_exact_reranking": true,
+    "configurations_reported_without_test_selection": [
+      "FAST",
+      "BALANCED",
+      "HIGH_RECALL"
+    ]
+  },
+  "configs": {
+    "FAST": {
+      "config": "FAST",
+      "queries": 360,
+      "known_parent_queries": 300,
+      "mean_shortlist_parents": 17.625,
+      "median_shortlist_parents": 15.0,
+      "mean_candidate_pool_size": 9.019444444444444,
+      "candidate_pool_under_10_queries": 97,
+      "empty_shortlist_queries": 0,
+      "mean_known_parent_recall": 0.962777777777778,
+      "all_known_true_parents_present_rate": 0.9133333333333333,
+      "mean_exact_top10_overlap": 0.7324999999999999,
+      "exact_top10_identical_rate": 0.3333333333333333,
+      "latency_mean_ms": 0.40823051944444444,
+      "latency_p50_ms": 0.389102,
+      "latency_p95_ms": 0.4969427,
+      "latency_p99_ms": 0.7487629900000006,
+      "index_build_ms": 153.096661,
+      "index_unique_bucket_keys": 96379,
+      "index_postings": 193744
+    },
+    "BALANCED": {
+      "config": "BALANCED",
+      "queries": 360,
+      "known_parent_queries": 300,
+      "mean_shortlist_parents": 53.727777777777774,
+      "median_shortlist_parents": 54.0,
+      "mean_candidate_pool_size": 10.0,
+      "candidate_pool_under_10_queries": 0,
+      "empty_shortlist_queries": 0,
+      "mean_known_parent_recall": 0.9744444444444446,
+      "all_known_true_parents_present_rate": 0.9433333333333334,
+      "mean_exact_top10_overlap": 0.9997222222222222,
+      "exact_top10_identical_rate": 0.9972222222222222,
+      "latency_mean_ms": 0.4488124111111111,
+      "latency_p50_ms": 0.435468,
+      "latency_p95_ms": 0.53340305,
+      "latency_p99_ms": 0.6747110700000001,
+      "index_build_ms": 226.265575,
+      "index_unique_bucket_keys": 122308,
+      "index_postings": 387488
+    },
+    "HIGH_RECALL": {
+      "config": "HIGH_RECALL",
+      "queries": 360,
+      "known_parent_queries": 300,
+      "mean_shortlist_parents": 59.32222222222222,
+      "median_shortlist_parents": 59.0,
+      "mean_candidate_pool_size": 10.0,
+      "candidate_pool_under_10_queries": 0,
+      "empty_shortlist_queries": 0,
+      "mean_known_parent_recall": 0.9744444444444446,
+      "all_known_true_parents_present_rate": 0.9433333333333334,
+      "mean_exact_top10_overlap": 1.0,
+      "exact_top10_identical_rate": 1.0,
+      "latency_mean_ms": 0.5382702111111111,
+      "latency_p50_ms": 0.5223925,
+      "latency_p95_ms": 0.6463376500000001,
+      "latency_p99_ms": 0.9096626700000028,
+      "index_build_ms": 194.698318,
+      "index_unique_bucket_keys": 19314,
+      "index_postings": 774976
+    }
+  },
+  "interpretation_rule": {
+    "ann_score_is_not_final_provenance_score": true,
+    "candidate_generation": "LSH retrieves candidate registered parents from frozen binary signatures.",
+    "reranking": "Retrieved parents are reranked using the exact frozen Phase7 query-parent retrieval score.",
+    "downstream_solver": "Evaluated separately in Phase12B."
+  }
+}
