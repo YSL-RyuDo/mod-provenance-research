@@ -1,0 +1,4 @@
+﻿sha256,component_count,mod_count,mods,modalities,paths
+703d0bb497fb55e5b3f4fdeb3af132497cb521458aa3372b43d99755fa80aa06,3,3,MOD0014|MOD0015|MOD0016,CODE,build-logic/src/main/java/com/blamejared/Util.java | build-logic/src/main/java/com/blamejared/Util.java | build-logic/src/main/java/com/blamejared/Util.java
+866245b3ef2f9f5b9c1aeb5e9c55d0fe18d114fc8ff8f54e0020ceb1c4398b1a,2,2,MOD0015|MOD0016,CODE,build-logic/src/main/java/com/blamejared/RootPlugin.java | build-logic/src/main/java/com/blamejared/RootPlugin.java
+f5199a9c5811fc4b2acdefb551b2bd8679948d631bc2b9d60e53409990a6a25f,3,3,MOD0014|MOD0015|MOD0016,CODE,build-logic/src/main/java/com/blamejared/LoaderPlugin.java | build-logic/src/main/java/com/blamejared/LoaderPlugin.java | build-logic/src/main/java/com/blamejared/LoaderPlugin.java

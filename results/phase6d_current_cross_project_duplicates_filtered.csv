@@ -1,0 +1,49 @@
+﻿modality,component_sha256,project_count,projects,fresh_id,role,relative_path
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0016,TARGET_MOD,assets/vegandelight/textures/block/applesauce_still.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_ancestors.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_curio.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_dominion.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_duality.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_eminence.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_fortitude.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_fortune.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_ghosts.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_greed.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_hordes.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_impatience.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_savagery.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_tyranny.png.mcmeta
+STRUCTURED,6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d,2,"[""FMOD0016"", ""FMOD0030""]",FMOD0030,TARGET_MOD,assets/mcendgame/textures/item/aspect_of_zeal.png.mcmeta
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0016,TARGET_MOD,data/c/tags/items/foods/candy.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0023,TARGET_MOD,data/betterend/tags/block/incorrect_for_aeternium_tool.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0065,TARGET_MOD,data/simple_copper_pipes/tags/block/silent_copper_pipes.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/block/fence_gates.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/block/fences.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/block/walls.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/item/axes.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/item/hoes.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/item/pickaxes.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/item/shovels.json
+STRUCTURED,b83114c23eeec820ce7eca52011f13013fb6c64002254be7aebe1e4b36244d48,4,"[""FMOD0016"", ""FMOD0023"", ""FMOD0065"", ""FMOD0081""]",FMOD0081,TARGET_MOD,data/minecraft/tags/item/trim_templates.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_cobbles/data/c/tags/block/cobblestones.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_cobbles/data/c/tags/block/cobblestones/mossy.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_cobbles/data/c/tags/blocks/cobblestones.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_cobbles/data/c/tags/blocks/cobblestones/mossy.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_sands/data/c/tags/block/gravels.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_sands/data/c/tags/block/sands.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_sands/data/c/tags/blocks/gravels.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0032,TARGET_MOD,dataPacks/spread_sands/data/c/tags/blocks/sands.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/block/currency.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/coin_bank.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/coin_stack.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/collectable_coin.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/edible_coin.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/instant_effect_coin.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/ledger.json
+STRUCTURED,15eac2527cafc3f3bf0d59d5d33e8e5845c8e52b51e03a56b8f891aa47b806f1,2,"[""FMOD0032"", ""FMOD0091""]",FMOD0091,BACKGROUND_LIBRARY,data/villagerunknown-villagercoin/tags/item/receipt.json
+STRUCTURED,bf9ffcac57be53bce7a37f1940e6dcc9ecb5be628ffebfd4337e84cdc03f0033,2,"[""FMOD0035"", ""FMOD0081""]",FMOD0035,TARGET_MOD,assets/dungeonnowloading/models/item/spawn_egg_scuttle.json
+STRUCTURED,bf9ffcac57be53bce7a37f1940e6dcc9ecb5be628ffebfd4337e84cdc03f0033,2,"[""FMOD0035"", ""FMOD0081""]",FMOD0035,TARGET_MOD,assets/dungeonnowloading/models/item/spawn_egg_garhold.json
+STRUCTURED,bf9ffcac57be53bce7a37f1940e6dcc9ecb5be628ffebfd4337e84cdc03f0033,2,"[""FMOD0035"", ""FMOD0081""]",FMOD0035,TARGET_MOD,assets/dungeonnowloading/models/item/spawn_egg_ballista_golem.json
+STRUCTURED,bf9ffcac57be53bce7a37f1940e6dcc9ecb5be628ffebfd4337e84cdc03f0033,2,"[""FMOD0035"", ""FMOD0081""]",FMOD0081,TARGET_MOD,assets/echoesofantiquity/models/item/chorus_husk_spawn_egg.json
+IMAGE,e7681741df50ccd1fa3c35e7e4d1db63d7122f3356f2d79f86c09180b3369ec0,2,"[""FMOD0050"", ""FMOD0086""]",FMOD0050,TARGET_MOD,assets/modid/icon.png
+IMAGE,e7681741df50ccd1fa3c35e7e4d1db63d7122f3356f2d79f86c09180b3369ec0,2,"[""FMOD0050"", ""FMOD0086""]",FMOD0086,TARGET_MOD,assets/config_editor/icon.png
