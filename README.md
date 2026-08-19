@@ -3,11 +3,10 @@
 [![Research status](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
 [![Benchmark](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
 [![Reproducibility](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
-[![Languages](https://img.shields.io/badge/readme-EN%20%7C%20KO%20%7C%20JA-555)](#languages)
 
 ## Languages
 
-**English** · [한국어](README.ko.md) · [日本語](README.ja.md)
+[![English](https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge)](README.md) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](README.ko.md) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](README.ja.md)
 
 An academic research repository for reconstructing the likely provenance of components inside a recomposed MOD/JAR package. The system combines identity-neutral evidence from code/binaries, structured resources, and images; retrieves candidate registered projects; reconstructs a package-level parent set; and assigns unsupported components to a public `UNKNOWN` label.
 
