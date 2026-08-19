@@ -1,0 +1,60 @@
+name: Reproducibility report
+description: Report a documented result that does not reproduce from the preserved workflow.
+title: "[Reproducibility]: "
+labels:
+  - reproducibility
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach raw MOD/JAR payloads, credentials, or evaluation-private labels. Include hashes and paths rather than redistributing restricted material.
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - Phase 1-5 (exploratory)
+        - Phase 6 (frozen benchmark)
+        - Phase 7 (frozen method and TEST)
+        - Phase 8 (statistics and ablations)
+        - Phase 9 (server/system)
+        - Phase 10 (external comparison)
+        - Phase 11 (multi-unknown robustness)
+        - Phase 12 (retrieval scalability)
+        - Phase 13 (failure analysis)
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: Cite the tracked summary file and expected field/value.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed result
+      description: Include the observed field/value and the first relevant error, if any.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit hash
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and verification
+      description: OS, Python/Java versions, frozen-hash checks, and the steps run.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data-safety confirmation
+      options:
+        - label: I have not attached raw third-party payloads, credentials, or evaluation-private labels.
+          required: true

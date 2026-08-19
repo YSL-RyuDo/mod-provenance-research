@@ -1,113 +1,153 @@
-# Server-Side Multi-Parent Provenance Reconstruction for Heterogeneous Game MOD Packages
+# MOD Provenance Reconstruction
 
-Research repository for hierarchical multi-parent provenance reconstruction of heterogeneous game MOD packages.
+[![Research status](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
+[![Benchmark](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
+[![Reproducibility](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
+[![Languages](https://img.shields.io/badge/readme-EN%20%7C%20KO%20%7C%20JA-555)](#languages)
 
-## Preservation status (2026-08-18)
+## Languages
 
-The complete research workflow from Phase 1 through Phase 13 is preserved in Git. The repository contains the analysis source, server implementations, frozen experiment definitions, public and evaluation-private metadata, core intermediate tables, predictions, audits, summaries, and paper reproduction assets. Raw MOD/JAR payloads and replaceable caches are intentionally not versioned.
+**English** · [한국어](README.ko.md) · [日本語](README.ja.md)
 
-| Phase | Purpose | Status |
-|---|---|---|
-| 1 | Pilot and real-MOD corpus collection | Complete |
-| 2 | Corpus/release registry freeze | Complete |
-| 3 | Path, content, bytecode, and package baselines | Complete |
-| 4 | Dependency/resource graph construction | Complete |
-| 5 | Synthetic multi-parent method exploration | Complete |
-| 6 | Fresh 100-project benchmark, frozen split, queries, payload manifest, and graphs | Complete and frozen |
-| 7 | Calibration, method freeze, and final TEST evaluation | Complete and frozen |
-| 8 | Bootstrap, ablation, and source-cluster sensitivity | Complete |
-| 9 | Server correctness, concurrency, end-to-end, and scalability evaluation | Complete |
-| 10 | Source compatibility, StoneDetector packaging, and NiCadCross comparison | Complete |
-| 11 | Controlled multi-UNKNOWN robustness benchmark and evaluation | Complete |
-| 12 | Approximate retrieval and Exact-vs-LSH scalability | Complete and frozen |
-| 12 | Approximate registered-parent retrieval and Exact-vs-LSH scalability evaluation | Complete and frozen |
-| 13 | Post-freeze automated failure analysis | Complete and frozen |
+An academic research repository for reconstructing the likely provenance of components inside a recomposed MOD/JAR package. The system combines identity-neutral evidence from code/binaries, structured resources, and images; retrieves candidate registered projects; reconstructs a package-level parent set; and assigns unsupported components to a public `UNKNOWN` label.
 
-The primary TEST benchmark and Phase 7 parameters must not be retuned. Phase 11 is a post-freeze robustness analysis and does not replace or modify the primary TEST benchmark. Phase 12 is a post-freeze retrieval and scalability analysis using the already frozen Phase 7 method; it does not retune the primary method or modify the primary TEST benchmark.
+> [!IMPORTANT]
+> This is a technical provenance and evidence-reconstruction system. It does **not** determine copyright ownership, infringement, permission, or legal liability. Its outputs are intended to support expert and human review.
 
-## Workflow
+## Research question
 
-The execution order is:
+Can the component-level origins of a recomposed software package be reconstructed when the package may contain material from multiple registered projects as well as previously unseen sources?
 
-```text
-Phase 1 -> Phase 2 -> Phase 3 -> Phase 4 -> Phase 5
-        -> Phase 6 (freeze benchmark)
-        -> Phase 7 (calibrate, freeze, open TEST once)
-        -> Phase 8 (post-hoc statistics)
-        -> Phase 9 (server/system evaluation)
-        -> Phase 10 (external compatibility/baseline)
-        -> Phase 11 (post-freeze robustness)
-        -> Phase 12 (post-freeze approximate retrieval/scalability)
-        -> Phase 13 (post-freeze failure analysis)
+This matters because path names, package metadata, and project identifiers are easy to remove or rewrite during redistribution. A useful provenance method therefore has to work from content evidence, preserve uncertainty, and explain results at both component and whole-package levels.
+
+## System overview
+
+```mermaid
+flowchart LR
+    A[MOD / JAR package] --> B[Component extraction]
+    B --> C1[Code and binary evidence]
+    B --> C2[Structured-resource evidence]
+    B --> C3[Image evidence]
+    C1 --> D[Registered-parent retrieval]
+    C2 --> D
+    C3 --> D
+    D --> E[Hierarchical package reconstruction]
+    G[Optional dependency graph] -. weak refinement .-> E
+    E --> F[Known parent set + UNKNOWN]
+    F --> H[Component assignments and audit evidence]
 ```
 
-Scripts are named `scripts/phase<stage>_*.py`. Server entry points are in `server/`, and the Phase 3 bytecode helper source is in `tools/phase3d/`. Run scripts from the repository root so their relative `results/` and `data/` paths resolve consistently.
+Content evidence is the primary signal. The dependency graph is an optional weak refinement; its TEST effect on the primary parent-set metric was small and statistically inconclusive.
 
-Start with [`REPRODUCE.md`](REPRODUCE.md). The detailed script-to-input-to-output map, headline results, and freeze status are in [`reproducibility/EXPERIMENT_INDEX.md`](reproducibility/EXPERIMENT_INDEX.md).
+## Method at a glance
 
+1. Build public project and release registries, while retaining raw downloadable payloads locally.
+2. Extract identity-neutral evidence from code/binary, structured-resource, and image components.
+3. Retrieve a fixed candidate pool of registered parent projects for each query package.
+4. Jointly select the package-level parent set and assign each component to a selected parent or `UNKNOWN`.
+5. Freeze the benchmark, parameters, manifests, and hashes before opening the final TEST split.
+6. Evaluate uncertainty, baselines, external clone detection, deployment behavior, robustness, retrieval scalability, and failure localization without retuning the frozen method.
 
-## Phase 12: Approximate retrieval scalability
+## Research contributions
 
-Phase 12 evaluates whether exhaustive registered-parent retrieval can be accelerated with fixed binary multi-table LSH candidate generation while keeping the frozen Phase 7 provenance method unchanged.
+- A heterogeneous component-provenance formulation that combines registered-parent attribution with open-set `UNKNOWN` rejection.
+- A hierarchical reconstruction method that links component assignments to a coherent package-level parent set.
+- A frozen 120-project benchmark with public/private manifest separation, hash verification, and leakage audits.
+- Query-level bootstrap, ablation, source-cluster sensitivity, server correctness, and host-specific performance analyses.
+- External NiCadCross comparison on a strictly source-resolvable code subset, plus compatibility preparation for StoneDetector.
+- Post-freeze multi-unknown robustness, approximate-retrieval scalability, and hierarchical failure-localization studies.
 
-On the full frozen TEST set of 360 queries and 2,520 components:
+## Research progress
 
-- Exact content-only reconstruction achieves component accuracy `0.807143`, UNKNOWN F1 `0.752386`, parent-set F1 `0.843545`, parent-set exact accuracy `0.413889`, and K accuracy `0.480556`.
-- FAST LSH changes `1/360` query predictions and `1/2520` component predictions relative to Exact. Component accuracy becomes `0.806746` and parent-set F1 becomes `0.842804`.
-- BALANCED and HIGH_RECALL produce the same final content-only provenance predictions as Exact on all 360 frozen TEST queries.
-- FAST first shows lower observed p50 search latency than Exact at the 40-project real-gallery scale.
-- At the frozen 60-project scale, the deterministic runtime sample reports Exact p50 `10.315 ms` and FAST p50 `8.848 ms`, corresponding to an observed `1.166x` speedup.
-- BALANCED and HIGH_RECALL do not show a p50 latency advantage over Exact through 100 real projects or the `1000eq` synthetic component-volume stress condition.
+All Phase 1-13 scripts and reportable outputs are preserved on `main`. “Complete” means the recorded phase artifacts exist; only Phase 6 onward forms the frozen confirmatory benchmark.
 
-The `200eq`, `500eq`, and `1000eq` conditions are computational component-volume stress tests over 100 real registered parents. They are not evaluations on 200, 500, or 1000 unique real MOD projects.
+| Phase | Scope | Status |
+|---:|---|:---:|
+| 1 | Pilot collection and 30-project real-MOD corpus | Complete |
+| 2 | Source/release registries and duplicate audits | Complete |
+| 3 | Version-drift and bytecode/content baselines | Complete |
+| 4 | Dependency and resource-reference graphs | Complete |
+| 5 | Exploratory multi-parent hierarchical reconstruction | Complete |
+| 6 | Fresh 120-project corpus, frozen splits, 540 queries, and materialization | **Frozen** |
+| 7 | Calibration, method freeze, and final TEST evaluation | **Frozen** |
+| 8 | Bootstrap statistics, ablations, and source-cluster sensitivity | Complete |
+| 9 | Server correctness, concurrency, end-to-end, and gallery scaling | Complete |
+| 10 | NiCadCross external comparison and StoneDetector compatibility | Complete |
+| 11 | Controlled multiple-unknown-source robustness | Complete |
+| 12 | Exact versus binary-LSH retrieval and scalability | Complete |
+| 13 | Post-freeze automated failure analysis | Complete |
 
-Detailed Phase 12 scripts, inputs, outputs, reporting rules, and frozen results are recorded in [`reproducibility/EXPERIMENT_INDEX.md`](reproducibility/EXPERIMENT_INDEX.md).
+The detailed script → input → output → result → freeze map is in the [Experiment Index](reproducibility/EXPERIMENT_INDEX.md).
 
+## Key results
 
-## Phase 13: Failure analysis
+### Frozen Phase 7 TEST
 
-Phase 13 diagnoses the frozen TEST errors without retuning or recomputing the method. Among 489 component errors, 325 (66.46%) are component-assignment failures, 81 (16.56%) are UNKNOWN-rejection failures, 47 (9.61%) are parent-selection failures, and only 36 (7.36%) are retrieval misses.
+The final evaluation contains 360 queries and 2,520 components. The graph-refined result is the frozen final method; content-only is retained as the primary signal and ablation reference.
 
-The dominant remaining bottleneck is therefore downstream reconstruction—especially component assignment—rather than registered-parent candidate retrieval.
+| Track | Component accuracy | `UNKNOWN` F1 | Parent-set F1 | Parent-set exact | K accuracy |
+|---|---:|---:|---:|---:|---:|
+| Frozen final, graph-refined | 0.805952 | 0.753786 | 0.844233 | 0.419444 | 0.486111 |
+| Content-only | 0.807143 | 0.752386 | 0.843545 | 0.413889 | 0.480556 |
 
-Detailed outputs are recorded in `results/phase13a_*`, `results/phase13b_*`, and `results/phase13c_reporting_audit_summary.json`.
+Candidate retrieval reached 0.974444 mean known-parent recall, with every known parent present for 0.943333 of known-parent queries. Hierarchical content improved parent-set F1 by 0.046133 over independent component decisions. The graph-minus-content parent-set F1 delta was +0.000688, and its 95% query-bootstrap confidence interval included zero.
 
-## Frozen artifacts
+### System and external validation
 
-The primary freeze anchors are:
+| Evaluation | Scope | Headline result |
+|---|---|---|
+| Server correctness | 360 queries / 2,520 components | Predictions matched the frozen reference for every query and component. |
+| Precomputed-score server | Best measured concurrency | 86.21 requests/s. |
+| Evidence → search → reconstruction | Concurrency 1 | Server p50 12.579 ms; search 11.493 ms; reconstruction 1.088 ms. |
+| Local package → result | Concurrency 1 | Server p50 26.880 ms; extraction 14.440 ms; search 10.685 ms. |
+| Gallery scaling | 20 → 100 real projects | Sequential search p50 4.353 → 21.457 ms. |
+| NiCadCross paired subset | 1,169 source-resolvable code components | Proposed 0.841 vs NiCadCross 0.710 component accuracy; delta +0.131, paired 95% CI 0.096-0.167. |
 
-- `results/phase6c_project_split.csv`
-- `results/phase6k_query_manifest_private.csv`
-- `results/phase6k_query_manifest_public.csv`
-- `results/phase6l_materialized_private_manifest.csv`
-- `results/phase6l_materialized_public_manifest.csv`
-- `results/phase6l_graph_natural_public.csv`
-- `results/phase6l_graph_connected_stress_public.csv`
-- `results/phase7g_final_method_parameters.json`
-- `results/phase7g_final_method_freeze_summary.json`
-- `reproducibility/phase7g_final_method_parameters.json`
-- `reproducibility/phase12_freeze_manifest.sha256`
-- `results/phase12f_reporting_audit_summary.json`
+Phase 11 adds a controlled 180-query / 1,260-component recomposition analysis: component accuracy 0.841, `UNKNOWN` F1 0.888, and collapsed parent-set F1 0.884. Because the frozen model emits one public `UNKNOWN` label, these numbers measure rejection of unregistered components—not recovery of distinct unknown identities or multiplicity.
 
-The frozen Phase 7 parameter file SHA-256 recorded by the final evaluation is `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`.
+Phase 12 found that BALANCED and HIGH_RECALL binary-LSH configurations preserved Exact predictions on all 360 frozen TEST queries. FAST changed 1/360 query prediction and 1/2,520 component prediction, while reducing the 60-project runtime-sample p50 from 10.315 ms to 8.848 ms (1.166×). The `200eq`/`500eq`/`1000eq` conditions are synthetic component-volume stresses over 100 real registered parents, not additional unique MOD projects.
 
-## Reproducibility environment
+Phase 13 localized 489 frozen TEST component errors: component assignment 325 (66.46%), `UNKNOWN` rejection 81 (16.56%), parent selection 47 (9.61%), and retrieval 36 (7.36%). It is diagnostic only and does not recompute predictions or change the method.
 
-Environment records are described in [`reproducibility/ENVIRONMENT.md`](reproducibility/ENVIRONMENT.md), with a tested full Python environment in `requirements.txt`/`results/phase9_environment_freeze.txt`. The workflow requires Python and Java; Phase 10's external source baseline additionally requires a separately installed Open-NiCad/NiCadCross environment. External tools and downloaded repositories are not vendored.
+## Repository map
 
-## Data and publication safety
+```text
+scripts/             Phase 1-13 collection, calibration, evaluation, and audit scripts
+server/              Phase 9 FastAPI research services
+tools/               Tracked helper source and tool configuration
+results/             Curated summaries, audits, predictions, and frozen manifests
+reproducibility/     Environment records, hashes, freeze manifests, and experiment index
+paper/               Paper-oriented figure and reporting scripts
+archive/             Historical generated, superseded, and known-bug artifacts retained for audit
+data/                Registries and redistributable metadata; raw payload bytes remain ignored
+```
 
-This repository must remain **private** while it contains evaluation-private mappings and held-out ground-truth metadata. Here, `private` means hidden from the evaluated model, not credentials. Do not publish those mappings as part of a public benchmark release without a deliberate disclosure review.
+Raw MOD/JAR payloads, reconstructed external-tool corpora, private held-out mappings not approved for release, caches, generated server data, compiled files, and virtual environments are intentionally excluded from Git. See [Tracking Audit](reproducibility/TRACKING_AUDIT.md) for the preservation policy and historical classification.
 
-The following are intentionally excluded from Git:
+## Reproduction and freeze anchors
 
-- raw MOD/JAR archives, extracted source/payload trees, and generated query ZIP packages;
-- cloned third-party repositories and tool caches;
-- virtual environments, bytecode/classes, logs, timings, bootstrap replicate tables, and build by-products;
-- credentials, tokens, machine secrets, and accidental local command-output files.
+- [Reproduction guide](REPRODUCE.md)
+- [Experiment index](reproducibility/EXPERIMENT_INDEX.md)
+- [Environment record](reproducibility/ENVIRONMENT.md)
+- [Tracking audit](reproducibility/TRACKING_AUDIT.md)
+- [Phase 12 freeze manifest](reproducibility/phase12_freeze_manifest.sha256)
+- [Phase 13 freeze manifest](reproducibility/phase13_freeze_manifest.sha256)
 
-The exact preservation audit and baseline untracked-file classification are in [`reproducibility/TRACKING_AUDIT.md`](reproducibility/TRACKING_AUDIT.md) and `reproducibility/UNTRACKED_CLASSIFICATION.csv`.
+Core Phase 6-7 anchors include the frozen split, query manifest and ground truth, payload-hash manifest, graph tracks, and `results/phase7g_final_method_parameters.json`. The frozen parameter SHA-256 is `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`.
 
-## Historical artifacts
+## Responsible interpretation
 
-Known generated or invalid implementations are retained under `archive/` with an explanation. They are evidence of the research process and must not be used as the current method.
+- Do not infer legal ownership, copying, license compliance, or infringement from a provenance score alone.
+- Do not claim the graph refinement is a statistically established improvement on the primary TEST metric.
+- Do not compare the Phase 9 latency scopes as if they measured the same pipeline.
+- NiCadCross receives reconstructed Java source while the proposed system uses frozen binary-side evidence; the comparison is restricted to the same source-resolvable subset.
+- StoneDetector artifacts document compatibility preparation, not a completed comparative effectiveness result.
+- Do not use Phase 7 TEST, Phase 11 recompositions, Phase 12 operating points, or Phase 13 diagnostics to retune the frozen method.
+
+## Data, citation, license, and contact
+
+The repository is kept private while held-out mappings and redistribution-sensitive research artifacts are reviewed. “Private” benchmark files refer to model-private evaluation labels; they are not credentials and must still be handled as sensitive research data.
+
+The paper is under preparation. Until formal bibliographic metadata is finalized, cite this repository together with the exact commit hash used for reproduction. No repository-wide license has yet been declared; do not assume that source code, datasets, MOD/JAR payloads, or third-party materials are licensed for redistribution. Original third-party licenses remain controlling.
+
+For research questions or reproducibility reports, use the repository's GitHub Issues. For private contact, use the [repository owner's GitHub profile](https://github.com/YSL-RyuDo).
