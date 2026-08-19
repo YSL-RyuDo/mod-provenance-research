@@ -1,7 +1,7 @@
 # MOD 출처 재구성 연구
 
-[![연구 상태](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
-[![벤치마크](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
+[![연구 상태](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
+[![벤치마크](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#user-content-freeze-anchors-ko)
 [![재현성](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
 
 ## 언어
@@ -76,7 +76,7 @@ Phase 1-13의 모든 스크립트와 보고 가능한 결과가 `main`에 보존
 | 12 | Exact 대 binary-LSH 검색 및 확장성 | 완료 |
 | 13 | 동결 후 자동 실패 분석 | 완료 |
 
-각 Phase의 script → input → output → 핵심 결과 → 동결 여부는 [실험 색인](reproducibility/EXPERIMENT_INDEX.md)에 정리되어 있습니다.
+각 Phase의 script → input → output → 핵심 결과 → 동결 여부는 [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)에 정리되어 있습니다.
 
 ## 핵심 결과
 
@@ -126,7 +126,7 @@ data/                레지스트리와 재배포 가능한 메타데이터; 원
 ## 재현 및 동결 기준점
 
 - [재현 안내](REPRODUCE.md)
-- [실험 색인](reproducibility/EXPERIMENT_INDEX.md)
+- [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
 - [환경 기록](reproducibility/ENVIRONMENT.md)
 - [추적 감사](reproducibility/TRACKING_AUDIT.md)
 - [Phase 12 동결 manifest](reproducibility/phase12_freeze_manifest.sha256)

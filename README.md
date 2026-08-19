@@ -229,7 +229,7 @@ Phase 1-13의 모든 스크립트와 보고 가능한 결과가 `main`에 보존
 | 12 | Exact 대 binary-LSH 검색 및 확장성 | 완료 |
 | 13 | 동결 후 자동 실패 분석 | 완료 |
 
-각 Phase의 script → input → output → 핵심 결과 → 동결 여부는 [실험 색인](reproducibility/EXPERIMENT_INDEX.md)에 정리되어 있습니다.
+각 Phase의 script → input → output → 핵심 결과 → 동결 여부는 [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)에 정리되어 있습니다.
 
 ## 핵심 결과
 
@@ -279,7 +279,7 @@ data/                레지스트리와 재배포 가능한 메타데이터; 원
 ## 재현 및 동결 기준점
 
 - [재현 안내](REPRODUCE.md)
-- [실험 색인](reproducibility/EXPERIMENT_INDEX.md)
+- [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
 - [환경 기록](reproducibility/ENVIRONMENT.md)
 - [추적 감사](reproducibility/TRACKING_AUDIT.md)
 - [Phase 12 동결 manifest](reproducibility/phase12_freeze_manifest.sha256)
@@ -380,7 +380,7 @@ Phase 1-13の全スクリプトと報告可能な結果が `main` に保存さ�
 | 12 | Exact対binary-LSH検索とスケーラビリティ | 完了 |
 | 13 | 凍結後の自動失敗分析 | 完了 |
 
-Phaseごとのscript → input → output → 主要結果 → 凍結状況は、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md)に整理しています。
+Phaseごとのscript → input → output → 主要結果 → 凍結状況は、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)に整理しています。
 
 ## 主要結果
 
@@ -430,7 +430,7 @@ data/                レジストリと再配布可能なメタデータ。生pa
 ## 再現と凍結アンカー
 
 - [再現ガイド](REPRODUCE.md)
-- [実験インデックス](reproducibility/EXPERIMENT_INDEX.md)
+- [実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
 - [環境記録](reproducibility/ENVIRONMENT.md)
 - [追跡監査](reproducibility/TRACKING_AUDIT.md)
 - [Phase 12凍結manifest](reproducibility/phase12_freeze_manifest.sha256)
