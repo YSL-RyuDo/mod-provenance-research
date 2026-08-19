@@ -68,3 +68,24 @@ Key findings:
 - 200eq/500eq/1000eq are computational component-volume stress conditions over 100 real registered parents, not additional unique real MOD projects.
 
 Primary fidelity/downstream claims must use the full 360-query Phase 12C/12D results. Phase 12E uses a deterministic stratified 120-query sample and is used for runtime/scalability reporting.
+
+## Phase 13 — Automated Failure Analysis
+
+Phase 13 is a post-freeze diagnostic analysis of the frozen Phase 7H TEST predictions. It does not recompute predictions, retune parameters, or modify the primary TEST benchmark.
+
+- Phase 13A: automated component/query failure taxonomy.
+- Phase 13B: hierarchical localization of retrieval, parent-selection, component-assignment, and UNKNOWN-rejection failures.
+- Phase 13C: reporting-only integrity and freeze audit.
+
+Key results on the frozen 360-query / 2,520-component TEST:
+
+- 2,031 correct components and 489 errors; component accuracy remains 0.805952.
+- Component error types: KNOWN→UNKNOWN 358, UNKNOWN→KNOWN 81, wrong known parent 50.
+- Failure localization: component assignment 325 (66.46%), UNKNOWN rejection 81 (16.56%), parent selection 47 (9.61%), retrieval 36 (7.36%).
+- 453/489 component errors occur after retrieval; only 36 are retrieval misses.
+- At query level, 151 parent sets are exact, 192 failures are reconstruction-limited, and 17 are retrieval-limited.
+- In TEST_KNOWN_K1, all observed failures are localized to component assignment.
+- Higher-parent-count scenarios introduce additional retrieval and parent-selection failures.
+
+The primary interpretation is that the dominant remaining error source is component assignment after the true registered parent has already survived retrieval and package-level parent selection.
+

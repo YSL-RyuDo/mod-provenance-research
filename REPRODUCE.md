@@ -1,6 +1,6 @@
 # Reproducing the Research Workflow
 
-This repository preserves the code and metadata needed to trace Phase 1 through Phase 12. It intentionally does not redistribute third-party MOD/JAR payloads, cloned repositories, generated query packages, or external tools.
+This repository preserves the code and metadata needed to trace Phase 1 through Phase 13. It intentionally does not redistribute third-party MOD/JAR payloads, cloned repositories, generated query packages, or external tools.
 
 ## 1. Environment
 
@@ -45,6 +45,7 @@ Phase 10 source/external-baseline compatibility
 Phase 11 post-freeze multi-UNKNOWN robustness
 Phase 12 post-freeze Exact-vs-LSH retrieval/scalability
 Phase 12 post-freeze Exact-vs-LSH retrieval/scalability evaluation
+Phase 13 post-freeze automated failure analysis
 ```
 
 The exact scripts, inputs, outputs, results, and freeze status for each phase are listed in `reproducibility/EXPERIMENT_INDEX.md`.
@@ -106,3 +107,21 @@ Verify the frozen Phase 12 state with:
 - Multi-UNKNOWN robustness: `results/phase11c_multi_unknown_summary.json`
 
 If regenerated endpoint metrics differ, stop and compare frozen input hashes, environment versions, and the relevant detailed audit tables before interpreting the discrepancy.
+
+
+## Phase 13 failure analysis
+
+Run:
+
+- `scripts/phase13a_failure_taxonomy.py`
+- `scripts/phase13b_hierarchical_failure_localization.py`
+- `scripts/phase13c_reporting_audit.py`
+
+This phase is diagnostic only. It must not be used to retune the frozen method.
+
+Preserved endpoints:
+
+- `results/phase13a_failure_taxonomy_summary.json`
+- `results/phase13b_failure_localization_summary.json`
+- `results/phase13c_reporting_audit_summary.json`
+- `reproducibility/phase13_freeze_manifest.sha256`

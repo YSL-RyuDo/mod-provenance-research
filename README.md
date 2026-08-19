@@ -4,7 +4,7 @@ Research repository for hierarchical multi-parent provenance reconstruction of h
 
 ## Preservation status (2026-08-18)
 
-The complete research workflow from Phase 1 through Phase 12 is preserved in Git. The repository contains the analysis source, server implementations, frozen experiment definitions, public and evaluation-private metadata, core intermediate tables, predictions, audits, summaries, and paper reproduction assets. Raw MOD/JAR payloads and replaceable caches are intentionally not versioned.
+The complete research workflow from Phase 1 through Phase 13 is preserved in Git. The repository contains the analysis source, server implementations, frozen experiment definitions, public and evaluation-private metadata, core intermediate tables, predictions, audits, summaries, and paper reproduction assets. Raw MOD/JAR payloads and replaceable caches are intentionally not versioned.
 
 | Phase | Purpose | Status |
 |---|---|---|
@@ -21,6 +21,7 @@ The complete research workflow from Phase 1 through Phase 12 is preserved in Git
 | 11 | Controlled multi-UNKNOWN robustness benchmark and evaluation | Complete |
 | 12 | Approximate retrieval and Exact-vs-LSH scalability | Complete and frozen |
 | 12 | Approximate registered-parent retrieval and Exact-vs-LSH scalability evaluation | Complete and frozen |
+| 13 | Post-freeze automated failure analysis | Complete and frozen |
 
 The primary TEST benchmark and Phase 7 parameters must not be retuned. Phase 11 is a post-freeze robustness analysis and does not replace or modify the primary TEST benchmark. Phase 12 is a post-freeze retrieval and scalability analysis using the already frozen Phase 7 method; it does not retune the primary method or modify the primary TEST benchmark.
 
@@ -37,6 +38,7 @@ Phase 1 -> Phase 2 -> Phase 3 -> Phase 4 -> Phase 5
         -> Phase 10 (external compatibility/baseline)
         -> Phase 11 (post-freeze robustness)
         -> Phase 12 (post-freeze approximate retrieval/scalability)
+        -> Phase 13 (post-freeze failure analysis)
 ```
 
 Scripts are named `scripts/phase<stage>_*.py`. Server entry points are in `server/`, and the Phase 3 bytecode helper source is in `tools/phase3d/`. Run scripts from the repository root so their relative `results/` and `data/` paths resolve consistently.
@@ -61,6 +63,14 @@ The `200eq`, `500eq`, and `1000eq` conditions are computational component-volume
 
 Detailed Phase 12 scripts, inputs, outputs, reporting rules, and frozen results are recorded in [`reproducibility/EXPERIMENT_INDEX.md`](reproducibility/EXPERIMENT_INDEX.md).
 
+
+## Phase 13: Failure analysis
+
+Phase 13 diagnoses the frozen TEST errors without retuning or recomputing the method. Among 489 component errors, 325 (66.46%) are component-assignment failures, 81 (16.56%) are UNKNOWN-rejection failures, 47 (9.61%) are parent-selection failures, and only 36 (7.36%) are retrieval misses.
+
+The dominant remaining bottleneck is therefore downstream reconstruction—especially component assignment—rather than registered-parent candidate retrieval.
+
+Detailed outputs are recorded in `results/phase13a_*`, `results/phase13b_*`, and `results/phase13c_reporting_audit_summary.json`.
 
 ## Frozen artifacts
 

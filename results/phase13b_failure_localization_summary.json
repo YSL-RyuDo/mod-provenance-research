@@ -1,0 +1,82 @@
+{
+  "phase13b_complete": true,
+  "scope": "POST_FREEZE_HIERARCHICAL_FAILURE_LOCALIZATION",
+  "parameters_retuned": false,
+  "predictions_recomputed": false,
+  "primary_test_modified": false,
+  "component_errors": 489,
+  "failure_localization": {
+    "COMPONENT_ASSIGNMENT_MISS": 325,
+    "UNKNOWN_REJECTION_FAILURE": 81,
+    "PARENT_SELECTION_MISS": 47,
+    "RETRIEVAL_MISS": 36
+  },
+  "failure_localization_fraction": {
+    "COMPONENT_ASSIGNMENT_MISS": 0.6646216768916156,
+    "UNKNOWN_REJECTION_FAILURE": 0.1656441717791411,
+    "PARENT_SELECTION_MISS": 0.09611451942740286,
+    "RETRIEVAL_MISS": 0.0736196319018405
+  },
+  "interpretation": {
+    "RETRIEVAL_MISS": "The registered ground-truth parent is absent from the frozen candidate pool.",
+    "PARENT_SELECTION_MISS": "The true parent is retrieved but excluded by package-level known-parent subset reconstruction.",
+    "COMPONENT_ASSIGNMENT_MISS": "The true parent survives both retrieval and package-level parent selection, but the component is assigned to UNKNOWN or another parent.",
+    "UNKNOWN_REJECTION_FAILURE": "A true UNKNOWN component is falsely attributed to a registered parent."
+  },
+  "by_modality": {
+    "COMPONENT_ASSIGNMENT_MISS": {
+      "CODE_BINARY": 214,
+      "IMAGE": 0,
+      "STRUCTURED": 111
+    },
+    "PARENT_SELECTION_MISS": {
+      "CODE_BINARY": 39,
+      "IMAGE": 0,
+      "STRUCTURED": 8
+    },
+    "RETRIEVAL_MISS": {
+      "CODE_BINARY": 31,
+      "IMAGE": 1,
+      "STRUCTURED": 4
+    },
+    "UNKNOWN_REJECTION_FAILURE": {
+      "CODE_BINARY": 58,
+      "IMAGE": 9,
+      "STRUCTURED": 14
+    }
+  },
+  "by_scenario": {
+    "COMPONENT_ASSIGNMENT_MISS": {
+      "TEST_KNOWN_K1": 102,
+      "TEST_KNOWN_K2": 69,
+      "TEST_KNOWN_K3": 67,
+      "TEST_MIXED_1K1U": 42,
+      "TEST_MIXED_2K1U": 45,
+      "TEST_UNKNOWN_K1": 0
+    },
+    "PARENT_SELECTION_MISS": {
+      "TEST_KNOWN_K1": 0,
+      "TEST_KNOWN_K2": 8,
+      "TEST_KNOWN_K3": 19,
+      "TEST_MIXED_1K1U": 7,
+      "TEST_MIXED_2K1U": 13,
+      "TEST_UNKNOWN_K1": 0
+    },
+    "RETRIEVAL_MISS": {
+      "TEST_KNOWN_K1": 0,
+      "TEST_KNOWN_K2": 3,
+      "TEST_KNOWN_K3": 21,
+      "TEST_MIXED_1K1U": 0,
+      "TEST_MIXED_2K1U": 12,
+      "TEST_UNKNOWN_K1": 0
+    },
+    "UNKNOWN_REJECTION_FAILURE": {
+      "TEST_KNOWN_K1": 0,
+      "TEST_KNOWN_K2": 0,
+      "TEST_KNOWN_K3": 0,
+      "TEST_MIXED_1K1U": 23,
+      "TEST_MIXED_2K1U": 15,
+      "TEST_UNKNOWN_K1": 43
+    }
+  }
+}

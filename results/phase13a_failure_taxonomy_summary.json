@@ -1,0 +1,31 @@
+{
+  "phase13a_complete": true,
+  "scope": "POST_FREEZE_AUTOMATED_FAILURE_ANALYSIS",
+  "parameters_retuned": false,
+  "predictions_recomputed": false,
+  "primary_test_modified": false,
+  "test": {
+    "queries": 360,
+    "components": 2520,
+    "component_correct": 2031,
+    "component_errors": 489,
+    "component_accuracy": 0.805952380952381,
+    "query_parent_exact": 151,
+    "query_parent_failures": 209
+  },
+  "component_error_taxonomy": {
+    "KNOWN_TO_UNKNOWN": 358,
+    "UNKNOWN_TO_KNOWN": 81,
+    "WRONG_KNOWN_PARENT": 50
+  },
+  "component_failure_stage": {
+    "RECONSTRUCTION": 453,
+    "RETRIEVAL": 36
+  },
+  "query_failure_taxonomy": {
+    "RECONSTRUCTION_LIMITED": 192,
+    "CORRECT": 151,
+    "RETRIEVAL_LIMITED": 17
+  },
+  "interpretation_rule": "RETRIEVAL denotes a registered ground-truth parent absent from the frozen candidate pool. RECONSTRUCTION denotes a failure despite the true registered parent being available to reconstruction, or an UNKNOWN false attribution."
+}
