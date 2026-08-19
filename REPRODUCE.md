@@ -43,7 +43,6 @@ Phase 8  post-hoc statistics and ablations
 Phase 9  server correctness and performance
 Phase 10 source/external-baseline compatibility
 Phase 11 post-freeze multi-UNKNOWN robustness
-Phase 12 post-freeze Exact-vs-LSH retrieval/scalability
 Phase 12 post-freeze Exact-vs-LSH retrieval/scalability evaluation
 Phase 13 post-freeze automated failure analysis
 ```
@@ -98,30 +97,29 @@ Verify the frozen Phase 12 state with:
 - `reproducibility/phase12_freeze_manifest.sha256`
 - `results/phase12f_reporting_audit_summary.json`
 
-## 9. Expected preserved endpoints
+## 9. Phase 13 failure analysis
+
+Run in order:
+
+- `scripts/phase13a_failure_taxonomy.py`
+- `scripts/phase13b_hierarchical_failure_localization.py`
+- `scripts/phase13c_reporting_audit.py`
+
+This phase reads the existing frozen predictions and audits. It is diagnostic only: it must not recompute the primary predictions or be used to retune the frozen method.
+
+Verify the frozen Phase 13 state with:
+
+- `reproducibility/phase13_freeze_manifest.sha256`
+- `results/phase13c_reporting_audit_summary.json`
+
+## 10. Expected preserved endpoints
 
 - Primary frozen TEST: `results/phase7h_final_test_summary.json`
 - Statistical analysis: `results/phase8a_bootstrap_summary.json`, `phase8b_baseline_ablation_summary.json`, `phase8c_source_cluster_sensitivity_summary.json`
 - System evaluation: `results/phase9b_server_correctness_summary.json` through `phase9f_gallery_scalability_summary.json`
 - External baseline: `results/phase10a4f_nicad_paired_bootstrap_summary.json`
 - Multi-UNKNOWN robustness: `results/phase11c_multi_unknown_summary.json`
+- Approximate retrieval/scalability: `results/phase12f_reporting_audit_summary.json`
+- Failure analysis: `results/phase13a_failure_taxonomy_summary.json`, `phase13b_failure_localization_summary.json`, `phase13c_reporting_audit_summary.json`
 
 If regenerated endpoint metrics differ, stop and compare frozen input hashes, environment versions, and the relevant detailed audit tables before interpreting the discrepancy.
-
-
-## Phase 13 failure analysis
-
-Run:
-
-- `scripts/phase13a_failure_taxonomy.py`
-- `scripts/phase13b_hierarchical_failure_localization.py`
-- `scripts/phase13c_reporting_audit.py`
-
-This phase is diagnostic only. It must not be used to retune the frozen method.
-
-Preserved endpoints:
-
-- `results/phase13a_failure_taxonomy_summary.json`
-- `results/phase13b_failure_localization_summary.json`
-- `results/phase13c_reporting_audit_summary.json`
-- `reproducibility/phase13_freeze_manifest.sha256`
