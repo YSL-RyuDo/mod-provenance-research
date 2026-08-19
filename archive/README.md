@@ -26,15 +26,15 @@ This directory preserves generated or invalid historical implementations that ar
 
 [← 한국어 저장소 소개](../README.md#user-content-readme-ko)
 
-이 directory는 감사 가능성에 유용하지만 현재 실행 가능한 source of truth가 아닌 생성물 또는 유효하지 않은 과거 구현을 보존합니다.
+이 디렉터리는 연구 이력을 검증하는 데 필요한 생성 파일과 폐기된 과거 구현을 보존한다. 현재 결과를 재현할 때 사용하는 실행 기준 파일은 아니다.
 
 ## `generated/`
 
-`_phase11b_phase7h_adapter_generated.py`는 동결 Phase 7H 구현에서 `scripts/phase11b_run_multi_unknown_robustness.py`가 결정론적으로 생성했습니다. 기록된 Phase 11 실행에 사용한 정확한 과거 adapter로 보존합니다. 향후 실행은 무시되는 활성 파일 `scripts/_phase11b_phase7h_adapter_generated.py`를 다시 생성합니다.
+`_phase11b_phase7h_adapter_generated.py`는 `scripts/phase11b_run_multi_unknown_robustness.py`가 동결된 Phase 7H 구현을 바탕으로 항상 같은 방식으로 생성한 파일이다. 기록된 Phase 11 실행에 사용한 버전을 남겨 두었으며, 이후 실행에서는 Git 관리 대상이 아닌 `scripts/_phase11b_phase7h_adapter_generated.py`를 다시 생성한다.
 
 ## `failed_experiments/`
 
-`phase10a4d_score_nicad_v1_buggy.py`는 대체된 최초 NiCad scoring 구현입니다. Held-out 구성요소에 동결 benchmark의 `ground_truth_label` 대신 internal source identity를 사용했고, collapsed `UNKNOWN` group을 제외한 채 K를 계산했습니다. 보고된 Phase 10 결과 재현에 사용하면 안 됩니다. 수정된 구현은 `scripts/phase10a4d_score_nicad.py`입니다.
+`phase10a4d_score_nicad_v1_buggy.py`는 오류가 확인되어 교체된 초기 NiCad 채점 구현이다. 평가용으로 분리한 구성요소에 동결 벤치마크의 `ground_truth_label` 대신 내부 소스 식별자를 사용했고, 단일 `UNKNOWN` 집단을 제외한 채 K를 계산했다. 보고된 Phase 10 결과에는 사용할 수 없으며, 수정된 구현은 `scripts/phase10a4d_score_nicad.py`이다.
 
 ---
 
@@ -46,12 +46,12 @@ This directory preserves generated or invalid historical implementations that ar
 
 [← 日本語のリポジトリ概要](../README.md#user-content-readme-ja)
 
-このdirectoryは、監査可能性には有用ですが現在の実行可能なsource of truthではない、生成済みまたは無効な過去実装を保存します。
+このディレクトリには、研究履歴の検証に必要な生成ファイルと、廃止された過去の実装を保存している。現在の結果を再現する際に使用する基準実装ではない。
 
 ## `generated/`
 
-`_phase11b_phase7h_adapter_generated.py`は、凍結Phase 7H実装から`scripts/phase11b_run_multi_unknown_robustness.py`によって決定論的に生成されました。記録済みPhase 11 runで使用した正確な過去adapterとして保存します。今後のrunでは、無視対象のactiveファイル`scripts/_phase11b_phase7h_adapter_generated.py`を再生成します。
+`_phase11b_phase7h_adapter_generated.py`は、`scripts/phase11b_run_multi_unknown_robustness.py`が凍結済みPhase 7H実装を基に常に同じ手順で生成したファイルである。記録済みPhase 11実行で使用した版を保存しており、今後の実行ではGit管理対象外の`scripts/_phase11b_phase7h_adapter_generated.py`を再生成する。
 
 ## `failed_experiments/`
 
-`phase10a4d_score_nicad_v1_buggy.py`は、置き換えられた最初のNiCad scoring実装です。Held-out componentに凍結benchmarkの`ground_truth_label`ではなくinternal source identityを使用し、collapsed `UNKNOWN` groupを除外してKを計算していました。報告済みPhase 10結果の再現に使用してはいけません。修正済み実装は`scripts/phase10a4d_score_nicad.py`です。
+`phase10a4d_score_nicad_v1_buggy.py`は、不具合が確認されて置き換えられた初期のNiCad採点実装である。評価用に分離したコンポーネントに、凍結ベンチマークの`ground_truth_label`ではなく内部ソース識別子を使用し、単一の`UNKNOWN`グループを除外してKを計算していた。報告済みPhase 10結果には使用できない。修正済み実装は`scripts/phase10a4d_score_nicad.py`である。

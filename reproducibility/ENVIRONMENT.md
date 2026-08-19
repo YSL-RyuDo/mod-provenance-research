@@ -51,40 +51,40 @@ Use separate virtual environments for historical exact-server reproduction and a
 
 [← 재현 안내](../REPRODUCE.md#user-content-reproduce-ko)
 
-연구가 WSL과 Windows system-benchmark 환경에서 진행되었으므로 두 개의 환경 snapshot이 존재합니다. 이를 하나의 동시 환경으로 취급하면 안 됩니다.
+연구를 WSL 환경과 Windows 시스템 성능 측정 환경에서 각각 수행했기 때문에 두 종류의 환경 기록이 남아 있다. 두 기록은 동일한 시점의 단일 환경을 나타내지 않는다.
 
-## WSL/toolchain 기록
+## WSL 도구 환경 기록
 
 - OS/kernel: WSL2 Linux `6.6.87.2-microsoft-standard-WSL2`
 - Python: 3.12.3
 - Java: OpenJDK 11.0.31
 - Git: 2.43.0
 
-정확히 capture한 문자열은 이 directory의 `system.txt`, `python_version.txt`, `java_version.txt`, `git_version.txt`에 보존되어 있습니다.
+당시 출력 문자열은 이 디렉터리의 `system.txt`, `python_version.txt`, `java_version.txt`, `git_version.txt`에 그대로 보존되어 있다.
 
-`requirements_freeze.txt`는 NumPy 2.5.2와 pandas 3.0.5를 포함한 간결한 후속 Python snapshot입니다. 환경 기록으로 보존하지만 완전한 Phase 9 server 환경이라고 주장하지 않습니다.
+`requirements_freeze.txt`는 NumPy 2.5.2와 pandas 3.0.5를 포함한 후속 Python 환경 요약이다. 환경 기록으로 보존하지만 Phase 9 서버의 전체 실행 환경을 나타내지는 않는다.
 
 ## 시험한 Phase 9 환경
 
-Phase 9 성능 summary에는 다음이 기록되어 있습니다.
+Phase 9 성능 요약에는 다음 환경이 기록되어 있다.
 
 - Windows Python 3.10.6
-- Intel CPU, physical core 20개 / logical core 28개
-- 전체 system memory 34,031,173,632 bytes
+- Intel CPU, 물리 코어 20개 / 논리 코어 28개
+- 전체 시스템 메모리 34,031,173,632바이트
 
-해당 server/system 단계에서 사용한 전체 package freeze는 `results/phase9_environment_freeze.txt`입니다. 편의를 위해 루트의 `requirements.txt`가 시험한 전체 환경을 그대로 반영합니다. NumPy 2.2.6, pandas 2.3.2, FastAPI 0.141.1, Uvicorn 0.52.1, SciPy 1.15.3, scikit-learn 1.7.2, Pillow 11.3.0, ImageHash 4.3.2 및 전체 transitive 환경이 포함됩니다.
+서버·시스템 평가에 사용한 전체 패키지 목록은 `results/phase9_environment_freeze.txt`에 고정되어 있다. 저장소 루트의 `requirements.txt`도 같은 환경을 재현할 수 있도록 해당 목록을 반영한다. 주요 패키지는 NumPy 2.2.6, pandas 2.3.2, FastAPI 0.141.1, Uvicorn 0.52.1, SciPy 1.15.3, scikit-learn 1.7.2, Pillow 11.3.0, ImageHash 4.3.2이며, 이들이 의존하는 패키지도 함께 기록되어 있다.
 
-정확한 timing 재현은 여전히 운영체제, CPU, filesystem/cache 상태 및 server process 설정에 의존합니다. 성능 summary는 보편적 상수가 아니라 기록된 host의 결과로 취급하세요.
+정확한 실행 시간은 운영체제, CPU, 파일시스템·캐시 상태와 서버 프로세스 설정에 따라 달라진다. 따라서 성능 요약은 보편적인 수치가 아니라 기록된 실행 환경에서 얻은 결과로 해석해야 한다.
 
 ## 외부 도구
 
-- Phase 3D에는 `tools/phase3d/JavapBatch.java`를 compile/run하기 위한 Java가 필요합니다.
-- Phase 10은 Java function용으로 설정하고 default/blindrename threshold 0.30을 적용한 별도 Open-NiCad/NiCadCross 7.0 설치를 사용합니다.
-- 공개 저장소 snapshot/download를 복원할 때만 Git과 network 접근이 필요하며, 해당 cache는 의도적으로 제외됩니다.
+- Phase 3D에서 `tools/phase3d/JavapBatch.java`를 컴파일하고 실행하려면 Java가 필요하다.
+- Phase 10은 Java 함수 단위 분석, `default`/`blindrename`, 임계값 0.30으로 설정한 별도의 Open-NiCad/NiCadCross 7.0 설치를 사용한다.
+- 공개 저장소의 특정 시점 자료를 복원하거나 파일을 내려받을 때만 Git과 네트워크 접근이 필요하다. 내려받은 캐시는 Git 관리 대상에서 제외한다.
 
 ## 권장 격리
 
-과거 exact-server 재현과 최신 재실행에는 서로 다른 가상환경을 사용하세요. 고정된 Phase 9 환경을 조용히 upgrade한 뒤 동일한 환경인 것처럼 timing을 비교하면 안 됩니다.
+과거 서버 환경을 그대로 재현하는 경우와 최신 패키지로 다시 실행하는 경우에는 서로 다른 가상환경을 사용한다. 고정된 Phase 9 환경의 패키지를 바꾼 결과는 동일 조건의 실행 시간으로 비교할 수 없다.
 
 ---
 
@@ -96,37 +96,37 @@ Phase 9 성능 summary에는 다음이 기록되어 있습니다.
 
 [← 再現ガイド](../REPRODUCE.md#user-content-reproduce-ja)
 
-研究はWSLとWindows system-benchmark環境にまたがって実行されたため、2つの環境snapshotがあります。これらを1つの同時環境として扱ってはいけません。
+研究はWSL環境とWindows上のシステム性能測定環境で別々に実行したため、2種類の環境記録が残っている。両者は同一時点の単一環境を示すものではない。
 
-## WSL/toolchain記録
+## WSLツール環境の記録
 
 - OS/kernel：WSL2 Linux `6.6.87.2-microsoft-standard-WSL2`
 - Python：3.12.3
 - Java：OpenJDK 11.0.31
 - Git：2.43.0
 
-正確にcaptureした文字列は、このdirectoryの`system.txt`、`python_version.txt`、`java_version.txt`、`git_version.txt`に保存されています。
+当時の出力文字列は、このディレクトリの`system.txt`、`python_version.txt`、`java_version.txt`、`git_version.txt`にそのまま保存している。
 
-`requirements_freeze.txt`は、NumPy 2.5.2とpandas 3.0.5を含む簡潔な後期Python snapshotです。環境記録として保存されていますが、完全なPhase 9 server環境であるとは主張しません。
+`requirements_freeze.txt`は、NumPy 2.5.2とpandas 3.0.5を含む後期のPython環境要約である。環境記録として保存しているが、Phase 9サーバーの完全な実行環境を示すものではない。
 
 ## 試験済みPhase 9環境
 
-Phase 9性能summaryには次が記録されています。
+Phase 9の性能要約には次の環境を記録している。
 
 - Windows Python 3.10.6
-- Intel CPU、physical core 20 / logical core 28
-- system memory合計34,031,173,632 bytes
+- Intel CPU、物理コア20 / 論理コア28
+- システムメモリ合計34,031,173,632バイト
 
-これらのserver/system段階で使用した完全なpackage freezeは`results/phase9_environment_freeze.txt`です。便宜上、ルートの`requirements.txt`は試験済みの完全環境をそのまま反映します。NumPy 2.2.6、pandas 2.3.2、FastAPI 0.141.1、Uvicorn 0.52.1、SciPy 1.15.3、scikit-learn 1.7.2、Pillow 11.3.0、ImageHash 4.3.2、および完全なtransitive環境を含みます。
+サーバー・システム評価に用いた全パッケージ一覧は`results/phase9_environment_freeze.txt`に固定している。リポジトリルートの`requirements.txt`も、同じ環境を再現できるよう当該一覧を反映する。主要パッケージはNumPy 2.2.6、pandas 2.3.2、FastAPI 0.141.1、Uvicorn 0.52.1、SciPy 1.15.3、scikit-learn 1.7.2、Pillow 11.3.0、ImageHash 4.3.2であり、依存パッケージも併記している。
 
-正確なtiming再現は、OS、CPU、filesystem/cache状態、server process設定にも依存します。性能summaryは普遍的な定数ではなく、記録されたhostでの結果として扱ってください。
+正確な処理時間は、OS、CPU、ファイルシステム・キャッシュの状態、サーバープロセスの設定によって変化する。性能要約は普遍的な値ではなく、記録された実行環境で得られた結果として解釈する必要がある。
 
-## 外部tool
+## 外部ツール
 
-- Phase 3Dでは`tools/phase3d/JavapBatch.java`のcompile/runにJavaが必要です。
-- Phase 10では、Java function用に設定し、default/blindrename threshold 0.30を適用した別のOpen-NiCad/NiCadCross 7.0 installを使用します。
-- 公開リポジトリsnapshot/downloadの復元時にのみGitとnetwork accessが必要であり、そのcacheは意図的に除外されています。
+- Phase 3Dで`tools/phase3d/JavapBatch.java`をコンパイル・実行するにはJavaが必要である。
+- Phase 10では、Java関数単位、`default`/`blindrename`、しきい値0.30に設定した別途導入のOpen-NiCad/NiCadCross 7.0を使用する。
+- 公開リポジトリの特定時点の資料を復元したり、ファイルをダウンロードしたりする場合にのみGitとネットワーク接続が必要となる。ダウンロード済みキャッシュはGit管理対象外である。
 
 ## 推奨する分離
 
-過去のexact-server再現と最新のrerunには別々の仮想環境を使用してください。固定済みPhase 9環境を黙ってupgradeし、同一環境であるかのようにtimingを比較してはいけません。
+過去のサーバー環境をそのまま再現する場合と、最新パッケージで再実行する場合には、別々の仮想環境を使用する。固定済みPhase 9環境のパッケージを変更した結果は、同一条件の処理時間として比較できない。

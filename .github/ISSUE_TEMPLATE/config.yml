@@ -2,10 +2,10 @@ blank_issues_enabled: true
 contact_links:
   - name: Research overview — English
     url: https://github.com/YSL-RyuDo/mod-provenance-research/blob/main/README.md
-    about: Read the research scope and interpretation guardrails before opening an issue.
+    about: Review the research scope and interpretation limits before opening an issue.
   - name: 연구 개요 — 한국어
     url: https://github.com/YSL-RyuDo/mod-provenance-research/blob/main/README.ko.md
-    about: 이슈를 열기 전에 연구 범위와 해석상 주의사항을 확인해 주세요.
+    about: 이슈를 등록하기 전에 연구 범위와 결과의 해석 한계를 확인해 주세요.
   - name: 研究概要 — 日本語
     url: https://github.com/YSL-RyuDo/mod-provenance-research/blob/main/README.ja.md
-    about: Issueを作成する前に、研究範囲と解釈上の注意事項を確認してください。
+    about: Issueを作成する前に、研究範囲と結果の解釈上の制約をご確認ください。

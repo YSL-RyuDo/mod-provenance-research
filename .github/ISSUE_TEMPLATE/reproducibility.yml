@@ -1,5 +1,5 @@
-name: Reproducibility report
-description: Report a documented result that does not reproduce from the preserved workflow.
+name: Reproducibility report / 재현 보고 / 再現性報告
+description: Report a preserved result that does not reproduce. / 보존 결과가 재현되지 않는 경우 보고합니다. / 保存済み結果を再現できない場合に報告します。
 title: "[Reproducibility]: "
 labels:
   - reproducibility
@@ -7,11 +7,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Do not attach raw MOD/JAR payloads, credentials, or evaluation-private labels. Include hashes and paths rather than redistributing restricted material.
+        Do not attach raw MOD/JAR data, credentials, or evaluation-private labels. Use hashes and paths instead. / 원본 MOD/JAR, 인증정보와 평가 전용 정답을 첨부하지 말고 해시와 경로를 적어 주세요. / 生のMOD/JAR、認証情報、評価専用の正解ラベルは添付せず、ハッシュとパスを記載してください。
   - type: dropdown
     id: phase
     attributes:
-      label: Phase
+      label: Phase / 단계 / フェーズ
       options:
         - Phase 1-5 (exploratory)
         - Phase 6 (frozen benchmark)
@@ -27,34 +27,34 @@ body:
   - type: textarea
     id: expected
     attributes:
-      label: Expected result
-      description: Cite the tracked summary file and expected field/value.
+      label: Expected result / 기대 결과 / 期待結果
+      description: Cite the tracked summary file and expected field/value. / 공식 요약 파일과 기대 필드·값을 적습니다. / 正式な要約ファイルと期待する項目・値を記載します。
     validations:
       required: true
   - type: textarea
     id: observed
     attributes:
-      label: Observed result
-      description: Include the observed field/value and the first relevant error, if any.
+      label: Observed result / 관측 결과 / 観測結果
+      description: Include the observed field/value and the first relevant error, if any. / 관측 필드·값과 첫 관련 오류를 적습니다. / 観測した項目・値と最初の関連エラーを記載します。
     validations:
       required: true
   - type: input
     id: commit
     attributes:
-      label: Commit hash
+      label: Commit hash / 커밋 해시 / コミットハッシュ
     validations:
       required: true
   - type: textarea
     id: environment
     attributes:
-      label: Environment and verification
-      description: OS, Python/Java versions, frozen-hash checks, and the steps run.
+      label: Environment / 환경 / 環境
+      description: OS, Python/Java versions, frozen-hash checks, and steps run. / OS, Python·Java 버전, 동결 해시 확인과 실행 절차를 적습니다. / OS、Python・Javaの版、凍結ハッシュ確認、実行手順を記載します。
     validations:
       required: true
   - type: checkboxes
     id: safety
     attributes:
-      label: Data-safety confirmation
+      label: Data safety / 데이터 안전 / データ安全
       options:
-        - label: I have not attached raw third-party payloads, credentials, or evaluation-private labels.
+        - label: No restricted data attached. / 제한 자료를 첨부하지 않았습니다. / 制限資料を添付していません。
           required: true

@@ -140,11 +140,11 @@ If regenerated endpoint metrics differ, stop and compare frozen input hashes, en
 
 [← 한국어 저장소 소개](README.md#user-content-readme-ko)
 
-이 저장소는 Phase 1부터 Phase 13까지 추적하는 데 필요한 코드와 metadata를 보존합니다. 제3자 MOD/JAR payload, clone한 저장소, 생성된 query package 또는 외부 도구는 의도적으로 재배포하지 않습니다.
+이 저장소에는 Phase 1부터 Phase 13까지의 연구 과정을 재현하는 데 필요한 코드와 메타데이터가 보존되어 있다. 제3자 MOD/JAR 원본, 복제한 외부 저장소, 생성된 질의 패키지와 외부 도구는 재배포하지 않는다.
 
 ## 1. 환경
 
-System benchmark에서 시험한 Python 환경은 `requirements.txt`에 고정되어 있으며 `results/phase9_environment_freeze.txt`에도 동일한 내용이 그대로 보존되어 있습니다.
+시스템 성능 평가에 사용한 Python 환경은 `requirements.txt`와 `results/phase9_environment_freeze.txt`에 동일하게 고정되어 있다.
 
 ```bash
 python -m venv .venv
@@ -153,11 +153,11 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-기록된 WSL toolchain은 Python 3.12.3, OpenJDK 11.0.31, Git 2.43.0을 사용했습니다. Phase 9 성능 측정은 Windows Python 3.10.6을 사용했으므로 정확한 latency 값은 host와 환경에 따라 달라집니다. 시간을 비교하기 전에 [환경 기록](reproducibility/ENVIRONMENT.md#user-content-environment-ko)을 확인하세요.
+WSL 실행 기록은 Python 3.12.3, OpenJDK 11.0.31과 Git 2.43.0을 사용한다. Phase 9의 성능 측정은 Windows Python 3.10.6에서 수행했으므로 정확한 지연 시간은 실행 컴퓨터와 환경에 따라 달라진다. 성능 수치를 비교할 때에는 [환경 기록](reproducibility/ENVIRONMENT.md#user-content-environment-ko)을 함께 확인해야 한다.
 
-## 2. 제외된 input 복원
+## 2. 제외된 입력 자료 복원
 
-Raw archive는 Git에 없습니다. 추적되는 project/version identifier, download URL, content hash, snapshot commit 및 mapping audit를 사용하여 각 script가 기대하는 경로에 복원하세요. 중요한 복원 metadata는 다음과 같습니다.
+원본 압축파일은 Git에 포함하지 않는다. 추적 중인 프로젝트·버전 식별자, 내려받기 주소, 내용 해시, 특정 시점의 커밋과 대응표 감사를 이용하여 각 스크립트가 요구하는 경로에 자료를 복원한다. 주요 복원 자료는 다음과 같다.
 
 - `results/phase6a_fresh_corpus.csv`
 - `results/phase6c_project_split.csv`
@@ -165,61 +165,61 @@ Raw archive는 Git에 없습니다. 추적되는 project/version identifier, dow
 - `results/phase10a3_class_to_java_mapping.csv`
 - `results/phase9e_package_manifest.csv`
 
-후속 단계를 실행하기 전에 다운로드한 파일의 SHA-1/SHA-256/SHA-512 필드를 추적된 값과 대조하세요. 복원한 archive나 추출 payload를 commit하지 마세요.
+후속 단계를 실행하기 전에 내려받은 파일의 SHA-1/SHA-256/SHA-512를 추적된 값과 대조한다. 복원한 압축파일과 추출한 원본 데이터는 커밋하지 않는다.
 
 ## 3. 실행 순서
 
-대부분의 script는 범용 command-line application이 아니라 경로 상수가 고정된 연구 protocol 프로그램입니다. 저장소 루트에서 실행하세요.
+대부분의 스크립트는 범용 명령행 프로그램이 아니라 경로와 절차가 고정된 연구용 프로그램이다. 저장소 루트에서 실행한다.
 
 ```text
 Phase 1  수집
-Phase 2  corpus/release 동결
-Phase 3  과거 baseline
-Phase 4  graph 추출
+Phase 2  데이터셋·릴리스 동결
+Phase 3  과거 기준선
+Phase 4  그래프 추출
 Phase 5  합성 방법 탐색
-Phase 6  신규 benchmark 및 동결 query/graph 구축
-Phase 7  calibration -> 방법 동결 -> 최종 TEST
-Phase 8  사후 통계 및 ablation
-Phase 9  server 정확성과 성능
-Phase 10 source/외부 baseline 호환성
+Phase 6  신규 벤치마크 및 동결 질의·그래프 구축
+Phase 7  보정 -> 방법 동결 -> 최종 TEST
+Phase 8  사후 통계 및 제거 실험
+Phase 9  서버 정확성과 성능
+Phase 10 소스·외부 기준선 호환성
 Phase 11 동결 후 다중 UNKNOWN 강건성
-Phase 12 동결 후 Exact-vs-LSH retrieval/확장성 평가
+Phase 12 동결 후 정확 검색·LSH 검색의 성능과 확장성 평가
 Phase 13 동결 후 자동 실패 분석
 ```
 
-각 Phase의 정확한 script, input, output, 결과 및 동결 상태는 [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)에 정리되어 있습니다.
+각 Phase의 스크립트, 입력, 출력, 결과와 동결 상태는 [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)에 정리되어 있다.
 
 ## 4. 평가 전 동결 확인
 
-Phase 7H 또는 이후 분석을 재현하기 전에 다음을 확인하세요.
+Phase 7H 또는 이후 분석을 재현하기 전에 다음 사항을 확인한다.
 
-1. `results/phase7g_final_method_parameters.json`의 SHA-256이 `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`인지 확인합니다.
-2. Phase 6C split과 Phase 6K/6L manifest가 `reproducibility/FROZEN_ARTIFACT_SHA256.txt`와 일치하는지 확인합니다.
-3. TEST를 확인한 뒤에는 threshold, `alpha`, `lambda`, candidate-pool 크기, graph beta, boundary Top-R 또는 `Kmax`를 변경하지 않습니다.
-4. 평가 전용 label은 scoring boundary 이외에서 model/pipeline이 접근하지 못하게 유지합니다.
+1. `results/phase7g_final_method_parameters.json`의 SHA-256이 `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`인지 확인한다.
+2. Phase 6C 분할과 Phase 6K/6L 명세가 `reproducibility/FROZEN_ARTIFACT_SHA256.txt`와 일치하는지 확인한다.
+3. TEST를 확인한 뒤에는 임계값, `alpha`, `lambda`, 후보군 크기, 그래프 beta, 경계 Top-R과 `Kmax`를 변경하지 않는다.
+4. 평가 전용 정답은 채점 단계 이외에서 모델과 처리 과정이 접근할 수 없도록 분리한다.
 
-## 5. Phase 9 service
+## 5. Phase 9 서버
 
-보존된 service 구현은 다음과 같습니다.
+보존된 서버 구현은 다음과 같다.
 
-- `server/phase9a_server.py`: 미리 계산한 score에서 동결 reconstruction 수행
-- `server/phase9d_evidence_server.py`: 식별자 중립 evidence에서 gallery search와 reconstruction 수행
-- `server/phase9e3_package_server.py`: local materialized package에서 extraction과 reconstruction 수행
-- `server/phase9f_scalability_server.py`: gallery 크기 확장성 service
+- `server/phase9a_server.py`: 미리 계산한 점수로 동결된 재구성 수행
+- `server/phase9d_evidence_server.py`: 식별자 중립 증거를 이용한 후보 검색과 재구성 수행
+- `server/phase9e3_package_server.py`: 로컬에 구성한 패키지의 추출과 재구성 수행
+- `server/phase9f_scalability_server.py`: 후보 프로젝트 수에 따른 확장성 평가
 
-해당 server가 정상 상태를 보고한 뒤에 일치하는 Phase 9 benchmark script를 실행하세요. Latency를 보고할 때 benchmark 범위를 보존해야 합니다. Phase 9C, 9D, 9E3는 pipeline의 서로 다른 부분을 포함합니다.
+해당 서버의 정상 동작을 확인한 뒤 대응하는 Phase 9 성능 평가 스크립트를 실행한다. Phase 9C, 9D, 9E3는 처리 과정의 서로 다른 구간을 측정하므로, 지연 시간을 보고할 때 각 평가 범위를 구분해야 한다.
 
 ## 6. Phase 10 외부 도구
 
-Open-NiCad/NiCadCross는 저장소에 포함하지 않습니다. 별도로 설치하고 Phase 10 mapping에서 추적하는 query/gallery source corpus를 복원하세요. 보관된 `phase10a4d_score_nicad_v1_buggy.py`는 유효하지 않으므로 사용하면 안 됩니다. `scripts/phase10a4d_score_nicad.py`를 사용하세요.
+Open-NiCad/NiCadCross는 저장소에 포함하지 않는다. 별도로 설치한 뒤 Phase 10 대응표에 기록된 질의·후보 소스 데이터를 복원한다. 보관된 `phase10a4d_score_nicad_v1_buggy.py`에는 오류가 있으므로 보고 결과 재현에 사용할 수 없다. 수정된 `scripts/phase10a4d_score_nicad.py`를 사용한다.
 
-## 7. Phase 11 생성 adapter
+## 7. Phase 11 생성 어댑터
 
-`scripts/phase11b_run_multi_unknown_robustness.py`를 실행하세요. 이 script는 정확한 Phase 7B donor evidence를 재사용하고 `scripts/_phase11b_phase7h_adapter_generated.py`에 임시 adapter를 생성합니다. 추적되는 driver가 이를 결정론적으로 재생성하므로 활성 생성 파일은 무시됩니다. 보존된 실행에서 사용한 과거 adapter는 감사를 위해 `archive/generated/` 아래에 있습니다.
+`scripts/phase11b_run_multi_unknown_robustness.py`는 Phase 7B의 기증자 증거를 그대로 재사용하고 `scripts/_phase11b_phase7h_adapter_generated.py`에 임시 어댑터를 생성한다. 추적 중인 실행 파일이 항상 같은 방식으로 다시 만들 수 있으므로 현재 생성본은 Git 관리 대상에서 제외한다. 보존된 실행에 사용한 과거 어댑터는 감사를 위해 `archive/generated/`에 남겨 두었다.
 
-## 8. Phase 12 근사 retrieval 및 확장성
+## 8. Phase 12 근사 검색 및 확장성
 
-다음 순서로 실행하세요.
+다음 순서로 실행한다.
 
 - `scripts/phase12a_ann_candidate_benchmark.py`
 - `scripts/phase12b_ann_downstream_evaluation.py`
@@ -228,41 +228,41 @@ Open-NiCad/NiCadCross는 저장소에 포함하지 않습니다. 별도로 설�
 - `scripts/phase12e_scalability_crossover.py`
 - `scripts/phase12f_reporting_audit.py`
 
-360개 query 전체의 fidelity 결과에는 Phase 12C/12D를 사용하세요. Phase 12E는 결정론적으로 뽑은 120개 query runtime/확장성 sample입니다.
+360개 질의 전체의 예측 일치도는 Phase 12C/12D에서 확인한다. Phase 12E는 항상 같은 방식으로 선택한 120개 질의의 실행 시간·확장성 표본이다.
 
-`200eq`, `500eq`, `1000eq`는 실제 등록 부모 100개에 대한 합성 component-volume stress 조건이며 고유 프로젝트 수가 아닙니다.
+`200eq`, `500eq`, `1000eq`는 실제 등록 부모 100개를 바탕으로 구성요소 수만 늘린 합성 부하 조건이며 고유 프로젝트 수가 아니다.
 
-다음 파일로 동결 Phase 12 상태를 확인하세요.
+다음 파일로 동결 Phase 12 상태를 확인한다.
 
 - `reproducibility/phase12_freeze_manifest.sha256`
 - `results/phase12f_reporting_audit_summary.json`
 
 ## 9. Phase 13 실패 분석
 
-다음 순서로 실행하세요.
+다음 순서로 실행한다.
 
 - `scripts/phase13a_failure_taxonomy.py`
 - `scripts/phase13b_hierarchical_failure_localization.py`
 - `scripts/phase13c_reporting_audit.py`
 
-이 Phase는 기존 동결 prediction과 audit를 읽습니다. 진단 전용이므로 1차 prediction을 다시 계산하거나 동결 방법을 재조정하는 데 사용하면 안 됩니다.
+이 Phase는 기존의 동결 예측과 감사 자료를 읽는다. 진단 전용 단계이며 주요 예측을 다시 계산하거나 동결 방법을 재조정하지 않는다.
 
-다음 파일로 동결 Phase 13 상태를 확인하세요.
+다음 파일로 동결 Phase 13 상태를 확인한다.
 
 - `reproducibility/phase13_freeze_manifest.sha256`
 - `results/phase13c_reporting_audit_summary.json`
 
-## 10. 보존된 예상 endpoint
+## 10. 보존된 주요 결과 파일
 
 - 1차 동결 TEST: `results/phase7h_final_test_summary.json`
 - 통계 분석: `results/phase8a_bootstrap_summary.json`, `phase8b_baseline_ablation_summary.json`, `phase8c_source_cluster_sensitivity_summary.json`
-- System 평가: `results/phase9b_server_correctness_summary.json`부터 `phase9f_gallery_scalability_summary.json`
-- 외부 baseline: `results/phase10a4f_nicad_paired_bootstrap_summary.json`
+- 시스템 평가: `results/phase9b_server_correctness_summary.json`부터 `phase9f_gallery_scalability_summary.json`
+- 외부 기준선: `results/phase10a4f_nicad_paired_bootstrap_summary.json`
 - 다중 UNKNOWN 강건성: `results/phase11c_multi_unknown_summary.json`
-- 근사 retrieval/확장성: `results/phase12f_reporting_audit_summary.json`
+- 근사 검색·확장성: `results/phase12f_reporting_audit_summary.json`
 - 실패 분석: `results/phase13a_failure_taxonomy_summary.json`, `phase13b_failure_localization_summary.json`, `phase13c_reporting_audit_summary.json`
 
-재생성한 endpoint metric이 다르면 차이를 해석하기 전에 중단하고 동결 input hash, 환경 version 및 관련 상세 audit table을 비교하세요.
+다시 생성한 주요 수치가 다를 경우에는 해석을 중단하고 동결 입력 해시, 환경 버전과 관련 상세 감사표를 먼저 비교한다.
 
 ---
 
@@ -274,11 +274,11 @@ Open-NiCad/NiCadCross는 저장소에 포함하지 않습니다. 별도로 설�
 
 [← 日本語のリポジトリ概要](README.md#user-content-readme-ja)
 
-本リポジトリは、Phase 1からPhase 13までを追跡するために必要なコードとmetadataを保存しています。第三者のMOD/JAR payload、cloneしたリポジトリ、生成query package、外部toolは意図的に再配布しません。
+本リポジトリには、Phase 1からPhase 13までの研究手順を再現するために必要なコードとメタデータを保存している。第三者のMOD/JAR原本、複製した外部リポジトリ、生成済みクエリパッケージ、外部ツールは再配布しない。
 
 ## 1. 環境
 
-System benchmarkで試験したPython環境は`requirements.txt`に固定され、`results/phase9_environment_freeze.txt`にも同じ内容がそのまま保存されています。
+システム性能評価に使用したPython環境は、`requirements.txt`と`results/phase9_environment_freeze.txt`に同一内容で固定している。
 
 ```bash
 python -m venv .venv
@@ -287,11 +287,11 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-記録済みWSL toolchainはPython 3.12.3、OpenJDK 11.0.31、Git 2.43.0を使用しました。Phase 9性能測定はWindows Python 3.10.6を使用したため、正確なlatency値はhostと環境に依存します。時間を比較する前に[環境記録](reproducibility/ENVIRONMENT.md#user-content-environment-ja)を確認してください。
+WSLの実行記録ではPython 3.12.3、OpenJDK 11.0.31、Git 2.43.0を使用している。Phase 9の性能測定はWindows Python 3.10.6で実施したため、正確な処理時間は実行コンピューターと環境によって変化する。性能値を比較する際は[環境記録](reproducibility/ENVIRONMENT.md#user-content-environment-ja)を併せて確認する必要がある。
 
-## 2. 除外inputの復元
+## 2. Gitに含まれない入力資料の復元
 
-Raw archiveはGitにありません。追跡対象のproject/version identifier、download URL、content hash、snapshot commit、mapping auditを用いて、各scriptが想定するpathへ復元してください。重要な復元metadataは次のとおりです。
+原本アーカイブはGitに含めていない。追跡済みのプロジェクト・バージョン識別子、ダウンロードURL、内容ハッシュ、特定時点のコミット、対応表監査を用いて、各スクリプトが想定するパスへ資料を復元する。主な復元資料は次のとおりである。
 
 - `results/phase6a_fresh_corpus.csv`
 - `results/phase6c_project_split.csv`
@@ -299,61 +299,61 @@ Raw archiveはGitにありません。追跡対象のproject/version identifier�
 - `results/phase10a3_class_to_java_mapping.csv`
 - `results/phase9e_package_manifest.csv`
 
-後続段階を実行する前に、downloadしたファイルを追跡済みSHA-1/SHA-256/SHA-512 fieldと照合してください。復元archiveや抽出payloadをcommitしないでください。
+後続段階を実行する前に、ダウンロードしたファイルのSHA-1/SHA-256/SHA-512を追跡済みの値と照合する。復元したアーカイブと抽出済み原本データはコミットしない。
 
 ## 3. 実行順序
 
-多くのscriptは汎用command-line applicationではなく、path定数を固定した研究protocolプログラムです。リポジトリルートから実行してください。
+多くのスクリプトは汎用のコマンドラインアプリケーションではなく、パスと手順を固定した研究用プログラムである。リポジトリルートから実行する。
 
 ```text
 Phase 1  収集
-Phase 2  corpus/release凍結
-Phase 3  旧baseline
-Phase 4  graph抽出
+Phase 2  データセット・リリースの凍結
+Phase 3  旧ベースライン
+Phase 4  グラフ抽出
 Phase 5  合成手法の探索
-Phase 6  新規benchmarkと凍結query/graph構築
-Phase 7  calibration -> 手法凍結 -> 最終TEST
-Phase 8  事後統計とablation
-Phase 9  server正確性と性能
-Phase 10 source/外部baseline互換性
+Phase 6  新規ベンチマークと凍結済みクエリ・グラフ構築
+Phase 7  較正 -> 手法凍結 -> 最終TEST
+Phase 8  事後統計とアブレーション
+Phase 9  サーバー正確性と性能
+Phase 10 ソース・外部ベースライン互換性
 Phase 11 凍結後の複数UNKNOWN頑健性
-Phase 12 凍結後のExact-vs-LSH retrieval/スケーラビリティ評価
+Phase 12 凍結後の厳密検索・LSH検索の性能とスケーラビリティ評価
 Phase 13 凍結後の自動失敗分析
 ```
 
-各Phaseの正確なscript、input、output、結果、凍結状況は[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)に記載しています。
+各Phaseのスクリプト、入力、出力、結果、凍結状況は[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)に記載している。
 
 ## 4. 評価前の凍結確認
 
-Phase 7Hまたはそれ以降の分析を再現する前に、次を確認してください。
+Phase 7Hまたはそれ以降の分析を再現する前に、次の事項を確認する。
 
 1. `results/phase7g_final_method_parameters.json`のSHA-256が`caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`であること。
-2. Phase 6C splitおよびPhase 6K/6L manifestが`reproducibility/FROZEN_ARTIFACT_SHA256.txt`と一致すること。
-3. TESTを確認した後はthreshold、`alpha`、`lambda`、candidate-pool size、graph beta、boundary Top-R、`Kmax`を変更しないこと。
-4. 評価専用labelにはscoring boundary以外でmodel/pipelineからアクセスできないようにすること。
+2. Phase 6Cの分割とPhase 6K/6Lのマニフェストが`reproducibility/FROZEN_ARTIFACT_SHA256.txt`と一致すること。
+3. TESTを確認した後は、しきい値、`alpha`、`lambda`、候補群サイズ、グラフbeta、境界Top-R、`Kmax`を変更しないこと。
+4. 評価専用の正解ラベルを、採点段階以外からモデルや処理系が参照できないよう分離すること。
 
-## 5. Phase 9 service
+## 5. Phase 9サーバー
 
-保存済みservice実装は次のとおりです。
+保存済みのサーバー実装は次のとおりである。
 
-- `server/phase9a_server.py`：事前計算scoreからの凍結reconstruction
-- `server/phase9d_evidence_server.py`：識別子中立evidenceからgallery searchとreconstruction
-- `server/phase9e3_package_server.py`：local materialized packageからextractionとreconstruction
-- `server/phase9f_scalability_server.py`：gallery-sizeスケーラビリティservice
+- `server/phase9a_server.py`：事前計算済みスコアによる凍結済み再構成
+- `server/phase9d_evidence_server.py`：識別子に依存しない証拠による候補検索と再構成
+- `server/phase9e3_package_server.py`：ローカルに構成したパッケージの抽出と再構成
+- `server/phase9f_scalability_server.py`：候補プロジェクト数に対するスケーラビリティ評価
 
-対応するserverが正常状態を報告してから、一致するPhase 9 benchmark scriptを実行してください。Latencyを報告するときはbenchmark範囲を維持してください。Phase 9C、9D、9E3はpipelineの異なる部分を含みます。
+対応するサーバーの正常動作を確認してから、該当するPhase 9性能評価スクリプトを実行する。Phase 9C、9D、9E3は処理系の異なる区間を測定するため、処理時間を報告する際は各評価範囲を区別する。
 
-## 6. Phase 10外部tool
+## 6. Phase 10外部ツール
 
-Open-NiCad/NiCadCrossは同梱しません。別途installし、Phase 10 mappingで追跡するquery/gallery source corpusを復元してください。保管された`phase10a4d_score_nicad_v1_buggy.py`は無効であり、使用してはいけません。`scripts/phase10a4d_score_nicad.py`を使用してください。
+Open-NiCad/NiCadCrossは同梱していない。別途導入したうえで、Phase 10対応表に記録されたクエリ・候補ソースデータを復元する。保存済みの`phase10a4d_score_nicad_v1_buggy.py`には不具合があり、報告結果の再現には使用できない。修正版の`scripts/phase10a4d_score_nicad.py`を使用する。
 
-## 7. Phase 11生成adapter
+## 7. Phase 11生成アダプター
 
-`scripts/phase11b_run_multi_unknown_robustness.py`を実行してください。このscriptは正確なPhase 7B donor evidenceを再利用し、`scripts/_phase11b_phase7h_adapter_generated.py`に一時adapterを生成します。追跡済みdriverが決定論的に再生成するため、active生成ファイルは無視されます。保存runで使用した過去adapterは監査用として`archive/generated/`にあります。
+`scripts/phase11b_run_multi_unknown_robustness.py`は、Phase 7Bの提供元証拠をそのまま再利用し、`scripts/_phase11b_phase7h_adapter_generated.py`に一時アダプターを生成する。追跡済みの実行ファイルが常に同じ手順で再生成できるため、現在の生成物はGit管理対象外である。保存済み実行で使用した過去のアダプターは、監査用として`archive/generated/`に残している。
 
-## 8. Phase 12近似retrievalとスケーラビリティ
+## 8. Phase 12近似検索とスケーラビリティ
 
-次の順序で実行してください。
+次の順序で実行する。
 
 - `scripts/phase12a_ann_candidate_benchmark.py`
 - `scripts/phase12b_ann_downstream_evaluation.py`
@@ -362,38 +362,38 @@ Open-NiCad/NiCadCrossは同梱しません。別途installし、Phase 10 mapping
 - `scripts/phase12e_scalability_crossover.py`
 - `scripts/phase12f_reporting_audit.py`
 
-360 query全体のfidelity結果にはPhase 12C/12Dを使用してください。Phase 12Eは決定論的に選んだ120 queryのruntime/スケーラビリティsampleです。
+360クエリ全体の予測一致度はPhase 12C/12Dで確認する。Phase 12Eは、常に同じ手順で選択した120クエリの処理時間・スケーラビリティ標本である。
 
-`200eq`、`500eq`、`1000eq`は実登録親100件に対する合成component-volume stress条件であり、一意なプロジェクト数ではありません。
+`200eq`、`500eq`、`1000eq`は、100件の実在する登録済み親を基にコンポーネント数のみを増やした合成負荷条件であり、固有プロジェクト数ではない。
 
-次のファイルで凍結Phase 12状態を確認してください。
+次のファイルで凍結済みPhase 12の状態を確認する。
 
 - `reproducibility/phase12_freeze_manifest.sha256`
 - `results/phase12f_reporting_audit_summary.json`
 
 ## 9. Phase 13失敗分析
 
-次の順序で実行してください。
+次の順序で実行する。
 
 - `scripts/phase13a_failure_taxonomy.py`
 - `scripts/phase13b_hierarchical_failure_localization.py`
 - `scripts/phase13c_reporting_audit.py`
 
-このPhaseは既存の凍結predictionとauditを読み取ります。診断専用であり、主要predictionを再計算したり、凍結手法の再調整に使用したりしてはいけません。
+このPhaseは既存の凍結済み予測と監査資料を読み込む。診断専用の段階であり、主要予測の再計算や凍結済み手法の再調整は行わない。
 
-次のファイルで凍結Phase 13状態を確認してください。
+次のファイルで凍結済みPhase 13の状態を確認する。
 
 - `reproducibility/phase13_freeze_manifest.sha256`
 - `results/phase13c_reporting_audit_summary.json`
 
-## 10. 保存済みの期待endpoint
+## 10. 保存済みの主要結果ファイル
 
 - 主要凍結TEST：`results/phase7h_final_test_summary.json`
 - 統計分析：`results/phase8a_bootstrap_summary.json`、`phase8b_baseline_ablation_summary.json`、`phase8c_source_cluster_sensitivity_summary.json`
-- System評価：`results/phase9b_server_correctness_summary.json`から`phase9f_gallery_scalability_summary.json`
-- 外部baseline：`results/phase10a4f_nicad_paired_bootstrap_summary.json`
+- システム評価：`results/phase9b_server_correctness_summary.json`から`phase9f_gallery_scalability_summary.json`
+- 外部ベースライン：`results/phase10a4f_nicad_paired_bootstrap_summary.json`
 - 複数UNKNOWN頑健性：`results/phase11c_multi_unknown_summary.json`
-- 近似retrieval/スケーラビリティ：`results/phase12f_reporting_audit_summary.json`
+- 近似検索・スケーラビリティ：`results/phase12f_reporting_audit_summary.json`
 - 失敗分析：`results/phase13a_failure_taxonomy_summary.json`、`phase13b_failure_localization_summary.json`、`phase13c_reporting_audit_summary.json`
 
-再生成したendpoint metricが異なる場合は、差を解釈する前に停止し、凍結input hash、環境version、関連する詳細audit tableを比較してください。
+再生成した主要指標が異なる場合は解釈を中断し、凍結済み入力ハッシュ、環境のバージョン、関連する詳細監査表を比較する。

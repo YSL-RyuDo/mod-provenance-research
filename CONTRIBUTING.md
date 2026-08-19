@@ -43,32 +43,32 @@ Use GitHub Issues for reproducibility problems, documentation gaps, and narrowly
 
 [← 한국어 저장소 소개](README.md#user-content-readme-ko)
 
-기여 내용은 이 저장소에 문서화된 연구 기록, 재현성 경계 및 제3자 재배포 제약을 보존해야 합니다.
+기여 시에는 이 저장소에 기록된 연구 이력, 재현 조건과 제3자 자료의 재배포 제한을 유지해야 한다.
 
 ## 변경 전 확인
 
-1. [한국어 저장소 소개](README.md#user-content-readme-ko), [재현 안내](REPRODUCE.md#user-content-reproduce-ko), [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)를 읽으세요.
-2. Data나 생성 output을 추가하기 전에 [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)를 확인하세요.
-3. 범위가 명확한 branch에서 작업하고 관련 없는 local 파일은 commit에서 제외하세요.
+1. [한국어 저장소 소개](README.md#user-content-readme-ko), [재현 안내](REPRODUCE.md#user-content-reproduce-ko), [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)를 확인한다.
+2. 데이터나 생성 결과를 추가하기 전에 [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)를 확인한다.
+3. 범위가 명확한 브랜치에서 작업하고 관련 없는 로컬 파일은 커밋에서 제외한다.
 
 ## 보호되는 연구 산출물
 
-일상적인 정리나 문서 작업의 일부로 Phase 6 split/manifest, Phase 7 동결 parameter나 1차 TEST prediction 또는 Phase 12/13 freeze manifest를 변경하지 마세요. 과학적으로 정당한 후속 방법은 새 Phase 또는 명시적으로 version을 부여한 protocol로 기록해야 하며, 동결 evidence를 조용히 대체하면 안 됩니다.
+일반적인 정리나 문서 작업으로 Phase 6의 분할·명세, Phase 7의 동결 매개변수·주요 TEST 예측, Phase 12/13의 동결 명세를 변경해서는 안 된다. 과학적 근거가 있는 후속 방법은 새 Phase 또는 명시적으로 버전을 부여한 절차로 기록하며, 기존의 동결 자료를 덮어쓰지 않는다.
 
-원본 MOD/JAR archive, 제3자 source/tool cache, 외부 도구용 복원 corpus, credential, private token, 가상환경, compiled output 또는 대용량 재생성 가능 파일을 절대 commit하지 마세요.
+원본 MOD/JAR 압축파일, 제3자 소스·도구 캐시, 외부 도구용 복원 데이터, 인증정보, 비공개 토큰, 가상환경, 컴파일 결과와 대용량 재생성 파일은 커밋하지 않는다.
 
 ## Pull request 점검표
 
-- 변경의 연구 또는 문서 목적을 설명합니다.
-- 영향받는 script, input, output 및 summary를 나열합니다.
-- 동결 artifact가 변경되는지 밝힙니다. 변경된다면 이유를 설명하고 과거 기록을 덮어쓰지 않은 새 hash를 제공합니다.
-- 보고한 metric이 추적되는 summary에서 복사되었고 원래 범위를 유지하는지 확인합니다.
-- Secret, 재배포 민감 payload 또는 held-out mapping을 실수로 추가하지 않았는지 확인합니다.
-- 관련 script 점검을 실행하고 모든 상대 Markdown link를 확인합니다.
+- 변경의 연구 목적 또는 문서화 목적을 설명한다.
+- 영향을 받는 스크립트, 입력, 출력과 요약 파일을 나열한다.
+- 동결 자료의 변경 여부를 밝힌다. 변경되는 경우에는 이유와 새 해시를 기록하고 과거 기록을 덮어쓰지 않는다.
+- 보고 수치가 추적 중인 공식 요약에서 옮겨졌으며 원래의 평가 범위를 유지하는지 확인한다.
+- 인증정보, 재배포 제한 자료 또는 평가 전용 대응표가 실수로 포함되지 않았는지 확인한다.
+- 관련 검사를 실행하고 Markdown 상대 경로가 모두 유효한지 확인한다.
 
 ## Issue 보고
 
-재현 문제, 문서 누락 및 범위가 좁은 연구 질문에는 GitHub Issues를 사용하세요. 공개 보고서에 제3자 payload 또는 평가 전용 label을 첨부하지 마세요.
+재현 문제, 문서 누락과 범위가 명확한 연구 질문은 GitHub Issues로 접수한다. 공개 보고에는 제3자 원본 데이터나 평가 전용 정답을 첨부하지 않는다.
 
 ---
 
@@ -80,29 +80,29 @@ Use GitHub Issues for reproducibility problems, documentation gaps, and narrowly
 
 [← 日本語のリポジトリ概要](README.md#user-content-readme-ja)
 
-コントリビューションでは、本リポジトリに記録された研究記録、再現性の境界、第三者再配布の制約を維持する必要があります。
+コントリビューションでは、本リポジトリに記録された研究履歴、再現条件、第三者資料の再配布制限を維持する。
 
 ## 変更前の確認
 
-1. [日本語のリポジトリ概要](README.md#user-content-readme-ja)、[再現ガイド](REPRODUCE.md#user-content-reproduce-ja)、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)を読んでください。
-2. Dataや生成outputを追加する前に[追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)を確認してください。
-3. 対象を絞ったbranchで作業し、無関係なlocalファイルをcommitに含めないでください。
+1. [日本語のリポジトリ概要](README.md#user-content-readme-ja)、[再現ガイド](REPRODUCE.md#user-content-reproduce-ja)、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)を確認する。
+2. データや生成結果を追加する前に[追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)を確認する。
+3. 対象を明確にしたブランチで作業し、無関係なローカルファイルをコミットに含めない。
 
 ## 保護対象の研究成果物
 
-通常の整理や文書作業の一部として、Phase 6 split/manifest、Phase 7凍結parameterや主要TEST prediction、Phase 12/13 freeze manifestを変更しないでください。科学的に正当な後継手法は、新しいPhaseまたは明示的にversionを付けたprotocolとして記録し、凍結evidenceを黙って置き換えてはいけません。
+通常の整理や文書作業によって、Phase 6のデータ分割・マニフェスト、Phase 7の凍結パラメータ・主要TEST予測、Phase 12/13の凍結マニフェストを変更してはならない。科学的根拠のある後継手法は、新しいPhaseまたは明示的に版を付けた手順として記録し、既存の凍結資料を上書きしない。
 
-生のMOD/JAR archive、第三者source/tool cache、外部tool用の再構成corpus、credential、private token、仮想環境、compiled output、大容量で再生成可能なファイルを決してcommitしないでください。
+生のMOD/JARアーカイブ、第三者のソース・ツールキャッシュ、外部ツール用に復元したデータ、認証情報、非公開トークン、仮想環境、コンパイル結果、大容量の再生成可能ファイルはコミットしない。
 
 ## Pull requestチェックリスト
 
-- 変更の研究上または文書上の目的を説明します。
-- 影響を受けるscript、input、output、summaryを列挙します。
-- 凍結artifactが変更されるかを明記します。変更する場合は理由を説明し、過去記録を上書きせずに新しいhashを提示します。
-- 報告metricが追跡済みsummaryから転記され、元の範囲を維持していることを確認します。
-- Secret、再配布に配慮が必要なpayload、held-out mappingを誤って追加していないことを確認します。
-- 関連scriptのcheckを実行し、すべての相対Markdown linkを確認します。
+- 変更の研究上または文書上の目的を説明する。
+- 影響を受けるスクリプト、入力、出力、要約ファイルを列挙する。
+- 凍結資料の変更有無を明記する。変更する場合は理由と新しいハッシュを記録し、過去の記録を上書きしない。
+- 報告値が追跡中の正式な要約から転記され、元の評価範囲を維持していることを確認する。
+- 認証情報、再配布制限のある資料、評価専用対応表が誤って含まれていないことを確認する。
+- 関連する検査を実行し、Markdownの相対パスがすべて有効であることを確認する。
 
 ## Issueの報告
 
-再現上の問題、文書の不足、範囲を絞った研究質問にはGitHub Issuesを使用してください。公開報告に第三者payloadや評価専用labelを添付しないでください。
+再現上の問題、文書の不足、対象が明確な研究上の質問はGitHub Issuesで受け付ける。公開報告には第三者の原本データや評価専用の正解ラベルを添付しない。
