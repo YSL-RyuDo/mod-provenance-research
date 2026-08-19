@@ -1,7 +1,7 @@
 # MOD来歴再構成研究
 
-[![研究状況](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
-[![ベンチマーク](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
+[![研究状況](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
+[![ベンチマーク](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#user-content-freeze-anchors-ja)
 [![再現性](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
 
 ## 言語
@@ -76,7 +76,7 @@ Phase 1-13の全スクリプトと報告可能な結果が `main` に保存さ�
 | 12 | Exact対binary-LSH検索とスケーラビリティ | 完了 |
 | 13 | 凍結後の自動失敗分析 | 完了 |
 
-Phaseごとのscript → input → output → 主要結果 → 凍結状況は、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md)に整理しています。
+Phaseごとのscript → input → output → 主要結果 → 凍結状況は、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)に整理しています。
 
 ## 主要結果
 
@@ -126,7 +126,7 @@ data/                レジストリと再配布可能なメタデータ。生pa
 ## 再現と凍結アンカー
 
 - [再現ガイド](REPRODUCE.md)
-- [実験インデックス](reproducibility/EXPERIMENT_INDEX.md)
+- [実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
 - [環境記録](reproducibility/ENVIRONMENT.md)
 - [追跡監査](reproducibility/TRACKING_AUDIT.md)
 - [Phase 12凍結manifest](reproducibility/phase12_freeze_manifest.sha256)
