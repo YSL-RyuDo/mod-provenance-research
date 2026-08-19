@@ -1,17 +1,14 @@
-# MOD Provenance Reconstruction · MOD 출처 재구성 연구 · MOD来歴再構成研究
+# MOD Provenance Reconstruction
 
 [![Research status](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
 [![Benchmark](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
 [![Reproducibility](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
 
-## Languages · 언어 · 言語
+## Languages
 
-<details name="readme-language" open>
-<summary><a href="#user-content-readme-en"><img alt="English" src="https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge"></a> <a href="#user-content-readme-ko"><img alt="한국어" src="https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge"></a> <a href="#user-content-readme-ja"><img alt="日本語" src="https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge"></a></summary>
+[![English](https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge)](#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-readme-ja)
 
 <a id="readme-en"></a>
-
-<br>
 
 An academic research repository for reconstructing the likely provenance of components inside a recomposed MOD/JAR package. The system combines identity-neutral evidence from code/binaries, structured resources, and images; retrieves candidate registered projects; reconstructs a package-level parent set; and assigns unsupported components to a public `UNKNOWN` label.
 
@@ -156,14 +153,13 @@ The paper is under preparation. Until formal bibliographic metadata is finalized
 
 For research questions or reproducibility reports, use the repository's GitHub Issues. For private contact, use the [repository owner's GitHub profile](https://github.com/YSL-RyuDo).
 
-</details>
-
-<details name="readme-language">
-<summary><a href="#user-content-readme-en"><img alt="English" src="https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge"></a> <a href="#user-content-readme-ko"><img alt="한국어" src="https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge"></a> <a href="#user-content-readme-ja"><img alt="日本語" src="https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge"></a></summary>
+---
 
 <a id="readme-ko"></a>
 
-<br>
+# MOD 출처 재구성 연구
+
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-readme-ja)
 
 재조합된 MOD/JAR 패키지 내부 구성요소의 가능한 출처를 재구성하는 학술 연구 저장소입니다. 시스템은 코드/바이너리, 구조화 리소스, 이미지에서 프로젝트 식별자에 의존하지 않는 증거를 결합하고, 등록된 후보 프로젝트를 검색한 뒤, 패키지 수준의 부모 집합을 재구성합니다. 등록된 출처로 뒷받침되지 않는 구성요소에는 공개 레이블인 `UNKNOWN`을 부여합니다.
 
@@ -308,14 +304,13 @@ Held-out mapping과 재배포에 민감한 연구 자료를 검토하는 동안 
 
 연구 질문과 재현성 보고는 저장소의 GitHub Issues를 이용해 주세요. 비공개 문의는 [저장소 소유자의 GitHub 프로필](https://github.com/YSL-RyuDo)을 이용할 수 있습니다.
 
-</details>
-
-<details name="readme-language">
-<summary><a href="#user-content-readme-en"><img alt="English" src="https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge"></a> <a href="#user-content-readme-ko"><img alt="한국어" src="https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge"></a> <a href="#user-content-readme-ja"><img alt="日本語" src="https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge"></a></summary>
+---
 
 <a id="readme-ja"></a>
 
-<br>
+# MOD来歴再構成研究
+
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](#user-content-readme-ja)
 
 再構成されたMOD/JARパッケージ内の各コンポーネントについて、もっともらしい由来を復元する学術研究リポジトリです。本システムは、コード／バイナリ、構造化リソース、画像からプロジェクト識別子に依存しない証拠を統合し、登録済み候補プロジェクトを検索したうえで、パッケージ単位の親集合を再構成します。登録済みの由来では裏付けられないコンポーネントには、公開ラベル `UNKNOWN` を割り当てます。
 
@@ -459,5 +454,3 @@ Held-out mappingと再配布に配慮が必要な研究資料を確認してい�
 論文は準備中です。正式な書誌情報が確定するまでは、再現に使用した正確なcommit hashと本リポジトリを併記して引用してください。現時点ではリポジトリ全体のライセンスは宣言されていません。ソースコード、データセット、MOD/JAR payload、第三者資料の再配布が許可されていると推定しないでください。第三者の元のライセンスが優先されます。
 
 研究上の質問や再現性の報告には、リポジトリのGitHub Issuesを利用してください。非公開の連絡には、[リポジトリ所有者のGitHubプロフィール](https://github.com/YSL-RyuDo)を利用できます。
-
-</details>
