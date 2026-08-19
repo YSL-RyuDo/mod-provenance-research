@@ -3,11 +3,10 @@
 [![研究状況](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
 [![ベンチマーク](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
 [![再現性](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
-[![言語](https://img.shields.io/badge/readme-EN%20%7C%20KO%20%7C%20JA-555)](#言語)
 
 ## 言語
 
-[English](README.md) · [한국어](README.ko.md) · **日本語**
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](README.md) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](README.ko.md) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](README.ja.md)
 
 再構成されたMOD/JARパッケージ内の各コンポーネントについて、もっともらしい由来を復元する学術研究リポジトリです。本システムは、コード／バイナリ、構造化リソース、画像からプロジェクト識別子に依存しない証拠を統合し、登録済み候補プロジェクトを検索したうえで、パッケージ単位の親集合を再構成します。登録済みの由来では裏付けられないコンポーネントには、公開ラベル `UNKNOWN` を割り当てます。
 

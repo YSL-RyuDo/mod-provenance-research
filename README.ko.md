@@ -3,11 +3,10 @@
 [![연구 상태](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
 [![벤치마크](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
 [![재현성](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
-[![언어](https://img.shields.io/badge/readme-EN%20%7C%20KO%20%7C%20JA-555)](#언어)
 
 ## 언어
 
-[English](README.md) · **한국어** · [日本語](README.ja.md)
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](README.md) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](README.ko.md) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](README.ja.md)
 
 재조합된 MOD/JAR 패키지 내부 구성요소의 가능한 출처를 재구성하는 학술 연구 저장소입니다. 시스템은 코드/바이너리, 구조화 리소스, 이미지에서 프로젝트 식별자에 의존하지 않는 증거를 결합하고, 등록된 후보 프로젝트를 검색한 뒤, 패키지 수준의 부모 집합을 재구성합니다. 등록된 출처로 뒷받침되지 않는 구성요소에는 공개 레이블인 `UNKNOWN`을 부여합니다.
 
