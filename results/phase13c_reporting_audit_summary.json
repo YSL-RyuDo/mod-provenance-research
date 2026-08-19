@@ -1,0 +1,22 @@
+{
+  "phase13c_complete": true,
+  "scope": "REPORTING_ONLY_FAILURE_ANALYSIS_FREEZE",
+  "parameters_retuned": false,
+  "predictions_recomputed": false,
+  "primary_test_modified": false,
+  "component_errors": 489,
+  "main_failure_localization": {
+    "COMPONENT_ASSIGNMENT_MISS": 325,
+    "UNKNOWN_REJECTION_FAILURE": 81,
+    "PARENT_SELECTION_MISS": 47,
+    "RETRIEVAL_MISS": 36
+  },
+  "paper_safe_interpretation": [
+    "Most component-level errors arise after retrieval, during component assignment.",
+    "Retrieval misses account for only a small fraction of total component errors.",
+    "Known K=1 failures are entirely localized to component assignment in this taxonomy.",
+    "Higher-parent-count scenarios show additional retrieval and parent-selection failures.",
+    "UNKNOWN-only errors are false attribution of UNKNOWN components to registered parents.",
+    "The analysis is diagnostic only and does not modify or retune the frozen method."
+  ]
+}
