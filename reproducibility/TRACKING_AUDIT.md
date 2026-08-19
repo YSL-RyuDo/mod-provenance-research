@@ -1,4 +1,10 @@
+<a id="tracking-en"></a>
+
 # Git Preservation and Tracking Audit
+
+[![English](https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge)](#user-content-tracking-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-tracking-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-tracking-ja)
+
+[← Repository overview](../README.md#user-content-readme-en)
 
 Audit date: 2026-08-18 (Asia/Seoul)
 
@@ -47,3 +53,119 @@ No original research artifact was deleted. Files excluded from Git remain on the
 ## Public-release warning
 
 This preservation commit is designed for a private research repository. Before any public release, create a separate sanitized export that removes evaluation-private mappings, reviews third-party metadata/licensing, and confirms that no historical commit exposes material intended to remain private.
+
+---
+
+<a id="tracking-ko"></a>
+
+# Git 보존 및 추적 감사
+
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-tracking-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](#user-content-tracking-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-tracking-ja)
+
+[← 한국어 저장소 소개](../README.md#user-content-readme-ko)
+
+감사일: 2026-08-18 (Asia/Seoul)
+
+## 기준 상태
+
+- 기존 보존 commit: `7003afeb87ae6ad0e0282386804fe9031c22e674`
+- 기존 branch: `main`
+- 기존 local remote-tracking ref: `origin/main`
+- 기준 관계: local `HEAD`와 기록된 `origin/main` ref가 동일했습니다.
+- 기준 commit에는 이미 Phase 1-11 script와 summary artifact가 들어 있었습니다. 문제는 초기 Phase 이력이 빠진 것이 아니라 상세 table, server/tool, 논문 asset 및 명시적 index가 빠져 있던 것이었습니다.
+
+변경 전 정확한 untracked inventory는 `UNTRACKED_CLASSIFICATION.csv`에 기록되어 있습니다. 기준 시점에 `git ls-files --others --exclude-standard`가 보고한 모든 untracked path를 아래 classification 중 하나로 분류했습니다.
+
+## 보존 commit에 포함된 항목
+
+`TRACK_REPRODUCIBILITY`에 포함되는 항목은 다음과 같습니다.
+
+- 모든 공개 analysis code와 Phase 9 server 구현
+- Java bytecode helper source(`tools/phase3d/JavapBatch.java`), 단 compiled class는 제외
+- Phase 1-11 상세 result CSV, 동결 split, public/evaluation-private manifest, score, prediction, audit 및 summary
+- 환경 freeze와 실험 index
+- LaTeX manuscript source, compile된 draft PDF, figure 생성 helper 및 논문 figure
+- 결정론적 Phase 11 생성 adapter와 ground-truth/K logic이 유효하지 않았던 Phase 10 NiCad scorer version의 archive copy
+
+Evaluation-private CSV에는 결과 재현에 필요한 동결 source label 또는 anonymous-to-internal mapping이 들어 있습니다. Credential이나 raw component byte는 포함하지 않습니다. 이 파일들이 있기 때문에 별도 공개 sanitization 단계를 마치기 전까지 저장소를 private으로 유지해야 합니다.
+
+## Git에서 제외하지만 local에 보존한 항목
+
+| Classification | 경로 / rule | 이유 |
+|---|---|---|
+| `EXCLUDE_RAW_DATA` | `data/`, `*.jar`, `*.zip`, archive | 제3자/raw payload와 생성 package는 크거나 재배포에 부적합할 수 있습니다. |
+| `EXCLUDE_CACHE` | `cache/` | 기준 untracked 파일 920개는 download/clone한 저장소 cache 내부 자료이며 추적되는 mapping과 ref로 복원할 수 있습니다. |
+| `EXCLUDE_ENV` | `.venv/`, `venv/`, `env/` | Machine별 가상환경이며 대신 정확한 package 기록을 추적합니다. |
+| `EXCLUDE_BUILD` | `__pycache__/`, `*.pyc`, `*.class`, `*.aux`, `*.log`, `*.synctex.gz` | 생성된 interpreter/compiler/manuscript output입니다. |
+| `EXCLUDE_TRANSIENT_RESULT` | stdout, timing, bootstrap-replicate CSV, NiCad stderr/time 파일 | 크고 noisy한 rerun artifact이며 summary와 point/interval result는 추적합니다. |
+| `EXCLUDE_GENERATED_ACTIVE` | 재생성 후 `scripts/_phase11b_phase7h_adapter_generated.py` | 추적되는 Phase 11B driver가 결정론적으로 생성합니다. 감사된 과거 copy는 `archive/generated/`에 있습니다. |
+| `EXCLUDE_LOCAL_DEBRIS` | 루트의 `0`, `Foo`, `earch state through Phase11A*` | 빈 placeholder 및 우연히 redirect된 `git diff --stat` output입니다. Disk에서 원본을 건드리지 않고 명시적으로 무시했습니다. |
+
+## Archive 결정
+
+- `archive/generated/_phase11b_phase7h_adapter_generated.py`는 audit snapshot으로 보존합니다. 활성 script는 `phase11b_run_multi_unknown_robustness.py`가 생성하므로 사람이 유지하는 source of truth가 아닙니다.
+- `archive/failed_experiments/phase10a4d_score_nicad_v1_buggy.py`는 대체된 baseline 결과를 기록하기 위해 보존합니다. Held-out query에서 internal `source_fresh_id`를 evaluation truth로 잘못 사용했고 predicted K에서 collapsed `UNKNOWN` 기여를 빠뜨렸습니다. 수정된 활성 구현은 `scripts/phase10a4d_score_nicad.py`입니다.
+
+원본 연구 artifact는 삭제하지 않았습니다. Git에서 제외한 파일은 local filesystem에 그대로 있으며 archive 파일은 version history에 보존된 rename/copy입니다.
+
+## 공개 release 경고
+
+이 보존 commit은 private 연구 저장소를 위해 설계되었습니다. 공개하기 전에는 evaluation-private mapping을 제거하고, 제3자 metadata/license를 검토하며, private으로 유지할 자료가 과거 commit에 노출되지 않는지 확인한 별도의 sanitized export를 만드세요.
+
+---
+
+<a id="tracking-ja"></a>
+
+# Git保存・追跡監査
+
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-tracking-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-tracking-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](#user-content-tracking-ja)
+
+[← 日本語のリポジトリ概要](../README.md#user-content-readme-ja)
+
+監査日：2026-08-18（Asia/Seoul）
+
+## 基準状態
+
+- 既存保存commit：`7003afeb87ae6ad0e0282386804fe9031c22e674`
+- 既存branch：`main`
+- 既存local remote-tracking ref：`origin/main`
+- 基準関係：local `HEAD`と記録済み`origin/main` refは同一でした。
+- 基準commitにはPhase 1-11のscriptとsummary artifactがすでに含まれていました。不足していたのは初期Phaseの履歴ではなく、詳細table、server/tool、論文asset、明示的indexでした。
+
+変更前の正確なuntracked inventoryは`UNTRACKED_CLASSIFICATION.csv`に記録されています。基準時点で`git ls-files --others --exclude-standard`が報告した全untracked pathを、以下のclassificationのいずれかに割り当てました。
+
+## 保存commitに含めた項目
+
+`TRACK_REPRODUCIBILITY`の対象は次のとおりです。
+
+- すべての公開analysis codeとPhase 9 server実装
+- Java bytecode helper source（`tools/phase3d/JavapBatch.java`）。ただしcompiled classは除外
+- Phase 1-11の詳細result CSV、凍結split、public/evaluation-private manifest、score、prediction、audit、summary
+- 環境freezeと実験index
+- LaTeX manuscript source、compile済みdraft PDF、figure生成helper、論文figure
+- 決定論的Phase 11生成adapter、およびground-truth/K logicが無効だったPhase 10 NiCad scorer versionのarchive copy
+
+Evaluation-private CSVには、結果再現に必要な凍結source labelまたはanonymous-to-internal mappingが含まれます。Credentialやraw component byteは含まれません。これらのファイルが存在するため、別途公開sanitizationを完了するまでリポジトリをprivateに保つ必要があります。
+
+## Gitから除外しlocalに保存する項目
+
+| Classification | Path / rule | 理由 |
+|---|---|---|
+| `EXCLUDE_RAW_DATA` | `data/`、`*.jar`、`*.zip`、archive | 第三者/raw payloadと生成packageは大容量または再配布に不適切な場合があります。 |
+| `EXCLUDE_CACHE` | `cache/` | 基準untrackedファイル920件はdownload/cloneしたリポジトリcache内部資料であり、追跡済みmappingとrefから復元できます。 |
+| `EXCLUDE_ENV` | `.venv/`、`venv/`、`env/` | Machine固有の仮想環境であり、代わりに正確なpackage記録を追跡します。 |
+| `EXCLUDE_BUILD` | `__pycache__/`、`*.pyc`、`*.class`、`*.aux`、`*.log`、`*.synctex.gz` | 生成されたinterpreter/compiler/manuscript outputです。 |
+| `EXCLUDE_TRANSIENT_RESULT` | stdout、timing、bootstrap-replicate CSV、NiCad stderr/timeファイル | 大容量でnoiseの多いrerun artifactです。summaryとpoint/interval resultは追跡します。 |
+| `EXCLUDE_GENERATED_ACTIVE` | 再生成後の`scripts/_phase11b_phase7h_adapter_generated.py` | 追跡済みPhase 11B driverが決定論的に生成します。監査済みの過去copyは`archive/generated/`にあります。 |
+| `EXCLUDE_LOCAL_DEBRIS` | ルートの`0`、`Foo`、`earch state through Phase11A*` | 空placeholderと、誤ってredirectされた`git diff --stat` outputです。Disk上の原本には触れず明示的に無視しました。 |
+
+## Archive判断
+
+- `archive/generated/_phase11b_phase7h_adapter_generated.py`はaudit snapshotとして保存します。active scriptは`phase11b_run_multi_unknown_robustness.py`が生成するため、人が保守するsource of truthではありません。
+- `archive/failed_experiments/phase10a4d_score_nicad_v1_buggy.py`は、置き換えられたbaseline結果を記録するために保存します。Held-out queryでinternal `source_fresh_id`をevaluation truthとして誤用し、predicted Kからcollapsed `UNKNOWN`の寄与を除外していました。修正済みactive実装は`scripts/phase10a4d_score_nicad.py`です。
+
+元の研究artifactは削除していません。Gitから除外したファイルはlocal filesystemに残り、archiveファイルはversion historyに保存されたrename/copyです。
+
+## 公開release警告
+
+この保存commitはprivate研究リポジトリ向けです。公開前に、evaluation-private mappingを削除し、第三者metadata/licenseを確認し、privateに保つべき資料が過去commitに露出していないことを確認した別のsanitized exportを作成してください。

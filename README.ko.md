@@ -2,11 +2,11 @@
 
 [![연구 상태](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
 [![벤치마크](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#user-content-freeze-anchors-ko)
-[![재현성](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
+[![재현성](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md#user-content-reproduce-ko)
 
 ## 언어
 
-[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](README.md) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](README.ko.md) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](README.ja.md)
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](README.md#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](README.md#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](README.md#user-content-readme-ja)
 
 재조합된 MOD/JAR 패키지 내부 구성요소의 가능한 출처를 재구성하는 학술 연구 저장소입니다. 시스템은 코드/바이너리, 구조화 리소스, 이미지에서 프로젝트 식별자에 의존하지 않는 증거를 결합하고, 등록된 후보 프로젝트를 검색한 뒤, 패키지 수준의 부모 집합을 재구성합니다. 등록된 출처로 뒷받침되지 않는 구성요소에는 공개 레이블인 `UNKNOWN`을 부여합니다.
 
@@ -121,14 +121,16 @@ archive/             감사를 위해 보존한 생성물, 대체된 버전, 알
 data/                레지스트리와 재배포 가능한 메타데이터; 원본 payload byte는 제외
 ```
 
-원본 MOD/JAR payload, 외부 도구용 복원 corpus, 공개 승인을 받지 않은 비공개 held-out mapping, cache, 생성 서버 데이터, compiled 파일, 가상환경은 의도적으로 Git에서 제외합니다. 보존 정책과 과거 파일 분류는 [추적 감사](reproducibility/TRACKING_AUDIT.md)를 참고하세요.
+원본 MOD/JAR payload, 외부 도구용 복원 corpus, 공개 승인을 받지 않은 비공개 held-out mapping, cache, 생성 서버 데이터, compiled 파일, 가상환경은 의도적으로 Git에서 제외합니다. 보존 정책과 과거 파일 분류는 [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)를 참고하세요.
 
 ## 재현 및 동결 기준점
 
-- [재현 안내](REPRODUCE.md)
+- [재현 안내](REPRODUCE.md#user-content-reproduce-ko)
 - [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
-- [환경 기록](reproducibility/ENVIRONMENT.md)
-- [추적 감사](reproducibility/TRACKING_AUDIT.md)
+- [환경 기록](reproducibility/ENVIRONMENT.md#user-content-environment-ko)
+- [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)
+- [기여 안내](CONTRIBUTING.md#user-content-contributing-ko)
+- [Archive 설명](archive/README.md#user-content-archive-ko)
 - [Phase 12 동결 manifest](reproducibility/phase12_freeze_manifest.sha256)
 - [Phase 13 동결 manifest](reproducibility/phase13_freeze_manifest.sha256)
 

@@ -1,8 +1,8 @@
 # MOD Provenance Reconstruction
 
-[![Research status](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md)
+[![Research status](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en)
 [![Benchmark](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
-[![Reproducibility](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
+[![Reproducibility](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md#user-content-reproduce-en)
 
 ## Languages
 
@@ -78,7 +78,7 @@ All Phase 1-13 scripts and reportable outputs are preserved on `main`. “Comple
 | 12 | Exact versus binary-LSH retrieval and scalability | Complete |
 | 13 | Post-freeze automated failure analysis | Complete |
 
-The detailed script → input → output → result → freeze map is in the [Experiment Index](reproducibility/EXPERIMENT_INDEX.md).
+The detailed script → input → output → result → freeze map is in the [Experiment Index](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en).
 
 ## Key results
 
@@ -123,14 +123,16 @@ archive/             Historical generated, superseded, and known-bug artifacts r
 data/                Registries and redistributable metadata; raw payload bytes remain ignored
 ```
 
-Raw MOD/JAR payloads, reconstructed external-tool corpora, private held-out mappings not approved for release, caches, generated server data, compiled files, and virtual environments are intentionally excluded from Git. See [Tracking Audit](reproducibility/TRACKING_AUDIT.md) for the preservation policy and historical classification.
+Raw MOD/JAR payloads, reconstructed external-tool corpora, private held-out mappings not approved for release, caches, generated server data, compiled files, and virtual environments are intentionally excluded from Git. See [Tracking Audit](reproducibility/TRACKING_AUDIT.md#user-content-tracking-en) for the preservation policy and historical classification.
 
 ## Reproduction and freeze anchors
 
-- [Reproduction guide](REPRODUCE.md)
-- [Experiment index](reproducibility/EXPERIMENT_INDEX.md)
-- [Environment record](reproducibility/ENVIRONMENT.md)
-- [Tracking audit](reproducibility/TRACKING_AUDIT.md)
+- [Reproduction guide](REPRODUCE.md#user-content-reproduce-en)
+- [Experiment index](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en)
+- [Environment record](reproducibility/ENVIRONMENT.md#user-content-environment-en)
+- [Tracking audit](reproducibility/TRACKING_AUDIT.md#user-content-tracking-en)
+- [Contribution guide](CONTRIBUTING.md#user-content-contributing-en)
+- [Archive notes](archive/README.md#user-content-archive-en)
 - [Phase 12 freeze manifest](reproducibility/phase12_freeze_manifest.sha256)
 - [Phase 13 freeze manifest](reproducibility/phase13_freeze_manifest.sha256)
 
@@ -274,14 +276,16 @@ archive/             감사를 위해 보존한 생성물, 대체된 버전, 알
 data/                레지스트리와 재배포 가능한 메타데이터; 원본 payload byte는 제외
 ```
 
-원본 MOD/JAR payload, 외부 도구용 복원 corpus, 공개 승인을 받지 않은 비공개 held-out mapping, cache, 생성 서버 데이터, compiled 파일, 가상환경은 의도적으로 Git에서 제외합니다. 보존 정책과 과거 파일 분류는 [추적 감사](reproducibility/TRACKING_AUDIT.md)를 참고하세요.
+원본 MOD/JAR payload, 외부 도구용 복원 corpus, 공개 승인을 받지 않은 비공개 held-out mapping, cache, 생성 서버 데이터, compiled 파일, 가상환경은 의도적으로 Git에서 제외합니다. 보존 정책과 과거 파일 분류는 [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)를 참고하세요.
 
 ## 재현 및 동결 기준점
 
-- [재현 안내](REPRODUCE.md)
+- [재현 안내](REPRODUCE.md#user-content-reproduce-ko)
 - [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
-- [환경 기록](reproducibility/ENVIRONMENT.md)
-- [추적 감사](reproducibility/TRACKING_AUDIT.md)
+- [환경 기록](reproducibility/ENVIRONMENT.md#user-content-environment-ko)
+- [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)
+- [기여 안내](CONTRIBUTING.md#user-content-contributing-ko)
+- [Archive 설명](archive/README.md#user-content-archive-ko)
 - [Phase 12 동결 manifest](reproducibility/phase12_freeze_manifest.sha256)
 - [Phase 13 동결 manifest](reproducibility/phase13_freeze_manifest.sha256)
 
@@ -425,14 +429,16 @@ archive/             監査用に保存した生成物、旧版、既知bug版
 data/                レジストリと再配布可能なメタデータ。生payload byteは除外
 ```
 
-生のMOD/JAR payload、外部ツール用に再構成したcorpus、公開承認を受けていない非公開held-out mapping、cache、生成されたサーバーデータ、compiledファイル、仮想環境は意図的にGitから除外しています。保存方針と過去ファイルの分類は[追跡監査](reproducibility/TRACKING_AUDIT.md)を参照してください。
+生のMOD/JAR payload、外部ツール用に再構成したcorpus、公開承認を受けていない非公開held-out mapping、cache、生成されたサーバーデータ、compiledファイル、仮想環境は意図的にGitから除外しています。保存方針と過去ファイルの分類は[追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)を参照してください。
 
 ## 再現と凍結アンカー
 
-- [再現ガイド](REPRODUCE.md)
+- [再現ガイド](REPRODUCE.md#user-content-reproduce-ja)
 - [実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
-- [環境記録](reproducibility/ENVIRONMENT.md)
-- [追跡監査](reproducibility/TRACKING_AUDIT.md)
+- [環境記録](reproducibility/ENVIRONMENT.md#user-content-environment-ja)
+- [追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)
+- [コントリビューションガイド](CONTRIBUTING.md#user-content-contributing-ja)
+- [Archive説明](archive/README.md#user-content-archive-ja)
 - [Phase 12凍結manifest](reproducibility/phase12_freeze_manifest.sha256)
 - [Phase 13凍結manifest](reproducibility/phase13_freeze_manifest.sha256)
 

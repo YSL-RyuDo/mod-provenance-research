@@ -2,11 +2,11 @@
 
 [![研究状況](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
 [![ベンチマーク](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#user-content-freeze-anchors-ja)
-[![再現性](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md)
+[![再現性](https://img.shields.io/badge/reproducibility-audited-0969da)](REPRODUCE.md#user-content-reproduce-ja)
 
 ## 言語
 
-[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](README.md) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](README.ko.md) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](README.ja.md)
+[![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](README.md#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](README.md#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](README.md#user-content-readme-ja)
 
 再構成されたMOD/JARパッケージ内の各コンポーネントについて、もっともらしい由来を復元する学術研究リポジトリです。本システムは、コード／バイナリ、構造化リソース、画像からプロジェクト識別子に依存しない証拠を統合し、登録済み候補プロジェクトを検索したうえで、パッケージ単位の親集合を再構成します。登録済みの由来では裏付けられないコンポーネントには、公開ラベル `UNKNOWN` を割り当てます。
 
@@ -121,14 +121,16 @@ archive/             監査用に保存した生成物、旧版、既知bug版
 data/                レジストリと再配布可能なメタデータ。生payload byteは除外
 ```
 
-生のMOD/JAR payload、外部ツール用に再構成したcorpus、公開承認を受けていない非公開held-out mapping、cache、生成されたサーバーデータ、compiledファイル、仮想環境は意図的にGitから除外しています。保存方針と過去ファイルの分類は[追跡監査](reproducibility/TRACKING_AUDIT.md)を参照してください。
+生のMOD/JAR payload、外部ツール用に再構成したcorpus、公開承認を受けていない非公開held-out mapping、cache、生成されたサーバーデータ、compiledファイル、仮想環境は意図的にGitから除外しています。保存方針と過去ファイルの分類は[追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)を参照してください。
 
 ## 再現と凍結アンカー
 
-- [再現ガイド](REPRODUCE.md)
+- [再現ガイド](REPRODUCE.md#user-content-reproduce-ja)
 - [実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
-- [環境記録](reproducibility/ENVIRONMENT.md)
-- [追跡監査](reproducibility/TRACKING_AUDIT.md)
+- [環境記録](reproducibility/ENVIRONMENT.md#user-content-environment-ja)
+- [追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)
+- [コントリビューションガイド](CONTRIBUTING.md#user-content-contributing-ja)
+- [Archive説明](archive/README.md#user-content-archive-ja)
 - [Phase 12凍結manifest](reproducibility/phase12_freeze_manifest.sha256)
 - [Phase 13凍結manifest](reproducibility/phase13_freeze_manifest.sha256)
 
