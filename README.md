@@ -1,4 +1,4 @@
-# Server-Side Multi-Parent Provenance Reconstruction for Heterogeneous Game MOD Packages
+# Server-Side Multi-Parent Provenance Reconstruction for Copyright-Related Source Attribution in Heterogeneous Game MOD Packages
 
 [![Research status](https://img.shields.io/badge/status-Phase_1--13_complete-2ea44f)](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en)
 [![Benchmark](https://img.shields.io/badge/benchmark-frozen-6f42c1)](reproducibility/EXPERIMENT_INDEX.md#freeze-anchors)
@@ -10,16 +10,16 @@
 
 <a id="readme-en"></a>
 
-This repository implements and evaluates a server-side method for reconstructing the provenance of recomposed MOD/JAR packages. The method attributes code/binary, structured-resource, and image components to one or more registered parent projects and retains `UNKNOWN` when the registered corpus does not support an attribution. Phase 1-13 source code, frozen evaluation records, principal results, and reproduction material are preserved here.
+This repository implements and evaluates server-side multi-parent provenance reconstruction for copyright-related source attribution in recomposed MOD/JAR packages. The method attributes code/binary, structured-resource, and image components to registered reference projects or `UNKNOWN`, reconstructs package-level mixed-source relationships, and supplies technical evidence for human review. Phase 1-13 source code, frozen evaluation records, principal results, and reproduction material are preserved here.
 
 > [!IMPORTANT]
 > The output is technical provenance evidence, not a legal determination of copyright ownership, infringement, permission, or liability. It is intended to support expert review.
 
 ## Research question
 
-Can the component-level origins of a recomposed software package be reconstructed when the package may contain material from multiple registered projects as well as previously unseen sources?
+Can a server reconstruct the component-level registered origins and package-level multi-parent set needed for copyright-related source review when a recomposed package mixes multiple registered projects with previously unseen sources?
 
-Redistribution can remove or rewrite path names, package metadata, and project identifiers. The study therefore relies on content evidence, preserves unsupported attribution as `UNKNOWN`, and reports results at both component and package levels.
+Redistribution can remove or rewrite path names, package metadata, and project identifiers. The study therefore relies on content evidence, preserves unsupported attribution as `UNKNOWN`, and reports results at both component and package levels. The question is technical source attribution; it does not ask the system to determine legal ownership, copying, permission, or infringement.
 
 ## System overview
 
@@ -35,7 +35,7 @@ flowchart LR
     D --> E[Hierarchical package reconstruction]
     G[Optional dependency graph] -. weak refinement .-> E
     E --> F[Known parent set + UNKNOWN]
-    F --> H[Component assignments and audit evidence]
+    F --> H[Copyright-related source-review report]
 ```
 
 Content evidence is the primary signal. The dependency graph is an optional weak refinement; its TEST effect on the primary parent-set metric was small and statistically inconclusive.
@@ -51,12 +51,20 @@ Content evidence is the primary signal. The dependency graph is an optional weak
 
 ## Contributions
 
-- A heterogeneous component-provenance formulation that combines registered-parent attribution with open-set `UNKNOWN` rejection.
+- A copyright-related source-attribution formulation that combines heterogeneous components, registered-parent attribution, and open-set `UNKNOWN` rejection.
 - A hierarchical reconstruction method that links component assignments to a coherent package-level parent set.
 - A frozen 120-project benchmark with public/private manifest separation, hash verification, and leakage audits.
 - Query-level bootstrap, ablation, source-cluster sensitivity, server correctness, and host-specific performance analyses.
 - External NiCadCross comparison on a strictly source-resolvable code subset, plus compatibility preparation for StoneDetector.
 - Post-freeze multi-unknown robustness, approximate-retrieval scalability, and hierarchical failure-localization studies.
+
+## Manuscript
+
+The current anonymous 17-page manuscript is titled **“Server-Side Multi-Parent Provenance Reconstruction for Copyright-Related Source Attribution in Heterogeneous Game MOD Packages.”**
+
+[English source](paper/manuscript/main_en.tex) · [English PDF](paper/manuscript/main_en.pdf) · [Korean source](paper/manuscript/main_ko.tex) · [Korean review PDF](paper/manuscript/main_ko.pdf)
+
+The English and Korean versions preserve the same section structure, frozen method, and reported measurements. Their outputs are framed as technical provenance evidence for copyright-related source review, not as automated legal conclusions.
 
 ## Research progress
 
@@ -118,7 +126,7 @@ server/              Phase 9 FastAPI research services
 tools/               Tracked helper source and tool configuration
 results/             Curated summaries, audits, predictions, and frozen manifests
 reproducibility/     Environment records, hashes, freeze manifests, and experiment index
-paper/               Paper-oriented figure and reporting scripts
+paper/               Manuscript sources/PDFs, figures, and paper-oriented reporting material
 archive/             Historical generated, superseded, and known-bug artifacts retained for audit
 data/                Registries and redistributable metadata; raw payload bytes remain ignored
 ```
@@ -151,7 +159,7 @@ Core Phase 6-7 anchors include the frozen split, query manifest and ground truth
 
 The repository is kept private while held-out mappings and redistribution-sensitive research artifacts are reviewed. “Private” benchmark files refer to model-private evaluation labels; they are not credentials and must still be handled as sensitive research data.
 
-The paper is under preparation. Until formal bibliographic metadata is finalized, cite this repository together with the exact commit hash used for reproduction. No repository-wide license has yet been declared; do not assume that source code, datasets, MOD/JAR payloads, or third-party materials are licensed for redistribution. Original third-party licenses remain controlling.
+The anonymous 17-page manuscript is preserved under [`paper/manuscript/`](paper/manuscript/) with the title given above. Until formal bibliographic metadata is finalized, cite this repository together with the exact commit hash used for reproduction. No repository-wide license has yet been declared; do not assume that source code, datasets, MOD/JAR payloads, or third-party materials are licensed for redistribution. Original third-party licenses remain controlling.
 
 For research questions or reproducibility reports, use the repository's GitHub Issues. For private contact, use the [repository owner's GitHub profile](https://github.com/YSL-RyuDo).
 
@@ -159,20 +167,20 @@ For research questions or reproducibility reports, use the repository's GitHub I
 
 <a id="readme-ko"></a>
 
-# 이종 게임 MOD 패키지의 서버 기반 다중 출처 계보 복원
+# 이종 게임 MOD 패키지의 저작권 출처 판별을 위한 서버 기반 다중 출처 Provenance 복원 기법
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-readme-ja)
 
-본 연구는 여러 기존 MOD의 코드·리소스·이미지가 섞인 재조합 MOD/JAR 패키지를 대상으로 구성요소별 출처와 패키지 전체의 부모 집합을 함께 추정한다. 파일명이나 프로젝트 식별자에 기대지 않고 내용 기반 증거를 사용하며, 등록된 후보로 설명할 수 없는 구성요소는 `UNKNOWN`으로 남긴다. 이 저장소에는 Phase 1-13의 구현, 동결된 평가 기록, 주요 결과와 재현 자료가 정리되어 있다.
+본 연구는 여러 기존 MOD의 코드·리소스·이미지가 섞인 재조합 MOD/JAR 패키지에서 저작권 관련 출처 검토에 필요한 기술적 provenance를 복원한다. 파일명이나 프로젝트 식별자에 기대지 않고 각 구성요소를 등록 참조 프로젝트 또는 `UNKNOWN`에 귀속하며, 패키지 전체의 다중 출처 관계를 함께 재구성한다. 이 저장소에는 Phase 1-13의 구현, 동결된 평가 기록, 주요 결과와 재현 자료가 정리되어 있다.
 
 > [!IMPORTANT]
 > 본 시스템의 출력은 기술적 출처 분석을 위한 증거이며 저작권의 귀속, 침해 여부, 이용 허락 또는 법적 책임에 대한 판단이 아니다. 결과는 전문가의 검토를 보조하는 용도로 사용한다.
 
 ## 연구 질문
 
-여러 등록 프로젝트와 이전에 관찰하지 못한 출처의 자료가 섞인 소프트웨어 패키지에서 구성요소별 출처와 패키지 수준의 부모 집합을 재구성할 수 있는가?
+여러 등록 MOD와 미등록 출처가 혼합된 패키지에서 저작권 관련 출처 검토에 필요한 구성요소별 등록 출처와 패키지 수준의 다중 부모 집합을 서버가 재구성할 수 있는가?
 
-재배포 과정에서는 경로명, 패키지 메타데이터와 프로젝트 식별자가 제거되거나 변경될 수 있다. 이에 따라 본 연구는 내용 기반 증거를 사용하고, 근거가 부족한 귀속은 `UNKNOWN`으로 유지하며, 구성요소와 패키지 두 수준의 결과를 함께 제시한다.
+재배포 과정에서는 경로명, 패키지 메타데이터와 프로젝트 식별자가 제거되거나 변경될 수 있다. 이에 따라 본 연구는 내용 기반 증거를 사용하고, 근거가 부족한 귀속은 `UNKNOWN`으로 유지하며, 구성요소와 패키지 두 수준의 결과를 함께 제시한다. 연구 질문은 기술적 출처 판별에 한정되며 법적 저작권자, 복제, 이용 허락 또는 침해 여부의 자동 판정을 뜻하지 않는다.
 
 ## 시스템 개요
 
@@ -188,7 +196,7 @@ flowchart LR
     D --> E[계층적 패키지 재구성]
     G[선택적 의존성 그래프] -. 약한 보정 .-> E
     E --> F[알려진 부모 집합 + UNKNOWN]
-    F --> H[구성요소 할당 및 감사 증거]
+    F --> H[저작권 관련 출처 검토 보고서]
 ```
 
 주된 신호는 내용 기반 증거다. 의존성 그래프는 선택적인 구조 보정에만 사용했으며, TEST의 주요 부모 집합 지표에 미친 영향은 작고 통계적으로 유의하다고 볼 수 없었다.
@@ -204,10 +212,18 @@ flowchart LR
 
 ## 연구 기여
 
-- 코드·바이너리, 구조화 리소스와 이미지에 걸친 구성요소 수준 출처 분석
+- 이종 구성요소, 등록 부모 귀속과 개방형 `UNKNOWN` 거부를 결합한 저작권 관련 출처 판별 문제 정식화
 - 여러 등록 부모와 개방형 `UNKNOWN` 처리를 결합한 계층적 재구성 방법
 - 공개용 자료와 평가 전용 자료를 분리하고 해시 검증과 누수 감사를 적용한 120개 프로젝트 동결 벤치마크
 - 통계 검증, 서버 평가, 외부 비교, 강건성 분석, 검색 확장성과 동결 후 오류 위치 분석
+
+## 논문 원고
+
+현재 익명 17쪽 원고의 제목은 **「이종 게임 MOD 패키지의 저작권 출처 판별을 위한 서버 기반 다중 출처 Provenance 복원 기법」**이다.
+
+[영문 원고](paper/manuscript/main_en.tex) · [영문 PDF](paper/manuscript/main_en.pdf) · [한글 원고](paper/manuscript/main_ko.tex) · [한글 검토용 PDF](paper/manuscript/main_ko.pdf)
+
+한글판과 영문판은 동일한 장 구조, 동결 방법과 보고 수치를 유지한다. 두 원고 모두 시스템 출력을 저작권 관련 출처 검토를 위한 기술적 provenance 증거로 한정하며, 법적 판단으로 과장하지 않는다.
 
 ## 연구 진행 현황
 
@@ -269,7 +285,7 @@ server/              Phase 9 FastAPI 연구 서버
 tools/               보조 소스 코드와 외부 도구 설정
 results/             선별된 요약, 감사, 예측과 동결 명세
 reproducibility/     환경 기록, 해시, 동결 명세와 실험 인덱스
-paper/               논문용 그림 생성 및 결과 정리 자료
+paper/               논문 원고·PDF, 그림과 논문용 결과 정리 자료
 archive/             감사를 위해 보존한 생성물·구버전·오류가 확인된 파일
 data/                목록과 재배포 가능한 메타데이터; 원본 데이터는 Git에서 제외
 ```
@@ -302,7 +318,7 @@ Phase 6-7의 주요 기록에는 동결된 데이터 분할, 질의 목록과 �
 
 평가용 대응표와 재배포에 주의가 필요한 연구 자료의 공개 범위를 검토하는 동안 저장소는 비공개로 유지한다. “평가 전용”은 평가 과정에서 모델에 공개하지 않은 정답을 뜻하며 인증정보라는 뜻은 아니다. 다만 해당 파일은 계속 제한적으로 관리해야 한다.
 
-논문은 준비 중이다. 정식 서지정보가 확정되기 전에는 재현에 사용한 정확한 커밋과 이 저장소를 함께 인용한다. 저장소 전체에 적용되는 라이선스는 아직 선언하지 않았으며, 제3자 소스 코드·데이터셋·MOD/JAR와 기타 자료에는 각각의 원래 라이선스가 적용된다.
+현재 익명 17쪽 원고는 위 제목으로 [`paper/manuscript/`](paper/manuscript/)에 보존되어 있다. 정식 서지정보가 확정되기 전에는 재현에 사용한 정확한 커밋과 이 저장소를 함께 인용한다. 저장소 전체에 적용되는 라이선스는 아직 선언하지 않았으며, 제3자 소스 코드·데이터셋·MOD/JAR와 기타 자료에는 각각의 원래 라이선스가 적용된다.
 
 연구 및 재현 관련 보고는 GitHub Issues에서 접수한다. 비공개 문의는 [저장소 소유자의 GitHub 프로필](https://github.com/YSL-RyuDo)을 통해 전달할 수 있다.
 
@@ -310,20 +326,20 @@ Phase 6-7의 주요 기록에는 동결된 데이터 분할, 질의 목록과 �
 
 <a id="readme-ja"></a>
 
-# 異種ゲームMODパッケージの複数由来を再構成するサーバーサイド手法
+# 異種ゲームMODパッケージの著作権関連由来判定に向けたサーバーサイド複数親プロベナンス再構成
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-readme-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-readme-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](#user-content-readme-ja)
 
-本研究では、複数の既存MODに由来するコード、リソース、画像が混在する再構成MOD/JARパッケージを対象に、各コンポーネントの由来とパッケージ全体の親プロジェクト集合を推定する。ファイル名やプロジェクト識別子には依存せず、内容に基づく証拠を用いる。登録済みの候補から十分な根拠が得られないコンポーネントは `UNKNOWN` とする。本リポジトリには、Phase 1-13の実装、凍結済み評価記録、主要結果、再現用資料を収録している。
+本研究では、複数の既存MODに由来するコード、リソース、画像が混在する再構成MOD/JARパッケージについて、著作権関連の由来確認に必要な技術的プロベナンスを復元する。ファイル名やプロジェクト識別子には依存せず、各コンポーネントを登録済み参照プロジェクトまたは `UNKNOWN` に割り当て、パッケージ全体の複数由来関係を再構成する。本リポジトリには、Phase 1-13の実装、凍結済み評価記録、主要結果、再現用資料を収録している。
 
 > [!IMPORTANT]
 > 本システムの出力は技術的な由来分析のための証拠であり、著作権の帰属、侵害の有無、利用許諾、法的責任を判断するものではない。専門家による検討を支援する目的で用いる。
 
 ## 研究課題
 
-複数の登録済みプロジェクトと未観測の由来から得られたデータが混在するソフトウェアパッケージについて、コンポーネント単位の由来とパッケージ単位の親プロジェクト集合を再構成できるか。
+複数の登録済みMODと未登録由来が混在するパッケージについて、著作権関連の由来確認に必要なコンポーネント単位の登録由来とパッケージ単位の複数親集合をサーバーが再構成できるか。
 
-再配布の過程では、パス名、パッケージのメタデータ、プロジェクト識別子が削除または変更される場合がある。そこで本研究では、内容に基づく証拠を用い、根拠が不十分な帰属を `UNKNOWN` として保持し、コンポーネント単位とパッケージ単位の結果を併せて示す。
+再配布の過程では、パス名、パッケージのメタデータ、プロジェクト識別子が削除または変更される場合がある。そこで本研究では、内容に基づく証拠を用い、根拠が不十分な帰属を `UNKNOWN` として保持し、コンポーネント単位とパッケージ単位の結果を併せて示す。研究課題は技術的な由来判定に限定され、法的な著作権者、複製、許諾、侵害の自動判定を意味しない。
 
 ## システム概要
 
@@ -339,7 +355,7 @@ flowchart LR
     D --> E[階層的パッケージ再構成]
     G[任意の依存グラフ] -. 弱い補正 .-> E
     E --> F[既知の親集合 + UNKNOWN]
-    F --> H[コンポーネント割当と監査証拠]
+    F --> H[著作権関連の由来確認レポート]
 ```
 
 主要な信号は内容に基づく証拠である。依存関係グラフは任意の構造的補正としてのみ用いた。TESTの主要な親集合指標に対する効果は小さく、統計的に有意とは判断できなかった。
@@ -355,10 +371,18 @@ flowchart LR
 
 ## 研究上の貢献
 
-- コード・バイナリ、構造化リソース、画像を対象とするコンポーネント単位の由来分析
+- 異種コンポーネント、登録済み親への帰属、オープンセットの `UNKNOWN` 棄却を統合した著作権関連由来判定の定式化
 - 複数の登録済み親とオープンセットの `UNKNOWN` 処理を統合した階層的再構成手法
 - 公開用資料と評価専用資料を分離し、ハッシュ検証と情報漏えい監査を適用した120プロジェクトの凍結ベンチマーク
 - 統計的検証、サーバー評価、外部比較、頑健性分析、検索のスケーラビリティ、凍結後の誤り局在化
+
+## 論文原稿
+
+現在の匿名17ページ原稿の題目は **「異種ゲームMODパッケージの著作権関連由来判定に向けたサーバーサイド複数親プロベナンス再構成」** である。
+
+[英語原稿](paper/manuscript/main_en.tex) · [英語PDF](paper/manuscript/main_en.pdf) · [韓国語原稿](paper/manuscript/main_ko.tex) · [韓国語確認用PDF](paper/manuscript/main_ko.pdf)
+
+英語版と韓国語版は、同一の章構成、凍結済み手法、報告値を維持している。いずれも出力を著作権関連の由来確認に用いる技術的プロベナンス証拠として位置付け、法的判断とはしない。
 
 ## 研究の進捗
 
@@ -420,7 +444,7 @@ server/              Phase 9 FastAPI研究サーバー
 tools/               補助ソースコードと外部ツール設定
 results/             選別済み要約、監査、予測、凍結マニフェスト
 reproducibility/     環境記録、ハッシュ、凍結マニフェスト、実験索引
-paper/               論文用の図表生成・結果整理資料
+paper/               論文原稿・PDF、図表、論文向け結果整理資料
 archive/             監査のために保存した生成物、旧版、既知の不具合を含むファイル
 data/                一覧と再配布可能なメタデータ。原本データはGitの対象外
 ```
@@ -453,6 +477,6 @@ Phase 6-7の主要記録には、凍結済みデータ分割、クエリ一覧�
 
 評価用対応表と再配布に注意を要する研究資料の公開範囲を確認しているため、リポジトリは非公開としている。「評価専用」は評価過程でモデルに開示しない正解ラベルを指し、認証情報を意味しない。ただし、これらのファイルは引き続き制限して取り扱う必要がある。
 
-論文は準備中である。正式な書誌情報が確定するまでは、再現に使用した正確なコミットと本リポジトリを併記して引用する。リポジトリ全体に適用するライセンスは現時点で宣言していない。第三者のソースコード、データセット、MOD/JAR、その他の資料には、それぞれの元のライセンスが適用される。
+現在の匿名17ページ原稿は、上記の題目で [`paper/manuscript/`](paper/manuscript/) に保存している。正式な書誌情報が確定するまでは、再現に使用した正確なコミットと本リポジトリを併記して引用する。リポジトリ全体に適用するライセンスは現時点で宣言していない。第三者のソースコード、データセット、MOD/JAR、その他の資料には、それぞれの元のライセンスが適用される。
 
 研究および再現に関する報告はGitHub Issuesで受け付ける。非公開の問い合わせは[リポジトリ所有者のGitHubプロフィール](https://github.com/YSL-RyuDo)を通じて連絡できる。

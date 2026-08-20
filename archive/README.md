@@ -16,6 +16,10 @@ This directory preserves generated or invalid historical implementations that ar
 
 `phase10a4d_score_nicad_v1_buggy.py` is the superseded first NiCad scoring implementation. It used the internal source identity rather than the frozen benchmark `ground_truth_label` for held-out components and calculated K without the collapsed `UNKNOWN` group. It must not be used to reproduce reported Phase 10 results. The corrected implementation remains `scripts/phase10a4d_score_nicad.py`.
 
+## `manuscript_v3/`
+
+This directory preserves the superseded Korean v3 draft and its compiled PDF for manuscript history. It is not the current paper. The copyright-related English and Korean manuscript sources and 17-page PDFs are under [`paper/manuscript/`](../paper/manuscript/).
+
 ---
 
 <a id="archive-ko"></a>
@@ -36,6 +40,10 @@ This directory preserves generated or invalid historical implementations that ar
 
 `phase10a4d_score_nicad_v1_buggy.py`는 오류가 확인되어 교체된 초기 NiCad 채점 구현이다. 평가용으로 분리한 구성요소에 동결 벤치마크의 `ground_truth_label` 대신 내부 소스 식별자를 사용했고, 단일 `UNKNOWN` 집단을 제외한 채 K를 계산했다. 보고된 Phase 10 결과에는 사용할 수 없으며, 수정된 구현은 `scripts/phase10a4d_score_nicad.py`이다.
 
+## `manuscript_v3/`
+
+교체된 한글 v3 원고와 컴파일 PDF를 논문 변경 이력 확인용으로 보존한다. 이 파일은 현재 원고가 아니다. 저작권 관련 출처 판별 관점으로 개편한 최신 한·영 원고와 17쪽 PDF는 [`paper/manuscript/`](../paper/manuscript/)에 있다.
+
 ---
 
 <a id="archive-ja"></a>
@@ -55,3 +63,7 @@ This directory preserves generated or invalid historical implementations that ar
 ## `failed_experiments/`
 
 `phase10a4d_score_nicad_v1_buggy.py`は、不具合が確認されて置き換えられた初期のNiCad採点実装である。評価用に分離したコンポーネントに、凍結ベンチマークの`ground_truth_label`ではなく内部ソース識別子を使用し、単一の`UNKNOWN`グループを除外してKを計算していた。報告済みPhase 10結果には使用できない。修正済み実装は`scripts/phase10a4d_score_nicad.py`である。
+
+## `manuscript_v3/`
+
+置き換え済みの韓国語v3原稿とコンパイル済みPDFを、論文の変更履歴を確認するために保存している。これは現行原稿ではない。著作権関連の由来判定として再構成した最新の英語・韓国語原稿と17ページPDFは、[`paper/manuscript/`](../paper/manuscript/)にある。

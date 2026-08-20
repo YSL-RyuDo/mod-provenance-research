@@ -29,6 +29,8 @@ cache/
 *.tmp
 *.bak
 *.aux
+*.bbl
+*.blg
 *.synctex.gz
 
 # Large transient result artifacts that are reproducible from tracked inputs
