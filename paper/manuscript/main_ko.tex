@@ -42,9 +42,9 @@
 
 \section{서론}
 
-게임 개발과 MOD 제작에서는 코드, 설정 데이터, 미디어 자산이 반복적으로 재사용된다. 이러한 재사용은 package manager나 명시적 dependency metadata에 항상 기록되는 것이 아니며, file-level copying은 기술적 유사성을 남긴 채 출처와 버전 정보를 제거할 수 있다 \cite{trasobares2025reuse,he2026filecopy}. 게임 MOD의 저작권 관련 출처 검토에서는 서로 다른 project에서 유래한 Java class, structured resource, image가 하나의 패키지에 함께 포함될 수 있고, 일부 출처는 server gallery에 존재하지 않을 수 있다. 따라서 기술적으로 필요한 것은 heterogeneous component의 개별 귀속, 여러 registered parent의 복원, 그리고 설명되지 않는 content의 open-set \texttt{UNKNOWN} 유지이다.
+게임 개발과 MOD 제작에서는 코드, 설정 데이터, 미디어 자산이 반복적으로 재사용된다. 게임 소프트웨어 공학의 실증 연구는 코드뿐 아니라 prefab과 같은 상위 수준 자산에서도 재사용이 이루어짐을 보여 준다 \cite{trasobares2025reuse}. 직접 복사나 재패키징은 package manager metadata에 남지 않을 수 있으므로, software supply-chain framework, secure-development 지침과 software bill of materials 표준은 검증 가능한 artifact provenance와 component inventory를 강조한다 \cite{torresarias2019intoto,nist2022ssdf,iso5962spdx}. 실제 supply-chain attack에 대한 실증 연구도 package 경계를 넘는 transformation evidence 보존의 필요성을 뒷받침한다 \cite{ohm2020backstabber}. 게임 MOD의 저작권 관련 출처 검토에서는 서로 다른 project에서 유래한 Java class, structured resource, image가 하나의 패키지에 함께 포함될 수 있고, 일부 출처는 server gallery에 존재하지 않을 수 있다. 따라서 기술적으로 필요한 것은 heterogeneous component의 개별 귀속, 여러 registered parent의 복원, 그리고 설명되지 않는 content의 open-set \texttt{UNKNOWN} 유지이다.
 
-Clone detection과 software composition analysis는 code/library reuse 식별에 강하지만 일반적으로 clone pair나 library match를 출력한다 \cite{roy2008nicad,sajnani2016sourcerer,heinze2026stone,zhao2025jcfinder}. 최근 provenance 연구는 model merge, agent skill, software supply-chain telemetry를 다룬다 \cite{adil2026modeldna,chen2026skilltrace,tan2026fusechain}. 본 연구는 heterogeneous game MOD package에서 component-level registered-parent/\texttt{UNKNOWN} attribution과 package-level multi-parent reconstruction을 함께 수행하는 문제에 초점을 둔다.
+Clone detection과 software composition analysis는 code/library reuse 식별에 강하지만 일반적으로 clone pair나 library match를 출력한다 \cite{roy2008nicad,sajnani2016sourcerer,heinze2026stone}. Third-party library 식별은 packaged Java/Android와 native binary까지 분석 범위를 확장한다 \cite{backes2016libscout,bincofer2025}. Provenance 표준과 secure supply-chain 연구는 artifact의 derivation과 transformation을 모델링한다 \cite{w3c2013provdm,torresarias2019intoto}. 본 연구는 heterogeneous game MOD package에서 component-level registered-parent/\texttt{UNKNOWN} attribution과 package-level multi-parent reconstruction을 함께 수행하는 문제에 초점을 둔다.
 
 이를 위해 Server-Side Hierarchical Multi-Parent Provenance Reconstruction을 제안한다. Path, project name, namespace를 제거한 identity-neutral CODE\_BINARY, STRUCTURED, IMAGE evidence를 추출하고, 전체 gallery에서 candidate parent를 검색한 뒤 bounded package-level parent set으로 component assignment를 제한한다. Dependency topology는 optional refinement로만 사용한다. 실제 공개 MOD 120개와 historical release에서 project-level calibration, registered TEST, held-out UNKNOWN split을 갖는 540개 frozen query를 구축하였다. 최종 360-query TEST에서 parent-set F1 0.844233을 기록했으며 external source baseline, FastAPI server, multi-UNKNOWN stress, retrieval scaling, failure localization도 평가하였다.
 
@@ -60,13 +60,13 @@ Clone detection과 software composition analysis는 code/library reuse 식별에
 \section{배경 및 관련 연구}
 
 \subsection{코드 유사도, Clone Detection 및 Software Composition Analysis}
-Code similarity는 text, token, AST, graph, learned representation을 사용하며 systematic review는 benchmark, evaluation, language support의 지속적인 한계를 지적한다 \cite{zakeri2023slr}. NiCad는 source normalization 기반 near-miss clone 탐지 \cite{roy2008nicad}, SourcererCC는 token filtering/indexing 기반 large-scale detection \cite{sajnani2016sourcerer}, 최근 연구는 transformer clone detection과 interpretability를 결합한다 \cite{clonexformer2025}. Package/library 수준에서는 JC-Finder가 Java clone-based TPL reuse를 탐지하고 \cite{zhao2025jcfinder}, BinCoFer는 partial C/C++ binary TPL reuse를 다루며 \cite{bincofer2025}, Android 연구는 obfuscation/version 문제와 dependency-fusion 방법을 제시한다 \cite{androidtpl2025,libmd2025}. 이들은 reuse를 식별하지만 하나의 heterogeneous package에서 여러 project parent와 open-set unknown을 함께 복원하지는 않는다.
+Code similarity는 text, token, AST, graph, learned representation을 사용하며 기존 비교 연구와 최근 systematic review는 benchmark, evaluation, language support의 지속적인 한계를 지적한다 \cite{roy2009comparison,zakeri2023slr}. NiCad는 source normalization 기반 near-miss clone 탐지 \cite{roy2008nicad}, SourcererCC는 token filtering/indexing 기반 large-scale detection \cite{sajnani2016sourcerer}, 최근 연구는 transformer clone detection과 interpretability를 결합한다 \cite{clonexformer2025}. Package/library 수준에서는 LibScout가 obfuscation에 강건한 Java/Android library를 탐지하고 \cite{backes2016libscout}, BinCoFer는 partial C/C++ binary TPL reuse를 다루며 \cite{bincofer2025}, 정식 심사를 거친 Android 연구는 obfuscation, versioning과 dependency-fusion 문제를 분석한다 \cite{androidtpl2025,libmd2025}. 이들은 reuse를 식별하지만 하나의 heterogeneous package에서 여러 project parent와 open-set unknown을 함께 복원하지는 않는다.
 
 \subsection{게임 소프트웨어 재사용과 저작권 관련 출처 검토}
-게임에서는 script, prefab, asset, scene-related resource가 함께 재사용될 수 있어 practical reuse unit이 단일 source file보다 넓다 \cite{trasobares2025reuse}. 저작권 관련 검토에는 clone pair뿐 아니라 modality별 source 후보, mixed-source 관계와 gallery가 설명하지 못하는 component도 필요하다. 따라서 executable, structured, decoded-image evidence를 인간 검토용 기술 증거로 분리하며 소유권, 이용 허락, license status 또는 침해를 추론하지 않는다.
+게임에서는 script, prefab, asset, scene-related resource가 함께 재사용될 수 있어 practical reuse unit이 단일 source file보다 넓다 \cite{trasobares2025reuse}. Software license audit 연구는 package declaration을 file-level artifact와 dependency relation에 대조해야 함을 보여 준다 \cite{german2010licensing}. 저작권 관련 검토에는 clone pair뿐 아니라 modality별 source 후보, mixed-source 관계와 gallery가 설명하지 못하는 component도 필요하다. 따라서 executable, structured, decoded-image evidence를 인간 검토용 기술 증거로 분리하며 소유권, 이용 허락, license status 또는 침해를 추론하지 않는다.
 
 \subsection{Provenance, Lineage 및 Multi-Source Reconstruction}
-File copying은 package-manager provenance 밖의 implicit dependency를 만든다 \cite{he2026filecopy}. 다른 multi-source lineage 연구는 model parent/merge 검증 \cite{adil2026modeldna}, mixed-modality agent-skill reuse audit \cite{chen2026skilltrace}, heterogeneous telemetry 기반 runtime supply-chain provenance reconstruction \cite{tan2026fusechain}을 수행한다. 본 연구의 novelty는 ``heterogeneous provenance'' 또는 ``multi-parent''라는 용어 자체가 아니라 component-level registered-parent/\texttt{UNKNOWN} attribution, package-level reconstruction, frozen real-MOD benchmark, server-side evaluation의 구체적 결합에 있다.
+일반 provenance 표준은 entity, activity, agent와 derivation을 구분하고 \cite{w3c2013provdm}, in-toto는 인증된 software supply-chain 단계를 기록하며 \cite{torresarias2019intoto}, ISO/IEC 5962는 SPDX component metadata를 표준화한다 \cite{iso5962spdx}. 이러한 artifact 및 metadata 수준 framework는 본 연구를 보완하지만 component-level multi-parent reconstruction 자체를 수행하지는 않는다. 본 연구의 novelty는 ``heterogeneous provenance'' 또는 ``multi-parent''라는 용어 자체가 아니라 component-level registered-parent/\texttt{UNKNOWN} attribution, package-level reconstruction, frozen real-MOD benchmark, server-side evaluation의 구체적 결합에 있다.
 
 \section{시스템 및 문제 모델}
 
@@ -137,19 +137,19 @@ P_q=\{p\mid \exists v\in V_q,\;y_v=p,\;p\neq\textsc{Unknown}\}
 
 \subsection{CODE\_BINARY Evidence}
 
-Java class file은 method-level opcode sequence를 parsing한다. Identity-neutral CODE representation은 세 종류의 128-bit SimHash를 사용한다.
+Java class file은 method-level opcode sequence를 parsing한다. Identity-neutral CODE representation은 Charikar가 제안한 compact similarity sketch 원리에 기반한 세 종류의 128-bit SimHash를 사용한다 \cite{charikar2002simhash}.
 
 첫째, opcode 3-gram representation은 operand나 constant value를 사용하지 않고 opcode sequence 자체의 local pattern만 보존한다. 둘째, structural representation은 method length, max stack, max locals, access flag, opcode category count, class-level method/field/instruction count를 log-bucket으로 요약한다. 셋째, context representation은 arithmetic, branch, load/store, invoke 등 opcode category의 3-gram을 사용한다. 이 방식은 class name, method name, descriptor, string literal과 같은 직접 identity information을 사용하지 않으면서 control/operation structure를 일정 수준 보존한다.
 
 \subsection{STRUCTURED Evidence}
 
-JSON과 유사한 structured resource에서는 literal identifier 자체보다 구조와 value shape를 보존한다. Key/value traversal 과정에서 object/array depth, key category, numeric/string/boolean/null pattern, sequence structure를 token으로 변환하고 128-bit SimHash로 요약한다. Resource identifier가 \texttt{namespace:path} 형태인 경우 \texttt{minecraft}와 같은 external namespace는 category로 유지하지만 MOD-specific namespace literal은 노출하지 않는다. 긴 hex, URL, qualified identifier 역시 literal을 그대로 사용하지 않고 shape category로 변환한다.
+JSON과 유사한 structured resource에서는 literal identifier 자체보다 구조와 value shape를 보존한다. 이는 canonical JSON representation이 강조하는 재현 가능성에 기반하되 \cite{rundgren2020jcs}, benchmark-specific encoding에서는 identity-neutral structural category만 유지한다. Key/value traversal 과정에서 object/array depth, key category, numeric/string/boolean/null pattern, sequence structure를 token으로 변환하고 128-bit SimHash로 요약한다. Resource identifier가 \texttt{namespace:path} 형태인 경우 \texttt{minecraft}와 같은 external namespace는 category로 유지하지만 MOD-specific namespace literal은 노출하지 않는다. 긴 hex, URL, qualified identifier 역시 literal을 그대로 사용하지 않고 shape category로 변환한다.
 
 빈 JSON object와 같이 다수 project에서 반복되며 provenance information이 거의 없는 trivial structured component는 benchmark preprocessing 단계에서 제거한다.
 
 \subsection{IMAGE Evidence}
 
-IMAGE는 file name이나 path를 사용하지 않고 decoded pixel만 분석한다. Grayscale image에서 64-bit aHash, dHash, pHash를 추출하고, luminance distribution을 16-bin normalized histogram으로 계산한다. 이렇게 생성한 perceptual evidence는 lossless re-encoding처럼 byte-level SHA가 달라져도 시각 content가 유지되는 경우를 처리할 수 있다. Final benchmark의 IMAGE payload는 lossless PNG re-encoding을 사용하며 pixel equality를 검증하였다.
+IMAGE는 file name이나 path를 사용하지 않고 decoded pixel만 분석한다. Grayscale image에서 64-bit aHash, dHash, pHash를 추출하고, luminance distribution을 16-bin normalized histogram으로 계산한다. Perceptual image hashing은 시각적으로 중요하지 않은 변환에 안정적으로 설계되므로 \cite{monga2006perceptual}, 이렇게 생성한 evidence는 lossless re-encoding처럼 byte-level SHA가 달라져도 시각 content가 유지되는 경우를 처리할 수 있다. Final benchmark의 IMAGE payload는 lossless PNG re-encoding을 사용하며 pixel equality를 검증하였다.
 
 \subsection{Component-to-Parent Cost}
 
@@ -523,7 +523,10 @@ Controlled recomposition은 exact technical donor label을 제공하지만 실�
 \section{결론}
 본 연구는 heterogeneous game MOD package의 저작권 관련 출처 판별을 위한 server-side Hierarchical Multi-Parent Provenance Reconstruction을 제안하였다. 120개 real project와 historical release로 540개 frozen query와 3,780개 materialized component를 구축했고 360-query TEST에서 component accuracy 0.805952, \texttt{UNKNOWN} F1 0.753786, parent-set F1 0.844233을 얻었다. 핵심 개선은 hierarchical reconstruction이며 graph 증분은 statistically inconclusive하다. FastAPI 구현은 frozen output을 모두 재현하면서 materialized p50 26.88 ms를 기록하였다. 이 결과는 법적 판정 정확도가 아니라 기술적 출처 복원 성능을 나타낸다. 향후에는 assignment calibration, structured-resource evidence, source-count inference를 우선 개선한다. 본 시스템은 법적 판정이 아니라 인간의 저작권 관련 출처 및 provenance 검토를 지원한다.
 
+\begingroup
+\renewcommand\small{\fontsize{8}{8.5}\selectfont}
 \bibliographystyle{splncs04_unsrt}
 \bibliography{references}
+\endgroup
 
 \end{document}
