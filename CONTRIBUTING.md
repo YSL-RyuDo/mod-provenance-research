@@ -4,13 +4,11 @@
 
 [![English](https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge)](#user-content-contributing-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-contributing-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-contributing-ja)
 
-[← Repository overview](README.md#user-content-readme-en)
-
 Contributions should preserve the research record, reproducibility boundaries, and third-party redistribution constraints documented in this repository.
 
 ## Before changing anything
 
-1. Read the [repository overview](README.md#user-content-readme-en), [reproduction guide](REPRODUCE.md#user-content-reproduce-en), and [Experiment Index](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en).
+1. Read the [reproduction guide](REPRODUCE.md#user-content-reproduce-en) and [Experiment Index](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en).
 2. Check the [Tracking Audit](reproducibility/TRACKING_AUDIT.md#user-content-tracking-en) before adding data or generated outputs.
 3. Work on a focused branch and keep unrelated local files out of the commit.
 
@@ -41,13 +39,11 @@ Use GitHub Issues for reproducibility problems, documentation gaps, and narrowly
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-contributing-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](#user-content-contributing-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-contributing-ja)
 
-[← 한국어 저장소 소개](README.md#user-content-readme-ko)
-
 기여 시에는 이 저장소에 기록된 연구 이력, 재현 조건과 제3자 자료의 재배포 제한을 유지해야 한다.
 
 ## 변경 전 확인
 
-1. [한국어 저장소 소개](README.md#user-content-readme-ko), [재현 안내](REPRODUCE.md#user-content-reproduce-ko), [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)를 확인한다.
+1. [재현 안내](REPRODUCE.md#user-content-reproduce-ko)와 [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)를 확인한다.
 2. 데이터나 생성 결과를 추가하기 전에 [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)를 확인한다.
 3. 범위가 명확한 브랜치에서 작업하고 관련 없는 로컬 파일은 커밋에서 제외한다.
 
@@ -78,13 +74,11 @@ Use GitHub Issues for reproducibility problems, documentation gaps, and narrowly
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-contributing-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-contributing-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](#user-content-contributing-ja)
 
-[← 日本語のリポジトリ概要](README.md#user-content-readme-ja)
-
 コントリビューションでは、本リポジトリに記録された研究履歴、再現条件、第三者資料の再配布制限を維持する。
 
 ## 変更前の確認
 
-1. [日本語のリポジトリ概要](README.md#user-content-readme-ja)、[再現ガイド](REPRODUCE.md#user-content-reproduce-ja)、[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)を確認する。
+1. [再現ガイド](REPRODUCE.md#user-content-reproduce-ja)と[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)を確認する。
 2. データや生成結果を追加する前に[追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)を確認する。
 3. 対象を明確にしたブランチで作業し、無関係なローカルファイルをコミットに含めない。
 

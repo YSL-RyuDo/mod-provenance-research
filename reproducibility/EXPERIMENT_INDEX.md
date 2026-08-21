@@ -4,8 +4,6 @@
 
 [![English](https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge)](#user-content-experiment-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-experiment-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-experiment-ja)
 
-[← Repository overview](../README.md#user-content-readme-en)
-
 Last documentation audit: 2026-08-19. Paths are relative to the repository root.
 
 This index is the routing map for the preserved research record. It distinguishes exploratory work from frozen confirmatory evaluation and maps each phase to its scripts, inputs, reportable outputs, headline result, and freeze status.
@@ -107,8 +105,6 @@ Use this section to locate the authoritative artifact for a specific claim. Larg
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-experiment-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](#user-content-experiment-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-experiment-ja)
 
-[← 한국어 저장소 소개](../README.md#user-content-readme-ko)
-
 마지막 문서 감사일: 2026-08-19. 모든 경로는 저장소 루트를 기준으로 한다.
 
 이 문서는 보존된 연구 기록을 단계별로 연결한 인덱스다. 탐색 단계와 동결된 확인 평가를 구분하고, 각 Phase의 스크립트, 입력, 보고 대상 출력, 주요 결과와 동결 상태를 함께 제시한다.
@@ -128,7 +124,7 @@ Use this section to locate the authoritative artifact for a specific claim. Larg
 | 7 | 보정, 방법 동결과 최종 TEST: `phase7a_*`부터 `phase7h_*`, `phase7c2_*`, `phase7f2_*` 포함 | 동결 Phase 6 벤치마크, CALIBRATION 분할, 식별자 중립 증거 | 보정 격자, 동결 매개변수, 검색 감사, 예측, `results/phase7h_final_test_summary.json` | 동결 TEST는 질의 360개와 구성요소 2,520개로 이루어진다. 구성요소 정확도 0.805952, 부모 집합 F1 0.844233, `UNKNOWN` F1 0.753786이다. | **7G에서 방법 동결; 이후 TEST 개봉** |
 | 8 | 통계 검증과 제거 실험: `phase8a_bootstrap_statistics.py`, `phase8b_baseline_ablation.py`, `phase8c_source_cluster_sensitivity.py` | 동결 Phase 7 예측과 점수 | 부트스트랩, 제거 실험, 출처 군집 표와 요약 | 계층적 내용 방법은 독립 구성요소 기준선보다 부모 집합 F1이 0.046133 높았다. 그래프 보정과 내용 방법의 차이는 +0.000688로 통계적으로 확정할 수 없었다. | 사후 분석; 재채점·재조정 없음 |
 | 9 | 연구 서버와 시스템 평가: `server/phase9a_server.py`; `phase9b_*`부터 `phase9f_*` | 동결 Phase 7 방법·증거와 Phase 6L 패키지 | 정확성 감사, 성능 평가표·요약, 환경 고정 목록 | 질의 360개와 구성요소 2,520개에서 기준 예측과 완전히 일치했다. 동시성 1의 로컬 패키지 p50은 26.880 ms이며, 측정 범위 내 최고 전체 처리량은 38.71 req/s였다. | 알고리즘 동결; 지연 시간은 실행 환경별 결과 |
-| 10 | 외부 비교: `phase10a2_*`, `phase10a3_*`, `phase10a4*`, `phase10a5_*`; 논문용 스크립트 | 동결 TEST 코드 구성요소, 공개 소스 시점 자료, 외부 NiCadCross 출력 | 소스 대응표·감사, 복제 쌍, 대응 예측·요약, StoneDetector 명세 | 동일한 구성요소 1,169개 부분집합에서 제안 방법의 정확도는 0.841, NiCadCross는 0.710이었다. 차이는 +0.131, 대응표본 95% CI는 0.096-0.167이었다. | 외부 비교; TEST 재조정 없음 |
+| 10 | 외부 비교: `phase10a2_*`, `phase10a3_*`, `phase10a4*`, `phase10a5_*` | 동결 TEST 코드 구성요소, 공개 소스 시점 자료, 외부 NiCadCross 출력 | 소스 대응표·감사, 복제 쌍, 대응 예측·요약, StoneDetector 명세 | 동일한 구성요소 1,169개 부분집합에서 제안 방법의 정확도는 0.841, NiCadCross는 0.710이었다. 차이는 +0.131, 대응표본 95% CI는 0.096-0.167이었다. | 외부 비교; TEST 재조정 없음 |
 | 11 | 통제된 다중 미등록 출처 강건성: `phase11a_build_multi_unknown_benchmark.py`, `phase11b_run_multi_unknown_robustness.py`, 보고 감사 | 동결 TEST 제공 자료·증거, Phase 7 매개변수와 후보군 | 질의 180개 목록, 변환된 증거, 예측, 감사, `results/phase11c_*`, `phase11d_*` | 질의 180개와 구성요소 1,260개. 구성요소 정확도 0.841, `UNKNOWN` F1 0.888, 단일 `UNKNOWN`으로 합산한 부모 집합 F1 0.884이다. | 동결 후 강건성; 주요 TEST 불변 |
 | 12 | 근사 검색 확장성: `phase12a_*`부터 `phase12f_*` | 동결 Phase 7 후보군·증거와 고정된 정확 검색·LSH 설정 | 후보 일치도, 온라인 실행 시간, 최종 예측, 교차점 분석, 보고 감사 | BALANCED와 HIGH_RECALL은 정확 검색과 같은 예측을 냈다. FAST는 질의 1/360개와 구성요소 1/2,520개의 예측을 바꾸었고, 프로젝트 60개에서 p50은 10.315 ms에서 8.848 ms로 줄었다. | 동결 후 시스템 분석; 명세 동결 |
 | 13 | 자동 오류 분석: `phase13a_*`부터 `phase13c_*` | 동결 Phase 7H TEST 예측, 검색 감사, 정답 자료 | 오류 유형, 계층적 오류 위치, 보고 감사 | 오류 489개는 구성요소 귀속 325개, `UNKNOWN` 판정 81개, 부모 선택 47개, 검색 36개로 구분된다. | 진단 전용; 명세 동결 |
@@ -210,8 +206,6 @@ Use this section to locate the authoritative artifact for a specific claim. Larg
 # 実験インデックス：Phase 1-13
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-experiment-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-experiment-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](#user-content-experiment-ja)
-
-[← 日本語のリポジトリ概要](../README.md#user-content-readme-ja)
 
 最終文書監査日：2026-08-19。すべてのパスはリポジトリルートからの相対パスである。
 
