@@ -24,7 +24,7 @@ data/
 # Downloaded repositories and replaceable caches
 cache/
 
-# Temporary/generated logs and manuscript build by-products
+# Temporary/generated logs and build by-products
 *.log
 *.tmp
 *.bak

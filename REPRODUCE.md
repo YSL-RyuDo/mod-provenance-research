@@ -4,8 +4,6 @@
 
 [![English](https://img.shields.io/badge/EN-English-0969DA?style=for-the-badge)](#user-content-reproduce-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-reproduce-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-reproduce-ja)
 
-[← Repository overview](README.md#user-content-readme-en)
-
 This repository preserves the code and metadata needed to trace Phase 1 through Phase 13. It intentionally does not redistribute third-party MOD/JAR payloads, cloned repositories, generated query packages, or external tools.
 
 ## 1. Environment
@@ -138,8 +136,6 @@ If regenerated endpoint metrics differ, stop and compare frozen input hashes, en
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-reproduce-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-0969DA?style=for-the-badge)](#user-content-reproduce-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-6E7781?style=for-the-badge)](#user-content-reproduce-ja)
 
-[← 한국어 저장소 소개](README.md#user-content-readme-ko)
-
 이 저장소에는 Phase 1부터 Phase 13까지의 연구 과정을 재현하는 데 필요한 코드와 메타데이터가 보존되어 있다. 제3자 MOD/JAR 원본, 복제한 외부 저장소, 생성된 질의 패키지와 외부 도구는 재배포하지 않는다.
 
 ## 1. 환경
@@ -271,8 +267,6 @@ Open-NiCad/NiCadCross는 저장소에 포함하지 않는다. 별도로 설치�
 # 研究ワークフローの再現
 
 [![English](https://img.shields.io/badge/EN-English-6E7781?style=for-the-badge)](#user-content-reproduce-en) [![한국어](https://img.shields.io/badge/KO-%ED%95%9C%EA%B5%AD%EC%96%B4-6E7781?style=for-the-badge)](#user-content-reproduce-ko) [![日本語](https://img.shields.io/badge/JA-%E6%97%A5%E6%9C%AC%E8%AA%9E-0969DA?style=for-the-badge)](#user-content-reproduce-ja)
-
-[← 日本語のリポジトリ概要](README.md#user-content-readme-ja)
 
 本リポジトリには、Phase 1からPhase 13までの研究手順を再現するために必要なコードとメタデータを保存している。第三者のMOD/JAR原本、複製した外部リポジトリ、生成済みクエリパッケージ、外部ツールは再配布しない。
 
