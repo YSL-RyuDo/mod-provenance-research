@@ -2,7 +2,13 @@
 
 # 이종 게임 MOD 패키지의 저작권 출처 판별을 위한 서버 기반 다중 출처 Provenance 복원 기법
 
-[English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
+[English](README.md), [Korean](README.ko.md), [Japanese](README.ja.md)
+
+**ICEA 2026: 논문 채택, 대만 가오슝 발표 예정, 후속 연구 확장 중**
+
+[International Conference on Intelligent Computing and its Emerging Applications](https://icea-conf.github.io/2026/)
+
+2026.11.19 ~ 22, 대만 가오슝
 
 ## 방법과 결과 요약
 
@@ -12,15 +18,15 @@ Java opcode SimHash, 이미지 해시와 구조화 자원 특징으로 등록된
 
 연구 질문과 방법을 먼저 읽고, 측정 결과와 실패 사례를 확인하세요. 재현 안내에서 공개된 산출물과 별도로 필요한 로컬 데이터를 구분할 수 있습니다.
 
-[개발 사례 보기](https://ysl-ryudo.github.io/ko/research/mod/) · [Portfolio](https://ysl-ryudo.github.io/ko/)
+[개발 사례 보기](https://ysl-ryudo.github.io/ko/research/mod/), [Portfolio](https://ysl-ryudo.github.io/ko/)
 
 ## 포트폴리오 맥락과 후속 연구
 
 이 프로젝트는 독립적인 MOD 패키지 출처 복원 연구이며, **WISA 2026 이미지 연구 및 GCTLAB 협업과 별개**입니다. 내용 기반 증거, 등록 출처 후보 검색, 계층적 다중 출처 할당과 명시적인 UNKNOWN 선택을 결합합니다. Phase 6~7의 동결 기준을 보존하고 후속 확장의 결과를 별도로 보고하는 방향으로 이어갑니다.
 
-공개 저장소에는 선별된 코드·결과가 있으며 로컬의 전체 데이터가 포함된 것은 아닙니다. 데이터 요건은 [REPRODUCE.md](REPRODUCE.md)를 확인하세요. 아래 기존 측정 결과의 범위는 그대로 유지하며, 이번 문서 작업에서 실험을 다시 실행하지 않았습니다.
+공개 저장소에는 선별된 코드, 결과가 있으며 로컬의 전체 데이터가 포함된 것은 아닙니다. 데이터 요건은 [REPRODUCE.md](REPRODUCE.md)를 확인하세요. 아래 기존 측정 결과의 범위는 그대로 유지하며, 이번 문서 작업에서 실험을 다시 실행하지 않았습니다.
 
-본 연구는 여러 기존 MOD의 코드·리소스·이미지가 섞인 재조합 MOD/JAR 패키지에서 저작권 관련 출처 검토에 필요한 기술적 provenance를 복원한다. 파일명이나 프로젝트 식별자에 기대지 않고 각 구성요소를 등록 참조 프로젝트 또는 `UNKNOWN`에 귀속하며, 패키지 전체의 다중 출처 관계를 함께 재구성한다. 이 저장소에는 Phase 1-13의 구현, 동결된 평가 기록, 주요 결과와 재현 자료가 정리되어 있다.
+본 연구는 여러 기존 MOD의 코드, 리소스, 이미지가 섞인 재조합 MOD/JAR 패키지에서 저작권 관련 출처 검토에 필요한 기술적 provenance를 복원한다. 파일명이나 프로젝트 식별자에 기대지 않고 각 구성요소를 등록 참조 프로젝트 또는 `UNKNOWN`에 귀속하며, 패키지 전체의 다중 출처 관계를 함께 재구성한다. 이 저장소에는 Phase 1 ~ 13의 구현, 동결된 평가 기록, 주요 결과와 재현 자료가 정리되어 있다.
 
 > [!IMPORTANT]
 > 본 시스템의 출력은 기술적 출처 분석을 위한 증거이며 저작권의 귀속, 침해 여부, 이용 허락 또는 법적 책임에 대한 판단이 아니다. 결과는 전문가의 검토를 보조하는 용도로 사용한다.
@@ -53,7 +59,7 @@ flowchart LR
 ## 연구 방법
 
 1. 공개 프로젝트와 릴리스 목록을 구축하고 내려받은 원본 데이터는 Git 외부에 보관한다.
-2. 코드·바이너리, 구조화 리소스와 이미지에서 식별자에 의존하지 않는 증거를 추출한다.
+2. 코드, 바이너리, 구조화 리소스와 이미지에서 식별자에 의존하지 않는 증거를 추출한다.
 3. 각 질의 패키지에 대해 정해진 수의 등록 부모 후보를 검색한다.
 4. 패키지 수준의 부모 집합을 선택하고 각 구성요소를 선택된 부모 또는 `UNKNOWN`에 귀속한다.
 5. 최종 TEST 평가 전에 벤치마크, 매개변수, 명세 파일과 해시를 동결한다.
@@ -61,20 +67,23 @@ flowchart LR
 
 ## 연구 기여
 
-- 이종 구성요소, 등록 부모 귀속과 개방형 `UNKNOWN` 거부를 결합한 저작권 관련 출처 판별 문제 정식화
-- 여러 등록 부모와 개방형 `UNKNOWN` 처리를 결합한 계층적 재구성 방법
-- 공개용 자료와 평가 전용 자료를 분리하고 해시 검증과 누수 감사를 적용한 120개 프로젝트 동결 벤치마크
-- 통계 검증, 서버 평가, 외부 비교, 강건성 분석, 검색 확장성과 동결 후 오류 위치 분석
+이종 구성요소, 등록 부모 귀속과 개방형 `UNKNOWN` 거부를 결합한 저작권 관련 출처 판별 문제 정식화
+
+여러 등록 부모와 개방형 `UNKNOWN` 처리를 결합한 계층적 재구성 방법
+
+공개용 자료와 평가 전용 자료를 분리하고 해시 검증과 누수 감사를 적용한 120개 프로젝트 동결 벤치마크
+
+통계 검증, 서버 평가, 외부 비교, 강건성 분석, 검색 확장성과 동결 후 오류 위치 분석
 
 ## 연구 진행 현황
 
-Phase 1-13의 스크립트와 보고 대상 결과는 모두 `main`에 보존되어 있다. 아래의 “완료”는 해당 단계의 기록이 보존되었다는 뜻이며, 동결된 확인 평가용 벤치마크는 Phase 6부터 시작한다.
+Phase 1 ~ 13의 스크립트와 보고 대상 결과는 모두 `main`에 보존되어 있다. 아래의 “완료”는 해당 단계의 기록이 보존되었다는 뜻이며, 동결된 확인 평가용 벤치마크는 Phase 6부터 시작한다.
 
 | Phase | 범위 | 상태 |
 |---:|---|:---:|
 | 1 | 예비 수집과 실제 MOD 30개 데이터셋 | 완료 |
 | 2 | 소스/릴리스 레지스트리와 중복 감사 | 완료 |
-| 3 | 버전 변화 및 바이트코드·내용 기반 기준선 | 완료 |
+| 3 | 버전 변화 및 바이트코드, 내용 기반 기준선 | 완료 |
 | 4 | 의존성과 리소스 참조 그래프 | 완료 |
 | 5 | 탐색적 다중 부모 계층 재구성 | 완료 |
 | 6 | 신규 120개 프로젝트, 동결 분할, 540개 질의와 데이터 구성 | **동결** |
@@ -83,7 +92,7 @@ Phase 1-13의 스크립트와 보고 대상 결과는 모두 `main`에 보존되
 | 9 | 서버 정확성, 동시 처리, 전체 처리 과정과 후보군 확장 | 완료 |
 | 10 | NiCadCross 외부 비교 및 StoneDetector 호환성 | 완료 |
 | 11 | 통제된 다중 미등록 출처 강건성 | 완료 |
-| 12 | 정확 검색과 이진 LSH 검색의 성능·확장성 비교 | 완료 |
+| 12 | 정확 검색과 이진 LSH 검색의 성능, 확장성 비교 | 완료 |
 | 13 | 동결 후 자동 실패 분석 | 완료 |
 
 [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)에는 각 단계의 스크립트, 입력, 출력, 주요 결과와 동결 여부가 정리되어 있다.
@@ -110,7 +119,7 @@ Phase 1-13의 스크립트와 보고 대상 결과는 모두 `main`에 보존되
 | 증거 → 검색 → 재구성 | 동시성 1 | 서버 p50 12.579 ms, 검색 11.493 ms, 재구성 1.088 ms |
 | 로컬 패키지 → 결과 | 동시성 1 | 서버 p50 26.880 ms, 추출 14.440 ms, 검색 10.685 ms |
 | 후보군 확장 | 실제 프로젝트 20 → 100개 | 순차 검색 p50 4.353 → 21.457 ms |
-| NiCadCross 대응 부분집합 | 소스 코드를 확인할 수 있는 구성요소 1,169개 | 제안 방법 0.841, NiCadCross 0.710; 차이 +0.131, 대응표본 95% CI 0.096-0.167 |
+| NiCadCross 대응 부분집합 | 소스 코드를 확인할 수 있는 구성요소 1,169개 | 제안 방법 0.841, NiCadCross 0.710; 차이 +0.131, 대응표본 95% CI 0.096 ~ 0.167 |
 
 Phase 11은 1,260개 구성요소로 이루어진 통제 재조합 질의 180개를 평가했다. 구성요소 정확도는 0.841, `UNKNOWN` F1은 0.888, 단일 `UNKNOWN`으로 합산한 부모 집합 F1은 0.884였다. 이 평가는 미등록 구성요소를 가려내는 성능을 측정하며, 서로 다른 미등록 출처의 정체나 개수를 복원하는 실험은 아니다.
 
@@ -134,30 +143,42 @@ data/                목록과 재배포 가능한 메타데이터; 원본 데�
 
 ## 재현 및 동결 기록
 
-- [재현 안내](REPRODUCE.md#user-content-reproduce-ko)
-- [실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
-- [환경 기록](reproducibility/ENVIRONMENT.md#user-content-environment-ko)
-- [추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)
-- [기여 안내](CONTRIBUTING.md#user-content-contributing-ko)
-- [보관 자료 설명](archive/README.md#user-content-archive-ko)
-- [Phase 12 동결 명세](reproducibility/phase12_freeze_manifest.sha256)
-- [Phase 13 동결 명세](reproducibility/phase13_freeze_manifest.sha256)
+[재현 안내](REPRODUCE.md#user-content-reproduce-ko)
 
-Phase 6-7의 주요 기록에는 동결된 데이터 분할, 질의 목록과 정답, 원본 데이터 해시 목록, 그래프 실험 자료와 `results/phase7g_final_method_parameters.json`이 포함된다. 동결 매개변수의 SHA-256은 `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`이다.
+[실험 인덱스](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ko)
+
+[환경 기록](reproducibility/ENVIRONMENT.md#user-content-environment-ko)
+
+[추적 감사](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ko)
+
+[기여 안내](CONTRIBUTING.md#user-content-contributing-ko)
+
+[보관 자료 설명](archive/README.md#user-content-archive-ko)
+
+[Phase 12 동결 명세](reproducibility/phase12_freeze_manifest.sha256)
+
+[Phase 13 동결 명세](reproducibility/phase13_freeze_manifest.sha256)
+
+Phase 6 ~ 7의 주요 기록에는 동결된 데이터 분할, 질의 목록과 정답, 원본 데이터 해시 목록, 그래프 실험 자료와 `results/phase7g_final_method_parameters.json`이 포함된다. 동결 매개변수의 SHA-256은 `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`이다.
 
 ## 해석 범위
 
-- 출처 점수만으로 법적 소유권, 복제, 라이선스 준수 또는 침해 여부를 판단할 수 없다.
-- 그래프 보정은 주요 TEST 지표에서 통계적으로 확립된 개선으로 해석할 수 없다.
-- Phase 9의 지연 시간 결과는 서로 다른 처리 범위를 측정하므로 직접 맞바꿔 비교할 수 없다.
-- NiCadCross에는 복원된 Java 소스가 입력되지만 제안 시스템은 동결된 바이너리 측 증거를 사용한다. 비교 범위는 동일하게 소스 코드를 확인할 수 있는 부분집합으로 제한된다.
-- StoneDetector 자료는 호환성 준비 기록이며 비교 효과 평가의 완료를 뜻하지 않는다.
-- Phase 7 TEST와 동결 후 Phase 11-13 분석은 동결 방법의 재조정에 사용하지 않았다.
+출처 점수만으로 법적 소유권, 복제, 라이선스 준수 또는 침해 여부를 판단할 수 없다.
+
+그래프 보정은 주요 TEST 지표에서 통계적으로 확립된 개선으로 해석할 수 없다.
+
+Phase 9의 지연 시간 결과는 서로 다른 처리 범위를 측정하므로 직접 맞바꿔 비교할 수 없다.
+
+NiCadCross에는 복원된 Java 소스가 입력되지만 제안 시스템은 동결된 바이너리 측 증거를 사용한다. 비교 범위는 동일하게 소스 코드를 확인할 수 있는 부분집합으로 제한된다.
+
+StoneDetector 자료는 호환성 준비 기록이며 비교 효과 평가의 완료를 뜻하지 않는다.
+
+Phase 7 TEST와 동결 후 Phase 11 ~ 13 분석은 동결 방법의 재조정에 사용하지 않았다.
 
 ## 데이터, 인용, 라이선스와 문의
 
 이 저장소는 현재 공개되어 있다. 원본 데이터와 평가용 대응표의 재배포 범위는 파일별로 구분하며, 로컬 연구 자료 전체가 공개 저장소에 포함된 것은 아니다. “평가 전용”은 평가 과정에서 모델에 공개하지 않은 정답을 뜻하며 인증정보라는 뜻은 아니다. 다만 해당 파일은 계속 제한적으로 관리해야 한다.
 
-정식 서지정보가 확정되기 전에는 재현에 사용한 정확한 커밋과 이 저장소를 함께 인용한다. 저장소 전체에 적용되는 라이선스는 아직 선언하지 않았으며, 제3자 소스 코드·데이터셋·MOD/JAR와 기타 자료에는 각각의 원래 라이선스가 적용된다.
+정식 서지정보가 확정되기 전에는 재현에 사용한 정확한 커밋과 이 저장소를 함께 인용한다. 저장소 전체에 적용되는 라이선스는 아직 선언하지 않았으며, 제3자 소스 코드, 데이터셋, MOD/JAR와 기타 자료에는 각각의 원래 라이선스가 적용된다.
 
 연구 및 재현 관련 보고는 GitHub Issues에서 접수한다. 비공개 문의는 [저장소 소유자의 GitHub 프로필](https://github.com/YSL-RyuDo)을 통해 전달할 수 있다.

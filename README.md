@@ -6,27 +6,33 @@
 
 ## Languages
 
-[English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
+[English](README.md), [Korean](README.ko.md), [Japanese](README.ja.md)
+
+**ICEA 2026: Accepted, presentation planned in Kaohsiung, research extensions in progress**
+
+[International Conference on Intelligent Computing and its Emerging Applications](https://icea-conf.github.io/2026/)
+
+19 ~ 22 Nov 2026, Kaohsiung, Taiwan
 
 ## Method and findings at a glance
 
-The method combines Java opcode SimHash, image hashes and structured-resource features, retrieves registered parent candidates, and assigns components to multiple parents or UNKNOWN. The frozen Phase 6–7 baseline is preserved separately from later extensions. Dependency-graph refinement had a small, statistically inconclusive effect on the primary TEST metric. This is technical attribution evidence for human review, not a legal ownership determination.
+The method combines Java opcode SimHash, image hashes and structured-resource features, retrieves registered parent candidates, and assigns components to multiple parents or UNKNOWN. The frozen Phase 6 ~ 7 baseline is preserved separately from later extensions. Dependency-graph refinement had a small, statistically inconclusive effect on the primary TEST metric. This is technical attribution evidence for human review, not a legal ownership determination.
 
 ## Reading guide
 
 Start with the research question and method, then inspect measured results and failure cases. Use the reproduction guide to distinguish the public artifacts from required local data.
 
-[Explore the case](https://ysl-ryudo.github.io/en/research/mod/) · [Portfolio](https://ysl-ryudo.github.io/en/)
+[Explore the case](https://ysl-ryudo.github.io/en/research/mod/), [Portfolio](https://ysl-ryudo.github.io/en/)
 
 ## Portfolio context and continuing research
 
-This is an independent MOD-package provenance research project. It is **separate from the WISA 2026 image-asset study and the GCTLAB collaboration**. The method combines content evidence, registered-parent retrieval, hierarchical multi-parent assignment and an explicit UNKNOWN option. Phase 6–7 defines the frozen baseline; later extensions should preserve it and report new results separately.
+This is an independent MOD-package provenance research project. It is **separate from the WISA 2026 image-asset study and the GCTLAB collaboration**. The method combines content evidence, registered-parent retrieval, hierarchical multi-parent assignment and an explicit UNKNOWN option. Phase 6 ~ 7 defines the frozen baseline; later extensions should preserve it and report new results separately.
 
 The public repository contains selected code and results, not the complete local corpus. Consult [REPRODUCE.md](REPRODUCE.md) for data requirements. Existing measured results below retain their original scope; this documentation update did not rerun the experiments.
 
 <a id="readme-en"></a>
 
-This repository implements and evaluates server-side multi-parent provenance reconstruction for copyright-related source attribution in recomposed MOD/JAR packages. The method attributes code/binary, structured-resource, and image components to registered reference projects or `UNKNOWN`, reconstructs package-level mixed-source relationships, and supplies technical evidence for human review. Phase 1-13 source code, frozen evaluation records, principal results, and reproduction material are preserved here.
+This repository implements and evaluates server-side multi-parent provenance reconstruction for copyright-related source attribution in recomposed MOD/JAR packages. The method attributes code/binary, structured-resource, and image components to registered reference projects or `UNKNOWN`, reconstructs package-level mixed-source relationships, and supplies technical evidence for human review. Phase 1 ~ 13 source code, frozen evaluation records, principal results, and reproduction material are preserved here.
 
 > [!IMPORTANT]
 > The output is technical provenance evidence, not a legal determination of copyright ownership, infringement, permission, or liability. It is intended to support expert review.
@@ -67,16 +73,21 @@ Content evidence is the primary signal. The dependency graph is an optional weak
 
 ## Contributions
 
-- A copyright-related source-attribution formulation that combines heterogeneous components, registered-parent attribution, and open-set `UNKNOWN` rejection.
-- A hierarchical reconstruction method that links component assignments to a coherent package-level parent set.
-- A frozen 120-project benchmark with public/private manifest separation, hash verification, and leakage audits.
-- Query-level bootstrap, ablation, source-cluster sensitivity, server correctness, and host-specific performance analyses.
-- External NiCadCross comparison on a strictly source-resolvable code subset, plus compatibility preparation for StoneDetector.
-- Post-freeze multi-unknown robustness, approximate-retrieval scalability, and hierarchical failure-localization studies.
+A copyright-related source-attribution formulation that combines heterogeneous components, registered-parent attribution, and open-set `UNKNOWN` rejection.
+
+A hierarchical reconstruction method that links component assignments to a coherent package-level parent set.
+
+A frozen 120-project benchmark with public/private manifest separation, hash verification, and leakage audits.
+
+Query-level bootstrap, ablation, source-cluster sensitivity, server correctness, and host-specific performance analyses.
+
+External NiCadCross comparison on a strictly source-resolvable code subset, plus compatibility preparation for StoneDetector.
+
+Post-freeze multi-unknown robustness, approximate-retrieval scalability, and hierarchical failure-localization studies.
 
 ## Research progress
 
-All Phase 1-13 scripts and reportable outputs are preserved on `main`. “Complete” means the recorded phase artifacts exist; only Phase 6 onward forms the frozen confirmatory benchmark.
+All Phase 1 ~ 13 scripts and reportable outputs are preserved on `main`. “Complete” means the recorded phase artifacts exist; only Phase 6 onward forms the frozen confirmatory benchmark.
 
 | Phase | Scope | Status |
 |---:|---|:---:|
@@ -118,9 +129,9 @@ Candidate retrieval reached 0.974444 mean known-parent recall, with every known 
 | Evidence → search → reconstruction | Concurrency 1 | Server p50 12.579 ms; search 11.493 ms; reconstruction 1.088 ms. |
 | Local package → result | Concurrency 1 | Server p50 26.880 ms; extraction 14.440 ms; search 10.685 ms. |
 | Gallery scaling | 20 → 100 real projects | Sequential search p50 4.353 → 21.457 ms. |
-| NiCadCross paired subset | 1,169 source-resolvable code components | Proposed 0.841 vs NiCadCross 0.710 component accuracy; delta +0.131, paired 95% CI 0.096-0.167. |
+| NiCadCross paired subset | 1,169 source-resolvable code components | Proposed 0.841 vs NiCadCross 0.710 component accuracy; delta +0.131, paired 95% CI 0.096 ~ 0.167. |
 
-Phase 11 adds a controlled 180-query / 1,260-component recomposition analysis: component accuracy 0.841, `UNKNOWN` F1 0.888, and collapsed parent-set F1 0.884. Because the frozen model emits one public `UNKNOWN` label, these numbers measure rejection of unregistered components—not recovery of distinct unknown identities or multiplicity.
+Phase 11 adds a controlled 180-query / 1,260-component recomposition analysis: component accuracy 0.841, `UNKNOWN` F1 0.888, and collapsed parent-set F1 0.884. Because the frozen model emits one public `UNKNOWN` label, these numbers measure rejection of unregistered components, not recovery of distinct unknown identities or multiplicity.
 
 Phase 12 found that BALANCED and HIGH_RECALL binary-LSH configurations preserved Exact predictions on all 360 frozen TEST queries. FAST changed 1/360 query prediction and 1/2,520 component prediction, while reducing the 60-project runtime-sample p50 from 10.315 ms to 8.848 ms (1.166×). The `200eq`/`500eq`/`1000eq` conditions are synthetic component-volume stresses over 100 real registered parents, not additional unique MOD projects.
 
@@ -142,25 +153,37 @@ Raw MOD/JAR payloads, reconstructed external-tool corpora, private held-out mapp
 
 ## Reproduction and freeze anchors
 
-- [Reproduction guide](REPRODUCE.md#user-content-reproduce-en)
-- [Experiment index](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en)
-- [Environment record](reproducibility/ENVIRONMENT.md#user-content-environment-en)
-- [Tracking audit](reproducibility/TRACKING_AUDIT.md#user-content-tracking-en)
-- [Contribution guide](CONTRIBUTING.md#user-content-contributing-en)
-- [Archive notes](archive/README.md#user-content-archive-en)
-- [Phase 12 freeze manifest](reproducibility/phase12_freeze_manifest.sha256)
-- [Phase 13 freeze manifest](reproducibility/phase13_freeze_manifest.sha256)
+[Reproduction guide](REPRODUCE.md#user-content-reproduce-en)
 
-Core Phase 6-7 anchors include the frozen split, query manifest and ground truth, payload-hash manifest, graph tracks, and `results/phase7g_final_method_parameters.json`. The frozen parameter SHA-256 is `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`.
+[Experiment index](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-en)
+
+[Environment record](reproducibility/ENVIRONMENT.md#user-content-environment-en)
+
+[Tracking audit](reproducibility/TRACKING_AUDIT.md#user-content-tracking-en)
+
+[Contribution guide](CONTRIBUTING.md#user-content-contributing-en)
+
+[Archive notes](archive/README.md#user-content-archive-en)
+
+[Phase 12 freeze manifest](reproducibility/phase12_freeze_manifest.sha256)
+
+[Phase 13 freeze manifest](reproducibility/phase13_freeze_manifest.sha256)
+
+Core Phase 6 ~ 7 anchors include the frozen split, query manifest and ground truth, payload-hash manifest, graph tracks, and `results/phase7g_final_method_parameters.json`. The frozen parameter SHA-256 is `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325`.
 
 ## Interpretation limits
 
-- Do not infer legal ownership, copying, license compliance, or infringement from a provenance score alone.
-- Do not claim the graph refinement is a statistically established improvement on the primary TEST metric.
-- Do not compare the Phase 9 latency scopes as if they measured the same pipeline.
-- NiCadCross receives reconstructed Java source while the proposed system uses frozen binary-side evidence; the comparison is restricted to the same source-resolvable subset.
-- StoneDetector artifacts document compatibility preparation, not a completed comparative effectiveness result.
-- Do not use Phase 7 TEST, Phase 11 recompositions, Phase 12 operating points, or Phase 13 diagnostics to retune the frozen method.
+Do not infer legal ownership, copying, license compliance, or infringement from a provenance score alone.
+
+Do not claim the graph refinement is a statistically established improvement on the primary TEST metric.
+
+Do not compare the Phase 9 latency scopes as if they measured the same pipeline.
+
+NiCadCross receives reconstructed Java source while the proposed system uses frozen binary-side evidence; the comparison is restricted to the same source-resolvable subset.
+
+StoneDetector artifacts document compatibility preparation, not a completed comparative effectiveness result.
+
+Do not use Phase 7 TEST, Phase 11 recompositions, Phase 12 operating points, or Phase 13 diagnostics to retune the frozen method.
 
 ## Data, citation, license, and contact
 

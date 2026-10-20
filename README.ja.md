@@ -2,7 +2,13 @@
 
 # 異種ゲームMODパッケージの著作権関連由来判定に向けたサーバーサイド複数親プロベナンス再構成
 
-[English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
+[English](README.md), [Korean](README.ko.md), [Japanese](README.ja.md)
+
+**ICEA 2026: 論文採択、高雄で発表予定、研究を拡張中**
+
+[International Conference on Intelligent Computing and its Emerging Applications](https://icea-conf.github.io/2026/)
+
+2026.11.19 ~ 22, 台湾・高雄
 
 ## 手法と結果の概要
 
@@ -12,7 +18,7 @@ Java opcode SimHash、画像ハッシュ、構造化リソース特徴から登�
 
 研究の問いと手法から読み、測定結果と失敗例を確認してください。再現ガイドで公開成果物と別途必要なローカルデータを区別できます。
 
-[開発事例を見る](https://ysl-ryudo.github.io/ja/research/mod/) · [Portfolio](https://ysl-ryudo.github.io/ja/)
+[開発事例を見る](https://ysl-ryudo.github.io/ja/research/mod/), [Portfolio](https://ysl-ryudo.github.io/ja/)
 
 ## ポートフォリオ上の位置付けと継続研究
 
@@ -20,7 +26,7 @@ Java opcode SimHash、画像ハッシュ、構造化リソース特徴から登�
 
 公開リポジトリは選定したコード・結果を含みますが、ローカルの全データではありません。必要なデータは[REPRODUCE.md](REPRODUCE.md)を参照してください。以下の既存測定結果の範囲は維持し、今回の文書作業では実験を再実行していません。
 
-本研究では、複数の既存MODに由来するコード、リソース、画像が混在する再構成MOD/JARパッケージについて、著作権関連の由来確認に必要な技術的プロベナンスを復元する。ファイル名やプロジェクト識別子には依存せず、各コンポーネントを登録済み参照プロジェクトまたは `UNKNOWN` に割り当て、パッケージ全体の複数由来関係を再構成する。本リポジトリには、Phase 1-13の実装、凍結済み評価記録、主要結果、再現用資料を収録している。
+本研究では、複数の既存MODに由来するコード、リソース、画像が混在する再構成MOD/JARパッケージについて、著作権関連の由来確認に必要な技術的プロベナンスを復元する。ファイル名やプロジェクト識別子には依存せず、各コンポーネントを登録済み参照プロジェクトまたは `UNKNOWN` に割り当て、パッケージ全体の複数由来関係を再構成する。本リポジトリには、Phase 1 ~ 13の実装、凍結済み評価記録、主要結果、再現用資料を収録している。
 
 > [!IMPORTANT]
 > 本システムの出力は技術的な由来分析のための証拠であり、著作権の帰属、侵害の有無、利用許諾、法的責任を判断するものではない。専門家による検討を支援する目的で用いる。
@@ -61,14 +67,17 @@ flowchart LR
 
 ## 研究上の貢献
 
-- 異種コンポーネント、登録済み親への帰属、オープンセットの `UNKNOWN` 棄却を統合した著作権関連由来判定の定式化
-- 複数の登録済み親とオープンセットの `UNKNOWN` 処理を統合した階層的再構成手法
-- 公開用資料と評価専用資料を分離し、ハッシュ検証と情報漏えい監査を適用した120プロジェクトの凍結ベンチマーク
-- 統計的検証、サーバー評価、外部比較、頑健性分析、検索のスケーラビリティ、凍結後の誤り局在化
+異種コンポーネント、登録済み親への帰属、オープンセットの `UNKNOWN` 棄却を統合した著作権関連由来判定の定式化
+
+複数の登録済み親とオープンセットの `UNKNOWN` 処理を統合した階層的再構成手法
+
+公開用資料と評価専用資料を分離し、ハッシュ検証と情報漏えい監査を適用した120プロジェクトの凍結ベンチマーク
+
+統計的検証、サーバー評価、外部比較、頑健性分析、検索のスケーラビリティ、凍結後の誤り局在化
 
 ## 研究の進捗
 
-Phase 1-13のスクリプトと報告対象の結果は、すべて `main` に保存されている。以下の「完了」は当該Phaseの記録が保存済みであることを示す。凍結済みの確認評価用ベンチマークはPhase 6から始まる。
+Phase 1 ~ 13のスクリプトと報告対象の結果は、すべて `main` に保存されている。以下の「完了」は当該Phaseの記録が保存済みであることを示す。凍結済みの確認評価用ベンチマークはPhase 6から始まる。
 
 | Phase | 対象 | 状況 |
 |---:|---|:---:|
@@ -110,7 +119,7 @@ Phase 1-13のスクリプトと報告対象の結果は、すべて `main` に�
 | 証拠 → 検索 → 再構成 | 並行度1 | サーバーp50 12.579 ms、検索11.493 ms、再構成1.088 ms |
 | ローカルパッケージ → 結果 | 並行度1 | サーバーp50 26.880 ms、抽出14.440 ms、検索10.685 ms |
 | 候補群の拡張 | 実在プロジェクト20 → 100件 | 逐次検索p50 4.353 → 21.457 ms |
-| NiCadCross対応部分集合 | ソースコードを対応付けられた1,169コンポーネント | 提案手法0.841、NiCadCross 0.710、差+0.131、対応あり95% CI 0.096-0.167 |
+| NiCadCross対応部分集合 | ソースコードを対応付けられた1,169コンポーネント | 提案手法0.841、NiCadCross 0.710、差+0.131、対応あり95% CI 0.096 ~ 0.167 |
 
 Phase 11では、1,260コンポーネントからなる制御再構成180クエリを評価した。コンポーネント正解率は0.841、`UNKNOWN` F1は0.888、単一の `UNKNOWN` にまとめた親集合F1は0.884であった。この評価は未登録コンポーネントの判別性能を測るものであり、異なる未登録由来の同定や個数の復元を対象としない。
 
@@ -134,25 +143,37 @@ data/                一覧と再配布可能なメタデータ。原本デー�
 
 ## 再現手順と凍結記録
 
-- [再現ガイド](REPRODUCE.md#user-content-reproduce-ja)
-- [実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
-- [環境記録](reproducibility/ENVIRONMENT.md#user-content-environment-ja)
-- [追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)
-- [コントリビューションガイド](CONTRIBUTING.md#user-content-contributing-ja)
-- [保存資料の説明](archive/README.md#user-content-archive-ja)
-- [Phase 12凍結マニフェスト](reproducibility/phase12_freeze_manifest.sha256)
-- [Phase 13凍結マニフェスト](reproducibility/phase13_freeze_manifest.sha256)
+[再現ガイド](REPRODUCE.md#user-content-reproduce-ja)
 
-Phase 6-7の主要記録には、凍結済みデータ分割、クエリ一覧と正解ラベル、原本データのハッシュ一覧、グラフ実験資料、`results/phase7g_final_method_parameters.json` が含まれる。凍結パラメータのSHA-256は `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325` である。
+[実験インデックス](reproducibility/EXPERIMENT_INDEX.md#user-content-experiment-ja)
+
+[環境記録](reproducibility/ENVIRONMENT.md#user-content-environment-ja)
+
+[追跡監査](reproducibility/TRACKING_AUDIT.md#user-content-tracking-ja)
+
+[コントリビューションガイド](CONTRIBUTING.md#user-content-contributing-ja)
+
+[保存資料の説明](archive/README.md#user-content-archive-ja)
+
+[Phase 12凍結マニフェスト](reproducibility/phase12_freeze_manifest.sha256)
+
+[Phase 13凍結マニフェスト](reproducibility/phase13_freeze_manifest.sha256)
+
+Phase 6 ~ 7の主要記録には、凍結済みデータ分割、クエリ一覧と正解ラベル、原本データのハッシュ一覧、グラフ実験資料、`results/phase7g_final_method_parameters.json` が含まれる。凍結パラメータのSHA-256は `caad17257304d0ab198e01ef327f5acf918e6b8aab3f00e5272be3d20d3f8325` である。
 
 ## 解釈上の制約
 
-- 由来スコアだけで法的な所有権、複製、ライセンス遵守、侵害の有無を判断することはできない。
-- グラフ補正を主要TEST指標に対する統計的に確立した改善とは解釈できない。
-- Phase 9の処理時間は互いに異なる範囲を測定しており、直接置き換えて比較できない。
-- NiCadCrossには復元済みJavaソースを入力する一方、提案システムは凍結済みのバイナリ側証拠を用いる。比較は、同じくソースコードを対応付けられた部分集合に限られる。
-- StoneDetectorの資料は互換性確認の準備記録であり、比較有効性評価の完了を示さない。
-- Phase 7 TESTと凍結後のPhase 11-13分析は、凍結済み手法の再調整に用いていない。
+由来スコアだけで法的な所有権、複製、ライセンス遵守、侵害の有無を判断することはできない。
+
+グラフ補正を主要TEST指標に対する統計的に確立した改善とは解釈できない。
+
+Phase 9の処理時間は互いに異なる範囲を測定しており、直接置き換えて比較できない。
+
+NiCadCrossには復元済みJavaソースを入力する一方、提案システムは凍結済みのバイナリ側証拠を用いる。比較は、同じくソースコードを対応付けられた部分集合に限られる。
+
+StoneDetectorの資料は互換性確認の準備記録であり、比較有効性評価の完了を示さない。
+
+Phase 7 TESTと凍結後のPhase 11 ~ 13分析は、凍結済み手法の再調整に用いていない。
 
 ## データ、引用、ライセンス、連絡先
 
