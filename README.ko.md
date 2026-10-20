@@ -4,6 +4,12 @@
 
 [English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
 
+## 연구 자료 읽는 순서
+
+연구 질문과 방법을 먼저 읽고, 측정 결과와 실패 사례를 확인하세요. 재현 안내에서 공개된 산출물과 별도로 필요한 로컬 데이터를 구분할 수 있습니다.
+
+[개발 사례 보기](https://ysl-ryudo.github.io/ko/research/mod/) · [Portfolio](https://ysl-ryudo.github.io/ko/)
+
 ## 포트폴리오 맥락과 후속 연구
 
 이 프로젝트는 독립적인 MOD 패키지 출처 복원 연구이며, **WISA 2026 이미지 연구 및 GCTLAB 협업과 별개**입니다. 내용 기반 증거, 등록 출처 후보 검색, 계층적 다중 출처 할당과 명시적인 UNKNOWN 선택을 결합합니다. Phase 6~7의 동결 기준을 보존하고 후속 확장의 결과를 별도로 보고하는 방향으로 이어갑니다.

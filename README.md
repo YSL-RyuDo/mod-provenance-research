@@ -8,6 +8,12 @@
 
 [English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
 
+## Reading guide
+
+Start with the research question and method, then inspect measured results and failure cases. Use the reproduction guide to distinguish the public artifacts from required local data.
+
+[Explore the case](https://ysl-ryudo.github.io/en/research/mod/) · [Portfolio](https://ysl-ryudo.github.io/en/)
+
 ## Portfolio context and continuing research
 
 This is an independent MOD-package provenance research project. It is **separate from the WISA 2026 image-asset study and the GCTLAB collaboration**. The method combines content evidence, registered-parent retrieval, hierarchical multi-parent assignment and an explicit UNKNOWN option. Phase 6–7 defines the frozen baseline; later extensions should preserve it and report new results separately.

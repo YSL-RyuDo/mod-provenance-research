@@ -4,6 +4,12 @@
 
 [English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
 
+## 資料の読み方
+
+研究の問いと手法から読み、測定結果と失敗例を確認してください。再現ガイドで公開成果物と別途必要なローカルデータを区別できます。
+
+[開発事例を見る](https://ysl-ryudo.github.io/ja/research/mod/) · [Portfolio](https://ysl-ryudo.github.io/ja/)
+
 ## ポートフォリオ上の位置付けと継続研究
 
 本研究は独立したMODパッケージの出所復元研究であり、**WISA 2026の画像研究およびGCTLABでの共同開発とは別です**。内容に基づく証拠、登録済み出所の候補検索、階層的な複数出所割り当て、明示的なUNKNOWN選択を組み合わせます。Phase 6～7の凍結基準を維持し、今後の拡張結果は分けて報告します。
