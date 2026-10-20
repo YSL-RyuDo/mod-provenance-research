@@ -8,6 +8,10 @@
 
 [English](README.md) · [Korean](README.ko.md) · [Japanese](README.ja.md)
 
+## Method and findings at a glance
+
+The method combines Java opcode SimHash, image hashes and structured-resource features, retrieves registered parent candidates, and assigns components to multiple parents or UNKNOWN. The frozen Phase 6–7 baseline is preserved separately from later extensions. Dependency-graph refinement had a small, statistically inconclusive effect on the primary TEST metric. This is technical attribution evidence for human review, not a legal ownership determination.
+
 ## Reading guide
 
 Start with the research question and method, then inspect measured results and failure cases. Use the reproduction guide to distinguish the public artifacts from required local data.
